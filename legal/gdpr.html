@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GDPR — SALUX</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/shared.css" />
+<link rel="stylesheet" href="../assets/article.css" />
+</head>
+<body data-screen-label="Legal — GDPR">
+
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="../index.html" class="nav-logo"><img src="../assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
+    <div class="nav-links">
+      <a href="../home-saas.html#modules">Funcționalități</a>
+      <a href="../home-saas.html#audience">Pentru cine</a>
+      <a href="../home-saas.html#pricing">Licențiere</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost">Autentificare</a>
+      <a href="../contact.html" class="btn btn-primary">Solicită demo</a>
+    </div>
+  </div>
+</nav>
+
+<section class="legal-hero"><div class="container">
+  <nav class="crumb"><a href="../index.html">Acasă</a> / Legal / GDPR</nav>
+  <h1>Conformitate GDPR</h1>
+  <p class="deck">Cum respectăm Regulamentul (UE) 2016/679 și ce angajamente practice ne asumăm față de clienții și utilizatorii noștri.</p>
+  <p class="updated">// Ultima actualizare: 01 mai 2026 · versiunea 2.4</p>
+</div></section>
+
+<section class="legal-body"><div class="container legal-layout">
+  <aside class="legal-toc">
+    <div class="h">Pe această pagină</div>
+    <ol>
+      <li><a href="#roluri">1. Roluri și responsabilități</a></li>
+      <li><a href="#principii">2. Principii GDPR aplicate</a></li>
+      <li><a href="#dpa">3. Acord de prelucrare (DPA)</a></li>
+      <li><a href="#masuri">4. Măsuri tehnice și organizatorice</a></li>
+      <li><a href="#sub">5. Sub-procesatori</a></li>
+      <li><a href="#transfer">6. Transferuri internaționale</a></li>
+      <li><a href="#breach">7. Notificare incidente</a></li>
+      <li><a href="#dpo">8. Responsabilul DPO</a></li>
+    </ol>
+  </aside>
+
+  <article class="legal-prose">
+
+    <h2 id="roluri">1. Roluri și responsabilități</h2>
+    <p>În cadrul utilizării platformei SALUX:</p>
+    <ul>
+      <li><strong>Clientul</strong> (operator privat sau UAT) este <em>Operator de date</em> pentru datele introduse în platformă.</li>
+      <li><strong>SALUX (MILBAC MANAGEMENT S.R.L.)</strong> este <em>Persoană împuternicită</em>, prelucrând datele exclusiv conform instrucțiunilor clientului.</li>
+    </ul>
+    <p>Pentru datele colectate direct de pe site-ul public salux.ro (formulare de contact, newsletter), SALUX este Operator de date — vezi <a href="confidentialitate.html">Politica de confidențialitate</a>.</p>
+
+    <h2 id="principii">2. Principii GDPR aplicate</h2>
+    <p>Aplicăm cele 7 principii GDPR la nivel de arhitectură:</p>
+    <ul>
+      <li><strong>Legalitate, echitate, transparență</strong> — fiecare prelucrare are temei și documentație</li>
+      <li><strong>Limitarea scopurilor</strong> — datele se folosesc doar în scopul declarat</li>
+      <li><strong>Minimizarea datelor</strong> — nu colectăm ce nu ne trebuie</li>
+      <li><strong>Exactitate</strong> — utilizatorii pot rectifica datele oricând</li>
+      <li><strong>Limitarea stocării</strong> — politici de retenție pe fiecare tip de date</li>
+      <li><strong>Integritate &amp; confidențialitate</strong> — criptare în repaus &amp; în tranzit</li>
+      <li><strong>Responsabilitate</strong> — audit log complet, RBAC granular</li>
+    </ul>
+
+    <h2 id="dpa">3. Acord de prelucrare a datelor (DPA)</h2>
+    <p>Toate contractele noastre includ un Acord de Prelucrare a Datelor (DPA) conform art. 28 GDPR. DPA-ul detaliază:</p>
+    <ul>
+      <li>Categoriile de date prelucrate</li>
+      <li>Categoriile de persoane vizate</li>
+      <li>Durata prelucrării</li>
+      <li>Drepturile și obligațiile părților</li>
+      <li>Măsurile de securitate aplicate</li>
+    </ul>
+    <p>O versiune standard de DPA poate fi obținută la cerere de la <a href="mailto:dpo@salux.ro">dpo@salux.ro</a>.</p>
+
+    <h2 id="masuri">4. Măsuri tehnice și organizatorice</h2>
+    <div class="box">
+      <div class="h">Tehnice</div>
+      <ul>
+        <li>Criptare în tranzit (TLS 1.3) și în repaus (AES-256)</li>
+        <li>Backup zilnic automat cu rotație 7/4/12 (zile / săptămâni / luni)</li>
+        <li>Audit log pentru toate acțiunile sensibile, stocat 5 ani</li>
+        <li>Autentificare în doi factori (2FA) disponibilă pentru toate conturile</li>
+        <li>RBAC granular (Role-Based Access Control)</li>
+        <li>Izolare multi-tenant prin <code>client_id</code> la nivel de framework</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="h">Organizatorice</div>
+      <ul>
+        <li>Acces la date pe principiul „need-to-know”</li>
+        <li>Training GDPR anual obligatoriu pentru tot personalul</li>
+        <li>Politica de parolă forte și schimbare periodică</li>
+        <li>Acord de confidențialitate semnat de toți angajații</li>
+        <li>Plan de continuitate a activității (BCP) și recuperare în caz de dezastru (DRP)</li>
+      </ul>
+    </div>
+
+    <h2 id="sub">5. Sub-procesatori</h2>
+    <p>Folosim un număr minim de sub-procesatori, toți cu sediul / servere în UE:</p>
+    <ul>
+      <li><strong>Hetzner Online GmbH (DE)</strong> — găzduire infrastructură</li>
+      <li><strong>SendGrid (Twilio Ireland)</strong> — email tranzacțional</li>
+      <li><strong>Sentry (DE region)</strong> — monitorizare erori aplicație</li>
+    </ul>
+    <p>Lista completă a sub-procesatorilor și DPA-urile semnate cu fiecare sunt disponibile la cerere.</p>
+
+    <h2 id="transfer">6. Transferuri internaționale</h2>
+    <p>Nu efectuăm transferuri de date personale în afara Spațiului Economic European (SEE). Toate serverele și sub-procesatorii sunt localizați în UE.</p>
+
+    <h2 id="breach">7. Notificare incidente de securitate</h2>
+    <p>În caz de incident de securitate care implică date personale:</p>
+    <ul>
+      <li>Notificăm clientul (în calitate de Operator) în maximum <strong>24 de ore</strong> de la descoperire</li>
+      <li>Furnizăm toate informațiile necesare pentru ca acesta să-și îndeplinească obligația de notificare către ANSPDCP în 72h</li>
+      <li>Cooperăm complet la investigație și măsuri de remediere</li>
+    </ul>
+
+    <h2 id="dpo">8. Responsabilul cu protecția datelor (DPO)</h2>
+    <div class="box">
+      <div class="h">Contact DPO</div>
+      <p>Email: <a href="mailto:dpo@salux.ro">dpo@salux.ro</a><br />
+      Răspundem în maximum 30 de zile la orice solicitare GDPR.</p>
+    </div>
+
+  </article>
+</div></section>
+
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><img src="../assets/salux_logo.png" alt="SALUX" class="brand-logo" /></div>
+      <p class="lede">Sistem informatic pentru salubrizare stradală și deszăpezire.</p>
+    </div>
+    <div><h4>Produs</h4><ul><li><a href="../home-sobru.html#modules">Module</a></li><li><a href="../contact.html">Solicită demo</a></li></ul></div>
+    <div><h4>Resurse</h4><ul><li><a href="../blog.html">Blog</a></li></ul></div>
+    <div><h4>Legal</h4><ul>
+      <li><a href="confidentialitate.html">Confidențialitate</a></li>
+      <li><a href="termeni.html">Termeni</a></li>
+      <li><a href="gdpr.html">GDPR</a></li>
+      <li><a href="eula.html">EULA</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 SALUX</span></div>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Multi-tenant pentru operatori multi-contract — SALUX Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/shared.css" />
+<link rel="stylesheet" href="assets/article.css" />
+</head>
+<body data-screen-label="Article — Multi-tenant">
+
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="index.html" class="nav-logo"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
+    <div class="nav-links">
+      <a href="home-saas.html#modules">Funcționalități</a>
+      <a href="home-saas.html#audience">Pentru cine</a>
+      <a href="home-saas.html#pricing">Licențiere</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost">Autentificare</a>
+      <a href="contact.html" class="btn btn-primary">Solicită demo</a>
+    </div>
+  </div>
+</nav>
+
+<section class="art-hero"><div class="container">
+  <nav class="crumb"><a href="blog.html">← Toate articolele</a></nav>
+  <span class="tag"><span class="dot"></span>Tehnic</span>
+  <h1>De ce un operator multi-contract are nevoie de multi-tenant</h1>
+  <p class="deck">Cum izolezi datele între contracte diferite, de ce nu funcționează „un Excel pe județ” și ce înseamnă <code>client_id</code> pentru securitatea ta.</p>
+  <div class="meta">
+    <span class="avi">CL</span>
+    <span><b>Cristian Lupu</b> · CTO SALUX</span>
+    <span>·</span><span>15 aprilie 2026</span><span>·</span><span>5 min citire</span>
+  </div>
+</div></section>
+
+<section class="art-body"><article class="prose">
+
+<p>Un operator cu 3 contracte într-o țară mică (Cluj, Sibiu, Brașov) și un sistem informatic „cu o instalare pe contract” = 3 baze de date, 3 backup-uri, 3 versiuni de software de sincronizat manual. La 5 contracte, devine ingestionabil.</p>
+
+<p>Soluția corectă se numește <strong>multi-tenant</strong>. Un singur sistem, cu izolare logică strictă între chiriași (tenants). În cazul nostru, fiecare „tenant” = un contract / operator / UAT.</p>
+
+<h2>Cum arată izolarea, tehnic</h2>
+<p>Fiecare tabel operațional din baza de date are o coloană numită <code>client_id</code>. Toate interogările trec printr-un filtru automat care adaugă <code>WHERE client_id = ?</code> la nivel de framework. Niciun query SQL nu poate ieși din contractul utilizatorului autentificat.</p>
+
+<div class="callout green">
+  <div class="h">// În practică</div>
+  Un dispecer din Cluj nu poate vedea o sarcină din Sibiu. Nu pentru că UI-ul ascunde linkul. Pentru că <code>SELECT * FROM tasks WHERE client_id = 'cluj'</code> nu va returna niciodată un rând cu <code>client_id = 'sibiu'</code>.
+</div>
+
+<h2>De ce nu „un Excel pe județ”</h2>
+<p>Trei probleme apar imediat:</p>
+<ol>
+  <li><strong>Nomenclatoarele divergează.</strong> Strada „Mihai Viteazul” are 3 variante de scriere în 3 Excel-uri. Când treci la raportare consolidată, se aprinde infernul.</li>
+  <li><strong>Nu poți raporta consolidat.</strong> Câte coșuri ai golit luna asta, în total? Câte sesizări ai închis? Cu Excel-uri separate, e o săptămână de muncă manuală pentru fiecare întrebare.</li>
+  <li><strong>Drepturile sunt o utopie.</strong> Cine deschide fișierul vede tot. Nu există RBAC pe Excel.</li>
+</ol>
+
+<h2>De ce nu „o instalare pe contract”</h2>
+<p>Aici intervine costul operațional. La fiecare upgrade de software, ai N instalări de actualizat. La fiecare nou regulament, N migrări de făcut. La fiecare incident de securitate, N investigații. Echipa ta tehnică nu va scala niciodată suficient.</p>
+
+<blockquote>
+  Multi-tenant nu e o optimizare. E singura arhitectură care suportă creșterea ta de la 2 la 20 de contracte fără să dublezi echipa tehnică.
+</blockquote>
+
+<h2>Ce mai face un sistem multi-tenant bun</h2>
+<ul>
+  <li><strong>Audit log per tenant.</strong> Cine a făcut ce, când, în ce contract. Stocat 5 ani.</li>
+  <li><strong>Branding per UAT.</strong> Portalul public „Sesizări cetățeni” poate purta logo-ul UAT-ului, nu al operatorului.</li>
+  <li><strong>Indicatori cross-tenant doar pentru admin.</strong> Doar tu, ca operator, vezi „toate contractele mele”. UAT-ul vede doar al lui.</li>
+  <li><strong>Backup &amp; restore selectiv.</strong> Poți restaura un tenant fără să atingi pe ceilalți.</li>
+</ul>
+
+<div class="kpi-inline">
+  <div class="k"><div class="v">1<span class="u">×</span></div><div class="l">o singură instalare</div></div>
+  <div class="k"><div class="v">N<span class="u">×</span></div><div class="l">contracte izolate</div></div>
+  <div class="k"><div class="v">0<span class="u">×</span></div><div class="l">scurgere între tenanți</div></div>
+</div>
+
+<h2>Pe scurt</h2>
+<p>Dacă operezi un singur contract pentru tot restul vieții, multi-tenant nu te ajută. Dacă vrei să poți câștiga al doilea contract fără să refaci sistemul de la zero, e singura arhitectură care merge. SALUX e multi-tenant de la fundație — nu adăugat ulterior.</p>
+
+</article></section>
+
+<section class="art-cta"><div class="container"><div class="grid">
+  <div>
+    <h2>Vrei să vezi cum arată dashboard-ul tău cu 3 contracte simultane?</h2>
+    <p>30 de minute. Îți arătăm pe datele tale.</p>
+  </div>
+  <a href="contact.html" class="btn btn-primary btn-lg">Programează demo →</a>
+</div></div></section>
+
+<section class="related"><div class="container">
+  <h4>Continuă lectura</h4>
+  <div class="related-grid">
+    <a href="article-srs.html" class="rel-card">
+      <div class="meta">04 MAI 2026 · 8 MIN</div>
+      <h5>SRS 6705/2008 explicat: indicatori lunari</h5>
+      <p>Cei 6 indicatori obligatorii pe care orice operator îi raportează lunar.</p>
+    </a>
+    <a href="article-deszapezire.html" class="rel-card">
+      <div class="meta">22 APR 2026 · 6 MIN</div>
+      <h5>Sezonul de deszăpezire: 7 lucruri care te apără</h5>
+      <p>Documentația minimă pe care orice operator ar trebui să o aibă pregătită.</p>
+    </a>
+    <a href="blog.html" class="rel-card">
+      <div class="meta">TOATE</div>
+      <h5>Vezi toate articolele</h5>
+      <p>Note practice pentru operatori și UAT-uri.</p>
+    </a>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></div>
+      <p class="lede">Sistem informatic pentru salubrizare stradală și deszăpezire.</p>
+    </div>
+    <div><h4>Produs</h4><ul><li><a href="home-sobru.html#modules">Module</a></li><li><a href="contact.html">Solicită demo</a></li></ul></div>
+    <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li></ul></div>
+    <div><h4>Legal</h4><ul><li><a href="legal/confidentialitate.html">Confidențialitate</a></li><li><a href="legal/gdpr.html">GDPR</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 SALUX</span></div>
+</div></footer>
+
+</body>
+</html>

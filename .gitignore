@@ -1,7 +1,2 @@
-node_modules/
-.next/
-out/
-dist/
-.env.local
-.env.production
-.gstack/
+.DS_Store
+*.log

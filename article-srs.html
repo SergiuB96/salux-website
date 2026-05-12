@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SRS 6705/2008 explicat: indicatori lunari — SALUX Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/shared.css" />
+<link rel="stylesheet" href="assets/article.css" />
+</head>
+<body data-screen-label="Article — SRS 6705">
+
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="index.html" class="nav-logo"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
+    <div class="nav-links">
+      <a href="home-saas.html#modules">Funcționalități</a>
+      <a href="home-saas.html#audience">Pentru cine</a>
+      <a href="home-saas.html#pricing">Licențiere</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost">Autentificare</a>
+      <a href="contact.html" class="btn btn-primary">Solicită demo</a>
+    </div>
+  </div>
+</nav>
+
+<section class="art-hero">
+  <div class="container">
+    <nav class="crumb"><a href="blog.html">← Toate articolele</a></nav>
+    <span class="tag"><span class="dot"></span>Conformitate</span>
+    <h1>SRS 6705/2008 explicat: ce indicatori trebuie să raportezi lunar</h1>
+    <p class="deck">Ghidul complet al indicatorilor de calitate pentru salubrizare stradală — cum se calculează, cine îi controlează și ce ai voie să automatizezi.</p>
+    <div class="meta">
+      <span class="avi">MR</span>
+      <span><b>Mihai Rusu</b> · Co-fondator SALUX</span>
+      <span>·</span>
+      <span>04 mai 2026</span>
+      <span>·</span>
+      <span>8 min citire</span>
+    </div>
+  </div>
+</section>
+
+<section class="art-body">
+  <article class="prose">
+
+    <p>Dacă operezi un contract de salubrizare stradală în România, există o singură întrebare care contează la sfârșitul lunii: <em>poți demonstra ce ai făcut?</em> SRS 6705/2008 — standardul român pentru servicii de salubrizare a localităților — îți spune exact ce trebuie să demonstrezi.</p>
+
+    <p>În următoarele 8 minute, parcurgem împreună indicatorii pe care orice operator e obligat să-i raporteze, plus partea pe care 9 din 10 echipe o gestionează manual și pe care un sistem informatic o poate genera automat.</p>
+
+    <h2>Ce este, de fapt, SRS 6705/2008</h2>
+    <p>Pe scurt: standardul stabilește cerințele de calitate, frecvențele minime și metodele de verificare pentru toate activitățile de salubrizare urbană — măturat manual și mecanic, spălare carosabil, golire coșuri stradale, deszăpezire. Conține și formulele de calcul pentru indicatorii de performanță pe care UAT-ul îi verifică lunar.</p>
+
+    <div class="callout green">
+      <div class="h">De reținut</div>
+      Standardul nu e opțional. Caietul de sarcini al oricărui contract public de salubrizare îl invocă explicit. Lipsa raportării conforme = motiv de penalizare contractuală.
+    </div>
+
+    <h2>Cei 6 indicatori obligatorii</h2>
+
+    <h3>1. Gradul de execuție a programului (GEP)</h3>
+    <p>Raportul dintre sarcinile executate și cele planificate, exprimat procentual. UAT-ul îl vrea peste 95% lunar. Sub 90% se consideră eșec contractual.</p>
+    <p><code>GEP = (sarcini_executate / sarcini_planificate) × 100</code></p>
+
+    <h3>2. Suprafața măturată / spălată (mp)</h3>
+    <p>Cumulat lunar, defalcat pe străzi și pe tipul de operațiune (manual / mecanic). Trebuie corelat cu nomenclatorul oficial al UAT-ului — nu cu „lista noastră internă”.</p>
+
+    <h3>3. Numărul de coșuri golite</h3>
+    <p>Pe sector și pe zi. La fiecare golire, sistemul trebuie să rețină momentul (timestamp) și poziția (GPS sau confirmare manuală). Auto-confirmările bulk sunt o invitație la contestație.</p>
+
+    <h3>4. Timpul mediu de răspuns la sesizări</h3>
+    <p>De la primirea unei sesizări de la cetățean până la închiderea ei. Caietele moderne cer SLA &lt; 48h pentru sesizări obișnuite și &lt; 4h pentru urgențe (animale moarte, deversări).</p>
+
+    <h3>5. Cantitatea de deșeuri colectate (t / m³)</h3>
+    <p>Doar pentru activitățile care includ și ridicarea deșeurilor stradale — măturat mecanic cu aspirație, golire coșuri. Se exprimă la cântar, nu „estimat”.</p>
+
+    <h3>6. Intervențiile de deszăpezire</h3>
+    <p>Număr de intervenții, timp de acțiune, materiale antiderapante consumate (kg sare / tonă nisip). Corelat cu codul meteo în vigoare.</p>
+
+    <div class="kpi-inline">
+      <div class="k"><div class="v">6<span class="u">/lună</span></div><div class="l">indicatori obligatorii minim</div></div>
+      <div class="k"><div class="v">≥95<span class="u">%</span></div><div class="l">prag tipic GEP în caiete</div></div>
+      <div class="k"><div class="v">48<span class="u">h</span></div><div class="l">SLA standard sesizare</div></div>
+    </div>
+
+    <h2>Ce poți automatiza (și ce nu)</h2>
+
+    <p>Cei trei piloni — <strong>nomenclator</strong>, <strong>execuție pe teren</strong>, <strong>raportare</strong> — pot fi complet digitalizați. Ce nu poate fi automatizat este <em>decizia operațională</em>: ce echipă trimiți, ce frecvență aplici, cum reacționezi la o sesizare urgentă. Acelea rămân umane.</p>
+
+    <p>În practică, un sistem informatic acoperă:</p>
+    <ul>
+      <li>Generarea programului lunar din nomenclator + norme + frecvențe (în 30 de secunde, nu 3 zile)</li>
+      <li>Confirmarea execuției prin app mobil cu GPS + foto-doveadă</li>
+      <li>Calculul automat al celor 6 indicatori, agregați pe sector și pe lună</li>
+      <li>Generarea fișierului PDF / Excel pentru UAT, cu toate datele primare atașate</li>
+    </ul>
+
+    <h2>Cea mai frecventă greșeală</h2>
+    <p>Operatorii care lucrează pe Excel raportează <em>totaluri</em> către UAT — „am măturat 142.000 mp luna asta”. Asta funcționează până la prima contestație. Când inspectorul cere „arătați-mi ce s-a măturat pe Bd. Magheru pe data de 14”, începe panica.</p>
+
+    <blockquote>
+      Trasabilitatea nu se adaugă la sfârșitul lunii. Se construiește la sursă, pe teren, când șeful de echipă apasă butonul „Finalizat”.
+    </blockquote>
+
+    <p>Cu un sistem care înregistrează la nivel de sarcină individuală, contestațiile se închid în 2 click-uri: vezi sarcina, vezi GPS-ul utilajului, vezi foto-doveada. Inspector mulțumit, operator liniștit.</p>
+
+    <h2>Pe scurt</h2>
+    <p>SRS 6705 nu e birocrație suplimentară. E modul în care UAT-ul îți spune <em>„dovedește-mi că meriți banii din contract”</em>. Cu evidențe corecte de la sursă, indicatorii se calculează singuri, iar raportul lunar se generează la un click.</p>
+
+  </article>
+</section>
+
+<section class="art-cta">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>Vezi cum SALUX generează raportul SRS pe contractul tău.</h2>
+        <p>30 de minute. Te ascultăm, apoi îți arătăm platforma pe datele tale.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-lg">Programează demo →</a>
+    </div>
+  </div>
+</section>
+
+<section class="related">
+  <div class="container">
+    <h4>Continuă lectura</h4>
+    <div class="related-grid">
+      <a href="article-deszapezire.html" class="rel-card">
+        <div class="meta">22 APR 2026 · 6 MIN</div>
+        <h5>Sezonul de deszăpezire: 7 lucruri care te apără în fața UAT-ului</h5>
+        <p>Documentația minimă pe care orice operator ar trebui să o aibă pregătită înainte de prima ninsoare.</p>
+      </a>
+      <a href="article-multi-tenant.html" class="rel-card">
+        <div class="meta">15 APR 2026 · 5 MIN</div>
+        <h5>De ce un operator multi-contract are nevoie de multi-tenant</h5>
+        <p>Cum izolăm datele între contracte diferite și ce înseamnă <code>client_id</code> pentru securitatea ta.</p>
+      </a>
+      <a href="blog.html" class="rel-card">
+        <div class="meta">TOATE ARTICOLELE</div>
+        <h5>Vezi toate articolele</h5>
+        <p>Note practice pentru operatori și UAT-uri.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></div>
+        <p class="lede">Sistem informatic pentru gestiunea și raportarea serviciilor de salubrizare stradală și deszăpezire în România.</p>
+      </div>
+      <div><h4>Produs</h4><ul>
+        <li><a href="home-sobru.html#modules">Module</a></li>
+        <li><a href="contact.html">Solicită demo</a></li>
+      </ul></div>
+      <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="legal/confidentialitate.html">Confidențialitate</a></li>
+        <li><a href="legal/gdpr.html">GDPR</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SALUX</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

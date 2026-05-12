@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SALUX — Blog</title>
+<meta name="description" content="Articole pentru operatori privați de salubrizare și UAT-uri. Conformitate SRS, raportare, deszăpezire, digitalizare." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/shared.css" />
+<style>
+body { background: #FBFBF9; }
+
+.blog-hero { padding: 80px 0 30px; border-bottom: 1px solid var(--line); background: white; }
+.blog-hero h1 { font-size: clamp(40px, 5.5vw, 60px); max-width: 760px; }
+.blog-hero .lede { font-size: 18px; color: var(--muted); margin-top: 20px; max-width: 600px; line-height: 1.6; }
+.blog-hero .filters { display: flex; gap: 8px; margin-top: 32px; flex-wrap: wrap; }
+.blog-hero .filters a { padding: 8px 16px; border-radius: 999px; font-size: 14px; color: var(--muted); border: 1px solid var(--line); }
+.blog-hero .filters a.active, .blog-hero .filters a:hover { background: var(--ink); color: white; border-color: var(--ink); }
+
+.featured { padding: 60px 0 30px; }
+.featured-card {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center;
+  background: white; border: 1px solid var(--line);
+  border-radius: var(--radius-xl); overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.featured-cover {
+  height: 100%; min-height: 320px; max-height: 480px;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, rgba(11,24,41,.04) 14px 15px),
+    linear-gradient(180deg, var(--primary-50), var(--accent-50));
+  position: relative; overflow: hidden;
+  font-family: var(--font-mono); color: var(--muted-2); font-size: 12px; letter-spacing: .04em;
+}
+.featured-cover image-slot { position: absolute; inset: 0; display: block; }
+.featured-cover .badge {
+  position: absolute; top: 22px; left: 22px;
+  background: white; padding: 6px 12px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; color: var(--primary-700);
+}
+.featured-text { padding: 50px 50px 50px 0; }
+.featured-text .meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted-2); display: flex; gap: 14px; margin-bottom: 18px; }
+.featured-text h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1; margin-bottom: 18px; }
+.featured-text p { font-size: 16.5px; line-height: 1.6; margin-bottom: 28px; }
+.featured-text .author { display: flex; align-items: center; gap: 12px; padding-top: 22px; border-top: 1px solid var(--line); margin-top: 22px; }
+.featured-text .author .avi {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent)); color: white;
+  display: grid; place-items: center; font-weight: 700; font-size: 14px;
+}
+.featured-text .author .name { font-weight: 600; color: var(--ink); font-size: 14px; }
+.featured-text .author .role { color: var(--muted); font-size: 13px; }
+
+.posts { padding: 40px 0 100px; }
+.posts-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+}
+.post {
+  background: white; border: 1px solid var(--line);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: all .2s;
+  display: flex; flex-direction: column;
+}
+.post:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+.post .cover {
+  aspect-ratio: 16/9;
+  display: grid; place-items: center;
+  font-family: var(--font-mono); color: rgba(255,255,255,.6); font-size: 11px;
+  position: relative;
+}
+.post.c1 .cover { background: linear-gradient(135deg, #0B1829, #1E3A5F); }
+.post.c2 .cover { background: linear-gradient(135deg, #3F9A6C, #5BB286); }
+.post.c3 .cover { background: linear-gradient(135deg, #2A5BA7, #3B72C4); }
+.post.c4 .cover { background: linear-gradient(135deg, #B45309, #D97706); }
+.post.c5 .cover { background: linear-gradient(135deg, #1E3A5F, #3F9A6C); }
+.post.c6 .cover { background: linear-gradient(135deg, #5A6B82, #0B1829); }
+.post .cover .tag {
+  position: absolute; top: 16px; left: 16px;
+  background: rgba(255,255,255,.92); color: var(--ink);
+  padding: 4px 10px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 600;
+  font-family: var(--font-sans); letter-spacing: 0;
+}
+.post .body { padding: 26px; flex: 1; display: flex; flex-direction: column; }
+.post .meta { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted-2); display: flex; gap: 12px; margin-bottom: 12px; }
+.post h3 { font-size: 19px; line-height: 1.25; margin-bottom: 12px; }
+.post p { font-size: 14px; line-height: 1.55; color: var(--muted); flex: 1; margin-bottom: 18px; }
+.post .read { font-size: 13.5px; color: var(--accent); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+
+.newsletter {
+  background: var(--ink); color: white;
+  padding: 70px 0; margin-top: 60px;
+}
+.news-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.news-grid h2 { color: white; font-size: 32px; line-height: 1.15; max-width: 560px; }
+.news-grid p { color: rgba(255,255,255,.7); margin-top: 12px; max-width: 520px; line-height: 1.6; }
+.news-form { display: flex; gap: 10px; align-items: center; }
+.news-form input {
+  padding: 14px 18px; border-radius: 999px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+  color: white; font-family: inherit; font-size: 15px;
+  min-width: 300px;
+}
+.news-form input::placeholder { color: rgba(255,255,255,.45); }
+
+@media (max-width: 920px) {
+  .featured-card { grid-template-columns: 1fr; }
+  .featured-text { padding: 36px; }
+  .posts-grid { grid-template-columns: 1fr 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+  .news-form input { min-width: 0; flex: 1; }
+}
+@media (max-width: 600px) { .posts-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-screen-label="Blog index">
+
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="index.html" class="nav-logo"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
+    <div class="nav-links">
+      <a href="home-saas.html#modules">Funcționalități</a>
+      <a href="home-saas.html#audience">Pentru cine</a>
+      <a href="home-saas.html#pricing">Licențiere</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost">Autentificare</a>
+      <a href="contact.html" class="btn btn-primary">Solicită demo</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>Blog SALUX</span>
+    <h1 style="margin-top: 18px;">Note practice pentru operatori și UAT-uri.</h1>
+    <p class="lede">Cum se digitalizează corect un contract de salubrizare stradală. Ce cere SRS-ul, ce vrea UAT-ul, ce ajută echipa de teren.</p>
+    <div class="filters">
+      <a href="#" class="active">Toate</a>
+      <a href="#">Conformitate</a>
+      <a href="#">Operațional</a>
+      <a href="#">Deszăpezire</a>
+      <a href="#">Cetățeni</a>
+      <a href="#">Studii de caz</a>
+      <a href="#">Tehnic</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <div class="featured-card">
+      <div class="featured-cover">
+        <image-slot id="case-study-cover" placeholder="Foto studiu de caz: oraș Cluj"></image-slot>
+        <span class="badge">Studiu de caz</span>
+      </div>
+      <div class="featured-text">
+        <div class="meta">
+          <span>STUDIU DE CAZ</span>
+          <span>·</span>
+          <span>12 min citire</span>
+          <span>·</span>
+          <span>04 mai 2026</span>
+        </div>
+        <h2>Cum a redus un operator din Cluj timpul de raportare lunară de la 14 la 3 zile</h2>
+        <p>După patru luni de SALUX, echipa operațională a renunțat la 9 fișiere Excel paralele și a generat prima situație de plată în 3 zile lucrătoare. Iată ce s-a schimbat și ce nu a fost ușor.</p>
+        <a href="article-srs.html" class="btn btn-primary">Citește studiul →</a>
+        <div class="author">
+          <div class="avi">MR</div>
+          <div>
+            <div class="name">Mihai Rusu</div>
+            <div class="role">Co-fondator SALUX · 04 mai 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="container">
+    <div class="posts-grid">
+
+      <a href="article-srs.html" class="post c1">
+        <div class="cover"><span class="tag">Conformitate</span>[ SRS · indicatori ]</div>
+        <div class="body">
+          <div class="meta"><span>04 MAI 2026</span><span>·</span><span>8 min</span></div>
+          <h3>SRS 6705/2008 explicat: ce indicatori trebuie să raportezi lunar</h3>
+          <p>Ghidul complet al indicatorilor de calitate pentru salubrizare stradală — cum se calculează, cine îi controlează și ce ai voie să automatizezi.</p>
+          <span class="read">Citește articolul →</span>
+        </div>
+      </a>
+
+      <a href="article-deszapezire.html" class="post c2">
+        <div class="cover"><span class="tag">Deszăpezire</span>[ meteo · interv ]</div>
+        <div class="body">
+          <div class="meta"><span>22 APR 2026</span><span>·</span><span>6 min</span></div>
+          <h3>Sezonul de deszăpezire: 7 lucruri care te apără în fața UAT-ului</h3>
+          <p>Documentația minimă pe care orice operator ar trebui să o aibă pregătită înainte de prima ninsoare — și ce evidențe digitale fac diferența la decont.</p>
+          <span class="read">Citește articolul →</span>
+        </div>
+      </a>
+
+      <a href="article-multi-tenant.html" class="post c3">
+        <div class="cover"><span class="tag">Tehnic</span>[ tenant · client_id ]</div>
+        <div class="body">
+          <div class="meta"><span>15 APR 2026</span><span>·</span><span>5 min</span></div>
+          <h3>De ce un operator multi-contract are nevoie de multi-tenant</h3>
+          <p>Cum izolăm datele între contracte diferite, de ce nu funcționează „un Excel pe județ” și ce înseamnă <code>client_id</code> pentru securitatea ta.</p>
+          <span class="read">Citește articolul →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post c4">
+        <div class="cover"><span class="tag">Operațional</span>[ programare · norme ]</div>
+        <div class="body">
+          <div class="meta"><span>02 APR 2026</span><span>·</span><span>7 min</span></div>
+          <h3>Cum construiești un program lunar pe care nu îl mai contestă nimeni</h3>
+          <p>De la nomenclatorul de străzi la norma de muncă, pas cu pas. Cele 4 greșeli care generează 80% dintre contestațiile UAT.</p>
+          <span class="read">Citește articolul →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post c5">
+        <div class="cover"><span class="tag">Cetățeni</span>[ sesizare · SLA ]</div>
+        <div class="body">
+          <div class="meta"><span>21 MAR 2026</span><span>·</span><span>4 min</span></div>
+          <h3>Sesizările cetățenilor: din sursă de stres, în date utile</h3>
+          <p>O sesizare nu e o reclamație. E un semnal. Cum o transformi într-o sarcină verificabilă, cu SLA și foto-confirmare.</p>
+          <span class="read">Citește articolul →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post c6">
+        <div class="cover"><span class="tag">Tehnic</span>[ GDPR · audit ]</div>
+        <div class="body">
+          <div class="meta"><span>14 MAR 2026</span><span>·</span><span>9 min</span></div>
+          <h3>GDPR pentru un sistem de salubrizare: ce date colectezi și de ce</h3>
+          <p>Poziții GPS, foto-doveadă, datele angajaților, sesizările cetățenilor. Ce e bază legală, ce e consimțământ, ce nu ai voie să stochezi.</p>
+          <span class="read">Citește articolul →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container news-grid">
+    <div>
+      <h2>Un email pe lună. Câte un lucru util.</h2>
+      <p>Schimbări legislative, șabloane de raportare, lecții din implementări reale. Fără spam, dezabonare cu un click.</p>
+    </div>
+    <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='✓ Te-ai abonat'">
+      <input type="email" placeholder="adresa@primaria.ro" required />
+      <button class="btn btn-accent btn-lg">Abonează-mă</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></div>
+        <p class="lede">Sistem informatic pentru gestiunea și raportarea serviciilor de salubrizare stradală și deszăpezire în România.</p>
+        <p class="lede" style="margin-top: 12px;"><a href="mailto:office@salux.ro">office@salux.ro</a></p>
+      </div>
+      <div><h4>Produs</h4><ul>
+        <li><a href="home-sobru.html#modules">Funcționalități</a></li>
+        <li><a href="home-sobru.html#operators">Pentru operatori</a></li>
+        <li><a href="contact.html">Solicită demo</a></li>
+      </ul></div>
+      <div><h4>Resurse</h4><ul>
+        <li><a href="blog.html">Blog</a></li>
+        
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="legal/confidentialitate.html">Confidențialitate</a></li>
+        <li><a href="legal/termeni.html">Termeni</a></li>
+        <li><a href="legal/gdpr.html">GDPR</a></li>
+        <li><a href="legal/eula.html">EULA</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SALUX</span>
+      <span>Orașe curate. Comunități sănătoase.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/image-slot.js"></script>
+</body>
+</html>

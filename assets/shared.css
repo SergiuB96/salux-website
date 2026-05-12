@@ -1,0 +1,162 @@
+/* SALUX — shared design tokens (LIGHT theme, keeping the brand palette) */
+:root {
+  /* Brand palette — kept from existing template */
+  --primary: #7DC8A0;          /* soft green — accent of growth/cleanliness */
+  --primary-600: #5BB286;
+  --primary-700: #3F9A6C;
+  --primary-50:  #EAF6F0;
+  --accent: #3B72C4;            /* trustworthy blue — institutional */
+  --accent-600: #2A5BA7;
+  --accent-50:  #ECF2FB;
+
+  /* Light surface system, warm-neutral — friendly for public sector */
+  --bg: #F7F8FA;
+  --bg-alt: #EEF1F5;
+  --surface: #FFFFFF;
+  --ink: #0B1829;               /* deep navy, from template family */
+  --ink-2: #1E3A5F;
+  --muted: #5A6B82;
+  --muted-2: #8A98AE;
+  --line: #E3E8EF;
+  --line-strong: #CFD7E3;
+
+  /* Type */
+  --font-sans: "Inter Tight", "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-display: "Inter Tight", "Geist", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(11,24,41,.04), 0 1px 1px rgba(11,24,41,.04);
+  --shadow-md: 0 4px 12px rgba(11,24,41,.06), 0 2px 4px rgba(11,24,41,.04);
+  --shadow-lg: 0 20px 40px -12px rgba(11,24,41,.12), 0 8px 16px rgba(11,24,41,.05);
+}
+
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; }
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.container-narrow { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+
+/* ====== NAV ====== */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-row { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+.nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -.01em; font-size: 19px; color: var(--ink); }
+.nav-logo .mark {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  display: grid; place-items: center; color: white; font-weight: 800; font-size: 14px;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.08);
+}
+.nav-logo .brand-logo { height: 30px; width: auto; display: block; }
+.nav-logo span { display: none; }
+.footer-brand .brand-logo { height: 26px; width: auto; display: block; filter: brightness(0) invert(1) opacity(.95); }
+.footer-brand span { display: none; }
+.nav-links { display: flex; gap: 4px; align-items: center; }
+.nav-links a { padding: 9px 14px; border-radius: 999px; color: var(--muted); font-size: 14.5px; font-weight: 500; transition: all .15s; }
+.nav-links a:hover { color: var(--ink); background: var(--bg-alt); }
+.nav-cta { display: flex; gap: 10px; align-items: center; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+}
+
+/* ====== BUTTONS ====== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 20px; border-radius: 999px;
+  font-weight: 600; font-size: 14.5px; line-height: 1;
+  border: 1px solid transparent;
+  transition: all .15s ease; cursor: pointer; font-family: inherit;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--ink); color: white; }
+.btn-primary:hover { background: var(--ink-2); transform: translateY(-1px); }
+.btn-accent { background: var(--accent); color: white; }
+.btn-accent:hover { background: var(--accent-600); transform: translateY(-1px); }
+.btn-green  { background: var(--primary-700); color: white; }
+.btn-green:hover { background: var(--primary-700); filter: brightness(1.06); }
+.btn-outline { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.btn-outline:hover { background: var(--bg-alt); border-color: var(--ink); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-ghost:hover { background: var(--bg-alt); }
+.btn-lg { padding: 14px 24px; font-size: 15.5px; }
+
+/* ====== TYPE ====== */
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); margin: 0; letter-spacing: -.02em; }
+h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.02; font-weight: 700; }
+h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.08; font-weight: 700; }
+h3 { font-size: 20px; line-height: 1.3; font-weight: 600; letter-spacing: -.01em; }
+p  { margin: 0; color: var(--muted); }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--primary-50); color: var(--primary-700);
+  font-size: 12.5px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase;
+}
+.eyebrow.accent { background: var(--accent-50); color: var(--accent-600); }
+.eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+/* ====== FOOTER ====== */
+.footer {
+  background: var(--ink); color: rgba(255,255,255,.7);
+  padding: 70px 0 28px;
+}
+.footer h4 { color: white; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.footer a { color: rgba(255,255,255,.7); font-size: 14px; }
+.footer a:hover { color: white; }
+.footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+.footer-bottom { padding-top: 26px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,.55); }
+.footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; color: white; font-weight: 700; font-size: 19px; }
+.footer-brand .mark { width: 32px; height: 32px; border-radius: 9px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); display: grid; place-items: center; color: white; font-weight: 800; font-size: 14px; }
+.footer p.lede { color: rgba(255,255,255,.55); font-size: 14px; max-width: 280px; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+}
+
+/* ====== UTILS ====== */
+.section { padding: 96px 0; }
+.section-tight { padding: 60px 0; }
+.grid { display: grid; gap: 20px; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px; border-radius: 999px;
+  background: var(--bg-alt); color: var(--ink-2);
+  font-size: 12px; font-weight: 500;
+  border: 1px solid var(--line);
+}
+
+/* Variation switcher banner */
+.var-switcher {
+  position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: white; border-radius: 999px;
+  padding: 5px; display: flex; gap: 2px; z-index: 100;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  font-size: 13px;
+}
+.var-switcher a { padding: 8px 14px; border-radius: 999px; color: rgba(255,255,255,.65); font-weight: 500; transition: all .15s; }
+.var-switcher a:hover { color: white; }
+.var-switcher a.active { background: white; color: var(--ink); font-weight: 600; }
