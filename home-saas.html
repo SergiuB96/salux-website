@@ -4,795 +4,773 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SALUX — Salubrizare stradală, simplificată</title>
+<meta name="description" content="Platforma SaaS pentru operatori privați de salubrizare și UAT-uri. Program lunar, raportare GPS, situații de plată automate, conform SRS." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/shared.css" />
 <style>
-/* VARIATION B — MODERN SaaS — airy, gradient hero, big rounded cards */
-body { background: #FFFFFF; }
+/* ==============================================================
+   SALUX — Varianta SaaS (light, modern product)
+   ============================================================== */
 
-.trust-strip { padding: 32px 0; background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.trust-strip .row { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
-.trust-strip .label { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted-2); font-weight: 600; }
-.trust-strip .badges { display: flex; gap: 32px; flex-wrap: wrap; }
-.trust-strip .badge { display: flex; align-items: center; gap: 10px; color: var(--ink-2); font-weight: 600; font-size: 14px; opacity: .8; }
-.trust-strip .badge svg { width: 20px; height: 20px; color: var(--primary-700); }
+body { background: #FBFBF9; }
 
-.problem-b { background: var(--bg); }
-.problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.problem-card { background: white; padding: 36px 30px; border-radius: var(--radius-lg); border: 1px solid var(--line); }
-.problem-card .num { font-family: var(--font-mono); font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 18px; letter-spacing: .06em; }
-.problem-card h3 { font-size: 19px; margin-bottom: 10px; letter-spacing: -.01em; }
-.problem-card p { font-size: 14.5px; line-height: 1.6; color: var(--muted); }
-
-.flow-b { background: var(--bg-alt); }
-.flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
-.flow-step { position: relative; padding: 0 22px; }
-.flow-step::after { content: "→"; position: absolute; right: -10px; top: 26px; color: var(--muted-2); font-size: 22px; font-family: var(--font-mono); }
-.flow-step:last-child::after { display: none; }
-.flow-step .stamp { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--primary-700); background: var(--primary-50); padding: 5px 10px; border-radius: 6px; margin-bottom: 16px; letter-spacing: .04em; }
-.flow-step h3 { font-size: 19px; margin-bottom: 8px; letter-spacing: -.01em; }
-.flow-step p { font-size: 14px; line-height: 1.6; color: var(--muted); }
-.flow-step .out { margin-top: 16px; padding: 14px; background: white; border: 1px solid var(--line); border-radius: 10px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-2); line-height: 1.6; }
-.flow-step .out b { color: var(--primary-700); font-weight: 500; }
-
-.feat-detail { background: white; }
-.feat-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid var(--line); }
-.feat-row { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
-.feat-row:nth-child(odd) { padding-right: 28px; border-right: 1px solid var(--line); }
-.feat-row:nth-child(even) { padding-left: 28px; }
-.feat-row .n { font-family: var(--font-mono); color: var(--muted-2); font-size: 12px; letter-spacing: .05em; padding-top: 2px; }
-.feat-row h3 { font-size: 16px; margin-bottom: 4px; letter-spacing: -.01em; }
-.feat-row p { font-size: 13.5px; line-height: 1.55; color: var(--muted); }
-
-@media (max-width: 900px) {
-  .problem-grid { grid-template-columns: 1fr; }
-  .flow-grid { grid-template-columns: 1fr 1fr; gap: 28px 0; }
-  .flow-step::after { display: none; }
-  .feat-list { grid-template-columns: 1fr; }
-  .feat-row:nth-child(odd) { border-right: none; padding-right: 0; }
-  .feat-row:nth-child(even) { padding-left: 0; }
-}
-
-.hero-b {
-  position: relative; padding: 80px 0 120px; overflow: hidden;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(125,200,160,.18), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(59,114,196,.12), transparent 60%),
-    linear-gradient(180deg, #F7FAFC 0%, #FFFFFF 100%);
-}
-.hero-b .center { text-align: center; max-width: 880px; margin: 0 auto; }
-.hero-b h1 { font-size: clamp(44px, 6.5vw, 78px); margin: 28px 0; }
-.hero-b h1 .grad {
-  background: linear-gradient(120deg, var(--primary-700) 0%, var(--accent) 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.hero-b .lede { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 auto 40px; line-height: 1.55; }
-.hero-b .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 60px; }
-
-.hero-shapes { position: relative; max-width: 1080px; margin: 0 auto; aspect-ratio: 16/9; }
-.hero-shapes .surface {
-  position: absolute; inset: 0; background: white; border-radius: 24px;
-  box-shadow: 0 30px 80px -20px rgba(11,24,41,.18), 0 10px 30px rgba(11,24,41,.06);
-  overflow: hidden; border: 1px solid var(--line);
-}
-.hero-shapes .surface .hdr { padding: 14px 20px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 12px; background: #FAFBFC; }
-.hero-shapes .dots { display: flex; gap: 6px; }
-.hero-shapes .dots span { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
-.hero-shapes .hdr .crumb { font-family: var(--font-mono); font-size: 12px; color: var(--muted-2); margin-left: auto; }
-.hero-shapes .surface .grid {
-  display: grid; grid-template-columns: 200px 1fr; height: calc(100% - 51px);
-}
-.hero-shapes .side { background: #F9FAFB; border-right: 1px solid var(--line); padding: 20px 16px; display: flex; flex-direction: column; gap: 6px; }
-.hero-shapes .side .li { padding: 8px 12px; border-radius: 8px; font-size: 13px; color: var(--muted); }
-.hero-shapes .side .li.act { background: var(--primary-50); color: var(--primary-700); font-weight: 600; }
-.hero-shapes .pane { padding: 24px; display: grid; gap: 16px; grid-template-rows: auto 1fr; }
-.hero-shapes .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.hero-shapes .k { padding: 14px; background: #F9FAFB; border-radius: 12px; }
-.hero-shapes .k .v { font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: -.02em; }
-.hero-shapes .k .l { font-size: 11px; color: var(--muted); margin-top: 2px; }
-.hero-shapes .chart { background: #F9FAFB; border-radius: 12px; padding: 16px; display: flex; align-items: end; gap: 8px; }
-.hero-shapes .chart .b { flex: 1; background: var(--primary); border-radius: 4px 4px 0 0; opacity: .85; }
-.hero-shapes .chart .b.alt { background: var(--accent); }
-
-/* floating badges around the surface */
-.float-badge {
-  position: absolute; background: white; padding: 14px 18px;
-  border-radius: 14px; box-shadow: 0 14px 40px rgba(11,24,41,.12);
-  border: 1px solid var(--line); display: flex; align-items: center; gap: 12px;
-  font-size: 13px;
-}
-.float-badge .dot { width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; }
-.fb-1 { top: -28px; left: -28px; }
-.fb-1 .dot { background: var(--primary-50); color: var(--primary-700); }
-.fb-2 { bottom: 30px; right: -32px; }
-.fb-2 .dot { background: var(--accent-50); color: var(--accent); }
-.fb-3 { top: 40%; left: -50px; }
-.fb-3 .dot { background: #FEF3C7; color: #B45309; }
-
-/* SaaS metric row */
-.metric-row { background: white; }
-.metric-row .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 50px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.metric-row .m .v { font-size: 38px; font-weight: 700; color: var(--ink); letter-spacing: -.025em; line-height: 1; }
-.metric-row .m .v .u { font-size: 22px; color: var(--primary-700); }
-.metric-row .m .l { font-size: 14px; color: var(--muted); margin-top: 8px; }
-
-/* big section heads */
-.s-head { max-width: 720px; margin: 0 auto 64px; text-align: center; }
-.s-head h2 { margin: 16px 0 16px; font-size: clamp(34px, 4.5vw, 52px); }
-.s-head p { font-size: 19px; color: var(--muted); }
-
-/* Solution — feature blocks (large, rounded, bold visual) */
-.s-block { background: var(--bg); }
-.feat-blocks { display: grid; gap: 24px; }
-.feat-block {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-  background: white; padding: 60px; border-radius: var(--radius-xl);
-  border: 1px solid var(--line);
-}
-.feat-block.rev { direction: rtl; }
-.feat-block.rev > * { direction: ltr; }
-.feat-block h3 { font-size: 32px; margin-bottom: 16px; letter-spacing: -.02em; }
-.feat-block p { font-size: 17px; line-height: 1.6; margin-bottom: 24px; }
-.feat-block .bullets { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 10px; }
-.feat-block .bullets li { display: flex; gap: 10px; font-size: 14.5px; color: var(--ink-2); }
-.feat-block .bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); margin-top: 9px; flex-shrink: 0; }
-.feat-block .visual {
-  aspect-ratio: 4/3; border-radius: var(--radius-lg); padding: 28px;
-  display: grid; align-content: center; gap: 12px; position: relative; overflow: hidden;
-}
-.feat-block .visual.v-green { background: linear-gradient(135deg, #EAF6F0 0%, #D6EDE1 100%); }
-.feat-block .visual.v-blue  { background: linear-gradient(135deg, #ECF2FB 0%, #D6E3F5 100%); }
-.feat-block .visual.v-ink   { background: linear-gradient(135deg, #0B1829 0%, #1E3A5F 100%); color: white; }
-
-.tag { display: inline-flex; padding: 4px 10px; font-size: 12px; font-weight: 600; border-radius: 999px; background: white; color: var(--ink-2); margin-bottom: 12px; align-self: start; width: fit-content; }
-
-/* Visual mocks */
-.mock-cal { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 10px 30px rgba(11,24,41,.06); display: grid; gap: 10px; }
-.mock-cal .row { display: grid; grid-template-columns: 60px 1fr 80px; gap: 12px; align-items: center; font-size: 12px; }
-.mock-cal .row .d { font-weight: 600; color: var(--ink); }
-.mock-cal .row .bar { height: 8px; background: var(--bg-alt); border-radius: 4px; overflow: hidden; }
-.mock-cal .row .bar i { display: block; height: 100%; background: var(--primary); border-radius: 4px; }
-.mock-cal .row .v { font-family: var(--font-mono); color: var(--muted); font-size: 11px; text-align: right; }
-
-.mock-map { background: white; border-radius: 14px; padding: 0; height: 100%; min-height: 280px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(11,24,41,.06); }
-.mock-map .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(11,24,41,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(11,24,41,.04) 1px, transparent 1px); background-size: 32px 32px; }
-.mock-map .pin { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 5px rgba(125,200,160,.25); }
-.mock-map .pin.blue { background: var(--accent); box-shadow: 0 0 0 5px rgba(59,114,196,.25); }
-.mock-map .pin.red  { background: #EF4444; box-shadow: 0 0 0 5px rgba(239,68,68,.25); }
-
-.mock-mobile { background: var(--ink); border-radius: 22px; padding: 18px; box-shadow: 0 20px 40px rgba(0,0,0,.2); max-width: 240px; margin: 0 auto; }
-.mock-mobile .scr { background: white; border-radius: 14px; padding: 16px; }
-.mock-mobile .row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
-.mock-mobile .row:last-child { border-bottom: none; }
-.mock-mobile .row .ch { width: 18px; height: 18px; border-radius: 5px; background: var(--primary-50); display: grid; place-items: center; color: var(--primary-700); font-size: 11px; font-weight: 700; }
-.mock-mobile .row .t { font-size: 12px; color: var(--ink); font-weight: 500; }
-.mock-mobile .row .s { font-size: 10px; color: var(--muted); margin-left: auto; }
-
-/* Module grid SaaS */
-.mods { background: white; }
-.mod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.mod {
-  padding: 26px; border-radius: 18px; border: 1px solid var(--line);
-  background: white; transition: all .2s;
-}
-.mod:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.mod .ic { width: 40px; height: 40px; border-radius: 11px; background: var(--primary-50); color: var(--primary-700); display: grid; place-items: center; margin-bottom: 18px; }
-.mod .ic.b { background: var(--accent-50); color: var(--accent); }
-.mod .ic svg { width: 20px; height: 20px; stroke-width: 1.7; }
-.mod h3 { font-size: 16px; margin-bottom: 6px; }
-.mod p { font-size: 13.5px; }
-
-/* Audience split */
-.aud { background: var(--bg); }
-.aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.aud-card {
-  background: white; border-radius: var(--radius-xl); padding: 50px;
-  border: 1px solid var(--line); position: relative; overflow: hidden;
-}
-.aud-card .gtag {
-  display: inline-block; padding: 5px 12px; border-radius: 999px;
-  background: var(--primary-50); color: var(--primary-700);
-  font-size: 12px; font-weight: 600; margin-bottom: 22px; letter-spacing: .02em;
-}
-.aud-card.b .gtag { background: var(--accent-50); color: var(--accent); }
-.aud-card h3 { font-size: 28px; margin-bottom: 14px; letter-spacing: -.02em; }
-.aud-card > p { font-size: 16px; margin-bottom: 24px; line-height: 1.6; }
-.aud-card ul { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 10px; }
-.aud-card ul li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; color: var(--ink-2); }
-.aud-card ul li .ic { width: 18px; height: 18px; color: var(--primary-700); flex-shrink: 0; margin-top: 2px; }
-.aud-card.b ul li .ic { color: var(--accent); }
-.aud-card .deco { position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; border-radius: 50%; background: var(--primary-50); opacity: .6; pointer-events: none; }
-.aud-card.b .deco { background: var(--accent-50); }
-
-/* Pricing CTA card */
-.pricing-b { background: white; }
-.pricing-b .card {
-  max-width: 900px; margin: 0 auto;
-  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
-  border-radius: 28px; padding: 70px; text-align: center; color: white;
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
   position: relative; overflow: hidden;
+  padding: 80px 0 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 75% 20%, rgba(59,114,196,.10), transparent 65%),
+    radial-gradient(ellipse 55% 50% at 15% 80%, rgba(63,154,108,.09), transparent 65%),
+    #FBFBF9;
 }
-.pricing-b .card::before { content: ""; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--primary), transparent 70%); opacity: .25; }
-.pricing-b .card::after  { content: ""; position: absolute; bottom: -120px; left: -120px; width: 320px; height: 320px; background: radial-gradient(circle, var(--accent), transparent 70%); opacity: .2; }
-.pricing-b .card h2 { color: white; font-size: 44px; margin-bottom: 16px; position: relative; }
-.pricing-b .card p  { color: rgba(255,255,255,.7); font-size: 18px; max-width: 540px; margin: 0 auto 32px; position: relative; }
-.pricing-b .card .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; }
-.pricing-b .card .ok { display: flex; justify-content: center; gap: 28px; margin-top: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,.6); position: relative; }
-.pricing-b .card .ok span::before { content: "✓ "; color: var(--primary); font-weight: 700; }
+.hero::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(11,24,41,.028) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11,24,41,.028) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 60% 30%, black, transparent 80%);
+  pointer-events: none;
+}
+.hero .container { position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 80px; align-items: center; padding-bottom: 80px; }
+.hero-text .eyebrow { margin-bottom: 22px; }
+.hero-text h1 {
+  font-size: clamp(42px, 6.5vw, 76px);
+  line-height: .95; letter-spacing: -.04em; font-weight: 800;
+  margin-bottom: 26px;
+}
+.hero-text h1 .green { color: var(--primary-700); }
+.hero-text h1 .accent { color: var(--accent); }
+.hero-text .lede { font-size: 19px; color: var(--muted); line-height: 1.65; max-width: 520px; margin-bottom: 36px; }
+.hero-text .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 40px; }
+.hero-text .trust-row { display: flex; flex-wrap: wrap; gap: 20px; padding-top: 24px; border-top: 1px solid var(--line); }
+.hero-text .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); }
+.hero-text .trust-item::before { content: "✓"; color: var(--primary-700); font-weight: 700; font-size: 13px; }
 
-/* FAQ */
+/* Hero mockup */
+.hero-mockup {
+  position: relative;
+  background: var(--ink); border-radius: 18px;
+  box-shadow: 0 40px 80px -20px rgba(11,24,41,.38), 0 0 0 1px rgba(255,255,255,.06);
+  overflow: visible;
+}
+.hero-mockup .chrome {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 18px; background: rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.07); border-radius: 18px 18px 0 0;
+}
+.hero-mockup .chrome .dots { display: flex; gap: 6px; }
+.hero-mockup .chrome .dots span { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.15); }
+.hero-mockup .chrome .url { font-family: var(--font-mono); font-size: 11.5px; color: rgba(255,255,255,.4); margin-left: 6px; }
+.hero-mockup .chrome .pill {
+  margin-left: auto; background: rgba(63,154,108,.2); color: #7DC8A0;
+  font-family: var(--font-mono); font-size: 10.5px; padding: 3px 10px; border-radius: 999px;
+  display: flex; align-items: center; gap: 5px;
+}
+.hero-mockup .chrome .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #7DC8A0; animation: salux-live 1.8s infinite; }
+
+.hero-body { padding: 22px; display: grid; gap: 14px; }
+.hero-kpis { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.hero-kpi { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 14px 16px; }
+.hero-kpi .v { font-size: 22px; font-weight: 700; color: white; letter-spacing: -.02em; }
+.hero-kpi .l { font-size: 11px; color: rgba(255,255,255,.5); margin-top: 3px; font-family: var(--font-mono); }
+.hero-kpi .d { font-size: 11.5px; color: #7DC8A0; margin-top: 2px; font-weight: 600; }
+
+.hero-table { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; overflow: hidden; }
+.hero-tr { display: grid; grid-template-columns: 44px 1fr 64px 56px; gap: 8px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.05); align-items: center; }
+.hero-tr:last-child { border-bottom: none; }
+.hero-tr .code { font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,.4); font-weight: 600; }
+.hero-tr .name { font-size: 12.5px; color: rgba(255,255,255,.85); font-weight: 500; }
+.hero-tr .qty { font-size: 11.5px; color: rgba(255,255,255,.5); text-align: right; font-variant-numeric: tabular-nums; }
+.hero-tr .ok { font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px; text-align: center; }
+.hero-tr .ok.green { background: rgba(63,154,108,.2); color: #7DC8A0; }
+.hero-tr .ok.blue { background: rgba(59,114,196,.2); color: #93BBFF; }
+
+.hero-strip { background: rgba(255,255,255,.03); border-top: 1px solid rgba(255,255,255,.06); padding: 14px 22px; display: grid; grid-template-columns: repeat(3,1fr); border-radius: 0 0 18px 18px; }
+.hero-strip .it { font-size: 11.5px; }
+.hero-strip .it .l { color: rgba(255,255,255,.4); font-family: var(--font-mono); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
+.hero-strip .it .v { color: white; font-weight: 600; margin-top: 2px; }
+
+/* floating badge */
+.hero-badge {
+  position: absolute; top: 50%; right: -32px; transform: translateY(-40%);
+  background: white; border: 1px solid var(--line); border-radius: 14px;
+  padding: 14px 18px; box-shadow: var(--shadow-lg);
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-badge .ico { width: 36px; height: 36px; border-radius: 9px; background: var(--primary-50); display: grid; place-items: center; color: var(--primary-700); flex-shrink: 0; }
+.hero-badge .ico svg { width: 18px; height: 18px; }
+.hero-badge .t { font-size: 13px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+.hero-badge .s { font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+
+/* ── Trust strip ──────────────────────────────────────────── */
+.trust-strip { padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
+.trust-strip .row { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.trust-strip .label { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted-2); font-weight: 600; flex-shrink: 0; }
+.trust-strip .badges { display: flex; gap: 28px; flex-wrap: wrap; }
+.trust-strip .badge { display: flex; align-items: center; gap: 8px; color: var(--ink-2); font-weight: 600; font-size: 13.5px; opacity: .75; }
+.trust-strip .badge svg { width: 18px; height: 18px; color: var(--primary-700); }
+
+/* ── Section header (shared) ──────────────────────────────── */
+.s-head { max-width: 720px; margin: 0 auto 60px; text-align: center; }
+.s-head h2 { margin: 14px 0 16px; }
+.s-head p { font-size: 18px; color: var(--muted); }
+
+/* ── Features grid ────────────────────────────────────────── */
+.feats { background: var(--bg-alt); }
+.feats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.feat-block {
+  background: white; padding: 28px; border-radius: var(--radius-lg);
+  border: 1px solid var(--line); transition: all .2s;
+}
+.feat-block:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+.feat-block .ico {
+  width: 44px; height: 44px; border-radius: 11px; background: var(--primary-50);
+  display: grid; place-items: center; color: var(--primary-700); margin-bottom: 20px;
+}
+.feat-block .ico svg { width: 22px; height: 22px; stroke-width: 1.7; }
+.feat-block h3 { font-size: 16px; margin-bottom: 8px; }
+.feat-block p { font-size: 13.5px; line-height: 1.55; color: var(--muted); }
+
+/* ── Walkthrough (video-style) ───────────────────────────── */
+.walk { background: var(--ink); }
+.walk .s-head h2, .walk .s-head p { color: rgba(255,255,255,.85); }
+.walk .s-head .eyebrow { background: rgba(255,255,255,.08); color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.12); }
+.walk .s-head .dot { background: #7DC8A0; }
+
+.walk-stage {
+  position: relative; max-width: 1080px; margin: 0 auto;
+  border-radius: var(--radius-xl); overflow: hidden;
+  background: #0B1829;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,.5);
+  border: 1px solid rgba(255,255,255,.06);
+}
+.walk-stage .player-chrome {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 22px; background: rgba(255,255,255,.04);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.walk-stage .player-chrome .dots { display: flex; gap: 6px; }
+.walk-stage .player-chrome .dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.18); }
+.walk-stage .player-chrome .title { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,.55); margin-left: 8px; }
+.walk-stage .player-chrome .live {
+  margin-left: auto; font-family: var(--font-mono); font-size: 11px;
+  color: #34d399; display: flex; align-items: center; gap: 6px;
+}
+.walk-stage .player-chrome .live::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; background: #34d399;
+  animation: salux-live 1.8s infinite;
+}
+.walk-screen { position: relative; aspect-ratio: 16/9; background: linear-gradient(180deg, #0B1829 0%, #14233A 100%); }
+.walk-poster {
+  position: absolute; inset: 0; z-index: 10;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  background: linear-gradient(180deg, rgba(11,24,41,.7) 0%, rgba(11,24,41,.92) 100%);
+  cursor: pointer; transition: opacity .3s;
+}
+.walk-poster.hide { opacity: 0; pointer-events: none; }
+.walk-poster .play-btn {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: white; display: grid; place-items: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,.4);
+}
+.walk-poster .play-btn::after { content: ""; border: 0 solid transparent; border-left: 22px solid var(--ink); border-top: 14px solid transparent; border-bottom: 14px solid transparent; margin-left: 4px; }
+.walk-poster .lbl { font-family: var(--font-mono); font-size: 13px; color: rgba(255,255,255,.6); }
+.walk-scenes { position: absolute; inset: 0; }
+.walk-scene {
+  position: absolute; inset: 0; padding: 40px;
+  opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease;
+  display: grid; gap: 24px; align-content: center;
+}
+.walk-scene.active { opacity: 1; transform: translateY(0); }
+.walk-scene .scene-tag {
+  display: inline-flex; align-items: center; gap: 8px; align-self: start;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(125,200,160,.15); color: #86efac;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; width: fit-content;
+}
+.walk-scene h3 { color: white; font-size: 26px; margin: 0; letter-spacing: -.02em; }
+.walk-scene .scene-body {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px; padding: 22px;
+}
+
+/* Scene 1 — Planning */
+.scene-plan .cal-mini { display: grid; grid-template-columns: repeat(14,1fr); gap: 4px; }
+.scene-plan .cal-mini .c { aspect-ratio:1; border-radius: 4px; background: rgba(255,255,255,.06); animation: walk-plan-fill 4s infinite ease-in-out; }
+.scene-plan .cal-mini .c.f { background: rgba(125,200,160,.4); }
+@keyframes walk-plan-fill { 0%,100% { background: rgba(255,255,255,.06); } 40%,70% { background: rgba(125,200,160,.55); } }
+.scene-plan .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 16px; }
+.scene-plan .stat { padding: 12px 14px; background: rgba(255,255,255,.04); border-radius: 8px; }
+.scene-plan .stat .v { font-size: 20px; font-weight: 700; color: white; letter-spacing: -.02em; }
+.scene-plan .stat .l { font-size: 11px; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+/* Scene 2 — Execution / Map */
+.scene-exec .map-area {
+  position: relative; height: 220px;
+  background: radial-gradient(ellipse at 40% 50%, rgba(59,114,196,.12), transparent 70%), #0A1525;
+  border-radius: 10px; overflow: hidden;
+}
+.scene-exec .map-area .truck { position: absolute; top: 50%; left: 0; width: 26px; height: 26px; border-radius: 6px; background: rgba(59,114,196,.3); display: grid; place-items: center; animation: walk-truck 5s linear infinite; }
+.scene-exec .map-area .truck::after { content: "🚛"; font-size: 14px; filter: grayscale(1) brightness(2); }
+@keyframes walk-truck { 0% { left: -5%; top: 60%; } 50% { left: 55%; top: 35%; } 100% { left: 105%; top: 40%; } }
+.scene-exec .map-area .trail { position: absolute; height: 2px; background: linear-gradient(90deg, transparent, var(--primary)); border-radius: 1px; }
+.scene-exec .map-area .t1 { top: 70%; left: 0; width: 35%; transform: rotate(-30deg); transform-origin: left; }
+.scene-exec .map-area .t2 { top: 35%; left: 35%; width: 35%; transform: rotate(20deg); transform-origin: left; }
+.scene-exec .map-area .pin-x { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(59,114,196,.3); animation: walk-pin-pop .6s ease-out forwards; }
+.scene-exec .map-area .p1 { top: 28%; left: 38%; animation-delay: 1.2s; opacity: 0; }
+.scene-exec .map-area .p2 { top: 62%; left: 67%; animation-delay: 2.4s; opacity: 0; }
+.scene-exec .map-area .p3 { top: 40%; left: 85%; animation-delay: 3.6s; opacity: 0; }
+@keyframes walk-pin-pop { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+
+/* Scene 3 — Payment */
+.scene-pay .invoice { background: rgba(255,255,255,.04); border-radius: 10px; padding: 22px; }
+.scene-pay .invoice .hdr { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.scene-pay .invoice .hdr .doc { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.5); letter-spacing: .06em; }
+.scene-pay .invoice .hdr .month { color: white; font-weight: 700; }
+.scene-pay .invoice .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.06); color: rgba(255,255,255,.85); font-size: 14px; }
+.scene-pay .invoice .total { display: flex; justify-content: space-between; padding: 16px 0 0; color: white; font-size: 18px; font-weight: 700; }
+.scene-pay .invoice .total .amt { color: #86efac; }
+.scene-pay .stamp {
+  position: absolute; right: 200px; bottom: 80px;
+  width: 110px; height: 110px;
+  border: 3px solid #86efac; border-radius: 50%;
+  display: grid; place-items: center; color: #86efac;
+  font-family: var(--font-mono); font-weight: 700; font-size: 12px;
+  transform: rotate(-12deg); opacity: 1; text-align: center; line-height: 1.2;
+}
+
+/* Controls */
+.walk-controls { display: flex; align-items: center; gap: 14px; padding: 14px 22px; background: rgba(255,255,255,.04); border-top: 1px solid rgba(255,255,255,.06); }
+.ctrl-btn { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.08); display: grid; place-items: center; color: white; cursor: pointer; flex-shrink: 0; }
+.ctrl-btn:hover { background: rgba(255,255,255,.15); }
+.progress { flex: 1; position: relative; height: 6px; background: rgba(255,255,255,.12); border-radius: 3px; cursor: pointer; }
+.progress .markers { position: absolute; inset: 0; display: flex; }
+.progress .markers span { flex: 1; border-right: 1px solid rgba(255,255,255,.18); }
+.progress .markers span:last-child { border-right: 0; }
+.progress .fill { height: 100%; background: #7DC8A0; border-radius: 3px; width: 0%; transition: width .1s linear; }
+.walk-controls .time { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,.6); flex-shrink: 0; }
+
+/* Chapters */
+.walk-chapters { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 18px; max-width: 1080px; margin-left: auto; margin-right: auto; }
+.walk-chapter {
+  background: white; border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-lg); padding: 20px 22px; cursor: pointer; transition: all .2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+}
+.walk-chapter:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.25); border-color: var(--primary); }
+.walk-chapter.active { border-color: var(--primary); box-shadow: 0 4px 20px rgba(63,154,108,.25); }
+.walk-chapter .ch-num { font-family: var(--font-mono); font-size: 11px; color: var(--primary-700); margin-bottom: 6px; font-weight: 600; }
+.walk-chapter .ch-title { font-size: 15px; font-weight: 700; color: var(--ink); }
+.walk-chapter .ch-time { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); margin-top: 4px; }
+
+/* ── Before/After ─────────────────────────────────────────── */
+.compare-b { background: var(--bg); }
+.compare-wrap {
+  position: relative; max-width: 1060px; margin: 0 auto;
+  border-radius: var(--radius-xl); overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+  min-height: 380px;
+}
+.compare-side { padding: 56px 48px; display: flex; flex-direction: column; justify-content: space-between; }
+.compare-side .lbl { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .09em; margin-bottom: 8px; display: block; }
+.compare-side h3 { font-size: 22px; font-weight: 700; margin: 0 0 22px; }
+.compare-side .items { display: grid; gap: 11px; }
+.compare-side .it { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.compare-side .it .ic { width: 20px; height: 20px; flex-shrink: 0; }
+.compare-side .metric { margin-top: 32px; padding-top: 22px; }
+.compare-side .metric .v { font-size: 42px; font-weight: 900; display: block; letter-spacing: -.05em; line-height: 1; margin-bottom: 6px; }
+.compare-side .metric .l { font-size: 13px; }
+.compare-side.before {
+  background-color: #FFFEF9;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 27px, #D1D9E6 27px 28px),
+    repeating-linear-gradient(90deg, transparent 0 79px, #D1D9E6 79px 80px);
+  position: relative;
+}
+.compare-side.before::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 60% 100%, rgba(180,160,120,.10), transparent 70%);
+  pointer-events: none;
+}
+.compare-side.before .lbl { color: rgba(0,0,0,.4); }
+.compare-side.before h3 { color: rgba(0,0,0,.75); }
+.compare-side.before .it { color: rgba(0,0,0,.55); }
+.compare-side.before .it .ic { color: rgba(0,0,0,.3); }
+.compare-side.before .metric { border-top-color: rgba(0,0,0,.1); }
+.compare-side.before .metric .v { color: rgba(0,0,0,.7); }
+.compare-side.before .metric .l { color: rgba(0,0,0,.45); }
+.compare-side.after {
+  background-color: #0D1E35;
+  background-image:
+    linear-gradient(to right, rgba(59,114,196,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59,114,196,.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: absolute; inset: 0; clip-path: inset(0 0 0 50%);
+}
+.compare-side.after::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 40% 50%, rgba(59,114,196,.14), transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 20%, rgba(63,154,108,.10), transparent 60%);
+  pointer-events: none;
+}
+.compare-side.after .lbl { color: rgba(255,255,255,.35); }
+.compare-side.after h3 { color: rgba(255,255,255,.9); }
+.compare-side.after .it { color: rgba(255,255,255,.6); }
+.compare-side.after .it .ic { color: rgba(63,154,108,.7); }
+.compare-side.after .metric { border-top-color: rgba(255,255,255,.08); }
+.compare-side.after .metric .v { color: #7DC8A0; }
+.compare-side.after .metric .l { color: rgba(255,255,255,.4); }
+.compare-handle {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 40px; transform: translateX(-50%);
+  cursor: ew-resize; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10;
+}
+.compare-handle .knob {
+  width: 40px; height: 40px; border-radius: 50%; background: white;
+  border: 2px solid rgba(0,0,0,.12); box-shadow: 0 4px 16px rgba(0,0,0,.18);
+  display: grid; place-items: center;
+}
+.compare-handle .knob::before { content: "⇄"; font-size: 14px; color: var(--ink-2); }
+.compare-handle::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,.5); transform: translateX(-50%); z-index: -1; }
+.compare-hint { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-family: var(--font-mono); font-size: 11px; color: rgba(0,0,0,.35); white-space: nowrap; pointer-events: none; background: rgba(255,255,255,.6); padding: 4px 12px; border-radius: 999px; backdrop-filter: blur(4px); }
+
+/* ── ROI Calculator ───────────────────────────────────────── */
+.roi-b { background: var(--bg-alt); }
+.roi-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  background: white; border: 1px solid var(--line); border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md); overflow: hidden;
+  max-width: 1060px; margin: 0 auto;
+}
+.roi-inputs { padding: 48px; display: grid; gap: 28px; border-right: 1px solid var(--line); }
+.roi-row label { font-size: 14px; font-weight: 600; color: var(--ink); display: flex; justify-content: space-between; margin-bottom: 10px; }
+.roi-row label span { font-family: var(--font-mono); font-size: 13px; color: var(--primary-700); font-weight: 500; }
+.roi-row input[type=range] {
+  width: 100%; -webkit-appearance: none; height: 6px;
+  background: linear-gradient(to right, var(--primary) 0%, var(--primary) var(--p,50%), var(--line) var(--p,50%), var(--line) 100%);
+  border-radius: 3px; outline: none; cursor: pointer;
+}
+.roi-row input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: white; border: 2px solid var(--primary); box-shadow: 0 1px 4px rgba(0,0,0,.18); cursor: pointer; }
+.roi-results { background: var(--ink); padding: 48px; display: flex; flex-direction: column; gap: 28px; }
+.roi-big { }
+.roi-big .roi-num { font-size: 52px; font-weight: 900; letter-spacing: -.05em; color: #7DC8A0; line-height: 1; margin-bottom: 6px; }
+.roi-big .roi-num .unit { font-size: 20px; font-weight: 500; color: rgba(125,200,160,.65); display: block; margin-top: 4px; letter-spacing: 0; }
+.roi-big .roi-label { font-size: 13.5px; color: rgba(255,255,255,.55); margin-top: 8px; }
+.roi-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.roi-sub-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 16px 18px; }
+.roi-sub-item .v { font-size: 22px; font-weight: 800; color: white; letter-spacing: -.03em; }
+.roi-sub-item .l { font-size: 11.5px; color: rgba(255,255,255,.45); margin-top: 4px; font-family: var(--font-mono); }
+.roi-disclaimer { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.3); line-height: 1.5; }
+.roi-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.roi-sub-item { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+.roi-sub-item .v { font-size: 20px; font-weight: 700; color: var(--ink); letter-spacing: -.02em; }
+.roi-sub-item .l { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+/* ── Audience ────────────────────────────────────────────── */
+.audience { background: var(--bg-alt); }
+.aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.aud-card {
+  background: white; padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--line);
+  display: flex; gap: 28px;
+}
+.aud-ico { width: 54px; height: 54px; border-radius: 13px; flex-shrink: 0; display: grid; place-items: center; }
+.aud-ico svg { width: 26px; height: 26px; stroke-width: 1.7; }
+.aud-ico.green { background: var(--primary-50); color: var(--primary-700); }
+.aud-ico.blue { background: var(--accent-50); color: var(--accent); }
+.aud-card h3 { font-size: 21px; margin-bottom: 10px; }
+.aud-card p { font-size: 14.5px; line-height: 1.6; margin-bottom: 18px; color: var(--muted); }
+.aud-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.aud-tags span { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--bg); color: var(--ink-2); border: 1px solid var(--line); }
+
+/* ── FAQ ─────────────────────────────────────────────────── */
 .faq-b { background: var(--bg); }
 .faq-b .list { max-width: 800px; margin: 0 auto; display: grid; gap: 12px; }
-.faq-b details { background: white; border-radius: 14px; border: 1px solid var(--line); padding: 0 24px; }
-.faq-b summary { padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 600; color: var(--ink); }
+.faq-b details { background: white; border-radius: 14px; border: 1px solid var(--line); padding: 0 24px; transition: box-shadow .2s; }
+.faq-b details[open] { box-shadow: var(--shadow-md); border-color: var(--primary); }
+.faq-b summary { padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 600; color: var(--ink); gap: 16px; }
 .faq-b summary::-webkit-details-marker { display: none; }
-.faq-b summary::after { content: "+"; color: var(--primary-700); font-size: 22px; font-weight: 400; }
+.faq-b summary::after { content: "+"; color: var(--primary-700); font-size: 22px; font-weight: 400; flex-shrink: 0; }
 .faq-b details[open] summary::after { content: "−"; }
 .faq-b .a { padding: 0 0 20px; color: var(--muted); font-size: 14.5px; line-height: 1.65; }
 
-/* Final CTA */
+/* ── Final CTA ───────────────────────────────────────────── */
 .final-b { background: white; }
-.final-b .x { text-align: center; max-width: 720px; margin: 0 auto; }
-.final-b h2 { font-size: clamp(36px, 5vw, 60px); margin-bottom: 18px; }
-.final-b p { font-size: 18px; max-width: 520px; margin: 0 auto 32px; }
+.final-b .container.x { text-align: center; }
+.final-b .container.x h2 { margin: 18px 0 16px; }
+.final-b .container.x p { font-size: 18px; color: var(--muted); max-width: 500px; margin: 0 auto 32px; }
 
-@media (max-width: 900px) {
-  .feat-block { grid-template-columns: 1fr; gap: 30px; padding: 40px 24px; }
-  .feat-block.rev { direction: ltr; }
-  .mod-grid { grid-template-columns: 1fr 1fr; }
-  .aud-grid, .metric-row .grid4 { grid-template-columns: 1fr; }
-  .hero-shapes { aspect-ratio: auto; }
-  .hero-shapes .surface { position: relative; height: 360px; }
-  .hero-shapes .surface .grid { grid-template-columns: 1fr; }
-  .hero-shapes .side { display: none; }
-  .float-badge { display: none; }
-  .section { padding: 64px 0; }
-  .pricing-b .card { padding: 40px 24px; }
-}
-/* === Overrides post-feedback === */
-.nav { background: rgba(255,255,255,.55) !important; backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid rgba(11,24,41,.06); }
-
-.reality { background: white; }
-.reality-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.reality-grid .slot-wrap { aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-alt); }
-.reality-grid image-slot { width: 100%; height: 100%; display: block; }
-@media (max-width: 900px) { .reality-grid { grid-template-columns: 1fr; } }
-
-.hero-shapes .side .li { cursor: pointer; transition: all .15s; user-select: none; }
-.hero-shapes .side .li:hover { background: var(--bg-alt); color: var(--ink); }
-.hero-shapes .chart .b { transition: height .5s cubic-bezier(.22,.61,.36,1); }
-
-/* Reveal-on-scroll */
-@keyframes salux-fadeup { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
-[data-reveal] { opacity: 0; will-change: transform, opacity; }
-[data-reveal].in { animation: salux-fadeup .75s cubic-bezier(.22,.61,.36,1) forwards; }
-[data-reveal][data-d="1"].in { animation-delay: .08s; }
-[data-reveal][data-d="2"].in { animation-delay: .16s; }
-[data-reveal][data-d="3"].in { animation-delay: .24s; }
-[data-reveal][data-d="4"].in { animation-delay: .32s; }
-@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; } [data-reveal].in { animation: none; } }
-
-/* Card hover lift */
-.problem-card, .flow-step, .aud-card, .mod, .float-badge { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
-.problem-card:hover, .flow-step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.aud-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-.mod:hover { transform: translateY(-2px); border-color: var(--line-strong); box-shadow: var(--shadow-sm); }
-.float-badge:hover { transform: translateY(-2px) scale(1.03); box-shadow: var(--shadow-lg); }
-
-/* Live indicator on hero crumb */
-.hero-shapes .hdr .crumb::before {
-  content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-  background: #22c55e; margin-right: 7px; vertical-align: middle;
-  box-shadow: 0 0 0 0 rgba(34,197,94,.5);
-  animation: salux-live 1.8s infinite;
-}
-@keyframes salux-live { 0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); } 50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); } }
-
-/* Sidebar active blink */
-.hero-shapes .side .li.act { position: relative; }
-.hero-shapes .side .li.act::after {
-  content: ""; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-  width: 6px; height: 6px; border-radius: 50%; background: var(--primary-700);
-  animation: salux-blink 1.4s infinite;
-}
-@keyframes salux-blink { 0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); } 50% { opacity: .3; transform: translateY(-50%) scale(.7); } }
-
-/* Eyebrow dot pulse */
-.eyebrow .dot { animation: salux-pulse 2.4s infinite; }
-@keyframes salux-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: .6; } }
-
-/* Float badge gentle bob */
-.float-badge.fb-1 { animation: salux-bob1 5s ease-in-out infinite; }
-.float-badge.fb-2 { animation: salux-bob2 6s ease-in-out infinite; }
-.float-badge.fb-3 { animation: salux-bob1 5.5s ease-in-out infinite .8s; }
-@keyframes salux-bob1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-@keyframes salux-bob2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-.float-badge.fb-1:hover, .float-badge.fb-2:hover, .float-badge.fb-3:hover { animation-play-state: paused; }
-/* Interactive module cards */
-.mod.m-int { cursor: pointer; position: relative; transition: all .2s; }
-.mod.m-int:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary); }
-.mod.m-int .play-tag { display: inline-block; margin-top: 12px; font-family: var(--font-mono); font-size: 11px; color: var(--primary-700); font-weight: 600; opacity: .75; }
-.mod.m-int:hover .play-tag { opacity: 1; }
-
-/* Demo modal */
-.demo-modal { position: fixed; inset: 0; background: rgba(11,24,41,.65); backdrop-filter: blur(8px); display: none; place-items: center; z-index: 100; padding: 24px; }
-.demo-modal.open { display: grid; animation: dm-fade .25s ease; }
-@keyframes dm-fade { from { opacity: 0; } to { opacity: 1; } }
-.demo-modal .panel { background: white; border-radius: 22px; max-width: 880px; width: 100%; overflow: hidden; box-shadow: var(--shadow-lg); }
-.demo-modal .head { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid var(--line); }
-.demo-modal .head h3 { margin: 0; font-size: 18px; }
-.demo-modal .head .x { background: var(--bg-alt); border: 0; width: 32px; height: 32px; border-radius: 999px; cursor: pointer; font-size: 18px; color: var(--muted); display: grid; place-items: center; }
-.demo-modal .stage { aspect-ratio: 16 / 10; background: linear-gradient(180deg, var(--primary-50), var(--accent-50)); position: relative; overflow: hidden; }
-.demo-modal .stage .label { position: absolute; bottom: 14px; left: 16px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); background: rgba(255,255,255,.8); padding: 4px 10px; border-radius: 999px; }
-.demo-modal .caption { padding: 16px 24px 22px; color: var(--muted); font-size: 14px; line-height: 1.6; }
-.demo-modal .caption b { color: var(--ink); display: block; margin-bottom: 4px; }
-
-/* Plan demo */
-.d-plan { display: grid; place-items: center; height: 100%; }
-.d-plan .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; padding: 30px; width: 80%; }
-.d-plan .cell { aspect-ratio: 1; background: white; border-radius: 6px; display: grid; place-items: center; font-size: 11px; color: var(--muted); border: 1px solid var(--line); animation: planFill 4s infinite; }
-@keyframes planFill { 0%, 100% { background: white; } 50% { background: var(--primary); color: white; } }
-.d-plan .cell:nth-child(odd) { animation-delay: .2s; }
-.d-plan .cell:nth-child(3n) { animation-delay: .5s; }
-
-/* Map demo */
-.d-map { height: 100%; position: relative; background: repeating-linear-gradient(45deg, rgba(11,24,41,.04) 0 1px, transparent 1px 28px), repeating-linear-gradient(-45deg, rgba(11,24,41,.04) 0 1px, transparent 1px 28px); }
-.d-map .pin { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 4px rgba(125,200,160,.3); animation: pin-pulse 2s infinite; }
-.d-map .pin.a { top: 25%; left: 30%; animation-delay: 0s; }
-.d-map .pin.b { top: 55%; left: 55%; background: var(--accent); box-shadow: 0 0 0 4px rgba(59,114,196,.3); animation-delay: .6s; }
-.d-map .pin.c { top: 40%; left: 75%; animation-delay: 1.2s; }
-.d-map .route { position: absolute; top: 30%; left: 32%; width: 50%; height: 2px; background: linear-gradient(90deg, var(--primary), var(--accent)); transform: rotate(15deg); transform-origin: left; animation: route-draw 3s infinite; }
-@keyframes pin-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }
-@keyframes route-draw { 0% { width: 0; } 60% { width: 50%; } 100% { width: 50%; opacity: .5; } }
-
-/* Mobile demo */
-.d-mobile { display: grid; place-items: center; height: 100%; }
-.d-mobile .phone { width: 200px; height: 380px; background: var(--ink); border-radius: 28px; padding: 12px; box-shadow: var(--shadow-lg); }
-.d-mobile .screen { background: white; height: 100%; border-radius: 18px; padding: 18px 14px; font-size: 11px; }
-.d-mobile .screen .h { font-weight: 700; margin-bottom: 12px; }
-.d-mobile .screen .t { background: var(--bg-alt); border-radius: 8px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; opacity: 0; transform: translateY(8px); animation: task-in .5s forwards; }
-.d-mobile .screen .t:nth-child(2) { animation-delay: .3s; }
-.d-mobile .screen .t:nth-child(3) { animation-delay: .6s; }
-.d-mobile .screen .t:nth-child(4) { animation-delay: .9s; }
-.d-mobile .screen .t:nth-child(5) { animation-delay: 1.2s; }
-.d-mobile .screen .t .ok { color: var(--primary-700); font-weight: 700; }
-@keyframes task-in { to { opacity: 1; transform: translateY(0); } }
-
-/* ===== Tweak: Form (radius scale) ===== */
-body[data-form="sharp"] {
-  --radius: 4px; --radius-lg: 8px; --radius-xl: 12px;
-}
-body[data-form="sharp"] .btn,
-body[data-form="sharp"] .nav-links a,
-body[data-form="sharp"] .eyebrow,
-body[data-form="sharp"] .gtag,
-body[data-form="sharp"] .stamp,
-body[data-form="sharp"] .badge { border-radius: 4px !important; }
-body[data-form="sharp"] .hero-shapes .surface,
-body[data-form="sharp"] .float-badge,
-body[data-form="sharp"] .problem-card,
-body[data-form="sharp"] .mod,
-body[data-form="sharp"] .aud-card,
+/* ── Tweaks form override ─────────────────────────────────── */
 body[data-form="sharp"] .feat-block,
-body[data-form="sharp"] .pricing-b .card,
-body[data-form="sharp"] .faq-b details,
-body[data-form="sharp"] .reality-grid .slot-wrap { border-radius: 6px !important; }
-body[data-form="sharp"] .hero-shapes .k,
-body[data-form="sharp"] .hero-shapes .chart,
-body[data-form="sharp"] .flow-step .out { border-radius: 4px !important; }
-
-body[data-form="pill"] {
-  --radius: 22px; --radius-lg: 34px; --radius-xl: 44px;
-}
-body[data-form="pill"] .problem-card,
-body[data-form="pill"] .mod,
+body[data-form="sharp"] .faq-b details { border-radius: 6px !important; }
 body[data-form="pill"] .feat-block,
-body[data-form="pill"] .pricing-b .card,
-body[data-form="pill"] .faq-b details,
-body[data-form="pill"] .reality-grid .slot-wrap { border-radius: 34px !important; }
+body[data-form="pill"] .faq-b details { border-radius: 34px !important; }
 body[data-form="pill"] .aud-card { border-radius: 44px !important; }
-body[data-form="pill"] .hero-shapes .surface { border-radius: 32px !important; }
-body[data-form="pill"] .hero-shapes .k,
-body[data-form="pill"] .hero-shapes .chart,
-body[data-form="pill"] .flow-step .out,
-body[data-form="pill"] .float-badge { border-radius: 22px !important; }
-body[data-form="pill"] .float-badge .dot,
-body[data-form="pill"] .mod .ic { border-radius: 16px !important; }
 
-/* ===== Tweak: Motion (calm / standard / lively) ===== */
-body[data-motion="calm"] .hero-shapes .hdr .crumb::before,
-body[data-motion="calm"] .hero-shapes .side .li.act::after,
-body[data-motion="calm"] .eyebrow .dot,
-body[data-motion="calm"] .float-badge.fb-1,
-body[data-motion="calm"] .float-badge.fb-2,
-body[data-motion="calm"] .float-badge.fb-3 { animation: none !important; }
-body[data-motion="calm"] .problem-card:hover,
-body[data-motion="calm"] .flow-step:hover,
-body[data-motion="calm"] .aud-card:hover,
-body[data-motion="calm"] .mod:hover,
-body[data-motion="calm"] .float-badge:hover { transform: none !important; }
-body[data-motion="calm"] [data-reveal] { opacity: 1; animation: none !important; }
-
-body[data-motion="lively"] .float-badge.fb-1 { animation-duration: 2.6s; }
-body[data-motion="lively"] .float-badge.fb-2 { animation-duration: 3.2s; }
-body[data-motion="lively"] .float-badge.fb-3 { animation-duration: 2.9s; }
-body[data-motion="lively"] .eyebrow .dot { animation-duration: 1.2s; }
-body[data-motion="lively"] .hero-shapes .side .li.act::after { animation-duration: .8s; }
-body[data-motion="lively"] .hero-shapes .hdr .crumb::before { animation-duration: 1s; }
-body[data-motion="lively"] .problem-card:hover,
-body[data-motion="lively"] .flow-step:hover { transform: translateY(-8px) !important; }
-body[data-motion="lively"] .aud-card:hover { transform: translateY(-6px) scale(1.005) !important; }
-body[data-motion="lively"] .mod:hover { transform: translateY(-5px) !important; }
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-badge { display: none; }
+  .feats-grid { grid-template-columns: repeat(2,1fr); }
+  .roi-wrap { grid-template-columns: 1fr; }
+  .aud-grid { grid-template-columns: 1fr; }
+  .roi-inputs { border-right: none; border-bottom: 1px solid var(--line); padding: 36px; }
+  .roi-results { padding: 36px; }
+  .walk-chapters { grid-template-columns: 1fr; }
+  .walk-scene { padding: 22px; }
+  .walk-scene h3 { font-size: 18px; }
+  .scene-pay .stamp { right: 100px; bottom: 60px; width: 80px; height: 80px; font-size: 9px; }
+}
+@media (max-width: 700px) {
+  .compare-side.after { position: static; clip-path: none !important; }
+  .compare-handle, .compare-hint { display: none; }
+}
+@media (max-width: 600px) {
+  .feats-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
-<body data-screen-label="01 Home — Modern SaaS" data-palette="civic" data-form="soft" data-motion="standard">
+<body>
 
+<!-- ── NAV ──────────────────────────────────────────────────── -->
 <nav class="nav">
   <div class="container nav-row">
     <a href="index.html" class="nav-logo"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
     <div class="nav-links">
-      <a href="home-saas.html#modules">Funcționalități</a>
-      <a href="home-saas.html#audience">Pentru cine</a>
-      <a href="home-saas.html#pricing">Licențiere</a>
+      <a href="#modules">Funcționalități</a>
+      <a href="#audience">Pentru cine</a>
+      <a href="#pricing">Licențiere</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="#" class="btn btn-ghost">Autentificare</a>
+      <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
       <a href="contact.html" class="btn btn-primary">Solicită demo</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero-b">
-  <div class="container center">
-    <span class="eyebrow"><span class="dot"></span>Sistem informatic conform caietelor de sarcini</span>
-    <h1>Salubrizare stradală <span class="grad">care se vede.</span><br />Și care se justifică.</h1>
-    <p class="lede">SALUX transformă fiecare cursă, fiecare coș golit și fiecare oră de deszăpezire în date verificabile. Program lunar, hartă GPS în timp real, raportare automată, pentru operatorii privați și UAT-urile din România.</p>
-    <div class="cta-row">
-      <a href="contact.html" class="btn btn-green btn-lg">Solicită demo →</a>
-      <a href="#modules" class="btn btn-outline btn-lg">Cum funcționează</a>
-    </div>
-  </div>
-
+<!-- ── HERO ──────────────────────────────────────────────────── -->
+<section class="hero">
   <div class="container">
-    <div class="hero-shapes">
-      <div class="surface">
-        <div class="hdr">
-          <div class="dots"><span></span><span></span><span></span></div>
-          <span class="crumb">app.salux.ro / dashboard</span>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow accent"><span class="dot"></span>Sistem informatic pentru salubrizare stradală</span>
+        <h1>
+          <span class="green">Contracte mai curate.</span><br />
+          Orașe mai <span class="accent">curate</span>.
+        </h1>
+        <p class="lede">
+          SALUX conectează operatorul privat cu UAT-ul: program lunar,
+          raportare GPS din teren și situații de plată în 5 minute.
+          Conform SRS. Date în România.
+        </p>
+        <div class="cta-row">
+          <a href="contact.html" class="btn btn-primary btn-lg">Solicită demo →</a>
+          <a href="#walk" class="btn btn-outline btn-lg">Vezi turul ghidat</a>
         </div>
-        <div class="grid">
-          <aside class="side">
-            <span class="li act">▣ Dashboard</span>
-            <span class="li">▢ Program lunar</span>
-            <span class="li">▢ Sarcini zilnice</span>
-            <span class="li">▢ Hartă GPS</span>
-            <span class="li">▢ Coșuri</span>
-            <span class="li">▢ Sesizări</span>
-            <span class="li">▢ Pontaj</span>
-            <span class="li">▢ Rapoarte</span>
-            <span class="li">▢ Tarife</span>
-          </aside>
-          <div class="pane">
-            <div class="kpi-row">
-              <div class="k"><div class="v">48</div><div class="l">Sarcini azi</div></div>
-              <div class="k"><div class="v">87%</div><div class="l">Conformitate</div></div>
-              <div class="k"><div class="v">4</div><div class="l">Sesizări noi</div></div>
-              <div class="k"><div class="v">12.4t</div><div class="l">Colectat</div></div>
-            </div>
-            <div class="chart">
-              <div class="b" style="height: 40%;"></div>
-              <div class="b alt" style="height: 60%;"></div>
-              <div class="b" style="height: 55%;"></div>
-              <div class="b alt" style="height: 75%;"></div>
-              <div class="b" style="height: 65%;"></div>
-              <div class="b alt" style="height: 80%;"></div>
-              <div class="b" style="height: 90%;"></div>
-              <div class="b alt" style="height: 70%;"></div>
-              <div class="b" style="height: 85%;"></div>
-              <div class="b alt" style="height: 95%;"></div>
-              <div class="b" style="height: 78%;"></div>
-              <div class="b alt" style="height: 88%;"></div>
-            </div>
+        <div class="trust-row">
+          <span class="trust-item">Conform SRS salubrizare</span>
+          <span class="trust-item">GDPR & audit log</span>
+          <span class="trust-item">Hosting RO/UE</span>
+          <span class="trust-item">App mobil offline</span>
+        </div>
+      </div>
+
+      <!-- Mockup -->
+      <div class="hero-mockup">
+        <div class="chrome">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="url">app.salux.ro / program-lunar / 2026-05</span>
+          <span class="pill">48 sarcini active</span>
+        </div>
+        <div class="hero-body">
+          <div class="hero-kpis">
+            <div class="hero-kpi"><div class="v">87%</div><div class="l">CONFORMITATE</div><div class="d">+5pp luna</div></div>
+            <div class="hero-kpi"><div class="v">1.247</div><div class="l">SARCINI / LUNĂ</div><div class="d">+12% YoY</div></div>
+            <div class="hero-kpi"><div class="v">3 zile</div><div class="l">LA DECONT</div><div class="d">față de 14</div></div>
+          </div>
+          <div class="hero-table">
+            <div class="hero-tr"><span class="code">MS-03</span><span class="name">Măturat mecanizat — Str. Decebal</span><span class="qty">3.200 m²</span><span class="ok green">Aprobat</span></div>
+            <div class="hero-tr"><span class="code">CS-01</span><span class="name">Golit coșuri — Zona Centru</span><span class="qty">42 buc</span><span class="ok green">Aprobat</span></div>
+            <div class="hero-tr"><span class="code">MS-05</span><span class="name">Curățat rigole — Bd. Carol</span><span class="qty">1.800 ml</span><span class="ok blue">Execuție</span></div>
+            <div class="hero-tr"><span class="code">CD-01</span><span class="name">Colectat deșeuri — Sector 2</span><span class="qty">2,4 t</span><span class="ok blue">Execuție</span></div>
           </div>
         </div>
-      </div>
-
-      <!-- Floating badges -->
-      <div class="float-badge fb-1">
-        <div class="dot">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        <div class="hero-strip">
+          <div class="it"><div class="l">ECHIPE TEREN</div><div class="v">14 active</div></div>
+          <div class="it"><div class="l">SESIZĂRI NOI</div><div class="v">4 azi</div></div>
+          <div class="it"><div class="l">BUDGET RĂMAS</div><div class="v">68%</div></div>
         </div>
-        <div>
-          <div style="font-weight: 600; color: var(--ink);">Sarcină aprobată</div>
-          <div style="color: var(--muted); font-size: 11px;">Măturat · Str. Decebal</div>
-        </div>
-      </div>
-      <div class="float-badge fb-2">
-        <div class="dot">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div>
-          <div style="font-weight: 600; color: var(--ink);">GPS · 44.4°N 26.1°E</div>
-          <div style="color: var(--muted); font-size: 11px;">Echipa 2 · 08:42</div>
-        </div>
-      </div>
-      <div class="float-badge fb-3">
-        <div class="dot" style="background: #DCFCE7; color: #166534;">●</div>
-        <div>
-          <div style="font-weight: 600; color: var(--ink);">Situație de plată gata</div>
-          <div style="color: var(--muted); font-size: 11px;">Mai 2026 · 128.420 RON</div>
+        <div class="hero-badge">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <div>
+            <div class="t">Situație semnată</div>
+            <div class="s">128.420 RON · Mai 2026</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
+<!-- ── TRUST STRIP ────────────────────────────────────────────── -->
 <section class="trust-strip">
   <div class="container row">
-    <span class="label">Conformitate &amp; încredere</span>
+    <span class="label">Conformitate & încredere</span>
     <div class="badges">
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-4 9-8 10-4-1-8-5-8-10V6l8-4z"/></svg>GDPR &amp; DPA</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4"/></svg>Caiet de sarcini conform</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/></svg>ISO 27001 (în pregătire)</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-4 9-8 10-4-1-8-5-8-10V6l8-4z"/></svg>GDPR</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4"/></svg>SRS salubrizare</span>
       <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10S15 19 12 22M12 2c-3 3-4.5 6-4.5 10S9 19 12 22"/></svg>Hosting RO/UE</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12V7l-9-4-9 4v5c0 5 4 8 9 10 5-2 9-5 9-10z"/></svg>Audit log imutabil</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12V7l-9-4-9 4v5c0 5 4 8 9 10 5-2 9-5 9-10z"/></svg>Audit log complet</span>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="section problem-b">
+<!-- ── MODULES ────────────────────────────────────────────────── -->
+<section class="section feats" id="modules">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Provocarea</span>
-      <h2>Salubrizarea stradală pierde resurse<br />din lipsa digitalizării</h2>
-      <p>Documente pe hârtie, dispute contractuale, raportări duplicate, transparență scăzută — toate au același cost: bani și timp pierdut.</p>
+      <span class="eyebrow"><span class="dot"></span>Funcționalități</span>
+      <h2>Tot ce ai nevoie pentru a executa contractul</h2>
+      <p>Opt module integrate, fiecare adresând o cerință explicită din caietul de sarcini românesc.</p>
     </div>
-    <div class="problem-grid">
-      <div class="problem-card"><div class="num">01 / 03</div><h3>Raportare manuală, erori repetate</h3><p>Excel-uri actualizate manual, procese verbale pe hârtie, date inconsistente între părți. Fiecare lună aduce reconcilieri costisitoare și litigii la situațiile de plată.</p></div>
-      <div class="problem-card"><div class="num">02 / 03</div><h3>Transparență scăzută față de UAT</h3><p>Autoritatea locală nu poate verifica execuția în timp real. Inspecția se face post-factum, pe documente, fără dovezi geolocalizate, ceea ce slăbește controlul contractului.</p></div>
-      <div class="problem-card"><div class="num">03 / 03</div><h3>Caiet de sarcini complex de urmărit</h3><p>Peste 20 de operațiuni standard, frecvențe diferite, plafoane anuale, aprobări ierarhice. Fără un sistem dedicat, conformitatea devine o ipoteză, nu o certitudine.</p></div>
+    <div class="feats-grid">
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Program lunar</h3><p>Planificare operațiuni cu frecvențe zilnice, săptămânale și lunare. Generare automată sarcini.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Hartă GPS live</h3><p>Execuții, sesizări și coșuri pe hartă interactivă. Refresh automat la 60s, filtrare pe perioadă.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div><h3>Rapoarte SRS</h3><p>Export PDF și Excel conform SRS: situații de plată, PV recepție, rapoarte analitice.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><h3>App mobil PWA</h3><p>Raportare offline-first pentru echipele de teren. Sincronizare automată la revenire.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18l-2 13H5L3 6zM8 6V4a4 4 0 018 0v2"/></svg></div><h3>Coșuri stradale</h3><p>Inventar, golire, raportare per coș cu fotografie și GPS. Detectare anomalii.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0z"/><path d="M9 11l2 2 4-4"/></svg></div><h3>Sesizări cetățeni</h3><p>Flux complet: înregistrare, repartizare, soluționare cu notificări și foto.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Pontaj echipe</h3><p>Intrare/ieșire echipă teren, prezență per zi, integrat cu sarcinile zilnice.</p></div>
+      <div class="feat-block"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20M7 15h2M11 15h2"/></svg></div><h3>Tarife & situații</h3><p>Tarife istorice per operațiune, situații de plată generate automat, snapshot imutabil.</p></div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT METRICS -->
-<section class="metric-row">
-  <div class="container grid4">
-    <div class="m"><div class="v">−72<span class="u">%</span></div><div class="l">timp lunar la raportare</div></div>
-    <div class="m"><div class="v">98<span class="u">%</span></div><div class="l">sarcini verificate GPS + foto</div></div>
-    <div class="m"><div class="v">−61<span class="u">%</span></div><div class="l">contestații UAT, primul trimestru</div></div>
-    <div class="m"><div class="v">3<span class="u"> zile</span></div><div class="l">la situația de plată (de la 2 săpt.)</div></div>
-  </div>
-</section>
-
-<!-- FLOW -->
-<section class="section flow-b" id="flow">
+<!-- ── WALKTHROUGH ─────────────────────────────────────────────── -->
+<section class="section walk" id="walk">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Cum funcționează</span>
-      <h2>De la o stradă măturată,<br />la situația de plată semnată</h2>
-      <p>Toate datele intră o singură dată — la sursă, pe teren. Restul se întâmplă automat.</p>
-    </div>
-    <div class="flow-grid">
-      <div class="flow-step"><span class="stamp">01 · Planificare</span><h3>Program lunar</h3><p>Dispecerul construiește programul: străzi, sectoare, frecvențe, utilaje. Sistemul calculează normele și sarcinile zilnice.</p><div class="out"><b>→ Rezultat:</b><br />program-mai-2026.pdf<br />1.247 sarcini generate</div></div>
-      <div class="flow-step"><span class="stamp">02 · Execuție</span><h3>Confirmare teren</h3><p>Șeful de echipă deschide aplicația, vede sarcinile zilei, marchează început și sfârșit. Poziția GPS a utilajului confirmă traseul.</p><div class="out"><b>→ Rezultat:</b><br />traseu GPS + foto<br />marcaj timp verificat</div></div>
-      <div class="flow-step"><span class="stamp">03 · Validare</span><h3>Validare și contestații</h3><p>Inspectorul UAT vede ce s-a executat. Contestă o sarcină dacă e cazul, iar operatorul răspunde cu dovada.</p><div class="out"><b>→ Rezultat:</b><br />status: aprobat<br />istoric complet de audit</div></div>
-      <div class="flow-step"><span class="stamp">04 · Decontare</span><h3>Situație de plată</h3><p>La închiderea lunii, SALUX generează situația, defalcată pe străzi și tipuri de servicii, gata de transmis.</p><div class="out"><b>→ Rezultat:</b><br />situatie-plata.pdf<br />export pentru contabilitate</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- REALITY STRIP -->
-<section class="section reality">
-  <div class="container">
-    <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>În realitate</span>
-      <h2>Cum arată concret, în teren</h2>
-      <p>Trageți aici fotografii din propria operațiune. Vor înlocui aceste plăcute.</p>
-    </div>
-    <div class="reality-grid">
-      <div class="slot-wrap"><image-slot id="reality-vehicul" placeholder="Vehicul de salubrizare în acțiune"></image-slot></div>
-      <div class="slot-wrap"><image-slot id="reality-teren" placeholder="Echipă în teren cu aplicația mobilă"></image-slot></div>
-      <div class="slot-wrap"><image-slot id="reality-iarna" placeholder="Stradă deszăpezită, oraș iarna"></image-slot></div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURE BLOCKS -->
-<section class="section s-block" id="modules">
-  <div class="container">
-    <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Cum lucrează</span>
-      <h2>Un singur fir,<br />de la planul lunii la decontare</h2>
-      <p>Trei fluxuri principale, toate integrate. Restul vine la pachet.</p>
+      <span class="eyebrow"><span class="dot"></span>Tur ghidat · 45 secunde</span>
+      <h2>Vezi platforma în acțiune</h2>
+      <p>3 capitole. De la programul lunar generat dimineața, până la situația de plată semnată la final de lună.</p>
     </div>
 
-    <div class="feat-blocks">
-      <!-- 1. Program lunar -->
-      <div class="feat-block">
-        <div>
-          <span class="tag">Pasul 1 · Planificare</span>
-          <h3>Program lunar care se transformă în sarcini zilnice</h3>
-          <p>Definești operațiunile contractuale cu frecvențe (zilnic, săptămânal 1–7×, lunar 1–N×) și cantități. Sistemul generează automat sarcini zilnice pentru echipele de teren — exact ce trebuie făcut, exact când.</p>
-          <ul class="bullets">
-            <li>Peste 20 de operațiuni standard preconfigurate</li>
-            <li>Aprobare ierarhică (șef echipă → manager → UAT)</li>
-            <li>Distribuție automată pe zile lucrătoare</li>
-            <li>Istoric complet pentru fiecare linie de plan</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">Vezi pe datele tale →</a>
-        </div>
-        <div class="visual v-green">
-          <div class="mock-cal">
-            <div class="row"><span class="d">Lun</span><div class="bar"><i style="width: 92%;"></i></div><span class="v">12/13</span></div>
-            <div class="row"><span class="d">Mar</span><div class="bar"><i style="width: 78%;"></i></div><span class="v">11/14</span></div>
-            <div class="row"><span class="d">Mie</span><div class="bar"><i style="width: 100%; background: var(--primary-700);"></i></div><span class="v">14/14</span></div>
-            <div class="row"><span class="d">Joi</span><div class="bar"><i style="width: 64%;"></i></div><span class="v">9/14</span></div>
-            <div class="row"><span class="d">Vin</span><div class="bar"><i style="width: 85%;"></i></div><span class="v">12/14</span></div>
-            <div class="row"><span class="d">Sâm</span><div class="bar"><i style="width: 50%; background: var(--accent);"></i></div><span class="v">4/8</span></div>
-          </div>
-        </div>
+    <div class="walk-stage">
+      <div class="player-chrome">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="title">SALUX · Tur ghidat — Mai 2026</span>
+        <span class="live">TUR</span>
       </div>
-
-      <!-- 2. Teren -->
-      <div class="feat-block rev">
-        <div>
-          <span class="tag">Pasul 2 · Execuție</span>
-          <h3>Echipele raportează din teren,<br />chiar și fără semnal</h3>
-          <p>Aplicație mobilă care funcționează și fără internet. Foto cu poziție GPS, pontaj, sesizări, totul ajunge automat în dispecerat când revine semnalul, fără erori de transcriere.</p>
-          <ul class="bullets">
-            <li>Funcționează și fără semnal, sincronizare automată</li>
-            <li>Foto cu poziție GPS și marcaj timp verificat</li>
-            <li>Pontaj intrare/ieșire cu rol și utilaj</li>
-            <li>Hartă în timp real pentru dispecer și UAT</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">Cere demo mobil →</a>
+      <div class="walk-screen">
+        <div class="walk-poster" id="walkPoster">
+          <div class="play-btn"></div>
+          <div class="lbl"><b>Apasă pentru a porni turul</b> · 0:45 · fără sunet</div>
         </div>
-        <div class="visual v-blue" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-          <div class="mock-map">
-            <div class="grid-bg"></div>
-            <div class="pin" style="top: 22%; left: 30%;"></div>
-            <div class="pin blue" style="top: 50%; left: 55%;"></div>
-            <div class="pin" style="top: 70%; left: 25%;"></div>
-            <div class="pin red" style="top: 35%; left: 70%;"></div>
-            <div class="pin blue" style="top: 80%; left: 80%;"></div>
-            <div class="pin" style="top: 15%; left: 75%;"></div>
-          </div>
-          <div class="mock-mobile">
-            <div class="scr">
-              <div style="font-size: 11px; font-weight: 700; margin-bottom: 8px; color: var(--ink);">Sarcini azi</div>
-              <div class="row"><span class="ch">✓</span><span class="t">MS-03 Decebal</span><span class="s">09:12</span></div>
-              <div class="row"><span class="ch">✓</span><span class="t">CS-01 Centru</span><span class="s">10:04</span></div>
-              <div class="row"><span class="ch" style="background: var(--accent-50); color: var(--accent);">●</span><span class="t">MS-05 Carol</span><span class="s">acum</span></div>
-              <div class="row"><span class="ch" style="background: var(--bg-alt); color: var(--muted);">○</span><span class="t">CD-01 Sector 2</span><span class="s">12:00</span></div>
+        <div class="walk-scenes" id="walkScenes">
+
+          <div class="walk-scene scene-plan" data-scene="0">
+            <span class="scene-tag">01 · Planificare</span>
+            <h3>Dispecerul construiește programul lunar</h3>
+            <div class="scene-body">
+              <div class="cal-mini">
+                <div class="c f"></div><div class="c f"></div><div class="c"></div><div class="c f"></div><div class="c f"></div><div class="c f"></div><div class="c"></div>
+                <div class="c f"></div><div class="c"></div><div class="c f"></div><div class="c f"></div><div class="c f"></div><div class="c"></div><div class="c f"></div>
+                <div class="c f"></div><div class="c f"></div><div class="c f"></div><div class="c"></div><div class="c f"></div><div class="c f"></div><div class="c"></div>
+                <div class="c"></div><div class="c f"></div><div class="c f"></div><div class="c f"></div><div class="c f"></div><div class="c f"></div><div class="c"></div>
+              </div>
+              <div class="stat-row">
+                <div class="stat"><div class="v">1.247</div><div class="l">sarcini generate</div></div>
+                <div class="stat"><div class="v">22</div><div class="l">zile lucrătoare</div></div>
+                <div class="stat"><div class="v">14</div><div class="l">echipe alocate</div></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- 3. Raportare -->
-      <div class="feat-block">
-        <div>
-          <span class="tag">Pasul 3 · Raportare</span>
-          <h3>Situații de plată generate în 5 minute</h3>
-          <p>Datele din teren se consolidează automat. Aplici tariful (cu istoricizare), generezi PDF/Excel conform caietului de sarcini și transmiți la UAT. Tot fluxul cu snapshot imutabil per linie.</p>
-          <ul class="bullets">
-            <li>Istoric tarife cu valabilitate pe perioade</li>
-            <li>Export PDF și Excel, conform caietului de sarcini</li>
-            <li>Înghețare definitivă a fiecărei situații</li>
-            <li>Rapoarte analitice per sector, utilaj sau operator</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">Vezi exemple →</a>
-        </div>
-        <div class="visual v-ink">
-          <div style="background: rgba(255,255,255,.08); border-radius: 14px; padding: 24px;">
-            <div style="font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.5); margin-bottom: 12px;">SITUAȚIE DE PLATĂ · MAI 2026</div>
-            <div style="display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; font-size: 13px;">
-              <span style="color: rgba(255,255,255,.7);">Măturat mecanizat</span><span style="font-variant-numeric: tabular-nums;">128.400 m²</span>
-              <span style="color: rgba(255,255,255,.7);">Golit coșuri stradale</span><span style="font-variant-numeric: tabular-nums;">1.240 buc</span>
-              <span style="color: rgba(255,255,255,.7);">Colectat deșeuri</span><span style="font-variant-numeric: tabular-nums;">54,2 t</span>
-              <span style="color: rgba(255,255,255,.7);">Curățare rigole</span><span style="font-variant-numeric: tabular-nums;">8.400 ml</span>
-            </div>
-            <div style="height: 1px; background: rgba(255,255,255,.1); margin: 16px 0;"></div>
-            <div style="display: flex; justify-content: space-between; font-size: 15px; font-weight: 700;">
-              <span>Total fără TVA</span><span style="color: var(--primary);">128.420 RON</span>
+          <div class="walk-scene scene-exec" data-scene="1">
+            <span class="scene-tag">02 · Execuție</span>
+            <h3>Echipele raportează din teren, hartă în direct</h3>
+            <div class="scene-body">
+              <div class="map-area">
+                <div class="trail t1"></div>
+                <div class="trail t2"></div>
+                <div class="truck"></div>
+                <div class="pin-x p1"></div>
+                <div class="pin-x p2"></div>
+                <div class="pin-x p3"></div>
+              </div>
             </div>
           </div>
+
+          <div class="walk-scene scene-pay" data-scene="2">
+            <span class="scene-tag">03 · Decontare</span>
+            <h3>Situația de plată gata în 5 minute</h3>
+            <div class="scene-body invoice">
+              <div class="hdr">
+                <span class="doc">SITUAȚIE DE PLATĂ</span>
+                <span class="month">Mai 2026</span>
+              </div>
+              <div class="row"><span>Măturat mecanizat</span><span>128.400 m²</span></div>
+              <div class="row"><span>Golit coșuri stradale</span><span>1.240 buc</span></div>
+              <div class="row"><span>Colectat deșeuri</span><span>54,2 t</span></div>
+              <div class="row"><span>Curățare rigole</span><span>8.400 ml</span></div>
+              <div class="total"><span>Total fără TVA</span><span class="amt">128.420 RON</span></div>
+            </div>
+            <div class="stamp">SEMNAT<br />03 IUN</div>
+          </div>
+
         </div>
+      </div>
+      <div class="walk-controls">
+        <button class="ctrl-btn" id="walkPlay" aria-label="Play/Pause">
+          <svg id="walkPlayIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="progress" id="walkProgress">
+          <div class="markers"><span></span><span></span><span></span></div>
+          <div class="fill" id="walkFill"></div>
+        </div>
+        <span class="time" id="walkTime">0:00 / 0:45</span>
+      </div>
+    </div>
+
+    <div class="walk-chapters" id="walkChapters">
+      <div class="walk-chapter active" data-jump="0"><div class="ch-num">01</div><div class="ch-title">Planificare</div><div class="ch-time">0:00 — 0:15</div></div>
+      <div class="walk-chapter" data-jump="1"><div class="ch-num">02</div><div class="ch-title">Execuție pe teren</div><div class="ch-time">0:15 — 0:30</div></div>
+      <div class="walk-chapter" data-jump="2"><div class="ch-num">03</div><div class="ch-title">Decontare</div><div class="ch-time">0:30 — 0:45</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEFORE / AFTER ─────────────────────────────────────────── -->
+<section class="section compare-b">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow accent"><span class="dot"></span>Diferența concretă</span>
+      <h2>Trage de bară. Vezi schimbarea.</h2>
+      <p>Aceleași activități, două lumi. Stânga: cum lucrează majoritatea operatorilor azi. Dreapta: cu SALUX.</p>
+    </div>
+    <div class="compare-wrap" id="compareWrap">
+      <div class="compare-side before">
+        <span class="lbl">Înainte · pe hârtie</span>
+        <h3>Excel, telefon, procese verbale</h3>
+        <div class="items">
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>Reconciliere lunară 5–10 zile</div>
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>UAT cere dovezi, le cauți prin foi</div>
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>Contestații frecvente la situații</div>
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>Plafoane anuale aflate prea târziu</div>
+        </div>
+        <div class="metric"><span class="v">14 zile</span><span class="l">la situația de plată semnată</span></div>
+      </div>
+      <div class="compare-side after">
+        <span class="lbl">După · cu SALUX</span>
+        <h3>O singură sursă de adevăr</h3>
+        <div class="items">
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Situație gata automat în 5 minute</div>
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>GPS + foto pentru fiecare sarcină</div>
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Contestații cu argument, în 2 click-uri</div>
+          <div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Plafoane urmărite zilnic, alerte</div>
+        </div>
+        <div class="metric"><span class="v">3 zile</span><span class="l">de la închidere la decontare</span></div>
+      </div>
+      <div class="compare-handle" id="compareHandle"><div class="knob"></div></div>
+      <div class="compare-hint">Trage stânga–dreapta</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROI CALCULATOR ─────────────────────────────────────────── -->
+<section class="section roi-b">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow"><span class="dot"></span>Calculator ROI</span>
+      <h2>Cât economisești cu SALUX?</h2>
+      <p>Introdu datele contractului tău. Estimăm impactul în timp și bani.</p>
+    </div>
+    <div class="roi-wrap">
+      <div class="roi-inputs">
+        <div class="roi-row">
+          <label>Coșuri stradale gestionate <span id="roiBinsVal">500 buc</span></label>
+          <input type="range" id="roiBins" min="50" max="5000" step="50" value="500" />
+        </div>
+        <div class="roi-row">
+          <label>Km de stradă în contract <span id="roiKmVal">120 km</span></label>
+          <input type="range" id="roiKm" min="10" max="1000" step="10" value="120" />
+        </div>
+        <div class="roi-row">
+          <label>Echipe de teren <span id="roiTeamsVal">8 echipe</span></label>
+          <input type="range" id="roiTeams" min="1" max="50" step="1" value="8" />
+        </div>
+        <div class="roi-row">
+          <label>Cost lunar raportare & admin (RON) <span id="roiCostVal">8.000 RON</span></label>
+          <input type="range" id="roiCost" min="1000" max="50000" step="500" value="8000" />
+        </div>
+      </div>
+      <div class="roi-results">
+        <div class="roi-big">
+          <div class="roi-num" id="roiTotal">0 <span class="unit">RON / an</span></div>
+          <div class="roi-label">Economii și câștiguri anuale estimate</div>
+        </div>
+        <div class="roi-sub">
+          <div class="roi-sub-item"><div class="v" id="roiHours">0</div><div class="l">ore admin / an</div></div>
+          <div class="roi-sub-item"><div class="v" id="roiDisputes">0</div><div class="l">contestații evitate</div></div>
+          <div class="roi-sub-item"><div class="v" id="roiHoursM">0</div><div class="l">ore/lună eliberate</div></div>
+          <div class="roi-sub-item"><div class="v" id="roiPayback">0</div><div class="l">recuperare investiție</div></div>
+        </div>
+        <div class="roi-disclaimer">* Estimări orientative bazate pe medii din implementări similare. Valorile exacte depind de contractul și echipa ta.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MODULES grid -->
-<section class="section mods">
+<!-- ── AUDIENCE ────────────────────────────────────────────────── -->
+<section class="section audience" id="audience">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Tot ce e inclus</span>
-      <h2>Toate modulele,<br />într-un singur loc</h2>
-      <p>O licență anuală, fără costuri suplimentare pe utilizator sau pe modul.</p>
-    </div>
-    <div class="mod-grid">
-      <div class="mod m-int" data-demo="plan"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Program lunar</h3><p>Planificare cu frecvențe și cantități, aprobare ierarhică.</p><span class="play-tag">▶ Vezi cum arată</span></div>
-      <div class="mod m-int" data-demo="map"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></div><h3>Hartă în timp real</h3><p>Execuții, sesizări și coșuri, actualizate în direct.</p><span class="play-tag">▶ Vezi cum arată</span></div>
-      <div class="mod m-int" data-demo="mobile"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><h3>Aplicație mobilă</h3><p>Funcționează și fără semnal, cu sincronizare automată.</p><span class="play-tag">▶ Vezi cum arată</span></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><h3>Raportare automată</h3><p>PDF și Excel, conform caietului de sarcini.</p></div>
-      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18l-2 13H5L3 6zM8 6V4a4 4 0 018 0v2"/></svg></div><h3>Coșuri stradale</h3><p>Inventar, golire, raportare per coș.</p></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Pontaj</h3><p>Intrare/ieșire echipă, integrat cu sarcini.</p></div>
-      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0z"/><path d="M9 11l2 2 4-4"/></svg></div><h3>Sesizări cetățeni</h3><p>De la cetățean la echipa de teren, cu urmărire completă.</p></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><h3>Tarife și situații</h3><p>Istoric tarife, situații imutabile, export complet.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- AUDIENCE -->
-<section class="section aud" id="audience">
-  <div class="container">
-    <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Pentru cine</span>
-      <h2>Aceeași informație,<br />două perspective</h2>
+      <span class="eyebrow accent"><span class="dot"></span>Construit pentru ambele părți</span>
+      <h2>Operator privat și UAT — pe aceeași platformă</h2>
+      <p>Roluri și permisiuni clare, izolare strictă a datelor, dar același flux operațional.</p>
     </div>
     <div class="aud-grid">
       <div class="aud-card">
-        <div class="deco"></div>
-        <span class="gtag">Operatori privați de salubrizare</span>
-        <h3>Demonstrezi ce ai făcut,<br />fără să refaci Excel-uri</h3>
-        <p>Treci de la „luăm pe încredere” la „uite traseul, uite poza, uite ora”. Fiecare contract devine apărabil în fața UAT-ului.</p>
-        <ul>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Dovezi GPS + foto pentru fiecare lucrare</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Situații de plată generate automat</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Plafoane anuale urmărite zilnic</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Multi-tenant pentru mai multe UAT-uri</li>
-        </ul>
-        <a href="contact.html" class="btn btn-green">Solicită demo pentru operatori →</a>
+        <div class="aud-ico green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7M5 19a2 2 0 100-4 2 2 0 000 4zM19 19a2 2 0 100-4 2 2 0 000 4z"/></svg>
+        </div>
+        <div>
+          <h3>Operatori privați de salubrizare</h3>
+          <p>Planifici, raportezi, transmiți situații de plată. Echipele tale raportează din teren cu app-ul mobil offline-first. Controlezi contractele, nu te mai controlează ele.</p>
+          <div class="aud-tags">
+            <span>Program lunar</span><span>Sarcini zilnice</span><span>Pontaj</span>
+            <span>Utilaje & ITP</span><span>Tarife</span><span>Situații plată</span>
+          </div>
+        </div>
       </div>
-      <div class="aud-card b">
-        <div class="deco"></div>
-        <span class="gtag">UAT-uri & autorități locale</span>
-        <h3>Vezi exact ce plătești.<br />Aprobă cu argumente.</h3>
-        <p>Acces transparent la programul lunii, la sarcinile executate și la dovezile lor. Contestă în 2 click-uri. Aprobă cu conștiința curată.</p>
-        <ul>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Hartă live cu execuțiile operatorului</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Aprobare/respingere lucrări cu motivație</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Sesizări cetățeni cu prioritizare</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Buget anual cu proiecție epuizare</li>
-        </ul>
-        <a href="contact.html" class="btn btn-accent">Solicită demo pentru UAT →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section pricing-b" id="pricing">
-  <div class="container">
-    <div class="card">
-      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white;"><span class="dot" style="background: var(--primary);"></span>Licențiere personalizată</span>
-      <h2 style="margin-top: 22px;">Un singur plan.<br />Pe măsura contractului tău.</h2>
-      <p>Răspundem cu ofertă în 24h. Implementare asistată inclusă în preț.</p>
-      <div class="cta-row">
-        <a href="contact.html" class="btn btn-green btn-lg">Solicită ofertă →</a>
-        <a href="#modules" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.2); color: white;">Vezi funcționalități</a>
-      </div>
-      <div class="ok">
-        <span>Toate modulele incluse</span>
-        <span>Utilizatori nelimitați</span>
-        <span>Suport în română</span>
-        <span>Asistență la implementare</span>
-        <span>Hosting RO/UE</span>
+      <div class="aud-card">
+        <div class="aud-ico blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 22h18M5 22V10M19 22V10M3 10l9-7 9 7M9 14h2M13 14h2M9 18h2M13 18h2"/></svg>
+        </div>
+        <div>
+          <h3>UAT-uri & autorități locale</h3>
+          <p>Verifici execuția în timp real, aprobi sau respingi cu motivație, urmărești bugetul anual. Hartă GPS, sesizări cetățeni și alerte automate la depășire plafon.</p>
+          <div class="aud-tags">
+            <span>Hartă live</span><span>Aprobare / respingere</span><span>Sesizări</span>
+            <span>Buget anual</span><span>Rapoarte PDF</span><span>Inspectori teren</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ── FAQ ────────────────────────────────────────────────────── -->
 <section class="section faq-b" id="faq">
   <div class="container">
     <div class="s-head">
@@ -800,28 +778,49 @@ body[data-motion="lively"] .mod:hover { transform: translateY(-5px) !important; 
       <h2>Răspunsuri scurte</h2>
     </div>
     <div class="list">
-      <details open><summary>Cât durează implementarea?</summary><div class="a">Între 1 și 3 săptămâni, în funcție de mărimea contractului. Include configurarea conturilor, importul nomenclatoarelor (străzi, sectoare, utilaje), training pentru echipă și asistență la primul program lunar generat.</div></details>
-      <details><summary>Funcționează aplicația mobilă fără conexiune?</summary><div class="a">Da, complet. Aplicația salvează datele local și se sincronizează automat când revine semnalul. Echipele de teren nu pierd timp dacă internetul cade.</div></details>
-      <details><summary>Pot importa nomenclatorul meu de străzi?</summary><div class="a">Da. Avem import asistat pentru străzi, utilizatori și coșuri, cu pre-vizualizare și validare automată. Sistemul vine preîncărcat cu toate județele, municipiile reședință și codurile SIRUTA oficiale INS.</div></details>
-      <details><summary>Cum sunt protejate datele între operatori diferiți?</summary><div class="a">Arhitectură multi-tenant cu izolare strictă pe coloana <code style="font-family: var(--font-mono); font-size: 13px;">client_id</code> în toate tabelele operaționale. Niciun operator nu poate vedea datele altuia.</div></details>
-      <details><summary>Unde sunt stocate datele?</summary><div class="a">Servere din România și Uniunea Europeană, backup zilnic automat cu rotație pe 12 luni. Conform GDPR, oferim acord de prelucrare a datelor (DPA) la cerere.</div></details>
-      <details><summary>Se integrează cu sistemul nostru de contabilitate?</summary><div class="a">Situațiile de plată se exportă în PDF și Excel cu format standardizat, ușor de importat în orice sistem de contabilitate. La cerere, dezvoltăm conectori dedicați, prin interfață de programare sau export periodic, discutăm detaliile în faza de demo.</div></details>
-      <details><summary>Deszăpezirea este inclusă?</summary><div class="a">Da. Modulul include intervenții, stoc materiale (sare, nisip) per bază, prognoză meteo cu cod galben/portocaliu/roșu și raportare specifică pentru sezonul de iarnă.</div></details>
+      <details open>
+        <summary>Cât durează implementarea?</summary>
+        <div class="a">Între 1 și 3 săptămâni, în funcție de mărimea contractului. Include configurarea conturilor, importul nomenclatoarelor (străzi, sectoare, utilaje), training pentru echipă și asistență la primul program lunar generat.</div>
+      </details>
+      <details>
+        <summary>Funcționează aplicația mobilă fără conexiune?</summary>
+        <div class="a">Da, complet. Aplicația salvează datele local și se sincronizează automat când revine semnalul. Echipele de teren nu pierd timp dacă internetul cade.</div>
+      </details>
+      <details>
+        <summary>Pot importa nomenclatorul meu de străzi?</summary>
+        <div class="a">Da. Avem import asistat pentru străzi, utilizatori și coșuri, cu pre-vizualizare și validare automată. Sistemul vine preîncărcat cu toate județele, municipiile reședință și codurile SIRUTA oficiale INS.</div>
+      </details>
+      <details>
+        <summary>Cum sunt protejate datele între operatori diferiți?</summary>
+        <div class="a">Fiecare operator are propriul cont, complet izolat la nivel de bază de date. Nimeni nu vede datele altui operator, nici măcar accidental.</div>
+      </details>
+      <details>
+        <summary>Unde sunt stocate datele?</summary>
+        <div class="a">Pe servere din România și Uniunea Europeană, cu copie de siguranță zilnică automată și păstrare pe 12 luni. Conform GDPR, semnăm acord de prelucrare a datelor la cerere.</div>
+      </details>
+      <details>
+        <summary>Se integrează cu sistemul nostru de contabilitate?</summary>
+        <div class="a">Situațiile de plată se exportă în PDF și Excel cu format standardizat, ușor de preluat în orice program de contabilitate. La cerere, construim și legături automate cu programul tău, discutăm detaliile la prezentare.</div>
+      </details>
+      <details>
+        <summary>Deszăpezirea este inclusă?</summary>
+        <div class="a">Da. Modulul include intervenții, stoc materiale (sare, nisip) per bază, prognoză meteo cu cod galben/portocaliu/roșu și raportare specifică pentru sezonul de iarnă.</div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- ── FINAL CTA ───────────────────────────────────────────────── -->
 <section class="section final-b">
   <div class="container x">
     <span class="eyebrow"><span class="dot"></span>Pasul următor</span>
     <h2 style="margin-top: 22px;">Vino cu datele tale.<br />Plecăm cu un plan.</h2>
     <p>Îți arătăm cum arată SALUX configurat pentru contractul tău. Decizi după.</p>
-    <a href="contact.html" class="btn btn-green btn-lg">Programează demo →</a>
+    <a href="contact.html" class="btn btn-green btn-lg">Programează o prezentare →</a>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -830,175 +829,171 @@ body[data-motion="lively"] .mod:hover { transform: translateY(-5px) !important; 
         <p class="lede">Sistem informatic pentru salubrizare stradală și deszăpezire în România.</p>
         <p class="lede" style="margin-top: 12px;"><a href="mailto:office@salux.ro">office@salux.ro</a></p>
       </div>
-      <div><h4>Produs</h4><ul><li><a href="#modules">Funcționalități</a></li><li><a href="#audience">Pentru cine</a></li><li><a href="#pricing">Licențiere</a></li><li><a href="contact.html">Demo</a></li></ul></div>
-      <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="legal/confidentialitate.html">Confidențialitate</a></li><li><a href="legal/termeni.html">Termeni</a></li><li><a href="legal/gdpr.html">GDPR</a></li><li><a href="legal/eula.html">EULA</a></li></ul></div>
-      <div><h4>Companie</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Solicită demo</a></li><li><a href="mailto:office@salux.ro">office@salux.ro</a></li><li><a href="legal/gdpr.html">GDPR</a></li></ul></div>
+      <div><h4>Produs</h4><ul>
+        <li><a href="#modules">Funcționalități</a></li>
+        <li><a href="#audience">Pentru cine</a></li>
+        <li><a href="#pricing">Licențiere</a></li>
+        <li><a href="contact.html">Prezentare</a></li>
+      </ul></div>
+      <div><h4>Resurse</h4><ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#faq">Întrebări frecvente</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="legal/confidentialitate.html">Confidențialitate</a></li>
+        <li><a href="legal/termeni.html">Termeni</a></li>
+        <li><a href="legal/gdpr.html">GDPR</a></li>
+        <li><a href="legal/eula.html">EULA</a></li>
+      </ul></div>
+      <div><h4>Companie</h4><ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Programează o prezentare</a></li>
+        <li><a href="mailto:office@salux.ro">office@salux.ro</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 SALUX · București, România</span>
+      <span>© 2026 SALUX</span>
       <span>Orașe curate. Comunități sănătoase.</span>
     </div>
   </div>
 </footer>
 
-
-
-<!-- DEMO MODAL -->
-<div class="demo-modal" id="demoModal" aria-hidden="true">
-  <div class="panel">
-    <div class="head"><h3 id="demoTitle">Demo</h3><button class="x" onclick="closeDemo()" aria-label="Închide">✕</button></div>
-    <div class="stage" id="demoStage"></div>
-    <div class="caption" id="demoCaption"></div>
-  </div>
-</div>
-
-<script src="assets/image-slot.js"></script>
 <script>
+/* ── FAQ ACCORDION ──────────────────────────────────────────── */
 (function(){
-  const items = document.querySelectorAll('.hero-shapes .side .li');
-  const kpiCards = document.querySelectorAll('.hero-shapes .kpi-row .k');
-  const bars = document.querySelectorAll('.hero-shapes .chart .b');
-  const data = {
-    'dashboard':        [['48','Sarcini azi'],['87%','Conformitate'],['4','Sesizări noi'],['12.4t','Colectat']],
-    'program lunar':    [['14','Operațiuni'],['1.247','Sarcini gen.'],['98%','Acoperire'],['12','Noi azi']],
-    'sarcini zilnice':  [['38','În curs'],['10','Finalizate'],['2','Întârziate'],['09:42','Ultim sync']],
-    'hartă gps':        [['12','Echipe live'],['8','Utilaje GPS'],['64 km','Parcurși'],['100%','Conectate']],
-    'coșuri':           [['1.240','Coșuri'],['78%','Golite azi'],['3','Defecte'],['12','Programate']],
-    'sesizări':         [['4','Noi'],['7','În lucru'],['28','Închise săpt.'],['2.4h','Timp mediu']],
-    'pontaj':           [['54','Angajați azi'],['42','Pe teren'],['7h 12m','Mediu'],['2','Lipsă']],
-    'rapoarte':         [['Mai 26','Perioada'],['128k','m² măturat'],['54,2t','Colectat'],['Gata','Status']],
-    'tarife':           [['82','Tarife active'],['3','Modificate'],['128k','RON luna'],['Mai 26','Lună']]
-  };
-  function setBars(seed){
-    bars.forEach((b,i)=>{
-      const h = 35 + Math.abs(Math.sin(i*1.37 + seed)) * 60;
-      b.style.height = h.toFixed(0) + '%';
-    });
-  }
-  let seed = 0;
-  items.forEach(li => {
-    li.addEventListener('click', () => {
-      items.forEach(x => x.classList.remove('act'));
-      li.classList.add('act');
-      const key = li.textContent.replace(/[▣▢]/g,'').trim().toLowerCase();
-      const set = data[key] || data['dashboard'];
-      kpiCards.forEach((k,i) => {
-        if (!set[i]) return;
-        k.querySelector('.v').textContent = set[i][0];
-        k.querySelector('.l').textContent = set[i][1];
-      });
-      seed += 1.7;
-      setBars(seed);
+  const items = document.querySelectorAll('.faq-b details');
+  items.forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) items.forEach(o => { if (o !== d) o.open = false; });
     });
   });
+})();
 
-  // Auto-cycle until user interacts — exposed for Tweaks
-  let autoIdx = 0;
-  let autoPaused = false;
-  let cycleTimer = null;
-  window.saluxCycle = {
-    start(ms) {
-      if (cycleTimer) clearInterval(cycleTimer);
-      if (!ms || ms <= 0) { cycleTimer = null; return; }
-      cycleTimer = setInterval(() => {
-        if (autoPaused) return;
-        autoIdx = (autoIdx + 1) % items.length;
-        items[autoIdx].click();
-      }, ms);
-    },
-    stop() { if (cycleTimer) clearInterval(cycleTimer); cycleTimer = null; }
+/* ── WALKTHROUGH ────────────────────────────────────────────── */
+(function(){
+  const TOTAL = 45;
+  const CHAPTERS = [0, 15, 30, 45];
+  const poster = document.getElementById('walkPoster');
+  const scenes = document.querySelectorAll('#walkScenes .walk-scene');
+  const playBtn = document.getElementById('walkPlay');
+  const playIcon = document.getElementById('walkPlayIcon');
+  const fill = document.getElementById('walkFill');
+  const time = document.getElementById('walkTime');
+  const chapters = document.querySelectorAll('#walkChapters .walk-chapter');
+  const progress = document.getElementById('walkProgress');
+  let t = 0, playing = false, raf = null, last = 0;
+
+  const fmt = s => Math.floor(s/60) + ':' + String(Math.floor(s%60)).padStart(2,'0');
+  const sceneForTime = s => {
+    for (let i = 0; i < CHAPTERS.length - 1; i++) if (s < CHAPTERS[i+1]) return i;
+    return CHAPTERS.length - 2;
   };
-  window.saluxCycle.start(3200);
-  const surface = document.querySelector('.hero-shapes .surface');
-  if (surface) {
-    surface.addEventListener('mouseenter', () => { autoPaused = true; });
-    surface.addEventListener('mouseleave', () => { autoPaused = false; });
+  function render() {
+    fill.style.width = (t / TOTAL * 100).toFixed(2) + '%';
+    time.textContent = fmt(t) + ' / 0:45';
+    const idx = sceneForTime(t);
+    scenes.forEach((s,i) => s.classList.toggle('active', i === idx));
+    chapters.forEach((c,i) => c.classList.toggle('active', i === idx));
   }
-  items.forEach(li => li.addEventListener('click', (e) => {
-    if (e.isTrusted) { window.saluxCycle.stop(); autoPaused = true; }
+  function setPlay(v) {
+    playing = v;
+    playIcon.innerHTML = v
+      ? '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>'
+      : '<path d="M8 5v14l11-7z"/>';
+    if (v) { last = performance.now(); raf = requestAnimationFrame(loop); }
+    else if (raf) cancelAnimationFrame(raf);
+  }
+  function loop(now) {
+    const dt = (now - last) / 1000; last = now;
+    t += dt;
+    if (t >= TOTAL) { t = 0; }
+    render();
+    if (playing) raf = requestAnimationFrame(loop);
+  }
+  poster.addEventListener('click', () => { poster.classList.add('hide'); setPlay(true); });
+  playBtn.addEventListener('click', () => {
+    if (!poster.classList.contains('hide')) poster.classList.add('hide');
+    setPlay(!playing);
+  });
+  chapters.forEach((c, i) => c.addEventListener('click', () => {
+    poster.classList.add('hide');
+    t = CHAPTERS[i] + 0.1;
+    render();
+    if (!playing) setPlay(true);
   }));
-
-  // Reveal-on-scroll
-  const targets = document.querySelectorAll('.problem-card, .flow-step, .mod, .aud-card, .feature-block, .reality-grid .slot-wrap, .metric-row .m, .trust-strip .badge');
-  targets.forEach((el, i) => {
-    el.setAttribute('data-reveal', '');
-    el.setAttribute('data-d', String((i % 4) + 1));
+  progress.addEventListener('click', e => {
+    const r = progress.getBoundingClientRect();
+    t = (e.clientX - r.left) / r.width * TOTAL;
+    poster.classList.add('hide');
+    render();
   });
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  targets.forEach(el => io.observe(el));
-
-  // Count-up for metric values
-  const counted = new WeakSet();
-  const mio = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting || counted.has(e.target)) return;
-      counted.add(e.target);
-      const v = e.target;
-      const html = v.innerHTML;
-      const m = html.match(/(−|-)?(\d+)(<span[^>]*>[^<]*<\/span>)?/);
-      if (!m) return;
-      const sign = m[1] || '';
-      const target = parseInt(m[2], 10);
-      const unit = m[3] || '';
-      const dur = 1100;
-      const start = performance.now();
-      function tick(now) {
-        const t = Math.min(1, (now - start) / dur);
-        const eased = 1 - Math.pow(1 - t, 3);
-        const cur = Math.round(target * eased);
-        v.innerHTML = sign + cur + unit;
-        if (t < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.metric-row .m .v').forEach(el => mio.observe(el));
+  render();
 })();
-</script>
-<script>
+
+/* ── BEFORE / AFTER SLIDER ──────────────────────────────────── */
 (function(){
-  const demos = {
-    plan: {
-      title: 'Program lunar — generare automată',
-      stage: '<div class="d-plan"><div class="calendar">' + Array(28).fill(0).map((_,i)=>`<div class="cell">${i+1}</div>`).join('') + '</div><span class="label">Mai 2026 · 1.247 sarcini generate</span></div>',
-      caption: '<b>De la calendar la sarcini.</b>Dispecerul definește străzile și frecvențele. Sistemul construiește automat sarcinile zilnice, le distribuie pe echipe și calculează cantitățile.'
-    },
-    map: {
-      title: 'Hartă GPS — echipe în direct',
-      stage: '<div class="d-map"><div class="route"></div><div class="pin a"></div><div class="pin b"></div><div class="pin c"></div></div><span class="label">12 echipe · 8 utilaje · ultim sync 0:09</span>',
-      caption: '<b>Vezi unde sunt echipele în fiecare moment.</b>Pozițiile sunt actualizate în timp real. Coșurile semnalate, sesizările cetățenilor și traseele utilajelor apar pe aceeași hartă.'
-    },
-    mobile: {
-      title: 'Aplicație mobilă — șef echipă',
-      stage: '<div class="d-mobile"><div class="phone"><div class="screen"><div class="h">Sarcini azi · 12 mai</div><div class="t"><span>Măturat · Decebal</span><span class="ok">✓</span></div><div class="t"><span>Golit coșuri · Centru</span><span class="ok">✓</span></div><div class="t"><span>Rigole · Bd. Magheru</span><span style="color:#999">én curs</span></div><div class="t"><span>Colectat · Piața Mare</span><span style="color:#999">la 14:00</span></div></div></div></div><span class="label">Offline · 4 acțiuni în coadă</span>',
-      caption: '<b>Șeful de echipă marchează din teren.</b>Aplicația funcționează și fără semnal. Foto, GPS și timpi sunt salvate local și sincronizate automat când revine internetul.'
-    }
-  };
-  const modal = document.getElementById('demoModal');
-  const stage = document.getElementById('demoStage');
-  const title = document.getElementById('demoTitle');
-  const caption = document.getElementById('demoCaption');
-  document.querySelectorAll('.mod.m-int').forEach(card => {
-    card.addEventListener('click', () => {
-      const key = card.dataset.demo;
-      const d = demos[key]; if (!d) return;
-      title.textContent = d.title;
-      stage.innerHTML = d.stage;
-      caption.innerHTML = d.caption;
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden','false');
-    });
+  const wrap = document.getElementById('compareWrap');
+  if (!wrap) return;
+  const after = wrap.querySelector('.compare-side.after');
+  const handle = document.getElementById('compareHandle');
+  let drag = false;
+  function set(x) {
+    const r = wrap.getBoundingClientRect();
+    const p = Math.max(4, Math.min(96, (x - r.left) / r.width * 100));
+    handle.style.left = p + '%';
+    after.style.clipPath = `inset(0 0 0 ${p}%)`;
+  }
+  const pt = e => e.touches ? e.touches[0].clientX : e.clientX;
+  handle.addEventListener('mousedown', () => drag = true);
+  handle.addEventListener('touchstart', () => drag = true, {passive:true});
+  window.addEventListener('mouseup', () => drag = false);
+  window.addEventListener('touchend', () => drag = false);
+  window.addEventListener('mousemove', e => { if (drag) set(pt(e)); });
+  window.addEventListener('touchmove', e => { if (drag) set(pt(e)); }, {passive:true});
+  wrap.addEventListener('click', e => { if (e.target.closest('.compare-handle')) return; set(pt(e)); });
+  // init handle at 50% after layout
+  requestAnimationFrame(() => {
+    const r = wrap.getBoundingClientRect();
+    handle.style.left = '50%';
+    after.style.clipPath = 'inset(0 0 0 50%)';
   });
-  window.closeDemo = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); stage.innerHTML=''; };
-  modal.addEventListener('click', e => { if (e.target === modal) closeDemo(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDemo(); });
+})();
+
+/* ── ROI CALCULATOR ─────────────────────────────────────────── */
+(function(){
+  const ids = ['roiBins','roiKm','roiTeams','roiCost'];
+  const inputs = ids.map(i => document.getElementById(i));
+  if (inputs.some(i => !i)) return;
+  const fmt0 = n => n.toLocaleString('ro-RO');
+  function setTrack(el) {
+    const min = +el.min, max = +el.max, v = +el.value;
+    el.style.setProperty('--p', ((v-min)/(max-min)*100) + '%');
+  }
+  function calc() {
+    const bins = +inputs[0].value, km = +inputs[1].value, teams = +inputs[2].value, cost = +inputs[3].value;
+    document.getElementById('roiBinsVal').textContent = fmt0(bins) + ' buc';
+    document.getElementById('roiKmVal').textContent = fmt0(km) + ' km';
+    document.getElementById('roiTeamsVal').textContent = teams + ' echipe';
+    document.getElementById('roiCostVal').textContent = fmt0(cost) + ' RON';
+    const reportSavings = cost * 0.72 * 12;
+    const fieldEfficiency = teams * km * 4 * 18;
+    const disputeSavings = (km * 12) + (bins * 2);
+    const total = Math.round(reportSavings + fieldEfficiency + disputeSavings);
+    const hoursYear = Math.round(cost * 12 * 0.72 / 75);
+    const disputes = Math.max(4, Math.round((km + bins/40) / 20));
+    const paybackMonths = Math.max(2, Math.round(45000 / (total/12)));
+    document.getElementById('roiTotal').innerHTML = fmt0(total) + ' <span class="unit">RON / an</span>';
+    document.getElementById('roiHours').textContent = fmt0(hoursYear);
+    document.getElementById('roiHoursM').textContent = Math.round(hoursYear/12) + ' ore';
+    document.getElementById('roiDisputes').textContent = '~' + disputes;
+    document.getElementById('roiPayback').textContent = '~' + paybackMonths + ' luni';
+    inputs.forEach(setTrack);
+  }
+  inputs.forEach(i => i.addEventListener('input', calc));
+  calc();
 })();
 </script>
+
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
