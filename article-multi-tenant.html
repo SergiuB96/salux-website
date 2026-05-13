@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Multi-tenant pentru operatori multi-contract — SALUX Blog</title>
+<title>Arhitectura multi-tenant pentru operatorii cu mai multe contracte de delegare — SALUX Blog</title>
+<meta name="description" content="Separarea strictă a datelor între contracte și conturile distincte pentru fiecare autoritate contractantă — cerință structurală pentru evidențele distincte din art. 28 alin. (3) Legea 101/2006." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
@@ -24,7 +25,7 @@
     </div>
     <div class="nav-cta">
       <a href="#" class="btn btn-ghost">Autentificare</a>
-      <a href="contact.html" class="btn btn-primary">Solicită demo</a>
+      <a href="contact.html" class="btn btn-primary">Programați demo</a>
     </div>
   </div>
 </nav>
@@ -32,8 +33,8 @@
 <section class="art-hero"><div class="container">
   <nav class="crumb"><a href="blog.html">← Toate articolele</a></nav>
   <span class="tag"><span class="dot"></span>Tehnic</span>
-  <h1>De ce un operator multi-contract are nevoie de multi-tenant</h1>
-  <p class="deck">Cum izolezi datele între contracte diferite, de ce nu funcționează „un Excel pe județ” și ce înseamnă <code>client_id</code> pentru securitatea ta.</p>
+  <h1>Arhitectura multi-tenant pentru operatorii cu mai multe contracte de delegare</h1>
+  <p class="deck">Separarea strictă a datelor între contracte diferite și conturile distincte pentru fiecare autoritate contractantă — o cerință structurală pentru evidențele distincte impuse de art. 28 alin. (3) din Legea 101/2006.</p>
   <div class="meta">
     <span class="avi">CL</span>
     <span><b>Cristian Lupu</b> · CTO SALUX</span>
@@ -43,58 +44,56 @@
 
 <section class="art-body"><article class="prose">
 
-<p>Un operator cu 3 contracte într-o țară mică (Cluj, Sibiu, Brașov) și un sistem informatic „cu o instalare pe contract” = 3 baze de date, 3 backup-uri, 3 versiuni de software de sincronizat manual. La 5 contracte, devine ingestionabil.</p>
+<p>Un operator care derulează simultan contracte de delegare cu mai multe unități administrativ-teritoriale are o cerință structurală: evidențe distincte pe fiecare contract, fără posibilitatea de a confunda activitatea sau datele între autorități contractante. Această cerință decurge din obligația prevăzută la art. 28 alin. (3) din Legea 101/2006, care impune operatorului să țină evidențe separate pe fiecare tip de activitate.</p>
 
-<p>Soluția corectă se numește <strong>multi-tenant</strong>. Un singur sistem, cu izolare logică strictă între chiriași (tenants). În cazul nostru, fiecare „tenant” = un contract / operator / UAT.</p>
+<p>Răspunsul tehnologic adecvat este o arhitectură <strong>multi-tenant</strong> — un singur sistem informatic cu izolare logică strictă între chiriași (tenants). În acest cadru, fiecare contract de delegare funcționează ca un tenant distinct, cu utilizatori, date și raportări separate.</p>
 
-<h2>Cum arată izolarea, tehnic</h2>
-<p>Fiecare tabel operațional din baza de date are o coloană numită <code>client_id</code>. Toate interogările trec printr-un filtru automat care adaugă <code>WHERE client_id = ?</code> la nivel de framework. Niciun query SQL nu poate ieși din contractul utilizatorului autentificat.</p>
+<h2>Cum se realizează izolarea</h2>
+<p>Toate tabelele operaționale din baza de date conțin un identificator de contract, iar fiecare interogare se filtrează automat la nivelul framework-ului aplicației. Datele unui contract nu pot fi accesate din contextul altui contract, indiferent de calea de acces — interfață web, aplicație mobilă, API.</p>
 
 <div class="callout green">
-  <div class="h">// În practică</div>
-  Un dispecer din Cluj nu poate vedea o sarcină din Sibiu. Nu pentru că UI-ul ascunde linkul. Pentru că <code>SELECT * FROM tasks WHERE client_id = 'cluj'</code> nu va returna niciodată un rând cu <code>client_id = 'sibiu'</code>.
+  <div class="h">// Implicație operațională</div>
+  Autoritatea contractantă A primește un cont dedicat care vede exclusiv activitatea pe contractul propriu. Autoritatea contractantă B vede exclusiv activitatea pe contractul propriu. Operatorul are vedere consolidată — pentru raportare internă — fără ca această vedere să fie accesibilă vreunei autorități contractante.
 </div>
 
-<h2>De ce nu „un Excel pe județ”</h2>
-<p>Trei probleme apar imediat:</p>
+<h2>Alternativele care nu respectă cerința legală</h2>
+<p>Două abordări frecvent încercate eșuează în raport cu obligația din art. 28 alin. (3):</p>
 <ol>
-  <li><strong>Nomenclatoarele divergează.</strong> Strada „Mihai Viteazul” are 3 variante de scriere în 3 Excel-uri. Când treci la raportare consolidată, se aprinde infernul.</li>
-  <li><strong>Nu poți raporta consolidat.</strong> Câte coșuri ai golit luna asta, în total? Câte sesizări ai închis? Cu Excel-uri separate, e o săptămână de muncă manuală pentru fiecare întrebare.</li>
-  <li><strong>Drepturile sunt o utopie.</strong> Cine deschide fișierul vede tot. Nu există RBAC pe Excel.</li>
+  <li><strong>Evidențe pe foi de calcul separate.</strong> Nomenclatoarele divergează între fișiere, raportarea consolidată devine o reconstituire manuală costisitoare, iar drepturile de acces nu pot fi controlate la nivel de înregistrare. Riscul de a confunda evidențele între contracte este permanent.</li>
+  <li><strong>Instalări separate pentru fiecare contract.</strong> Această abordare creează cost operațional disproporționat — actualizări multiplicate, migrări legislative repetate, investigații de securitate paralele. Echipa tehnică nu poate susține creșterea numărului de contracte.</li>
 </ol>
 
-<h2>De ce nu „o instalare pe contract”</h2>
-<p>Aici intervine costul operațional. La fiecare upgrade de software, ai N instalări de actualizat. La fiecare nou regulament, N migrări de făcut. La fiecare incident de securitate, N investigații. Echipa ta tehnică nu va scala niciodată suficient.</p>
+<h2>Avantaje structurale ale arhitecturii multi-tenant</h2>
+<p>Cadrul unitar oferă, în plus, funcționalități care decurg din specificul activității de salubrizare:</p>
 
 <blockquote>
-  Multi-tenant nu e o optimizare. E singura arhitectură care suportă creșterea ta de la 2 la 20 de contracte fără să dublezi echipa tehnică.
+  Multi-tenant nu este o optimizare tehnică. Este modul în care se respectă obligația evidențelor distincte pe contract și se asigură conturile separate pentru fiecare autoritate contractantă.
 </blockquote>
 
-<h2>Ce mai face un sistem multi-tenant bun</h2>
 <ul>
-  <li><strong>Audit log per tenant.</strong> Cine a făcut ce, când, în ce contract. Stocat 5 ani.</li>
-  <li><strong>Branding per UAT.</strong> Portalul public „Sesizări cetățeni” poate purta logo-ul UAT-ului, nu al operatorului.</li>
-  <li><strong>Indicatori cross-tenant doar pentru admin.</strong> Doar tu, ca operator, vezi „toate contractele mele”. UAT-ul vede doar al lui.</li>
-  <li><strong>Backup &amp; restore selectiv.</strong> Poți restaura un tenant fără să atingi pe ceilalți.</li>
+  <li><strong>Audit log distinct pe contract.</strong> Toate acțiunile utilizatorilor sunt înregistrate cu identificator, marcaj temporal și conținut, păstrate minim cinci ani.</li>
+  <li><strong>Conturi dedicate pentru fiecare autoritate contractantă.</strong> Portalul autorității contractante poate include identitatea instituției și permite monitorizarea conformă art. 9 lit. h Legea 51/2006.</li>
+  <li><strong>Raportare consolidată pentru operator, separată pentru autoritatea contractantă.</strong> Operatorul vede activitatea pe toate contractele; fiecare autoritate vede exclusiv activitatea de pe contractul propriu.</li>
+  <li><strong>Backup și restore selective pe contract.</strong> Pierderea sau coruperea datelor pe un contract nu afectează celelalte.</li>
 </ul>
 
 <div class="kpi-inline">
-  <div class="k"><div class="v">1<span class="u">×</span></div><div class="l">o singură instalare</div></div>
-  <div class="k"><div class="v">N<span class="u">×</span></div><div class="l">contracte izolate</div></div>
-  <div class="k"><div class="v">0<span class="u">×</span></div><div class="l">scurgere între tenanți</div></div>
+  <div class="k"><div class="v">art. 28<span class="u"> alin. (3)</span></div><div class="l">Legea 101/2006 — evidențe distincte pe activitate</div></div>
+  <div class="k"><div class="v">5<span class="u"> ani</span></div><div class="l">audit log per contract</div></div>
+  <div class="k"><div class="v">RO &amp; UE<span class="u"></span></div><div class="l">hosting conform GDPR și OUG 119/2022</div></div>
 </div>
 
 <h2>Pe scurt</h2>
-<p>Dacă operezi un singur contract pentru tot restul vieții, multi-tenant nu te ajută. Dacă vrei să poți câștiga al doilea contract fără să refaci sistemul de la zero, e singura arhitectură care merge. SALUX e multi-tenant de la fundație — nu adăugat ulterior.</p>
+<p>Pentru operatorii cu un singur contract, arhitectura multi-tenant nu aduce diferențe semnificative. Pentru operatorii care derulează mai multe contracte sau care anticipează participarea la noi proceduri de delegare, multi-tenant este singura arhitectură care răspunde simultan cerinței legale de evidențe distincte și cerinței operaționale de gestionare scalabilă. SALUX este construit pe acest principiu din temelii.</p>
 
 </article></section>
 
 <section class="art-cta"><div class="container"><div class="grid">
   <div>
-    <h2>Vrei să vezi cum arată dashboard-ul tău cu 3 contracte simultane?</h2>
-    <p>30 de minute. Îți arătăm pe datele tale.</p>
+    <h2>Arhitectura multi-tenant, demonstrată pe contractele dumneavoastră.</h2>
+    <p>45 de minute. Pregătim demonstrația cu structura reală de contracte de delegare.</p>
   </div>
-  <a href="contact.html" class="btn btn-primary btn-lg">Programează demo →</a>
+  <a href="contact.html" class="btn btn-primary btn-lg">Programați o demonstrație →</a>
 </div></div></section>
 
 <section class="related"><div class="container">
@@ -102,18 +101,18 @@
   <div class="related-grid">
     <a href="article-srs.html" class="rel-card">
       <div class="meta">04 MAI 2026 · 8 MIN</div>
-      <h5>SRS 6705/2008 explicat: indicatori lunari</h5>
-      <p>Cei 6 indicatori obligatorii pe care orice operator îi raportează lunar.</p>
+      <h5>Indicatorii din Ordinul ANRSC 98/2025</h5>
+      <p>Lista indicatorilor de performanță și frecvențele minime stabilite prin Caietul de sarcini-cadru.</p>
     </a>
     <a href="article-deszapezire.html" class="rel-card">
       <div class="meta">22 APR 2026 · 6 MIN</div>
-      <h5>Sezonul de deszăpezire: 7 lucruri care te apără</h5>
-      <p>Documentația minimă pe care orice operator ar trebui să o aibă pregătită.</p>
+      <h5>Sezonul de deszăpezire: documentația sistematică</h5>
+      <p>Evidențele care permit justificarea sistematică a prestației pentru autoritatea contractantă.</p>
     </a>
     <a href="blog.html" class="rel-card">
       <div class="meta">TOATE</div>
       <h5>Vezi toate articolele</h5>
-      <p>Note practice pentru operatori și UAT-uri.</p>
+      <p>Note practice pentru operatori privați și unități administrativ-teritoriale.</p>
     </a>
   </div>
 </div></section>
@@ -122,13 +121,13 @@
   <div class="footer-grid">
     <div>
       <div class="footer-brand"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></div>
-      <p class="lede">Sistem informatic pentru salubrizare stradală și deszăpezire.</p>
+      <p class="lede">Platformă SaaS pentru salubrizarea stradală în România. Aliniată Ordinelor ANRSC 97/2025 și 98/2025.</p>
     </div>
-    <div><h4>Produs</h4><ul><li><a href="home-sobru.html#modules">Module</a></li><li><a href="contact.html">Solicită demo</a></li></ul></div>
+    <div><h4>Produs</h4><ul><li><a href="index.html#modules">Module</a></li><li><a href="contact.html">Programați demo</a></li></ul></div>
     <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li></ul></div>
     <div><h4>Legal</h4><ul><li><a href="legal/confidentialitate.html">Confidențialitate</a></li><li><a href="legal/gdpr.html">GDPR</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 SALUX</span></div>
+  <div class="footer-bottom"><span>© 2026 SALUX SRL. Hosting în România și UE. GDPR.</span></div>
 </div></footer>
 
 </body>
