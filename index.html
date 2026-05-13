@@ -312,6 +312,18 @@ body { background: #FFFFFF; }
   .float-badge { display: none; }
   .section { padding: 64px 0; }
   .pricing-b .card { padding: 40px 24px; }
+  /* Hero mobil — fără video, gradient în loc */
+  .hero-bg-video { display: none; }
+  .hero-b {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(125,200,160,.22), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(59,114,196,.14), transparent 60%),
+      linear-gradient(180deg, #F7FAFC 0%, #FFFFFF 100%);
+  }
+  .hero-b .lede { color: var(--muted); text-shadow: none; }
+  .hero-b h1 { font-size: clamp(36px, 9vw, 52px); }
+  .hero-b .center { padding: 0 8px; }
+  .section-dashboard { display: none; }
 }
 </style>
 </head>
@@ -352,11 +364,12 @@ body { background: #FFFFFF; }
 <!-- HERO -->
 <section class="hero-b">
   <div class="hero-bg-video">
-    <video autoplay muted loop playsinline>
-      <source src="assets/video_homepage_salux.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="hero-vid">
+      <source id="hero-vid-src" src="assets/video_homepage_salux.mp4" type="video/mp4">
     </video>
     <div class="hero-bg-video-overlay"></div>
   </div>
+  <script>if(window.innerWidth<=900){var s=document.getElementById('hero-vid-src');if(s){s.removeAttribute('src');document.getElementById('hero-vid').load();}}</script>
   <div class="container center">
     <h1>Digitalizăm salubrizarea stradală. <span class="grad">Sistem informatic integrat</span> pentru operator și autoritate contractantă.</h1>
     <p class="lede">SALUX este platforma SaaS dedicată operatorilor de salubrizare stradală și unităților administrativ-teritoriale care au delegat serviciul. Echipele introduc datele direct din teren. Sistemul construiește programul lunar zi de zi, generează automat rapoartele și situațiile de plată, păstrează istoricul auditabil. Operatorul și autoritatea contractantă lucrează pe aceeași sursă de adevăr.</p>
