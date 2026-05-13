@@ -23,7 +23,8 @@
       "Bash(vercel --version)",
       "Skill(ship)",
       "Bash(node *)",
-      "Bash(grep -v \"//.*Solicită\\\\|<p>.*caiet de sarcini\\\\|format.*caiet\\\\|Export.*caiet\\\\|conform.*caiet\\\\|prevăzut.*caiet\\\\|prevăzute.*caiet\\\\|model.*caiet\")"
+      "Bash(grep -v \"//.*Solicită\\\\|<p>.*caiet de sarcini\\\\|format.*caiet\\\\|Export.*caiet\\\\|conform.*caiet\\\\|prevăzut.*caiet\\\\|prevăzute.*caiet\\\\|model.*caiet\")",
+      "Bash(xargs ls -t)"
     ]
   }
 }
