@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(design-shotgun)",
+      "Bash(php --version)",
+      "Bash(/c/xampp/php/php.exe --version)",
+      "Bash(/c/xampp/php/php.exe composer.phar diagnose)",
+      "Bash(/c/xampp/php/php.exe composer.phar install --dry-run)",
+      "Bash(/c/xampp/php/php.exe composer.phar update phpoffice/phpspreadsheet --no-dev)",
+      "Bash(/c/xampp/php/php.exe composer.phar install)",
+      "Bash(grep -r '->getCalculatedValue\\\\|->setFormulaAttributes\\\\|calculateColumnWidths\\\\|PhpSpreadsheet\\\\\\\\Chart' /c/xampp/htdocs/app_stradal/pages/ /c/xampp/htdocs/app_stradal/includes/)",
+      "Bash(/c/xampp/php/php.exe *)",
+      "Bash(git add *)",
+      "Bash(git *)",
+      "Bash(powershell *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://app.salux.ro/bin/health_check.php?token=d73aa72d130ab44129872fbd1a3042b649545a4e9a422a814b9f21362df4ac51\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://app.salux.ro\")",
+      "Bash(curl -sL -w \"\\\\nHTTP: %{http_code}\" \"https://app.salux.ro/bin/health_check.php?token=d73aa72d130ab44129872fbd1a3042b649545a4e9a422a814b9f21362df4ac51\")",
+      "Bash(curl *)",
+      "Skill(investigate)",
+      "Bash(gh pr *)",
+      "Skill(browse)",
+      "Bash(vercel --version)",
+      "Skill(ship)",
+      "Bash(node *)",
+      "Bash(grep -v \"//.*Solicită\\\\|<p>.*caiet de sarcini\\\\|format.*caiet\\\\|Export.*caiet\\\\|conform.*caiet\\\\|prevăzut.*caiet\\\\|prevăzute.*caiet\\\\|model.*caiet\")"
+    ]
+  }
+}
