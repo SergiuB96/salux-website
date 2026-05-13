@@ -645,11 +645,11 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="s-head">
       <span class="eyebrow"><span class="dot"></span>Întrebări frecvente</span>
-      <h2>Răspunsuri scurte</h2>
+      <h2>Q&amp;A</h2>
     </div>
     <div class="list">
       <div class="faq-cat">Despre obligațiile legale</div>
-      <details open=""><summary>SALUX urmărește în timp real flota de utilaje?</summary><div class="a">Nu. Urmărirea în timp real a flotei de utilaje (telematică) este un serviciu distinct, oferit de furnizori specializați. SALUX permite captarea, la alegerea operatorului, a datelor de localizare pentru fiecare operațiune și sesizare înregistrată - nu urmărirea continuă a vehiculelor. Cele două sisteme sunt complementare și pot funcționa independent.</div></details>
+      <details><summary>SALUX urmărește în timp real flota de utilaje?</summary><div class="a">Nu. Urmărirea în timp real a flotei de utilaje (telematică) este un serviciu distinct, oferit de furnizori specializați. SALUX permite captarea, la alegerea operatorului, a datelor de localizare pentru fiecare operațiune și sesizare înregistrată - nu urmărirea continuă a vehiculelor. Cele două sisteme sunt complementare și pot funcționa independent.</div></details>
       <details><summary>Trebuie să mă conformez Ordinului ANRSC 97/2025? Vechiul Ordin 82/2015 mai este aplicabil?</summary><div class="a">Nu. Ordinul ANRSC 97/2025 (MOf. 190/5.03.2025) a abrogat Ordinul ANRSC 82/2015. Ordinul ANRSC 98/2025 (MOf. 192/5.03.2025) a abrogat Ordinul ANRSC 111/2007. Toate regulamentele și caietele de sarcini aprobate pe baza ordinelor vechi trebuie revizuite și aliniate la noul cadru.</div></details>
       <details><summary>Ce sancțiuni riscă operatorul în cazul neîndeplinirii indicatorilor de performanță?</summary><div class="a">Sancțiunile funcționează pe două paliere:<br><br><strong>Contractual:</strong> penalități, daune-interese, executarea garanției de bună execuție sau rezilierea unilaterală a contractului (art. 6 alin. (2), Legea 101/2006).<br><strong>Contravențional:</strong> amenzi ANRSC între 30.000 și 50.000 lei pentru încălcări majore (art. 30, Legea 101/2006); risc retragere licență ANRSC (Ord. ANRSC 100/2023).</div></details>
 
@@ -709,6 +709,20 @@ body { background: #FFFFFF; }
 
 
 <script>
+// FAQ accordion — single open at a time
+(function(){
+  var details = Array.from(document.querySelectorAll('.faq-b details'));
+  details.forEach(function(d) {
+    d.addEventListener('toggle', function() {
+      if (d.open) {
+        details.forEach(function(other) {
+          if (other !== d && other.open) other.removeAttribute('open');
+        });
+      }
+    });
+  });
+})();
+
 // Module accordion — single open at a time
 (function(){
   var mods = Array.from(document.querySelectorAll('.mod'));
