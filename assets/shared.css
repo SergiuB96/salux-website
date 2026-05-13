@@ -149,6 +149,17 @@ img { display: block; max-width: 100%; }
 .btn-ghost { background: transparent; color: var(--ink); }
 .btn-ghost:hover { background: var(--bg-alt); }
 .btn-lg { padding: 14px 24px; font-size: 15.5px; }
+.btn-nav {
+  background: linear-gradient(120deg, var(--primary-700) 0%, var(--accent) 100%);
+  color: white; border: none;
+  box-shadow: 0 2px 8px rgba(59,114,196,.25);
+  transition: filter .15s, transform .15s, box-shadow .15s;
+}
+.btn-nav:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(59,114,196,.35);
+}
 
 /* ====== TYPE ====== */
 h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); margin: 0; letter-spacing: -.02em; }

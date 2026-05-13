@@ -343,6 +343,11 @@ body { background: #FFFFFF; }
   .info-band { font-size: 12px; padding: 14px 16px; }
   .final-b h2 { font-size: clamp(28px, 7vw, 42px); }
   .final-b p { font-size: 16px; }
+  .feat-block .visual[style*="1fr 1fr"] { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .feat-block .visual { grid-template-columns: 1fr !important; }
+  .mock-map { min-height: 160px; }
 }
 </style>
 <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
@@ -365,7 +370,7 @@ body { background: #FFFFFF; }
     </div>
     <div class="nav-cta">
       <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
-      <a href="contact.html" class="btn btn-primary">Programează o demonstrație</a>
+      <a href="contact.html" class="btn btn-nav">Programează o demonstrație</a>
     </div>
       <button class="nav-hamburger" aria-label="Meniu" onclick="this.closest('.nav').classList.toggle('nav-open')">
         <span></span><span></span><span></span>
@@ -379,7 +384,7 @@ body { background: #FFFFFF; }
         <hr>
         <div class="nav-mobile-cta">
           <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
-          <a href="contact.html" class="btn btn-primary">Programează o demonstrație</a>
+          <a href="contact.html" class="btn btn-nav">Programează o demonstrație</a>
         </div>
       </div>
   </div>
