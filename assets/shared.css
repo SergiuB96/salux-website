@@ -76,6 +76,22 @@ img { display: block; max-width: 100%; }
 .nav-links a:hover { color: var(--ink); background: var(--bg-alt); }
 .nav-cta { display: flex; gap: 10px; align-items: center; }
 
+/* ── Nav dropdown ── */
+.nav-drop { position: relative; display: flex; align-items: center; }
+.nav-drop > a { padding: 9px 14px; border-radius: 999px; color: var(--muted); font-size: 14.5px; font-weight: 500; transition: all .15s; display: flex; align-items: center; gap: 4px; }
+.nav-drop > a::after { content: "▾"; font-size: 9px; opacity: .7; }
+.nav-drop > a:hover { color: var(--ink); background: var(--bg-alt); }
+.nav-drop-menu {
+  display: none; position: absolute; top: calc(100% + 8px); left: 0;
+  background: white; border: 1px solid var(--line); border-radius: 14px;
+  padding: 6px; min-width: 170px; z-index: 200;
+  box-shadow: 0 8px 24px rgba(11,24,41,.10), 0 2px 4px rgba(11,24,41,.04);
+  flex-direction: column; gap: 1px;
+}
+.nav-drop:hover .nav-drop-menu { display: flex; }
+.nav-drop-menu a { padding: 9px 14px; border-radius: 9px; font-size: 14px; color: var(--ink-2); font-weight: 500; }
+.nav-drop-menu a:hover { background: var(--bg); color: var(--ink); }
+
 @media (max-width: 900px) {
   .nav-links { display: none; }
 }
