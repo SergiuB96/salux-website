@@ -86,8 +86,12 @@ body { background: #FFFFFF; }
   display: grid; grid-template-columns: 200px 1fr; height: calc(100% - 51px);
 }
 .hero-shapes .side { background: #F9FAFB; border-right: 1px solid var(--line); padding: 20px 16px; display: flex; flex-direction: column; gap: 6px; }
-.hero-shapes .side .li { padding: 8px 12px; border-radius: 8px; font-size: 13px; color: var(--muted); }
+.hero-shapes .side .li { padding: 8px 12px; border-radius: 8px; font-size: 13px; color: var(--muted); cursor: pointer; transition: background .15s, color .15s; user-select: none; }
+.hero-shapes .side .li:hover:not(.act) { background: var(--bg-alt); color: var(--ink-2); }
 .hero-shapes .side .li.act { background: var(--primary-50); color: var(--primary-700); font-weight: 600; }
+.k { transition: opacity .18s ease; }
+.k.fade { opacity: 0; }
+.b { transition: height .35s cubic-bezier(.4,0,.2,1); }
 .hero-shapes .pane { padding: 24px; display: grid; gap: 16px; grid-template-rows: auto 1fr; }
 .hero-shapes .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .hero-shapes .k { padding: 14px; background: #F9FAFB; border-radius: 12px; }
@@ -290,7 +294,6 @@ body { background: #FFFFFF; }
     <p class="lede">SALUX este platforma SaaS dedicată operatorilor de salubrizare stradală și unităților administrativ-teritoriale care au delegat serviciul. Echipele introduc datele direct din teren. Sistemul construiește programul lunar zi de zi, generează automat rapoartele și situațiile de plată, păstrează istoricul auditabil. Operatorul și autoritatea contractantă lucrează pe aceeași sursă de adevăr.</p>
     <div class="cta-row">
       <a href="contact.html" class="btn btn-green btn-lg">Programați o demonstrație →</a>
-      <a href="#" class="btn btn-outline btn-lg">Descărcați fișa de prezentare (PDF)</a>
     </div>
   </div>
 
@@ -302,37 +305,37 @@ body { background: #FFFFFF; }
           <span class="crumb">app.salux.ro / dashboard</span>
         </div>
         <div class="grid">
-          <aside class="side">
-            <span class="li act">▣ Dashboard</span>
-            <span class="li">▢ Program lunar</span>
-            <span class="li">▢ Sarcini zilnice</span>
-            <span class="li">▢ Hartă GPS</span>
-            <span class="li">▢ Coșuri</span>
-            <span class="li">▢ Sesizări</span>
-            <span class="li">▢ Pontaj</span>
-            <span class="li">▢ Rapoarte</span>
-            <span class="li">▢ Tarife</span>
+          <aside class="side" id="dash-sidebar">
+            <span class="li act" data-view="dashboard">▣ Dashboard</span>
+            <span class="li" data-view="program-lunar">▢ Program lunar</span>
+            <span class="li" data-view="sarcini">▢ Sarcini zilnice</span>
+            <span class="li" data-view="harta">▢ Hartă GPS</span>
+            <span class="li" data-view="cosuri">▢ Coșuri</span>
+            <span class="li" data-view="sesizari">▢ Sesizări</span>
+            <span class="li" data-view="pontaj">▢ Pontaj</span>
+            <span class="li" data-view="rapoarte">▢ Rapoarte</span>
+            <span class="li" data-view="tarife">▢ Tarife</span>
           </aside>
-          <div class="pane">
-            <div class="kpi-row">
-              <div class="k"><div class="v">48</div><div class="l">Sarcini azi</div></div>
-              <div class="k"><div class="v">87%</div><div class="l">Conformitate</div></div>
-              <div class="k"><div class="v">4</div><div class="l">Sesizări noi</div></div>
-              <div class="k"><div class="v">12.4t</div><div class="l">Colectat</div></div>
+          <div class="pane" id="dash-pane">
+            <div class="kpi-row" id="dash-kpis">
+              <div class="k"><div class="v" id="k0v">48</div><div class="l" id="k0l">Sarcini azi</div></div>
+              <div class="k"><div class="v" id="k1v">87%</div><div class="l" id="k1l">Conformitate</div></div>
+              <div class="k"><div class="v" id="k2v">4</div><div class="l" id="k2l">Sesizări noi</div></div>
+              <div class="k"><div class="v" id="k3v">12.4t</div><div class="l" id="k3l">Colectat</div></div>
             </div>
-            <div class="chart">
-              <div class="b" style="height: 40%;"></div>
-              <div class="b alt" style="height: 60%;"></div>
-              <div class="b" style="height: 55%;"></div>
-              <div class="b alt" style="height: 75%;"></div>
-              <div class="b" style="height: 65%;"></div>
-              <div class="b alt" style="height: 80%;"></div>
-              <div class="b" style="height: 90%;"></div>
-              <div class="b alt" style="height: 70%;"></div>
-              <div class="b" style="height: 85%;"></div>
-              <div class="b alt" style="height: 95%;"></div>
-              <div class="b" style="height: 78%;"></div>
-              <div class="b alt" style="height: 88%;"></div>
+            <div class="chart" id="dash-chart">
+              <div class="b" style="height:40%"></div>
+              <div class="b alt" style="height:60%"></div>
+              <div class="b" style="height:55%"></div>
+              <div class="b alt" style="height:75%"></div>
+              <div class="b" style="height:65%"></div>
+              <div class="b alt" style="height:80%"></div>
+              <div class="b" style="height:90%"></div>
+              <div class="b alt" style="height:70%"></div>
+              <div class="b" style="height:85%"></div>
+              <div class="b alt" style="height:95%"></div>
+              <div class="b" style="height:78%"></div>
+              <div class="b alt" style="height:88%"></div>
             </div>
           </div>
         </div>
@@ -603,7 +606,6 @@ body { background: #FFFFFF; }
       <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
       <div class="cta-row">
         <a href="contact.html" class="btn btn-green btn-lg">Solicitați o demonstrație →</a>
-        <a href="#" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.2); color: white;">Descărcați fișa tehnică (PDF)</a>
       </div>
       <div class="ok">
         <span>Toate modulele incluse</span>
@@ -655,7 +657,6 @@ body { background: #FFFFFF; }
     <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată.</p>
     <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
       <a href="contact.html" class="btn btn-green btn-lg">Solicitați o demonstrație →</a>
-      <a href="#" class="btn btn-outline btn-lg">Descărcați fișa tehnică (PDF)</a>
     </div>
   </div>
 </section>
@@ -685,4 +686,63 @@ body { background: #FFFFFF; }
 
 
 
+<script>
+(function(){
+  const VIEWS = {
+    'dashboard':     { crumb:'app.salux.ro / dashboard',     kpis:[['48','Sarcini azi'],['87%','Conformitate'],['4','Sesizări noi'],['12.4t','Colectat']],        bars:[40,60,55,75,65,80,90,70,85,95,78,88], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
+    'program-lunar': { crumb:'app.salux.ro / program-lunar', kpis:[['22','Zile planificate'],['78%','Executat'],['3','Abateri'],['Pend.','Aprobare UAT']],         bars:[28,30,40,42,55,58,70,72,85,88,95,95], alt:[0,0,0,0,0,0,1,1,1,1,1,1] },
+    'sarcini':       { crumb:'app.salux.ro / sarcini',       kpis:[['48','Total sarcini'],['41','Completate'],['5','În progres'],['2','Restante']],                 bars:[88,92,78,68,55,48,40,30,22,14,10,6],  alt:[1,0,1,0,1,0,1,0,1,0,1,0] },
+    'harta':         { crumb:'app.salux.ro / harta',         kpis:[['6','Echipe active'],['142','km parcurși'],['18','Zone acoperite'],['2min','Ultimul sync']],    bars:[60,72,80,74,88,90,68,62,66,58,72,82], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
+    'cosuri':        { crumb:'app.salux.ro / coșuri',        kpis:[['1.247','Total coșuri'],['387','Golite azi'],['12','Defecte'],['153','Programate']],            bars:[68,64,76,80,72,66,84,78,74,80,76,82], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
+    'sesizari':      { crumb:'app.salux.ro / sesizări',      kpis:[['4','Deschise'],['23','Rezolvate'],['18h','Timp mediu'],['1','Scadente']],                      bars:[18,14,32,24,38,28,42,18,14,24,28,18], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
+    'pontaj':        { crumb:'app.salux.ro / pontaj',        kpis:[['24','Angajați activi'],['186h','Ore lună'],['96%','Prezențe'],['8h','Overtime']],              bars:[80,80,82,78,85,80,78,82,80,85,78,80], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
+    'rapoarte':      { crumb:'app.salux.ro / rapoarte',      kpis:[['3','Rapoarte lună'],['2','Exportate'],['1','În așteptare'],['Ieri','Ultima generare']],        bars:[14,18,22,14,28,18,34,24,18,28,22,32], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
+    'tarife':        { crumb:'app.salux.ro / tarife',        kpis:[['4.2 lei','Tarif/m²'],['31 dec','Valabilitate'],['+3.2%','Indexare'],['11','Situații emise']], bars:[68,68,70,70,72,72,70,68,72,70,68,72], alt:[0,0,0,0,0,0,0,0,0,0,0,0] }
+  };
+
+  const sidebar = document.getElementById('dash-sidebar');
+  const chart   = document.getElementById('dash-chart');
+  const crumbEl = document.querySelector('.hero-shapes .hdr .crumb');
+  const kEls    = [0,1,2,3].map(i => ({v: document.getElementById('k'+i+'v'), l: document.getElementById('k'+i+'l')}));
+  const bars    = Array.from(chart.querySelectorAll('.b'));
+
+  sidebar.querySelectorAll('.li').forEach(li => {
+    li.addEventListener('click', () => {
+      const view = VIEWS[li.dataset.view];
+      if (!view) return;
+
+      // Sidebar active state
+      sidebar.querySelectorAll('.li').forEach(s => {
+        s.classList.remove('act');
+        s.textContent = '▢ ' + s.textContent.replace(/^[▣▢]\s*/, '');
+      });
+      li.classList.add('act');
+      li.textContent = '▣ ' + li.textContent.replace(/^[▣▢]\s*/, '');
+
+      // Fade KPIs out
+      kEls.forEach(k => { k.v.closest('.k').classList.add('fade'); });
+
+      setTimeout(() => {
+        // Update crumb
+        if (crumbEl) crumbEl.textContent = view.crumb;
+
+        // Update KPIs
+        view.kpis.forEach(([val, label], i) => {
+          kEls[i].v.textContent = val;
+          kEls[i].l.textContent = label;
+        });
+
+        // Fade KPIs back in
+        kEls.forEach(k => { k.v.closest('.k').classList.remove('fade'); });
+
+        // Update chart bars
+        bars.forEach((bar, i) => {
+          bar.style.height = view.bars[i] + '%';
+          bar.classList.toggle('alt', !!view.alt[i]);
+        });
+      }, 180);
+    });
+  });
+})();
+</script>
 </body></html>
