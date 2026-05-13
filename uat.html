@@ -1,0 +1,432 @@
+<!DOCTYPE html><html lang="ro"><head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALUX pentru UAT — Monitorizare în timp real a salubrizării stradale</title>
+<meta name="description" content="Monitorizare în timp real a salubrizării stradale. Achiziție directă SEAP, 132.519 lei. Eligibil PNRR Componenta 10. Conformitate art. 9 lit. h, Legea 51/2006." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+body { background: #FFFFFF; }
+
+/* Gradient text albastru */
+.grad-blue {
+  background: linear-gradient(120deg, var(--accent) 0%, var(--primary-700) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Hero */
+.hero-uat {
+  padding: 80px 0 100px;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,114,196,.15), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(125,200,160,.1), transparent 60%),
+    linear-gradient(180deg, #F5F8FD 0%, #FFFFFF 100%);
+}
+.hero-uat .center { text-align: center; max-width: 880px; margin: 0 auto; }
+.hero-uat h1 { font-size: clamp(36px, 5vw, 62px); margin: 22px 0; }
+.hero-uat .lede { font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 auto 36px; line-height: 1.65; }
+.hero-uat .legal-cite { font-family: var(--font-mono); font-size: 12px; color: var(--accent-600); background: var(--accent-50); padding: 10px 18px; border-radius: var(--radius); display: inline-block; margin-bottom: 28px; }
+.hero-uat .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+/* Section heads */
+.s-head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+.s-head h2 { margin: 16px 0 16px; font-size: clamp(30px, 4vw, 46px); }
+.s-head p { font-size: 18px; color: var(--muted); }
+
+/* Feature blocks */
+.feat-blocks-uat { background: var(--bg); }
+.feat-blocks { display: grid; gap: 24px; }
+.feat-block {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  background: white; padding: 60px; border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+}
+.feat-block.rev { direction: rtl; }
+.feat-block.rev > * { direction: ltr; }
+.feat-block h3 { font-size: 28px; margin-bottom: 14px; letter-spacing: -.02em; }
+.feat-block p { font-size: 16px; line-height: 1.65; color: var(--muted); }
+.tag { display: inline-flex; padding: 4px 10px; font-size: 12px; font-weight: 600; border-radius: 999px; background: var(--bg-alt); color: var(--ink-2); margin-bottom: 14px; align-self: start; width: fit-content; border: 1px solid var(--line); }
+.feat-block .visual {
+  aspect-ratio: 4/3; border-radius: var(--radius-lg); padding: 28px;
+  display: grid; align-content: center; gap: 12px;
+}
+.feat-block .v-green { background: linear-gradient(135deg, #EAF6F0 0%, #D6EDE1 100%); }
+.feat-block .v-blue  { background: linear-gradient(135deg, #ECF2FB 0%, #D6E3F5 100%); }
+.feat-block .v-ink   { background: linear-gradient(135deg, #0B1829 0%, #1E3A5F 100%); color: white; }
+
+/* Mock hartă */
+.mock-map { background: white; border-radius: 14px; height: 100%; min-height: 220px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(11,24,41,.06); }
+.mock-map .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(11,24,41,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(11,24,41,.04) 1px, transparent 1px); background-size: 32px 32px; }
+.mock-map .pin { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 5px rgba(125,200,160,.25); }
+.mock-map .pin.blue { background: var(--accent); box-shadow: 0 0 0 5px rgba(59,114,196,.25); }
+.mock-map .pin.red { background: #EF4444; box-shadow: 0 0 0 5px rgba(239,68,68,.25); }
+.mock-map .badge { position: absolute; bottom: 12px; left: 12px; background: white; border-radius: 8px; padding: 6px 10px; font-size: 11px; font-family: var(--font-mono); color: var(--ink); box-shadow: 0 4px 12px rgba(11,24,41,.1); }
+
+/* Mock sesizare */
+.mock-sez { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 10px 30px rgba(11,24,41,.06); }
+.mock-sez .row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.mock-sez .row:last-child { border-bottom: none; }
+.mock-sez .badge-status { padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; margin-left: auto; }
+.mock-sez .open { background: #FEF3C7; color: #B45309; }
+.mock-sez .closed { background: var(--primary-50); color: var(--primary-700); }
+
+/* Mock dosar */
+.mock-dosar { background: rgba(255,255,255,.08); border-radius: 14px; padding: 20px; }
+.mock-dosar .item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 12px; color: rgba(255,255,255,.8); }
+.mock-dosar .item:last-child { border-bottom: none; }
+.mock-dosar .icon { width: 28px; height: 28px; border-radius: 6px; background: rgba(255,255,255,.1); display: grid; place-items: center; flex-shrink: 0; }
+
+/* SEAP highlight */
+.seap-b { background: var(--bg); }
+.seap-highlight {
+  background: linear-gradient(135deg, var(--accent-50) 0%, var(--primary-50) 100%);
+  border: 1px solid rgba(59,114,196,.2);
+  border-radius: var(--radius-xl); padding: 56px; text-align: center; margin-bottom: 32px;
+}
+.seap-badge {
+  display: inline-flex; padding: 5px 16px; border-radius: 999px;
+  background: var(--accent); color: white;
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; margin-bottom: 22px;
+}
+.seap-amount { font-size: clamp(42px, 6vw, 68px); font-weight: 800; color: var(--ink); letter-spacing: -.04em; line-height: 1; margin-bottom: 6px; }
+.seap-unit { font-family: var(--font-mono); font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+.seap-desc { font-size: 16px; color: var(--ink-2); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+.seap-note { font-size: 13.5px; color: var(--muted); font-style: italic; margin-top: 20px; text-align: center; }
+
+/* Tabel CPV */
+.comp-table { width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); }
+.comp-table th, .comp-table td { padding: 16px 20px; text-align: left; font-size: 14px; border-bottom: 1px solid var(--line); }
+.comp-table thead th { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted-2); font-family: var(--font-mono); background: var(--bg); }
+.comp-table td:first-child { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--accent-600); }
+.comp-table tr:last-child td { border-bottom: none; }
+
+/* Surse finanțare */
+.finance-b { background: white; }
+.mod-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.mod {
+  padding: 28px; border-radius: 18px; border: 1px solid var(--line);
+  background: white; transition: all .2s;
+}
+.mod:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.mod .ic { width: 40px; height: 40px; border-radius: 11px; background: var(--primary-50); color: var(--primary-700); display: grid; place-items: center; margin-bottom: 18px; }
+.mod .ic.b { background: var(--accent-50); color: var(--accent); }
+.mod .ic svg { width: 20px; height: 20px; stroke-width: 1.7; }
+.mod h3 { font-size: 15px; margin-bottom: 8px; }
+.mod p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+.mod .deadline { font-family: var(--font-mono); font-size: 11px; color: var(--accent-600); background: var(--accent-50); padding: 3px 8px; border-radius: 999px; display: inline-block; margin-top: 12px; }
+
+/* Beneficii 3 dimensiuni */
+.beneficii-b { background: var(--bg); }
+.dim-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.dim-card { background: white; border-radius: var(--radius-lg); padding: 36px 30px; border: 1px solid var(--line); }
+.dim-card .dim-label { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-600); margin-bottom: 14px; }
+.dim-card h3 { font-size: 20px; margin-bottom: 12px; }
+.dim-card p { font-size: 14px; line-height: 1.65; color: var(--muted); }
+
+/* CTA final */
+.cta-final-uat { background: white; }
+.cta-card {
+  max-width: 900px; margin: 0 auto;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
+  border-radius: 28px; padding: 70px; text-align: center; color: white;
+  position: relative; overflow: hidden;
+}
+.cta-card::before { content: ""; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--accent), transparent 70%); opacity: .25; }
+.cta-card::after  { content: ""; position: absolute; bottom: -120px; left: -120px; width: 320px; height: 320px; background: radial-gradient(circle, var(--primary), transparent 70%); opacity: .2; }
+.cta-card h2 { color: white; font-size: clamp(28px, 4vw, 40px); margin-bottom: 14px; position: relative; }
+.cta-card p  { color: rgba(255,255,255,.7); font-size: 17px; max-width: 520px; margin: 0 auto 28px; position: relative; line-height: 1.65; }
+.cta-card .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; }
+
+@media (max-width: 900px) {
+  .feat-block { grid-template-columns: 1fr; gap: 30px; padding: 40px 24px; }
+  .feat-block.rev { direction: ltr; }
+  .mod-grid-3, .dim-grid { grid-template-columns: 1fr; }
+  .cta-card { padding: 40px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="index.html" class="nav-logo"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
+    <div class="nav-links">
+      <a href="operator.html">Operatori</a>
+      <a href="uat.html" style="color: var(--ink); font-weight: 600;">UAT</a>
+      <a href="index.html#modules">Produs</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
+      <a href="contact.html" class="btn btn-primary">Programați o demonstrație</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-uat">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow accent"><span class="dot"></span>Soluție pentru UAT-uri</span>
+      <h1>Monitorizarea serviciului de salubrizare<br>ca <span class="grad-blue">obligație îndeplinită sistematic.</span></h1>
+      <div class="legal-cite">Art. 9 litera h din Legea 51/2006 — obligația autorităților locale de a monitoriza și controla modul de respectare a obligațiilor operatorilor</div>
+      <p class="lede">SALUX vă oferă instrumentul prin care această obligație trece de la o intenție administrativă la o practică documentată. Acces în timp real la activitatea operatorului, răspuns prompt la sesizările cetățenilor și documentație structurată pentru orice control.</p>
+      <div class="cta-row">
+        <a href="contact.html" class="btn btn-accent btn-lg">Solicitați modelul de caiet de sarcini →</a>
+        <a href="#cum-functioneaza" class="btn btn-outline btn-lg">Cum funcționează</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 BENEFICII PRINCIPALE -->
+<section id="cum-functioneaza" class="section feat-blocks-uat">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow"><span class="dot"></span>Cum funcționează pentru autoritatea contractantă</span>
+      <h2>Vizibilitate, răspuns prompt<br>și documentație pentru audit</h2>
+    </div>
+    <div class="feat-blocks">
+
+      <!-- 1. Acces real-time -->
+      <div class="feat-block">
+        <div>
+          <span class="tag">Acces real-time</span>
+          <h3>Activitatea operatorului, vizibilă în timp real</h3>
+          <p>Autoritatea contractantă primește un cont dedicat, cu permisiuni de citire, prin care vede în timp real localizarea echipelor de teren ale operatorului, programul lunar curent, prestațiile executate și abaterile față de planificare. Vizualizarea se face pe hartă, cu posibilitatea de a interoga orice stradă sau interval orar.</p>
+        </div>
+        <div class="visual v-green">
+          <div class="mock-map">
+            <div class="grid-bg"></div>
+            <div class="pin" style="top: 22%; left: 30%;"></div>
+            <div class="pin blue" style="top: 50%; left: 55%;"></div>
+            <div class="pin" style="top: 70%; left: 25%;"></div>
+            <div class="pin red" style="top: 35%; left: 70%;"></div>
+            <div class="pin blue" style="top: 80%; left: 80%;"></div>
+            <div class="pin" style="top: 15%; left: 75%;"></div>
+            <div class="badge">5 echipe active acum</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Sesizări -->
+      <div class="feat-block rev">
+        <div>
+          <span class="tag">Sesizări cetățeni</span>
+          <h3>Răspuns prompt la sesizările cetățenilor</h3>
+          <p>Când un cetățean reclamă neefectuarea unei prestații pe o stradă, autoritatea poate consulta direct istoricul SALUX pe acel segment de drum, pentru intervalul indicat. Răspunsul devine prompt și documentat — fotografie și GPS, nu un email de confirmare de la operator.</p>
+        </div>
+        <div class="visual v-blue">
+          <div class="mock-sez">
+            <div style="font-size: 11px; font-weight: 700; margin-bottom: 6px; color: var(--ink);">Sesizări active</div>
+            <div class="row">
+              <span style="font-size: 11px;">Str. Mihai Eminescu — coș plin</span>
+              <span class="badge-status open">Deschis</span>
+            </div>
+            <div class="row">
+              <span style="font-size: 11px;">Bd. Carol — măturat neefectuat</span>
+              <span class="badge-status open">Deschis</span>
+            </div>
+            <div class="row">
+              <span style="font-size: 11px;">Str. Victoriei — deszăpezire</span>
+              <span class="badge-status closed">Rezolvat</span>
+            </div>
+            <div class="row">
+              <span style="font-size: 11px;">Piața Unirii — gunoi stradal</span>
+              <span class="badge-status closed">Rezolvat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Audit -->
+      <div class="feat-block">
+        <div>
+          <span class="tag">Control și audit</span>
+          <h3>Audit și control fără perioadă de pregătire</h3>
+          <p>La auditul anual al Camerei de Conturi județene, documentația există, este structurată și se prezintă în formatul cerut. SALUX oferă răspunsul direct la întrebarea auditorului: cum ați monitorizat că operatorul și-a îndeplinit obligațiile contractuale?</p>
+        </div>
+        <div class="visual v-ink">
+          <div class="mock-dosar">
+            <div style="font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.5); margin-bottom: 10px;">DOSAR AUDIT — MAI 2026</div>
+            <div class="item">
+              <div class="icon">📄</div>
+              <span>Rapoarte lunare — 5 luni</span>
+            </div>
+            <div class="item">
+              <div class="icon">📍</div>
+              <span>GPS tracks — 1.247 curse</span>
+            </div>
+            <div class="item">
+              <div class="icon">📸</div>
+              <span>Fotografii — 3.891 probe</span>
+            </div>
+            <div class="item">
+              <div class="icon">✅</div>
+              <span>Sesizări rezolvate — 48</span>
+            </div>
+            <div class="item" style="border-bottom: none;">
+              <div class="icon">🔒</div>
+              <span>Audit log — imutabil, 5 ani</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACHIZIȚIE SEAP -->
+<section class="section seap-b">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow accent"><span class="dot"></span>Achiziția platformei</span>
+      <h2>Achiziție directă din SEAP</h2>
+    </div>
+    <div class="container-narrow">
+      <div class="seap-highlight">
+        <div class="seap-badge">Sub pragul de achiziție directă</div>
+        <div class="seap-amount">132.519 lei</div>
+        <div class="seap-unit">fără TVA — art. 7 alin. (5), Legea 98/2016</div>
+        <p class="seap-desc">Procedura, reglementată de HG 395/2016 articolele 43–46, se desfășoară integral electronic prin catalogul SEAP, fără publicarea unei documentații de atribuire și fără termenele procedurii deschise.</p>
+        <p class="seap-note">Documentația-tip pentru achiziție (notă justificativă și caiet de sarcini) se pune la dispoziție gratuit, la cerere.</p>
+      </div>
+
+      <p style="font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 16px;">Coduri CPV recomandate</p>
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Cod CPV</th>
+            <th>Descriere</th>
+            <th>Aplicabil pentru</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>48000000-8</td>
+            <td>Pachete software și sisteme informatice</td>
+            <td>Licența standard</td>
+          </tr>
+          <tr>
+            <td>72212517-6</td>
+            <td>Servicii de dezvoltare de software IT</td>
+            <td>Personalizări</td>
+          </tr>
+          <tr>
+            <td>72253200-5</td>
+            <td>Servicii de asistență pentru sisteme informatice</td>
+            <td>Suport tehnic anual</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SURSE FINANȚARE -->
+<section class="section finance-b">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow"><span class="dot"></span>Finanțare 2026</span>
+      <h2>Surse disponibile pentru<br>achizițiia platformei</h2>
+      <p>Echipa SALUX oferă suport tehnic gratuit pentru redactarea cererii de finanțare.</p>
+    </div>
+    <div class="mod-grid-3">
+      <div class="mod">
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"></path></svg>
+        </div>
+        <h3>PNRR Componenta 10 — Fondul Local</h3>
+        <p>Buget: 2,1 miliarde euro. Investiția I.4 — sisteme inteligente urbane (ITS). Referință: Ord. MDLPA nr. 999/10.05.2022.</p>
+        <span class="deadline">Termen: 30 iunie 2026</span>
+      </div>
+      <div class="mod">
+        <div class="ic b">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10S15 19 12 22M12 2c-3 3-4.5 6-4.5 10S9 19 12 22"></path></svg>
+        </div>
+        <h3>PNRR Componenta 7 — Transformare digitală</h3>
+        <p>Investiția I5 — digitalizare în domeniul mediului, inclusiv platforme de raportare ANPM (Legea 211/2011).</p>
+        <span class="deadline">Programe active 2026</span>
+      </div>
+      <div class="mod">
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 4v4"></path></svg>
+        </div>
+        <h3>POCA și fonduri europene 2021–2027</h3>
+        <p>Apeluri pentru digitalizarea procedurilor administrative locale. SALUX este eligibil ca instrument de monitorizare a unui serviciu public obligatoriu conform Legii 101/2006.</p>
+        <span class="deadline">Apeluri active 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 DIMENSIUNI BENEFICII -->
+<section class="section beneficii-b">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow accent"><span class="dot"></span>Beneficii directe</span>
+      <h2>Trei dimensiuni de impact<br>pentru autoritatea contractantă</h2>
+    </div>
+    <div class="dim-grid">
+      <div class="dim-card">
+        <div class="dim-label">Operațional</div>
+        <h3>Timp de răspuns redus</h3>
+        <p>Timpul de răspuns la sesizările cetățenilor se reduce semnificativ, iar disputele privind realitatea prestațiilor se rezolvă prin consultarea sistemului, nu prin verificare telefonică sau schimburi de emailuri.</p>
+      </div>
+      <div class="dim-card">
+        <div class="dim-label">Financiar</div>
+        <h3>Decizii susținute de documente</h3>
+        <p>Deciziile de aplicare a penalităților sau de încasare a garanției de bună execuție, conform articolului 6 alineatul (2) din Legea 101/2006, devin susținute de documente obiective din sistemul SALUX.</p>
+      </div>
+      <div class="dim-card">
+        <div class="dim-label">Instituțional</div>
+        <h3>Obligație îndeplinită sistematic</h3>
+        <p>Autoritatea îndeplinește în mod sistematic obligația de monitorizare prevăzută la art. 9 lit. h, Legea 51/2006 — fapt care se reflectă favorabil în rapoartele anuale ale Camerei de Conturi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section cta-final-uat">
+  <div class="container">
+    <div class="cta-card">
+      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--accent);"></span>Pasul următor</span>
+      <h2>Solicitați modelul de caiet de sarcini<br>și nota justificativă.</h2>
+      <p>Documentația-tip pentru achiziție directă din SEAP se pune la dispoziție gratuit. Echipa SALUX oferă suport tehnic gratuit și pentru redactarea cererii de finanțare PNRR.</p>
+      <div class="cta-row">
+        <a href="contact.html" class="btn btn-green btn-lg">Solicitați documentația →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.2); color: white;">Programați o demonstrație</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></div>
+        <p class="lede">Sistem informatic pentru salubrizare stradală și deszăpezire în România.</p>
+        <p class="lede" style="margin-top: 12px;"><a href="mailto:office@salux.ro">office@salux.ro</a></p>
+      </div>
+      <div><h4>Soluții</h4><ul><li><a href="operator.html">Operatori privați</a></li><li><a href="uat.html">UAT &amp; Primării</a></li></ul></div>
+      <div><h4>Produs</h4><ul><li><a href="index.html#modules">Module</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html">Demo</a></li></ul></div>
+      <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="legal/confidentialitate.html">Confidențialitate</a></li><li><a href="legal/termeni.html">Termeni</a></li><li><a href="legal/gdpr.html">GDPR</a></li><li><a href="legal/eula.html">EULA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SALUX SRL. Hosting în România și Uniunea Europeană. Conform GDPR.</span>
+      <span>Aliniat Ordinelor ANRSC 97/2025 și 98/2025.</span>
+    </div>
+  </div>
+</footer>
+
+</body></html>

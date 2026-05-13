@@ -3,8 +3,8 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SALUX — Salubrizare stradală, simplificată</title>
-<meta name="description" content="Platforma SaaS pentru operatori privați de salubrizare și UAT-uri. Program lunar, raportare GPS, situații de plată automate, conform SRS." />
+<title>SALUX — Platformă SaaS pentru salubrizare stradală</title>
+<meta name="description" content="Platformă SaaS pentru salubrizare stradală în România. Program lunar digital, raportare automată ANRSC 97/2025 și 98/2025, audit log imutabil." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -223,9 +223,19 @@ body { background: #FFFFFF; }
 .pricing-b .card .ok { display: flex; justify-content: center; gap: 28px; margin-top: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,.6); position: relative; }
 .pricing-b .card .ok span::before { content: "✓ "; color: var(--primary); font-weight: 700; }
 
+/* Info band (trust strip replacement) */
+.info-band {
+  font-family: var(--font-mono); font-size: 13px; line-height: 1.6;
+  color: var(--accent-600); background: var(--accent-50);
+  padding: 16px 24px; border-radius: var(--radius-lg);
+  text-align: center; max-width: 900px; margin: 0 auto;
+  border: 1px solid rgba(59,114,196,.15);
+}
+
 /* FAQ */
 .faq-b { background: var(--bg); }
 .faq-b .list { max-width: 800px; margin: 0 auto; display: grid; gap: 12px; }
+.faq-cat { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted-2); padding: 16px 0 4px; border-top: 1px solid var(--line); margin-top: 8px; }
 .faq-b details { background: white; border-radius: 14px; border: 1px solid var(--line); padding: 0 24px; }
 .faq-b summary { padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 600; color: var(--ink); }
 .faq-b summary::-webkit-details-marker { display: none; }
@@ -260,15 +270,15 @@ body { background: #FFFFFF; }
   <div class="container nav-row">
     <a href="index.html" class="nav-logo"><img src="assets/salux_logo.png" alt="SALUX" class="brand-logo" /></a>
     <div class="nav-links">
-      <a href="home-saas.html#modules">Funcționalități</a>
-      <a href="home-saas.html#audience">Pentru cine</a>
-      <a href="home-saas.html#pricing">Licențiere</a>
+      <a href="operator.html">Operatori</a>
+      <a href="uat.html">UAT</a>
+      <a href="#modules">Produs</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-cta">
       <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
-      <a href="contact.html" class="btn btn-primary">Solicită demo</a>
+      <a href="contact.html" class="btn btn-primary">Programați o demonstrație</a>
     </div>
   </div>
 </nav>
@@ -276,12 +286,11 @@ body { background: #FFFFFF; }
 <!-- HERO -->
 <section class="hero-b">
   <div class="container center">
-    <span class="eyebrow"><span class="dot"></span>Sistem informatic conform caietelor de sarcini</span>
-    <h1>Salubrizare stradală <span class="grad">care se vede.</span><br>Și care se justifică.</h1>
-    <p class="lede">SALUX transformă fiecare cursă, fiecare coș golit și fiecare oră de deszăpezire în date verificabile. Program lunar, hartă GPS live, raportare conform SRS — pentru operatorii privați și UAT-urile din România.</p>
+    <h1>Salubrizarea stradală, gestionată<br>într-un <span class="grad">cadru unitar</span> pentru operator<br>și autoritate contractantă.</h1>
+    <p class="lede">SALUX este platforma SaaS dedicată operatorilor de salubrizare stradală și unităților administrativ-teritoriale care au delegat serviciul. Echipele introduc datele direct din teren. Sistemul construiește programul lunar zi de zi, generează automat rapoartele și situațiile de plată, păstrează istoricul auditabil. Operatorul și autoritatea contractantă lucrează pe aceeași sursă de adevăr.</p>
     <div class="cta-row">
-      <a href="contact.html" class="btn btn-green btn-lg">Solicită demo →</a>
-      <a href="#modules" class="btn btn-outline btn-lg">Cum funcționează</a>
+      <a href="contact.html" class="btn btn-green btn-lg">Programați o demonstrație →</a>
+      <a href="#" class="btn btn-outline btn-lg">Descărcați fișa de prezentare (PDF)</a>
     </div>
   </div>
 
@@ -359,17 +368,10 @@ body { background: #FFFFFF; }
   </div>
 </section>
 
-<!-- TRUST STRIP -->
+<!-- BANDĂ INFORMATIVĂ -->
 <section class="trust-strip">
-  <div class="container row">
-    <span class="label">Conformitate &amp; încredere</span>
-    <div class="badges">
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-4 9-8 10-4-1-8-5-8-10V6l8-4z"></path></svg>GDPR &amp; DPA</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 4v4"></path></svg>SRS 6705/2008</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"></path></svg>ISO 27001 (în pregătire)</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10S15 19 12 22M12 2c-3 3-4.5 6-4.5 10S9 19 12 22"></path></svg>Hosting RO/UE</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12V7l-9-4-9 4v5c0 5 4 8 9 10 5-2 9-5 9-10z"></path></svg>Audit log imutabil</span>
-    </div>
+  <div class="container">
+    <p class="info-band">De la 5 martie 2025 sunt în vigoare Ordinele ANRSC 97/2025 (Regulament-cadru) și 98/2025 (Caiet de sarcini-cadru), care înlocuiesc Ordinele 82/2015 și 111/2007, pe care funcționau toate contractele de salubrizare din România. Toate regulamentele și caietele de sarcini aprobate înainte de această dată trebuie aliniate la noul cadru. SALUX este construit pe forma actualizată a reglementărilor.</p>
   </div>
 </section>
 
@@ -377,14 +379,14 @@ body { background: #FFFFFF; }
 <section class="section problem-b">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Provocarea</span>
-      <h2>Salubrizarea stradală pierde resurse<br>din lipsa digitalizării</h2>
-      <p>Documente pe hârtie, dispute contractuale, raportări duplicate, transparență scăzută — toate au același cost: bani și timp pierdut.</p>
+      <span class="eyebrow accent"><span class="dot"></span>De ce SALUX</span>
+      <h2>Trei propuneri de valoare</h2>
+      <p>Un cadru comun de lucru, automatizare completă și conformitate documentată — construite pe obligațiile legale în vigoare.</p>
     </div>
     <div class="problem-grid">
-      <div class="problem-card"><div class="num">— 01</div><h3>Raportare manuală, erori repetate</h3><p>Excel-uri actualizate manual, procese verbale pe hârtie, date inconsistente între părți. Fiecare lună aduce reconcilieri costisitoare și litigii la situațiile de plată.</p></div>
-      <div class="problem-card"><div class="num">— 02</div><h3>Transparență scăzută față de UAT</h3><p>Autoritatea locală nu poate verifica execuția în timp real. Inspecția se face post-factum, pe documente, fără dovezi geolocalizate, ceea ce slăbește controlul contractului.</p></div>
-      <div class="problem-card"><div class="num">— 03</div><h3>Caiet de sarcini complex de urmărit</h3><p>20+ operațiuni standard (MS-01…CD-01), frecvențe diferite, plafoane anuale, aprobări ierarhice. Fără un sistem dedicat, conformitatea cu SRS devine o ipoteză, nu o certitudine.</p></div>
+      <div class="problem-card"><div class="num">— 01</div><h3>Cadru unitar de lucru</h3><p>Operatorul și autoritatea contractantă acced la aceeași platformă, cu roluri și permisiuni diferențiate. Datele de teren intră o singură dată, în momentul prestației. Rapoartele lunare, situațiile de plată și răspunsurile la sesizări se construiesc din aceeași sursă. Disputele privind realitatea operațiunilor dispar pentru că nu mai există două versiuni ale aceleiași zile de muncă.</p></div>
+      <div class="problem-card"><div class="num">— 02</div><h3>Automatizare end-to-end</h3><p>Programul lunar de salubrizare se generează din ziua întâi a fiecărei luni și se actualizează automat pe măsură ce echipele lucrează. La sfârșit de lună, un singur click produce situația de plată completă, cu probele atașate. Rapoartele către ANRSC și ANPM se exportă în formatele cerute, fără introducere manuală de date.</p></div>
+      <div class="problem-card"><div class="num">— 03</div><h3>Conformitate documentată</h3><p>Fiecare activitate de teren este înregistrată cu coordonate GPS, fotografie datată și marcaj temporal imutabil. Pachetul de probe rămâne disponibil cinci ani în audit log. Pentru orice control — ANRSC, Curtea de Conturi, Garda de Mediu — dovada există, structurată și exportabilă, fără perioadă de pregătire.</p></div>
     </div>
   </div>
 </section>
@@ -392,26 +394,35 @@ body { background: #FFFFFF; }
 <!-- IMPACT METRICS -->
 <section class="metric-row">
   <div class="container grid4">
-    <div class="m"><div class="v">−72<span class="u">%</span></div><div class="l">timp lunar la raportare</div></div>
-    <div class="m"><div class="v">98<span class="u">%</span></div><div class="l">sarcini verificate GPS + foto</div></div>
-    <div class="m"><div class="v">−61<span class="u">%</span></div><div class="l">contestații UAT, primul trimestru</div></div>
-    <div class="m"><div class="v">3<span class="u"> zile</span></div><div class="l">la situația de plată (de la 2 săpt.)</div></div>
+    <div class="m"><div class="v">2 zile<span class="u"> → 30 min</span></div><div class="l">timp raport lunar</div></div>
+    <div class="m"><div class="v">132.519<span class="u"> lei</span></div><div class="l">prag achiziție directă SEAP</div></div>
+    <div class="m"><div class="v">5<span class="u"> ani</span></div><div class="l">audit log disponibil</div></div>
+    <div class="m"><div class="v">Mar<span class="u"> 2025</span></div><div class="l">cadru legal actualizat (ANRSC 97+98)</div></div>
   </div>
 </section>
 
-<!-- FLOW -->
-<section class="section flow-b" id="flow">
+<!-- CUI SE ADRESEAZĂ -->
+<section class="section aud" id="audience-top" style="background: white;">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Cum funcționează</span>
-      <h2>De la o stradă măturată,<br>la situația de plată semnată</h2>
-      <p>Toate datele intră o singură dată — la sursă, pe teren. Restul se întâmplă automat.</p>
+      <span class="eyebrow"><span class="dot"></span>Cui se adresează</span>
+      <h2>Două audiențe. Un singur produs.</h2>
     </div>
-    <div class="flow-grid">
-      <div class="flow-step"><span class="stamp">01 · PLAN</span><h3>Program lunar</h3><p>Dispecerul construiește programul: străzi, sectoare, frecvențe, utilaje. Sistemul calculează normele și sarcinile zilnice.</p><div class="out"><b>→ output:</b><br>program-mai-2026.pdf<br>1.247 sarcini generate</div></div>
-      <div class="flow-step"><span class="stamp">02 · EXEC</span><h3>Confirmare teren</h3><p>Șeful de echipă deschide app-ul, vede sarcinile zilei, marchează start/stop. GPS-ul utilajului confirmă traseul.</p><div class="out"><b>→ output:</b><br>GPS track + foto<br>timestamp verificat</div></div>
-      <div class="flow-step"><span class="stamp">03 · CHECK</span><h3>Validare &amp; contestații</h3><p>Inspectorul UAT vede ce s-a executat. Contestă o sarcină dacă e cazul; operatorul răspunde cu dovada.</p><div class="out"><b>→ output:</b><br>status: aprobat<br>audit trail complet</div></div>
-      <div class="flow-step"><span class="stamp">04 · BILL</span><h3>Situație de plată</h3><p>La închiderea lunii, SALUX generează situația, defalcată pe străzi și tipuri de servicii, gata de transmis.</p><div class="out"><b>→ output:</b><br>situatie-plata.pdf<br>export ERP-ready</div></div>
+    <div class="aud-grid">
+      <div class="aud-card">
+        <div class="deco"></div>
+        <span class="gtag">Operatori privați de salubrizare stradală</span>
+        <h3>Operatorilor privați de salubrizare stradală</h3>
+        <p>Companiilor care au unul sau mai multe contracte de delegare a gestiunii cu UAT-uri din România. SALUX organizează activitatea de teren, produce situații de plată cu probă completă, automatizează raportările către ANRSC și ANPM, și oferă instrumentele necesare pentru a trece auditul Curții de Conturi fără perioade de pregătire dedicate.</p>
+        <a href="operator.html" class="btn btn-green" style="margin-top: 24px;">Vezi soluția pentru operatori →</a>
+      </div>
+      <div class="aud-card b">
+        <div class="deco"></div>
+        <span class="gtag">UAT-uri &amp; autorități locale</span>
+        <h3>Unităților administrativ-teritoriale</h3>
+        <p>Primăriilor, consiliilor județene și asociațiilor de dezvoltare intercomunitară care au calitate de autoritate contractantă pentru serviciul de salubrizare. SALUX oferă acces în timp real la activitatea operatorului, monitorizare conformă obligației din articolul 9 litera h al Legii 51/2006, și un fundament documentar solid pentru deciziile contractuale și pentru răspunsul la orice control.</p>
+        <a href="uat.html" class="btn btn-accent" style="margin-top: 24px;">Vezi soluția pentru UAT →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -527,18 +538,20 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="s-head">
       <span class="eyebrow accent"><span class="dot"></span>Tot ce e inclus</span>
-      <h2>Opt module. Un singur abonament.</h2>
-      <p>Nu plătești pe seat, nu plătești pe modul.</p>
+      <h2>Zece module funcționale. Un singur abonament.</h2>
+      <p>Construite pe activitățile enumerate în art. 2 alin. (3) din Legea 101/2006. Nu plătești pe seat, nu plătești pe modul.</p>
     </div>
     <div class="mod-grid">
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div><h3>Program lunar</h3><p>Planificare cu frecvențe și cantități, aprobare ierarhică.</p></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"></path></svg></div><h3>Hartă GPS live</h3><p>Execuții, sesizări și coșuri, refresh la 60s.</p></div>
-      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg></div><h3>App mobil PWA</h3><p>Offline-first cu sync automat.</p></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path></svg></div><h3>Rapoarte SRS</h3><p>PDF &amp; Excel, format caiet de sarcini.</p></div>
-      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18l-2 13H5L3 6zM8 6V4a4 4 0 018 0v2"></path></svg></div><h3>Coșuri stradale</h3><p>Inventar, golire, raportare per coș.</p></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div><h3>Pontaj</h3><p>Intrare/ieșire echipă, integrat cu sarcini.</p></div>
-      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0z"></path><path d="M9 11l2 2 4-4"></path></svg></div><h3>Sesizări</h3><p>Cetățeni → dispecer → echipă, tracked.</p></div>
-      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg></div><h3>Tarife &amp; situații</h3><p>Istoric, snapshot imutabil, export.</p></div>
+      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div><h3>Program lunar digital</h3><p>Planificare cu frecvențe și cantități, aprobare ierarhică — art. 17 alin. (4), Legea 101/2006.</p></div>
+      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"></path></svg></div><h3>Hartă GPS live</h3><p>Execuții, sesizări și coșuri — acces operator (full) și UAT (read-only).</p></div>
+      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg></div><h3>App mobil PWA</h3><p>Android și iOS, fără instalare. Offline-first cu sync automat. Curbă de învățare: o tură.</p></div>
+      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path></svg></div><h3>Raportare automată</h3><p>Raport lunar UAT, raport anual ANRSC, raport ANPM — exportate pre-formatat din datele primare.</p></div>
+      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18l-2 13H5L3 6zM8 6V4a4 4 0 018 0v2"></path></svg></div><h3>Coșuri stradale</h3><p>Inventar geografic, istoricul golirilor, mentenanță — conform SR 13387:1997.</p></div>
+      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div><h3>Pontaj digital</h3><p>Marcaj GPS la intrare pe sector, evidență resurse umane — Legea 53/2003.</p></div>
+      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0z"></path><path d="M9 11l2 2 4-4"></path></svg></div><h3>Sesizări cetățeni</h3><p>Portal dedicat, asignare automată echipă, urmărire până la închidere cu foto — OG 27/2002.</p></div>
+      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="6" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg></div><h3>Situații de plată</h3><p>Snapshot imutabil per rând, probe atașate, export ERP — consultabil 5 ani.</p></div>
+      <div class="mod"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"></path></svg></div><h3>Tarife</h3><p>Calcul și ajustare tarife cu documentație de fundamentare — Ord. ANRSC 640/2022 + 324/2025.</p></div>
+      <div class="mod"><div class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18M3 6l6 6-6 6"></path></svg></div><h3>Deszăpezire</h3><p>GPS pe utilaje, cantități antiderapant, suprafețe intervenite, raport complet — art. 2 alin. (3) lit. k, Legea 101/2006.</p></div>
     </div>
   </div>
 </section>
@@ -551,31 +564,31 @@ body { background: #FFFFFF; }
       <h2>Două audiențe. Un singur produs.</h2>
     </div>
     <div class="aud-grid">
-      <div class="aud-card">
-        <div class="deco"></div>
-        <span class="gtag">Operatori privați de salubrizare</span>
-        <h3>Demonstrezi ce ai făcut,<br>fără să refaci Excel-uri</h3>
-        <p>Treci de la „luăm pe încredere” la „uite traseul, uite poza, uite ora”. Fiecare contract devine apărabil în fața UAT-ului.</p>
+      <div class=”aud-card”>
+        <div class=”deco”></div>
+        <span class=”gtag”>Operatori privați de salubrizare stradală</span>
+        <h3>O singură platformă,<br>de la teren la situație de plată acceptată.</h3>
+        <p>SALUX organizează activitatea de teren, produce situații de plată cu probă completă, automatizează raportările către ANRSC și ANPM, și oferă instrumentele necesare pentru a trece auditul Curții de Conturi fără perioade de pregătire dedicate.</p>
         <ul>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Dovezi GPS + foto pentru fiecare lucrare</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Situații de plată generate automat</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Plafoane anuale urmărite zilnic</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Multi-tenant pentru mai multe UAT-uri</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Probe GPS + foto, imutabile, 5 ani</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Situații de plată generate automat, cu snapshot per rând</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Export rapoarte ANRSC + ANPM pre-formatat</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Dosar audit gata în orice moment</li>
         </ul>
-        <a href="contact.html" class="btn btn-green">Solicită demo pentru operatori →</a>
+        <a href=”operator.html” class=”btn btn-green”>Vezi soluția pentru operatori →</a>
       </div>
-      <div class="aud-card b">
-        <div class="deco"></div>
-        <span class="gtag">UAT-uri &amp; autorități locale</span>
-        <h3>Vezi exact ce plătești.<br>Aprobă cu argumente.</h3>
-        <p>Acces transparent la programul lunii, la sarcinile executate și la dovezile lor. Contestă în 2 click-uri. Aprobă cu conștiința curată.</p>
+      <div class=”aud-card b”>
+        <div class=”deco”></div>
+        <span class=”gtag”>UAT-uri &amp; autorități contractante</span>
+        <h3>Monitorizarea serviciului<br>ca obligație îndeplinită sistematic.</h3>
+        <p>SALUX oferă acces în timp real la activitatea operatorului, monitorizare conformă obligației din articolul 9 litera h al Legii 51/2006, și un fundament documentar solid pentru deciziile contractuale și pentru răspunsul la orice control.</p>
         <ul>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Hartă live cu execuțiile operatorului</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Aprobare/respingere lucrări cu motivație</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Sesizări cetățeni cu prioritizare</li>
-          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>Buget anual cu proiecție epuizare</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Hartă live cu execuțiile operatorului (read-only)</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Răspuns la sesizări cetățeni cu GPS + foto</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Documentație structurată pentru Camera de Conturi</li>
+          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Achiziție directă SEAP — sub 132.519 lei</li>
         </ul>
-        <a href="contact.html" class="btn btn-accent">Solicită demo pentru UAT →</a>
+        <a href=”uat.html” class=”btn btn-accent”>Vezi soluția pentru UAT →</a>
       </div>
     </div>
   </div>
@@ -586,11 +599,11 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="card">
       <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white;"><span class="dot" style="background: var(--primary);"></span>Licențiere personalizată</span>
-      <h2 style="margin-top: 22px;">Un singur plan.<br>Pe măsura contractului tău.</h2>
-      <p>Răspundem cu ofertă în 24h. Implementare asistată inclusă în preț.</p>
+      <h2 style="margin-top: 22px;">Programați o demonstrație<br>de 45 de minute.</h2>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
       <div class="cta-row">
-        <a href="contact.html" class="btn btn-green btn-lg">Solicită ofertă →</a>
-        <a href="#modules" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.2); color: white;">Vezi funcționalități</a>
+        <a href="contact.html" class="btn btn-green btn-lg">Solicitați o demonstrație →</a>
+        <a href="#" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.2); color: white;">Descărcați fișa tehnică (PDF)</a>
       </div>
       <div class="ok">
         <span>Toate modulele incluse</span>
@@ -611,13 +624,25 @@ body { background: #FFFFFF; }
       <h2>Răspunsuri scurte</h2>
     </div>
     <div class="list">
-      <details open=""><summary>Cât durează implementarea?</summary><div class="a">Între 1 și 3 săptămâni, în funcție de mărimea contractului. Include configurarea conturilor, importul nomenclatoarelor (străzi, sectoare, utilaje), training pentru echipă și asistență la primul program lunar generat.</div></details>
-      <details><summary>Funcționează aplicația mobilă fără conexiune?</summary><div class="a">Da, complet. PWA salvează draftele local (IndexedDB) și se sincronizează automat la revenirea online. Echipele de teren nu pierd timp dacă semnalul cade.</div></details>
-      <details><summary>Pot importa nomenclatorul meu de străzi?</summary><div class="a">Da. Există import CSV bulk pentru străzi, utilizatori și coșuri, cu preview și validare. Plus, sistemul vine preîncărcat cu cele 42 județe și municipii reședință + coduri SIRUTA oficiale INS.</div></details>
-      <details><summary>Cum sunt protejate datele între operatori diferiți?</summary><div class="a">Arhitectură multi-tenant cu izolare strictă pe coloana <code style="font-family: var(--font-mono); font-size: 13px;">client_id</code> în toate tabelele operaționale. Niciun operator nu poate vedea datele altuia.</div></details>
-      <details><summary>Unde sunt stocate datele?</summary><div class="a">Servere din România și UE, backup zilnic automat (mysqldump + gzip + rotație 7/4/12 zilnic/săpt/lunar). Conform GDPR, oferim DPA (Data Processing Agreement) la cerere.</div></details>
-      <details><summary>Se integrează cu sistemul nostru ERP / contabilitate?</summary><div class="a">Situațiile de plată se exportă în PDF și Excel cu format standardizat, ușor de importat în orice ERP. La cerere, dezvoltăm conectori dedicați (REST/CSV) — discutăm în faza de demo.</div></details>
-      <details><summary>Deszăpezirea este inclusă?</summary><div class="a">Da. Modulul include intervenții, stoc materiale (sare, nisip) per bază, prognoză meteo cu cod galben/portocaliu/roșu și raportare specifică pentru sezonul de iarnă.</div></details>
+      <div class="faq-cat">Despre obligațiile legale</div>
+      <details open=""><summary>Este obligatorie prin lege monitorizarea GPS a echipelor de salubrizare?</summary><div class="a">Nu există în Legea 101/2006, Ordinul ANRSC 97/2025 sau Ordinul ANRSC 98/2025 o obligație expresă de monitorizare GPS. Există însă obligația operatorului de a justifica prestația (art. 6 alin. (2), Legea 101/2006) și obligația autorității contractante de a monitoriza activitatea operatorului (art. 9 lit. h, Legea 51/2006). În practică, aceste obligații nu pot fi îndeplinite în mod auditabil în absența unui sistem digital cu localizare.</div></details>
+      <details><summary>Trebuie să mă conformez Ordinului ANRSC 97/2025? Vechiul Ordin 82/2015 mai este aplicabil?</summary><div class="a">Nu. Ordinul ANRSC 97/2025 (MOf. 190/5.03.2025) a abrogat Ordinul ANRSC 82/2015. Ordinul ANRSC 98/2025 (MOf. 192/5.03.2025) a abrogat Ordinul ANRSC 111/2007. Toate regulamentele și caietele de sarcini aprobate pe baza ordinelor vechi trebuie revizuite și aliniate la noul cadru.</div></details>
+      <details><summary>Ce sancțiuni riscă operatorul în cazul neîndeplinirii indicatorilor de performanță?</summary><div class="a">Sancțiunile funcționează pe două paliere:<br><br><strong>Contractual:</strong> penalități, daune-interese, executarea garanției de bună execuție sau rezilierea unilaterală a contractului (art. 6 alin. (2), Legea 101/2006).<br><strong>Contravențional:</strong> amenzi ANRSC între 30.000 și 50.000 lei pentru încălcări majore (art. 30, Legea 101/2006); risc retragere licență ANRSC (Ord. ANRSC 100/2023).</div></details>
+
+      <div class="faq-cat">Despre achiziție și costuri</div>
+      <details><summary>Cum se realizează achiziția SALUX de către o autoritate publică?</summary><div class="a">Pragul achiziției directe pentru servicii este de 132.519 lei fără TVA (art. 7 alin. (5), Legea 98/2016, valoare 2026). Procedura se realizează din catalogul electronic SEAP, conform HG 395/2016 art. 43–46, fără publicarea unei documentații de atribuire. Documentația-tip (notă justificativă și caiet de sarcini) se pune la dispoziție gratuit, la cerere.</div></details>
+      <details><summary>Există surse de finanțare europeană aplicabile?</summary><div class="a">Da. Principalele surse active în 2026:<br><br>• <strong>PNRR Componenta 10 — Fondul Local</strong> (2,1 mld. euro; termen 30.06.2026; Investiția I.4 — sisteme inteligente urbane)<br>• <strong>PNRR Componenta 7 — Transformare digitală</strong> (Investiția I5 — digitalizare mediu, platforme raportare ANPM)<br>• <strong>POCA și fonduri europene 2021–2027</strong> (digitalizare administrativă locală)<br><br>Echipa SALUX oferă suport tehnic gratuit pentru redactarea cererii de finanțare.</div></details>
+
+      <div class="faq-cat">Despre operațiune și implementare</div>
+      <details><summary>Cât durează implementarea?</summary><div class="a">Implementarea standard se desfășoară în trei etape, pe parcursul a șase săptămâni, fără întreruperea operațiunilor curente:<br><br>• <strong>Săptămânile 1–2:</strong> Configurare sistem, import inventar (coșuri, străzi, contracte), instruire echipe administrative.<br>• <strong>Săptămânile 3–4:</strong> Pilot pe o rută sau un sector, cu o echipă de teren restrânsă.<br>• <strong>Săptămânile 5–6:</strong> Extindere la întreaga operațiune, migrare date istorice relevante.</div></details>
+      <details><summary>Echipele de teren se adaptează la sistemul digital?</summary><div class="a">Aplicația mobilă are o interfață cu patru acțiuni: pornire schimb, marcaj activitate, fotografie, încheiere schimb. Curba de învățare este, în experiența noastră, de o singură tură de lucru.</div></details>
+      <details><summary>Aplicația funcționează în zonele fără semnal mobil?</summary><div class="a">Da. Aplicația operează offline, înregistrând toate datele local pe dispozitiv. Sincronizarea se realizează automat la revenirea conectivității, fără pierdere de informații.</div></details>
+      <details><summary>SALUX înlocuiește sistemul ERP curent?</summary><div class="a">Nu. SALUX gestionează activitatea operațională de teren și produce documentația justificativă. ERP-ul existent (ASiS Salubritate, alte soluții) își păstrează rolul în contabilitate și facturare. Integrarea prin API permite transferul automat al datelor relevante.</div></details>
+
+      <div class="faq-cat">Despre securitate și date</div>
+      <details><summary>Unde sunt găzduite datele?</summary><div class="a">Exclusiv în România și în alte state membre ale Uniunii Europene. Conform GDPR, Legii 190/2018 și OUG 119/2022. Fără transfer către țări terțe. Acordul de prelucrare a datelor (DPA) se semnează odată cu contractul de licență.</div></details>
+      <details><summary>Probele generate de SALUX sunt admisibile în instanță?</summary><div class="a">Audit log-ul SALUX este construit pe principiile probei electronice acceptate în Codul de procedură civilă. Marcajul temporal criptografic și hash-ul de integritate asigură opozabilitatea probei.</div></details>
+      <details><summary>Ce se întâmplă cu datele la rezilierea contractului?</summary><div class="a">Datele aparțin clientului. La încetarea contractului SALUX, datele se exportă în format deschis (CSV, JSON, PDF) și se predau clientului. Ștergerea din sistemele SALUX urmează prevederile DPA și obligațiile legale de păstrare aplicabile.</div></details>
     </div>
   </div>
 </section>
@@ -626,9 +651,12 @@ body { background: #FFFFFF; }
 <section class="section final-b">
   <div class="container x">
     <span class="eyebrow"><span class="dot"></span>Pasul următor</span>
-    <h2 style="margin-top: 22px;">30 minute. Pe datele tale.</h2>
-    <p>Îți arătăm cum arată SALUX configurat pentru contractul tău. Decizi după.</p>
-    <a href="contact.html" class="btn btn-green btn-lg">Programează demo →</a>
+    <h2 style="margin-top: 22px;">Programați o demonstrație<br>de 45 de minute.</h2>
+    <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată.</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+      <a href="contact.html" class="btn btn-green btn-lg">Solicitați o demonstrație →</a>
+      <a href="#" class="btn btn-outline btn-lg">Descărcați fișa tehnică (PDF)</a>
+    </div>
   </div>
 </section>
 
@@ -641,13 +669,14 @@ body { background: #FFFFFF; }
         <p class="lede">Sistem informatic pentru salubrizare stradală și deszăpezire în România.</p>
         <p class="lede" style="margin-top: 12px;"><a href="mailto:office@salux.ro">office@salux.ro</a></p>
       </div>
-      <div><h4>Produs</h4><ul><li><a href="#modules">Funcționalități</a></li><li><a href="#audience">Pentru cine</a></li><li><a href="#pricing">Licențiere</a></li><li><a href="contact.html">Demo</a></li></ul></div>
-      <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Soluții</h4><ul><li><a href="operator.html">Operatori privați</a></li><li><a href="uat.html">UAT &amp; Primării</a></li></ul></div>
+      <div><h4>Produs</h4><ul><li><a href="#modules">Module</a></li><li><a href="#faq">FAQ</a></li><li><a href="contact.html">Demo</a></li></ul></div>
+      <div><h4>Resurse</h4><ul><li><a href="blog.html">Blog</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="legal/confidentialitate.html">Confidențialitate</a></li><li><a href="legal/termeni.html">Termeni</a></li><li><a href="legal/gdpr.html">GDPR</a></li><li><a href="legal/eula.html">EULA</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 SALUX</span>
-      <span>Orașe curate. Comunități sănătoase.</span>
+      <span>© 2026 SALUX SRL. Hosting în România și Uniunea Europeană. Conform GDPR.</span>
+      <span>Aliniat Ordinelor ANRSC 97/2025 și 98/2025.</span>
     </div>
   </div>
 </footer>
