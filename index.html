@@ -247,6 +247,37 @@ body { background: #FFFFFF; }
 .faq-b details[open] summary::after { content: "−"; }
 .faq-b .a { padding: 0 0 20px; color: var(--muted); font-size: 14.5px; line-height: 1.65; }
 
+/* Comparison table */
+.compare-wrap { border: 1px solid var(--line); border-radius: var(--radius-xl); overflow: hidden; }
+.compare-hdr-row { display: grid; grid-template-columns: 1fr 210px 210px; padding: 26px 32px 22px; background: var(--bg); border-bottom: 2px solid var(--line); }
+.c-lbl-feat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted-2); padding-top: 12px; }
+.c-lbl-party { padding-left: 20px; }
+.compare-row { display: grid; grid-template-columns: 1fr 210px 210px; padding: 15px 32px; border-bottom: 1px solid var(--line); align-items: center; transition: background .15s; }
+.compare-row:hover { background: var(--bg); }
+.c-feat { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.c-val { padding-left: 20px; display: flex; align-items: center; }
+.c-yes { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: var(--primary-50); color: var(--primary-700); font-size: 12px; font-weight: 700; }
+.c-yes.b { background: var(--accent-50); color: var(--accent); }
+.c-no { color: var(--muted-2); font-size: 18px; display: inline-block; padding: 0 8px; }
+.c-view { font-size: 11px; font-weight: 600; color: var(--muted); background: var(--bg-alt); padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); }
+.compare-footer-row { display: grid; grid-template-columns: 1fr 210px 210px; padding: 22px 32px; background: var(--bg); border-top: 2px solid var(--line); }
+.compare-footer-row > div { padding-left: 20px; }
+.compare-footer-row > div:first-child { padding-left: 0; }
+
+/* Module accordion */
+.mod { cursor: pointer; }
+.mod p { overflow: hidden; max-height: 0; opacity: 0; margin-top: 0; transition: max-height .3s ease, opacity .25s ease, margin-top .25s ease; }
+.mod.mod-open p { opacity: 1; margin-top: 6px; }
+.mod h3 { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.mod-icon { color: var(--primary-700); font-size: 17px; font-weight: 400; flex-shrink: 0; margin-top: 1px; transition: transform .25s; }
+.mod.mod-open .mod-icon { transform: rotate(45deg); }
+
+@media (max-width: 900px) {
+  .compare-hdr-row, .compare-row, .compare-footer-row { grid-template-columns: 1fr 90px 90px; padding: 13px 16px; }
+  .c-lbl-party, .c-val { padding-left: 8px; }
+  .compare-footer-row > div { padding-left: 8px; }
+}
+
 /* Final CTA */
 .final-b { background: white; }
 .final-b .x { text-align: center; max-width: 720px; margin: 0 auto; }
@@ -290,7 +321,7 @@ body { background: #FFFFFF; }
 <!-- HERO -->
 <section class="hero-b">
   <div class="container center">
-    <h1>Salubrizarea stradală, gestionată într-un <span class="grad">cadru unitar</span> pentru operator și autoritate contractantă.</h1>
+    <h1>Salubrizarea stradală. <span class="grad">Sistem informatic integrat</span> pentru operator și autoritate contractantă.</h1>
     <p class="lede">SALUX este platforma SaaS dedicată operatorilor de salubrizare stradală și unităților administrativ-teritoriale care au delegat serviciul. Echipele introduc datele direct din teren. Sistemul construiește programul lunar zi de zi, generează automat rapoartele și situațiile de plată, păstrează istoricul auditabil. Operatorul și autoritatea contractantă lucrează pe aceeași sursă de adevăr.</p>
     <div class="cta-row">
       <a href="contact.html" class="btn btn-green btn-lg">Programați o demonstrație →</a>
@@ -361,10 +392,12 @@ body { background: #FFFFFF; }
         </div>
       </div>
       <div class="float-badge fb-3">
-        <div class="dot">⚠</div>
+        <div class="dot" style="background:#D1FAE5;color:#065F46;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"></path></svg>
+        </div>
         <div>
-          <div style="font-weight: 600; color: var(--ink);">Stoc sare ↓</div>
-          <div style="color: var(--muted); font-size: 11px;">Baza Nord · 18%</div>
+          <div style="font-weight: 600; color: var(--ink);">Situație plată · Gata</div>
+          <div style="color: var(--muted); font-size: 11px;">Export PDF · Mai 2026</div>
         </div>
       </div>
     </div>
@@ -380,7 +413,7 @@ body { background: #FFFFFF; }
 
 <section class="section-tight" style="background: white;">
   <div class="container" style="text-align: center;">
-    <p style="font-size: 20px; color: var(--ink); max-width: 720px; margin: 0 auto; line-height: 1.6; font-weight: 500;">Un cadru comun de lucru, automatizare completă și conformitate documentată - construite pe obligațiile legale în vigoare.</p>
+    <p style="font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; color: var(--ink); max-width: 700px; margin: 0 auto; line-height: 1.65; font-weight: 600; font-style: italic; letter-spacing: -0.01em;">Un cadru comun de lucru, automatizare completă și conformitate documentată — construite pe obligațiile legale în vigoare.</p>
   </div>
 </section>
 
@@ -399,7 +432,7 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="s-head">
       <span class="eyebrow"><span class="dot"></span>Cui se adresează</span>
-      <h2>Două părți contractante. Un singur produs.</h2>
+      <h2>Două părți contractante. Un mod unitar de lucru.</h2>
     </div>
     <div class="aud-grid">
       <div class="aud-card">
@@ -425,7 +458,7 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="s-head">
       <span class="eyebrow"><span class="dot"></span>Cum lucrează</span>
-      <h2>De la program lunar la situație de plată,<br>fără Excel între</h2>
+      <h2>Program lunar de lucru, sarcini zilnice, situație de plată. Simplu, rapid, ușor de urmărit.</h2>
       <p>Trei fluxuri principale, toate integrate. Restul vine la pachet.</p>
     </div>
 
@@ -531,7 +564,7 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="s-head">
       <span class="eyebrow accent"><span class="dot"></span>Tot ce e inclus</span>
-      <h2>Zece module funcționale. Un singur abonament.</h2>
+      <h2><span class="grad">Zece</span> module funcționale. Un singur abonament.</h2>
       <p>Construite pe activitățile enumerate în art. 2 alin. (3) din Legea 101/2006. Nu plătești pe seat, nu plătești pe modul.</p>
     </div>
     <div class="mod-grid">
@@ -554,34 +587,33 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="s-head">
       <span class="eyebrow"><span class="dot"></span>Pentru cine</span>
-      <h2>Două părți contractante. Un singur produs.</h2>
+      <h2>Două părți contractante. Un mod unitar de lucru.</h2>
     </div>
-    <div class="aud-grid">
-      <div class=”aud-card”>
-        <div class=”deco”></div>
-        <span class=”gtag”>Operatori privați de salubrizare stradală</span>
-        <h3>O singură platformă,<br>de la teren la situație de plată acceptată.</h3>
-        <p>SALUX organizează activitatea de teren, produce situații de plată cu probă completă, automatizează raportările către ANRSC și ANPM, și oferă instrumentele necesare pentru a trece auditul Curții de Conturi fără perioade de pregătire dedicate.</p>
-        <ul>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Probe fotografice cu localizare opțională, imutabile, 5 ani</li>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Situații de plată generate automat, cu captură imutabilă per rând</li>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Export rapoarte ANRSC + ANPM pre-formatat</li>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Dosar audit gata în orice moment</li>
-        </ul>
-        <a href=”operator.html” class=”btn btn-green”>Vezi soluția pentru operatori →</a>
+    <div class="compare-wrap">
+      <div class="compare-hdr-row">
+        <div class="c-lbl-feat">Funcționalitate</div>
+        <div class="c-lbl-party">
+          <span class="gtag" style="margin:0 0 6px;display:inline-block;">Operator privat</span>
+          <div style="font-size:12px;color:var(--muted);line-height:1.4;">Companie concesionară de salubrizare</div>
+        </div>
+        <div class="c-lbl-party">
+          <span class="gtag" style="margin:0 0 6px;display:inline-block;background:var(--accent-50);color:var(--accent);">UAT</span>
+          <div style="font-size:12px;color:var(--muted);line-height:1.4;">Autoritate contractantă, primărie sau ADI</div>
+        </div>
       </div>
-      <div class=”aud-card b”>
-        <div class=”deco”></div>
-        <span class=”gtag”>UAT-uri &amp; autorități contractante</span>
-        <h3>Monitorizarea serviciului<br>ca obligație îndeplinită sistematic.</h3>
-        <p>SALUX oferă acces în timp real la activitatea operatorului, monitorizare conformă obligației din articolul 9 litera h al Legii 51/2006, și un fundament documentar solid pentru deciziile contractuale și pentru răspunsul la orice control.</p>
-        <ul>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Vizualizare activitate operator în timp real</li>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Răspuns la sesizări cetățeni cu dovezi fotografice</li>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Documentație structurată pentru Camera de Conturi</li>
-          <li><svg class=”ic” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2”><path d=”M9 12l2 2 4-4”></path><circle cx=”12” cy=”12” r=”10”></circle></svg>Acces pe bază de licență, fără costuri de implementare</li>
-        </ul>
-        <a href=”uat.html” class=”btn btn-accent”>Vezi soluția pentru UAT →</a>
+      <div class="compare-row"><div class="c-feat">Program lunar digital și sarcini zilnice</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-view">vizualizare</span></div></div>
+      <div class="compare-row"><div class="c-feat">Probe fotografice imutabile, păstrate 5 ani</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-yes b">✓</span></div></div>
+      <div class="compare-row"><div class="c-feat">Situații de plată generate automat, captură imutabilă per rând</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-view">aprobare</span></div></div>
+      <div class="compare-row"><div class="c-feat">Export rapoarte ANRSC + ANPM preformatat</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-no">–</span></div></div>
+      <div class="compare-row"><div class="c-feat">Vizualizare activitate operator în timp real</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-yes b">✓</span></div></div>
+      <div class="compare-row"><div class="c-feat">Sesizări cetățeni cu dovezi fotografice</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-yes b">✓</span></div></div>
+      <div class="compare-row"><div class="c-feat">Dosar audit gata în orice moment</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-yes b">✓</span></div></div>
+      <div class="compare-row"><div class="c-feat">Documentație structurată pentru Camera de Conturi</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-yes b">✓</span></div></div>
+      <div class="compare-row"><div class="c-feat">Implementare fără costuri suplimentare</div><div class="c-val"><span class="c-yes">✓</span></div><div class="c-val"><span class="c-yes b">✓</span></div></div>
+      <div class="compare-footer-row">
+        <div></div>
+        <div class="c-val"><a href="operator.html" class="btn btn-green">Detalii pentru operatori →</a></div>
+        <div class="c-val"><a href="uat.html" class="btn btn-accent">Detalii pentru UAT →</a></div>
       </div>
     </div>
   </div>
@@ -592,8 +624,8 @@ body { background: #FFFFFF; }
   <div class="container">
     <div class="card">
       <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white;"><span class="dot" style="background: var(--primary);"></span>Licențiere personalizată</span>
-      <h2 style="margin-top: 22px;">Programați o demonstrație<br>de 45 de minute.</h2>
-      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
+      <h2 style="margin-top: 22px;">Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
       <div class="cta-row">
         <a href="contact.html" class="btn btn-green btn-lg">Solicitați o demonstrație →</a>
       </div>
@@ -643,8 +675,8 @@ body { background: #FFFFFF; }
 <section class="section final-b">
   <div class="container x">
     <span class="eyebrow"><span class="dot"></span>Pasul următor</span>
-    <h2 style="margin-top: 22px;">Programați o demonstrație<br>de 45 de minute.</h2>
-    <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată.</p>
+    <h2 style="margin-top: 22px;">Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
+    <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată.</p>
     <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
       <a href="contact.html" class="btn btn-green btn-lg">Solicitați o demonstrație →</a>
     </div>
@@ -677,6 +709,29 @@ body { background: #FFFFFF; }
 
 
 <script>
+// Module accordion
+(function(){
+  document.querySelectorAll('.mod').forEach(function(mod) {
+    var p = mod.querySelector('p');
+    var h3 = mod.querySelector('h3');
+    if (!p || !h3) return;
+    var icon = document.createElement('span');
+    icon.className = 'mod-icon';
+    icon.textContent = '+';
+    h3.appendChild(icon);
+    mod.addEventListener('click', function() {
+      var isOpen = mod.classList.contains('mod-open');
+      if (isOpen) {
+        mod.classList.remove('mod-open');
+        p.style.maxHeight = '0';
+      } else {
+        mod.classList.add('mod-open');
+        p.style.maxHeight = p.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+
 (function(){
   const VIEWS = {
     'dashboard':     { crumb:'app.salux.ro / dashboard',     kpis:[['48','Sarcini azi'],['87%','Conformitate'],['4','Sesizări noi'],['12.4t','Colectat']],        bars:[40,60,55,75,65,80,90,70,85,95,78,88], alt:[0,1,0,1,0,1,0,1,0,1,0,1] },
