@@ -709,9 +709,10 @@ body { background: #FFFFFF; }
 
 
 <script>
-// Module accordion
+// Module accordion — single open at a time
 (function(){
-  document.querySelectorAll('.mod').forEach(function(mod) {
+  var mods = Array.from(document.querySelectorAll('.mod'));
+  mods.forEach(function(mod) {
     var p = mod.querySelector('p');
     var h3 = mod.querySelector('h3');
     if (!p || !h3) return;
@@ -721,12 +722,18 @@ body { background: #FFFFFF; }
     h3.appendChild(icon);
     mod.addEventListener('click', function() {
       var isOpen = mod.classList.contains('mod-open');
-      if (isOpen) {
-        mod.classList.remove('mod-open');
-        p.style.maxHeight = '0';
-      } else {
+      // Close all
+      mods.forEach(function(m) {
+        m.classList.remove('mod-open');
+        var mp = m.querySelector('p');
+        if (mp) { mp.style.maxHeight = '0'; mp.style.opacity = '0'; mp.style.marginTop = '0'; }
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
         mod.classList.add('mod-open');
         p.style.maxHeight = p.scrollHeight + 'px';
+        p.style.opacity = '1';
+        p.style.marginTop = '6px';
       }
     });
   });
