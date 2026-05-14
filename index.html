@@ -226,6 +226,15 @@ body { background: #FFFFFF; }
 .aud-card.b ul li .ic { color: var(--accent); }
 .aud-card .deco { position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; border-radius: 50%; background: var(--primary-50); opacity: .6; pointer-events: none; }
 .aud-card.b .deco { background: var(--accent-50); }
+.aud-card .card-icon {
+  position: absolute; top: 28px; right: 28px; z-index: 1;
+  width: 54px; height: 54px; border-radius: 16px;
+  background: white; color: var(--primary-700);
+  display: grid; place-items: center;
+  box-shadow: 0 4px 16px rgba(63,154,108,.18), 0 1px 3px rgba(11,24,41,.06);
+}
+.aud-card.b .card-icon { color: var(--accent); box-shadow: 0 4px 16px rgba(59,114,196,.18), 0 1px 3px rgba(11,24,41,.06); }
+.aud-card .card-icon svg { width: 28px; height: 28px; stroke-width: 1.5; }
 
 /* Pricing CTA card */
 .pricing-b { background: white; }
@@ -245,11 +254,32 @@ body { background: #FFFFFF; }
 
 /* Info band (trust strip replacement) */
 .info-band {
-  font-family: var(--font-mono); font-size: 13px; line-height: 1.6;
-  color: var(--accent-600); background: var(--accent-50);
-  padding: 16px 24px; border-radius: var(--radius-lg);
-  text-align: center; max-width: 900px; margin: 0 auto;
-  border: 1px solid rgba(59,114,196,.15);
+  display: flex; align-items: flex-start; gap: 22px;
+  font-size: 15.5px; line-height: 1.7;
+  color: var(--ink-2);
+  background: linear-gradient(135deg, #EBF2FD 0%, #D8E8F9 100%);
+  padding: 32px 36px; border-radius: var(--radius-xl);
+  text-align: left; max-width: 960px; margin: 0 auto;
+  border: 1px solid rgba(59,114,196,.22);
+  box-shadow: 0 4px 20px rgba(59,114,196,.09);
+}
+.info-band .ib-icon {
+  width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+  background: white; color: var(--accent);
+  display: grid; place-items: center;
+  box-shadow: 0 2px 10px rgba(59,114,196,.14);
+  margin-top: 2px;
+}
+.info-band .ib-icon svg { width: 24px; height: 24px; stroke-width: 1.7; }
+.info-band .ib-body .ib-label {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 8px; display: block;
+}
+.info-band .ib-body p { color: var(--ink-2); font-size: 15.5px; line-height: 1.7; }
+@media (max-width: 600px) {
+  .info-band { flex-direction: column; gap: 14px; padding: 24px 20px; font-size: 14px; }
+  .info-band .ib-body p { font-size: 14px; }
 }
 
 /* FAQ */
@@ -340,7 +370,8 @@ body { background: #FFFFFF; }
   .feat-block p { font-size: 15px; }
   .mod-grid { gap: 10px; }
   .mod { padding: 20px; }
-  .info-band { font-size: 12px; padding: 14px 16px; }
+  .info-band { flex-direction: column; gap: 14px; padding: 20px 18px; }
+  .info-band .ib-body p { font-size: 14px; }
   .final-b h2 { font-size: clamp(28px, 7vw, 42px); }
   .final-b p { font-size: 16px; }
   .feat-block .visual[style*="1fr 1fr"] { grid-template-columns: 1fr; }
@@ -370,7 +401,6 @@ body { background: #FFFFFF; }
     </div>
     <div class="nav-cta">
       <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
-      <a href="contact.html" class="btn btn-nav">Programează o demonstrație</a>
     </div>
       <button class="nav-hamburger" aria-label="Meniu" onclick="this.closest('.nav').classList.toggle('nav-open')">
         <span></span><span></span><span></span>
@@ -384,7 +414,6 @@ body { background: #FFFFFF; }
         <hr>
         <div class="nav-mobile-cta">
           <a href="https://app.salux.ro/login.php" class="btn btn-ghost">Autentificare</a>
-          <a href="contact.html" class="btn btn-nav">Programează o demonstrație</a>
         </div>
       </div>
   </div>
@@ -400,9 +429,9 @@ body { background: #FFFFFF; }
   </div>
   <div class="container center">
     <h1>Digitalizăm salubrizarea stradală. <span class="grad">Sistem informatic integrat</span> pentru operator și autoritate contractantă.</h1>
-    <p class="lede">SALUX este platforma SaaS dedicată operatorilor de salubrizare stradală și unităților administrativ-teritoriale care au delegat serviciul. Echipele introduc datele direct din teren. Sistemul construiește programul lunar zi de zi, generează automat rapoartele și situațiile de plată, păstrează istoricul auditabil. Operatorul și autoritatea contractantă lucrează pe aceeași sursă de adevăr.</p>
+    <p class="lede">Un sistem comun în care operatorul livrează, autoritatea contractantă verifică și ambele părți semnează pe aceleași date — de la primul program lunar până la ultima situație de plată.</p>
     <div class="cta-row">
-      <a href="contact.html" class="btn btn-green btn-lg">Programează o demonstrație →</a>
+      <a href="contact.html" class="btn btn-nav btn-lg">Programează o demonstrație →</a>
     </div>
   </div>
 
@@ -490,7 +519,15 @@ body { background: #FFFFFF; }
 <!-- BANDĂ INFORMATIVĂ -->
 <section class="trust-strip">
   <div class="container">
-    <p class="info-band">De la 5 martie 2025 sunt în vigoare Ordinele ANRSC 97/2025 (Regulament-cadru) și 98/2025 (Caiet de sarcini-cadru), care înlocuiesc Ordinele 82/2015 și 111/2007, pe care funcționau toate contractele de salubrizare din România. Toate regulamentele și caietele de sarcini aprobate înainte de această dată trebuie aliniate la noul cadru. SALUX este construit pe forma actualizată a reglementărilor.</p>
+    <div class="info-band">
+      <div class="ib-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      </div>
+      <div class="ib-body">
+        <span class="ib-label">Cadru legal în vigoare</span>
+        <p>De la 5 martie 2025 sunt în vigoare Ordinele ANRSC 97/2025 (Regulament-cadru) și 98/2025 (Caiet de sarcini-cadru), care înlocuiesc Ordinele 82/2015 și 111/2007, pe care funcționau toate contractele de salubrizare din România. Toate regulamentele și caietele de sarcini aprobate înainte de această dată trebuie aliniate la noul cadru. SALUX este construit pe forma actualizată a reglementărilor.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -503,9 +540,9 @@ body { background: #FFFFFF; }
 <!-- IMPACT METRICS -->
 <section class="metric-row">
   <div class="container grid4">
-    <div class="m"><div class="v">2 zile<span class="u"> → 30 min</span></div><div class="l">timp raport lunar</div></div>
+    <div class="m"><div class="v">5 zile<span class="u"> → 30 min</span></div><div class="l">timp raport lunar</div></div>
     <div class="m"><div class="v">0<span class="u"> lei</span></div><div class="l">costuri de implementare</div></div>
-    <div class="m"><div class="v">5<span class="u"> ani</span></div><div class="l">audit log disponibil</div></div>
+    <div class="m"><div class="v">5<span class="u"> ani</span></div><div class="l">arhivă disponibilă</div></div>
     <div class="m"><div class="v">Mar<span class="u"> 2025</span></div><div class="l">cadru legal actualizat (ANRSC 97+98)</div></div>
   </div>
 </section>
@@ -520,6 +557,9 @@ body { background: #FFFFFF; }
     <div class="aud-grid">
       <div class="aud-card">
         <div class="deco"></div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="1" y="3" width="15" height="13" rx="1.5"></rect><path d="M16 8h4l3 3v5h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
         <span class="gtag">Operatori privați de salubrizare stradală</span>
         <h3>Operatorilor privați de salubrizare stradală</h3>
         <p>Companiilor care au unul sau mai multe contracte de delegare a gestiunii cu UAT-uri din România. SALUX organizează activitatea de teren, produce situații de plată cu probă completă, automatizează raportările către ANRSC și ANPM, și oferă instrumentele necesare pentru a trece auditul Curții de Conturi fără perioade de pregătire dedicate.</p>
@@ -527,8 +567,11 @@ body { background: #FFFFFF; }
       </div>
       <div class="aud-card b">
         <div class="deco"></div>
-        <span class="gtag">UAT-uri &amp; autorități locale</span>
-        <h3>Unităților administrativ-teritoriale</h3>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M8 11v5M12 11v5M16 11v5"></path></svg>
+        </div>
+        <span class="gtag">Autorități contractante</span>
+        <h3>Autorităților publice</h3>
         <p>Primăriilor, consiliilor județene și asociațiilor de dezvoltare intercomunitară care au calitate de autoritate contractantă pentru serviciul de salubrizare. SALUX oferă acces în timp real la activitatea operatorului, monitorizare conformă obligației din articolul 9 litera h al Legii 51/2006, și un fundament documentar solid pentru deciziile contractuale și pentru răspunsul la orice control.</p>
         <a href="uat.html" class="btn btn-accent" style="margin-top: 24px;">Vezi soluția pentru UAT →</a>
       </div>
