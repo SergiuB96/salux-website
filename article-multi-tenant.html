@@ -68,9 +68,14 @@
 <h2>Cum arată izolarea, tehnic</h2>
 <p>Fiecare tabel operațional din baza de date are o coloană numită <code>client_id</code>. Toate interogările trec printr-un filtru automat care adaugă <code>WHERE client_id = ?</code> la nivel de framework. Niciun query SQL nu poate ieși din contractul utilizatorului autentificat.</p>
 
-<div class="callout green">
-  <div class="h">// În practică</div>
-  Un dispecer din Cluj nu poate vedea o sarcină din Sibiu. Nu pentru că UI-ul ascunde linkul. Pentru că <code>SELECT * FROM tasks WHERE client_id = 'cluj'</code> nu va returna niciodată un rând cu <code>client_id = 'sibiu'</code>.
+<div class="info-band">
+  <div class="ib-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+  </div>
+  <div class="ib-body">
+    <span class="ib-label">În practică</span>
+    <p>Un dispecer din Cluj nu poate vedea o sarcină din Sibiu. Nu pentru că UI-ul ascunde linkul. Pentru că <code>SELECT * FROM tasks WHERE client_id = 'cluj'</code> nu va returna niciodată un rând cu <code>client_id = 'sibiu'</code>.</p>
+  </div>
 </div>
 
 <h2>De ce nu „un Excel pe județ”</h2>
