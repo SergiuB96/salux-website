@@ -201,6 +201,22 @@ p  { margin: 0; color: var(--muted); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
 
+/* ====== CTA DEMO CARD (standard, identic pe toate paginile) ====== */
+.cta-demo-wrap { background: white; }
+.cta-card {
+  max-width: 900px; margin: 0 auto;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
+  border-radius: 28px; padding: 70px; text-align: center; color: white;
+  position: relative; overflow: hidden;
+}
+.cta-card::before { content: ""; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--primary), transparent 70%); opacity: .25; }
+.cta-card::after  { content: ""; position: absolute; bottom: -120px; left: -120px; width: 320px; height: 320px; background: radial-gradient(circle, var(--accent), transparent 70%); opacity: .2; }
+.cta-card h2 { color: white; font-size: clamp(28px, 4vw, 40px); margin-bottom: 14px; position: relative; }
+.cta-card p  { color: rgba(255,255,255,.7); font-size: 17px; max-width: 520px; margin: 0 auto 28px; position: relative; line-height: 1.65; }
+.cta-card .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; }
+@media (max-width: 900px) { .cta-card { padding: 40px 24px; } }
+@media (max-width: 600px) { .cta-card { padding: 32px 20px; } .cta-card h2 { font-size: clamp(24px, 6vw, 34px); } }
+
 /* ====== INFO BAND (card legal/informativ) ====== */
 .info-band {
   display: flex; align-items: flex-start; gap: 22px;

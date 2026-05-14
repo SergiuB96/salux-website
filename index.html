@@ -236,21 +236,7 @@ body { background: #FFFFFF; }
 .aud-card.b .card-icon { color: var(--accent); box-shadow: 0 4px 16px rgba(59,114,196,.18), 0 1px 3px rgba(11,24,41,.06); }
 .aud-card .card-icon svg { width: 28px; height: 28px; stroke-width: 1.5; }
 
-/* Pricing CTA card */
-.pricing-b { background: white; }
-.pricing-b .card {
-  max-width: 900px; margin: 0 auto;
-  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
-  border-radius: 28px; padding: 70px; text-align: center; color: white;
-  position: relative; overflow: hidden;
-}
-.pricing-b .card::before { content: ""; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--primary), transparent 70%); opacity: .25; }
-.pricing-b .card::after  { content: ""; position: absolute; bottom: -120px; left: -120px; width: 320px; height: 320px; background: radial-gradient(circle, var(--accent), transparent 70%); opacity: .2; }
-.pricing-b .card h2 { color: white; font-size: 44px; margin-bottom: 16px; position: relative; }
-.pricing-b .card p  { color: rgba(255,255,255,.7); font-size: 18px; max-width: 540px; margin: 0 auto 32px; position: relative; }
-.pricing-b .card .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; }
-.pricing-b .card .ok { display: flex; justify-content: center; gap: 28px; margin-top: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,.6); position: relative; }
-.pricing-b .card .ok span::before { content: "✓ "; color: var(--primary); font-weight: 700; }
+/* CTA cards → mutat în shared.css (.cta-card) */
 
 /* Info band → mutat în shared.css */
 
@@ -308,11 +294,7 @@ body { background: #FFFFFF; }
   .compare-footer-row .c-val .btn { width: 100%; justify-content: center; }
 }
 
-/* Final CTA */
-.final-b { background: white; }
-.final-b .x { text-align: center; max-width: 720px; margin: 0 auto; }
-.final-b h2 { font-size: clamp(36px, 5vw, 60px); margin-bottom: 18px; }
-.final-b p { font-size: 18px; max-width: 520px; margin: 0 auto 32px; }
+/* Final CTA → folosește .cta-card din shared.css */
 
 @media (max-width: 900px) {
   .feat-block { grid-template-columns: 1fr; gap: 30px; padding: 40px 24px; }
@@ -325,7 +307,7 @@ body { background: #FFFFFF; }
   .hero-shapes .side { display: none; }
   .float-badge { display: none; }
   .section { padding: 52px 0; }
-  .pricing-b .card { padding: 36px 20px; }
+  /* .cta-card responsive → în shared.css */
   .hero-b { padding: 56px 0 80px; }
   .hero-b h1 { font-size: clamp(32px, 9vw, 50px); margin: 18px 0; }
   .hero-b .lede { font-size: 17px; }
@@ -343,8 +325,7 @@ body { background: #FFFFFF; }
   .mod-grid { gap: 10px; }
   .mod { padding: 20px; }
   /* info-band responsive → în shared.css */
-  .final-b h2 { font-size: clamp(28px, 7vw, 42px); }
-  .final-b p { font-size: 16px; }
+  /* .final-b → înlocuit cu .cta-card */
   .feat-block .visual[style*="1fr 1fr"] { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
@@ -715,21 +696,14 @@ body { background: #FFFFFF; }
 </section>
 
 <!-- PRICING -->
-<section class="section pricing-b" id="pricing">
+<section class="section cta-demo-wrap" id="pricing">
   <div class="container">
-    <div class="card">
-      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white;"><span class="dot" style="background: var(--primary);"></span>Licențiere personalizată</span>
-      <h2 style="margin-top: 22px;">Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
-      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
+    <div class="cta-card">
+      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
+      <h2>Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
       <div class="cta-row">
         <a href="contact.html" class="btn btn-green btn-lg">Programează o demonstrație →</a>
-      </div>
-      <div class="ok">
-        <span>Toate modulele incluse</span>
-        <span>Utilizatori nelimitați</span>
-        <span>Suport în română</span>
-        <span>SLA 99.5%</span>
-        <span>Hosting RO/UE</span>
       </div>
     </div>
   </div>
@@ -749,8 +723,7 @@ body { background: #FFFFFF; }
       <details><summary>Ce sancțiuni riscă operatorul în cazul neîndeplinirii indicatorilor de performanță?</summary><div class="a">Sancțiunile funcționează pe două paliere:<br><br><strong>Contractual:</strong> penalități, daune-interese, executarea garanției de bună execuție sau rezilierea unilaterală a contractului (art. 6 alin. (2), Legea 101/2006).<br><strong>Contravențional:</strong> amenzi ANRSC între 30.000 și 50.000 lei pentru încălcări majore (art. 30, Legea 101/2006); risc retragere licență ANRSC (Ord. ANRSC 100/2023).</div></details>
 
       <div class="faq-cat">Despre achiziție și costuri</div>
-      <details><summary>Cum se achiziționează SALUX de către o autoritate publică?</summary><div class="a">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Autorităților publice le punem la dispoziție, gratuit, documentația-tip necesară procedurii de achiziție: nota justificativă și caietul de sarcini. Echipa SALUX oferă și suport tehnic pentru accesarea finanțărilor europene disponibile (PNRR Componenta 10, fonduri 2021-2027).</div></details>
-      <details><summary>Există surse de finanțare europeană aplicabile?</summary><div class="a">Da. Principalele surse active în 2026:<br><br>• <strong>PNRR Componenta 10 - Fondul Local</strong> (2,1 mld. euro; termen 30.06.2026; Investiția I.4 - sisteme inteligente urbane)<br>• <strong>PNRR Componenta 7 - Transformare digitală</strong> (Investiția I5 - digitalizare mediu, platforme raportare ANPM)<br>• <strong>POCA și fonduri europene 2021–2027</strong> (digitalizare administrativă locală)<br><br>Echipa SALUX oferă suport tehnic gratuit pentru redactarea cererii de finanțare.</div></details>
+      <details><summary>Cum se achiziționează SALUX de către o autoritate publică?</summary><div class="a">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Specialiștii SALUX oferă asistență tehnică pe tot parcursul procedurii de achiziție — analiza compatibilității cu Ordinul ANRSC 98/2025, consultanță privind specificațiile tehnice și suport în etapele de evaluare și atribuire.</div></details>
 
       <div class="faq-cat">Despre operațiune și implementare</div>
       <details><summary>Cât durează implementarea?</summary><div class="a">Implementarea standard se desfășoară în trei etape, pe parcursul a șase săptămâni, fără întreruperea operațiunilor curente:<br><br>• <strong>Săptămânile 1–2:</strong> Configurare sistem, import inventar (coșuri, străzi, contracte), instruire echipe administrative.<br>• <strong>Săptămânile 3–4:</strong> Pilot pe o rută sau un sector, cu o echipă de teren restrânsă.<br>• <strong>Săptămânile 5–6:</strong> Extindere la întreaga operațiune, migrare date istorice relevante.</div></details>
@@ -767,13 +740,15 @@ body { background: #FFFFFF; }
 </section>
 
 <!-- FINAL CTA -->
-<section class="section final-b">
-  <div class="container x">
-    <span class="eyebrow"><span class="dot"></span>Pasul următor</span>
-    <h2 style="margin-top: 22px;">Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
-    <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată.</p>
-    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
-      <a href="contact.html" class="btn btn-green btn-lg">Programează o demonstrație →</a>
+<section class="section cta-demo-wrap">
+  <div class="container">
+    <div class="cta-card">
+      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
+      <h2>Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
+      <div class="cta-row">
+        <a href="contact.html" class="btn btn-green btn-lg">Programează o demonstrație →</a>
+      </div>
     </div>
   </div>
 </section>

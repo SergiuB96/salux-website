@@ -127,19 +127,8 @@ body { background: #FFFFFF; }
 .dim-card h3 { font-size: 20px; margin-bottom: 12px; }
 .dim-card p { font-size: 14px; line-height: 1.65; color: var(--muted); }
 
-/* CTA final */
+/* CTA final — stiluri în shared.css */
 .cta-final-uat { background: white; }
-.cta-card {
-  max-width: 900px; margin: 0 auto;
-  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
-  border-radius: 28px; padding: 70px; text-align: center; color: white;
-  position: relative; overflow: hidden;
-}
-.cta-card::before { content: ""; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--accent), transparent 70%); opacity: .25; }
-.cta-card::after  { content: ""; position: absolute; bottom: -120px; left: -120px; width: 320px; height: 320px; background: radial-gradient(circle, var(--primary), transparent 70%); opacity: .2; }
-.cta-card h2 { color: white; font-size: clamp(28px, 4vw, 40px); margin-bottom: 14px; position: relative; }
-.cta-card p  { color: rgba(255,255,255,.7); font-size: 17px; max-width: 520px; margin: 0 auto 28px; position: relative; line-height: 1.65; }
-.cta-card .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; }
 
 @media (max-width: 900px) {
   .feat-block { grid-template-columns: 1fr; gap: 30px; padding: 40px 24px; }
@@ -334,7 +323,7 @@ body { background: #FFFFFF; }
         <div class="seap-badge">Fără costuri de implementare</div>
         <div class="seap-amount">0 lei</div>
         <div class="seap-unit">costuri de implementare</div>
-        <p class="seap-desc">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Documentația-tip necesară procedurii de achiziție publică (notă justificativă și caiet de sarcini) se pune la dispoziție gratuit. Echipa SALUX oferă suport tehnic și pentru accesarea finanțărilor europene disponibile.</p>
+        <p class="seap-desc">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Specialiștii SALUX oferă asistență tehnică pe tot parcursul procedurii de achiziție — analiza compatibilității cu Ordinul ANRSC 98/2025, consultanță privind specificațiile tehnice și suport în etapele de evaluare și atribuire.</p>
         <p class="seap-note">Contactați echipa SALUX pentru o ofertă adaptată dimensiunii contractului dumneavoastră.</p>
       </div>
 
@@ -342,42 +331,6 @@ body { background: #FFFFFF; }
   </div>
 </section>
 
-<!-- SURSE FINANȚARE -->
-<section class="section finance-b">
-  <div class="container">
-    <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Finanțare 2026</span>
-      <h2>Surse disponibile pentru<br>achizițiia platformei</h2>
-      <p>Echipa SALUX oferă suport tehnic gratuit pentru redactarea cererii de finanțare.</p>
-    </div>
-    <div class="mod-grid-3">
-      <div class="mod">
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"></path></svg>
-        </div>
-        <h3>PNRR Componenta 10 - Fondul Local</h3>
-        <p>Buget: 2,1 miliarde euro. Investiția I.4 - sisteme inteligente urbane (ITS). Referință: Ord. MDLPA nr. 999/10.05.2022.</p>
-        <span class="deadline">Termen: 30 iunie 2026</span>
-      </div>
-      <div class="mod">
-        <div class="ic b">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2c3 3 4.5 6 4.5 10S15 19 12 22M12 2c-3 3-4.5 6-4.5 10S9 19 12 22"></path></svg>
-        </div>
-        <h3>PNRR Componenta 7 - Transformare digitală</h3>
-        <p>Investiția I5 - digitalizare în domeniul mediului, inclusiv platforme de raportare ANPM (Legea 211/2011).</p>
-        <span class="deadline">Programe active 2026</span>
-      </div>
-      <div class="mod">
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 4v4"></path></svg>
-        </div>
-        <h3>POCA și fonduri europene 2021–2027</h3>
-        <p>Apeluri pentru digitalizarea procedurilor administrative locale. SALUX este eligibil ca instrument de monitorizare a unui serviciu public obligatoriu conform Legii 101/2006.</p>
-        <span class="deadline">Apeluri active 2026</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- 3 DIMENSIUNI BENEFICII -->
 <section class="section beneficii-b">
@@ -410,9 +363,9 @@ body { background: #FFFFFF; }
 <section class="section cta-final-uat">
   <div class="container">
     <div class="cta-card">
-      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--accent);"></span>Pasul următor</span>
+      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
       <h2>Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
-      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată monitorizarea serviciului și documentația pentru orice control.</p>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
       <div class="cta-row">
         <a href="contact.html" class="btn btn-green btn-lg">Programează o demonstrație →</a>
       </div>

@@ -96,19 +96,8 @@ body { background: #FFFFFF; }
 .flow-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .flow-grid-3 .flow-step::after { display: none; }
 
-/* CTA final */
+/* CTA final — stiluri în shared.css */
 .cta-final { background: white; }
-.cta-card {
-  max-width: 900px; margin: 0 auto;
-  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
-  border-radius: 28px; padding: 70px; text-align: center; color: white;
-  position: relative; overflow: hidden;
-}
-.cta-card::before { content: ""; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--primary), transparent 70%); opacity: .25; }
-.cta-card::after  { content: ""; position: absolute; bottom: -120px; left: -120px; width: 320px; height: 320px; background: radial-gradient(circle, var(--accent), transparent 70%); opacity: .2; }
-.cta-card h2 { color: white; font-size: clamp(28px, 4vw, 40px); margin-bottom: 14px; position: relative; }
-.cta-card p  { color: rgba(255,255,255,.7); font-size: 17px; max-width: 520px; margin: 0 auto 28px; position: relative; line-height: 1.65; }
-.cta-card .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; }
 
 /* Feature blocks alternante */
 .feat-blocks { display: grid; gap: 24px; }
@@ -520,7 +509,7 @@ body { background: #FFFFFF; }
     <div class="cta-card">
       <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
       <h2>Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
-      <p>Pregătim demonstrația pe un caz real - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră — un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
       <div class="cta-row">
         <a href="contact.html" class="btn btn-green btn-lg">Programează o demonstrație →</a>
       </div>
