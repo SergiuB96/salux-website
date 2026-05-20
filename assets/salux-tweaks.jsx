@@ -1,4 +1,4 @@
-// SALUX — Tweaks panel
+﻿// SALUX - Tweaks panel
 // Three expressive controls that reshape the feel of home-saas.html:
 //   palette · form · motion
 
@@ -77,7 +77,7 @@ function applyMotion(key) {
 }
 
 function paletteFromSwatch(swatch) {
-  // TweakColor sends back the swatch array — map it back to key
+  // TweakColor sends back the swatch array - map it back to key
   for (let i = 0; i < PALETTE_KEYS.length; i++) {
     if (PALETTES[PALETTE_KEYS[i]].swatch === swatch ||
         JSON.stringify(PALETTES[PALETTE_KEYS[i]].swatch) === JSON.stringify(swatch)) {

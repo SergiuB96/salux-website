@@ -1,15 +1,15 @@
-/* SALUX — shared design tokens (LIGHT theme, keeping the brand palette) */
+﻿/* SALUX - shared design tokens (LIGHT theme, keeping the brand palette) */
 :root {
-  /* Brand palette — kept from existing template */
-  --primary: #7DC8A0;          /* soft green — accent of growth/cleanliness */
+  /* Brand palette - kept from existing template */
+  --primary: #7DC8A0;          /* soft green - accent of growth/cleanliness */
   --primary-600: #5BB286;
   --primary-700: #3F9A6C;
   --primary-50:  #EAF6F0;
-  --accent: #3B72C4;            /* trustworthy blue — institutional */
+  --accent: #3B72C4;            /* trustworthy blue - institutional */
   --accent-600: #2A5BA7;
   --accent-50:  #ECF2FB;
 
-  /* Light surface system, warm-neutral — friendly for public sector */
+  /* Light surface system, warm-neutral - friendly for public sector */
   --bg: #F7F8FA;
   --bg-alt: #EEF1F5;
   --surface: #FFFFFF;

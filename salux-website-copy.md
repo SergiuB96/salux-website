@@ -1,4 +1,4 @@
-# SALUX — Website Copy (Versiunea finală, mai 2026)
+﻿# SALUX - Website Copy (Versiunea finală, mai 2026)
 
 > **Notă pentru Claude Code**
 > Acest fișier conține textele complete pentru website-ul www.salux.ro.
@@ -21,7 +21,7 @@
   "acoperire": "Națională, România",
   "cadru_legal_principal": ["Legea 101/2006", "Legea 51/2006", "Ord. ANRSC 97/2025", "Ord. ANRSC 98/2025"],
   "prag_achizitie_directa": "132.519 lei fără TVA",
-  "versiune": "3.0 — varianta finală echilibrată",
+  "versiune": "3.0 - varianta finală echilibrată",
   "data": "Mai 2026"
 }
 ```
@@ -32,11 +32,11 @@
 
 ### 1.1 Hero
 
-**[TITLU PRINCIPAL — h1]**
+**[TITLU PRINCIPAL - h1]**
 Salubrizarea stradală, gestionată într-un cadru unitar
 pentru operator și autoritate contractantă.
 
-**[SUBTITLU — h2]**
+**[SUBTITLU - h2]**
 SALUX este platforma SaaS dedicată operatorilor de salubrizare stradală
 și unităților administrativ-teritoriale care au delegat serviciul.
 Echipele introduc datele direct din teren. Sistemul construiește programul
@@ -44,10 +44,10 @@ lunar zi de zi, generează automat rapoartele și situațiile de plată,
 păstrează istoricul auditabil. Operatorul și autoritatea contractantă
 lucrează pe aceeași sursă de adevăr.
 
-**[CTA PRIMAR — buton]**
+**[CTA PRIMAR - buton]**
 Programați o demonstrație →
 
-**[CTA SECUNDAR — link]**
+**[CTA SECUNDAR - link]**
 Descărcați fișa de prezentare (PDF)
 
 ---
@@ -88,8 +88,8 @@ introducere manuală de date.
 
 Fiecare activitate de teren este înregistrată cu coordonate GPS, fotografie
 datată și marcaj temporal imutabil. Pachetul de probe rămâne disponibil
-cinci ani în audit log. Pentru orice control — ANRSC, Curtea de Conturi,
-Garda de Mediu — dovada există, structurată și exportabilă,
+cinci ani în audit log. Pentru orice control - ANRSC, Curtea de Conturi,
+Garda de Mediu - dovada există, structurată și exportabilă,
 fără perioadă de pregătire.
 
 ---
@@ -134,11 +134,11 @@ contractuale și pentru răspunsul la orice control.
 
 ### 1.6 CTA Final Homepage
 
-**[SECȚIUNE CTA — fundal închis]**
+**[SECȚIUNE CTA - fundal închis]**
 
 **Titlu:** Programați o demonstrație de 45 de minute.
 
-Pregătim demonstrația pe un caz real din operațiunea dumneavoastră —
+Pregătim demonstrația pe un caz real din operațiunea dumneavoastră -
 un sector, o lună, un raport. Vedeți concret cum arată fluxul de la
 teren la situație de plată, fără slide-uri generale și fără promisiuni
 nedovedibile.
@@ -165,16 +165,16 @@ documentele cerute.
 
 ---
 
-### 2.2 Cum funcționează — flux în patru etape
+### 2.2 Cum funcționează - flux în patru etape
 
-**[COMPONENTĂ VIZUALĂ — timeline sau stepper]**
+**[COMPONENTĂ VIZUALĂ - timeline sau stepper]**
 
 #### Etapa 1. Echipele de teren înregistrează activitatea direct din mobil
 
 Aplicația mobilă SALUX este o aplicație web progresivă (PWA), accesibilă
 pe orice telefon Android sau iOS prin browser, fără instalare. Interfața
-conține elementele strict necesare — start schimb, marcaj activitate,
-captură foto, încheiere schimb — cu o curbă de învățare de o singură tură.
+conține elementele strict necesare - start schimb, marcaj activitate,
+captură foto, încheiere schimb - cu o curbă de învățare de o singură tură.
 Modul offline asigură înregistrarea continuă în zonele fără semnal,
 cu sincronizare automată la revenirea conectivității.
 
@@ -190,7 +190,7 @@ completă a versiunilor.
 
 La sfârșit de lună, raportul către autoritatea contractantă este deja construit.
 Situația de plată include automat toate prestațiile efectuate, fiecare cu
-probele aferente — coordonate, fotografii, semnături, marcaje temporale.
+probele aferente - coordonate, fotografii, semnături, marcaje temporale.
 Documentul se exportă în formatul prevăzut de Ordinul ANRSC 112/2007
 și se transmite electronic.
 
@@ -221,7 +221,7 @@ de contestare retrospectivă.
 
 Obligația de a ține evidențe separate pe fiecare tip de activitate este
 implementată din arhitectura SALUX: măturat manual, măturat mecanic,
-spălat, deszăpezire, întreținerea coșurilor stradale — module distincte,
+spălat, deszăpezire, întreținerea coșurilor stradale - module distincte,
 rapoarte independente.
 
 #### Indicatori de performanță
@@ -330,7 +330,7 @@ sau interval orar.
 
 Când un cetățean reclamă neefectuarea unei prestații pe o stradă, autoritatea
 poate consulta direct istoricul SALUX pe acel segment de drum, pentru intervalul
-indicat. Răspunsul devine prompt și documentat — fotografie și GPS,
+indicat. Răspunsul devine prompt și documentat - fotografie și GPS,
 nu un email de confirmare de la operator.
 
 #### Audit și control fără perioadă de pregătire
@@ -346,7 +346,7 @@ direct la întrebarea auditorului: cum ați monitorizat că operatorul
 
 **[SECȚIUNE HIGHLIGHT]**
 
-**Achiziție directă din SEAP — sub pragul de 132.519 lei fără TVA**
+**Achiziție directă din SEAP - sub pragul de 132.519 lei fără TVA**
 
 Conform articolului 7 alineatul (5) din Legea 98/2016. Procedura,
 reglementată de HG 395/2016 articolele 43–46, se desfășoară integral
@@ -368,14 +368,14 @@ atribuire și fără termenele procedurii deschise.
 
 ### 3.4 Surse de finanțare disponibile în 2026
 
-#### PNRR Componenta 10 — Fondul Local
+#### PNRR Componenta 10 - Fondul Local
 **Buget:** 2,1 miliarde euro
 **Referință:** Ordinul MDLPA nr. 999/10.05.2022, MOf. nr. 467/10.05.2022
 **Termen implementare:** 30 iunie 2026
-**Relevanță SALUX:** Investiția I.4 — sisteme inteligente urbane (ITS)
+**Relevanță SALUX:** Investiția I.4 - sisteme inteligente urbane (ITS)
 
-#### PNRR Componenta 7 — Transformare digitală
-**Relevanță SALUX:** Investiția I5 — digitalizare în domeniul mediului,
+#### PNRR Componenta 7 - Transformare digitală
+**Relevanță SALUX:** Investiția I5 - digitalizare în domeniul mediului,
 inclusiv platforme de raportare ANPM (Legea 211/2011)
 
 #### POCA și fonduri europene 2021–2027
@@ -401,7 +401,7 @@ garanției de bună execuție, conform articolului 6 alineatul (2) din
 Legea 101/2006, devin susținute de documente obiective.
 
 **Instituțional.** Autoritatea îndeplinește în mod sistematic obligația
-de monitorizare — fapt care se reflectă favorabil în rapoartele anuale
+de monitorizare - fapt care se reflectă favorabil în rapoartele anuale
 ale Camerei de Conturi.
 
 **[CTA]** Solicitați modelul de caiet de sarcini și nota justificativă →
@@ -428,7 +428,7 @@ normativ.
 
 ### 4.2 Module operaționale principale
 
-#### Modul 1 — Program lunar digital
+#### Modul 1 - Program lunar digital
 **Bază legală:** Art. 17 alin. (4), Legea 101/2006; Ord. ANRSC 98/2025
 
 Programul lunar de prestație se construiește pe baza obligațiilor
@@ -437,15 +437,15 @@ digitală ierarhică. Versiunea aprobată devine document oficial al lunii,
 cu marcaj temporal imutabil. Modificările se gestionează prin act
 adițional digital, conform Legii 455/2001 (semnătura electronică).
 
-#### Modul 2 — Aplicație mobilă pentru echipele de teren
-**Tip:** PWA (Progressive Web App) — Android și iOS, fără instalare
+#### Modul 2 - Aplicație mobilă pentru echipele de teren
+**Tip:** PWA (Progressive Web App) - Android și iOS, fără instalare
 
 Interfața conține elementele strict necesare: start schimb, marcaj
 activitate, captură foto, încheiere schimb. Modul offline cu sincronizare
 automată la revenirea conectivității. Curbă de învățare: o singură tură
 de lucru.
 
-#### Modul 3 — Hartă live operațională
+#### Modul 3 - Hartă live operațională
 **Acces:** Dispecer (full) + UAT (read-only)
 
 Dispeceratul vede în timp real poziția fiecărei echipe, stadiul
@@ -453,7 +453,7 @@ programului pe rută și abaterile față de planificare. UAT-ul primește
 același ecran în varianta read-only, pentru monitorizarea obligației
 din articolul 9 litera h al Legii 51/2006.
 
-#### Modul 4 — Raportare automată
+#### Modul 4 - Raportare automată
 **Documente generate automat:**
 - Raport lunar UAT → Ord. ANRSC 112/2007
 - Raport anual ANRSC → Art. 8 alin. (3) lit. g, Legea 51/2006
@@ -461,7 +461,7 @@ din articolul 9 litera h al Legii 51/2006.
 - Pachet probe Curtea de Conturi → Legea 94/1992
 - Raport sesizări → OG 27/2002
 
-#### Modul 5 — Situații de plată cu snapshot imutabil
+#### Modul 5 - Situații de plată cu snapshot imutabil
 Fiecare rând al facturii are atașată o referință la snapshot-ul imutabil
 din audit log: coordonate GPS, fotografie datată, semnătura echipei,
 aprobări ierarhice. Snapshot-ul rămâne consultabil minim 5 ani.
@@ -470,37 +470,37 @@ aprobări ierarhice. Snapshot-ul rămâne consultabil minim 5 ani.
 
 ### 4.3 Module specializate
 
-#### Modul 6 — Coșuri stradale
+#### Modul 6 - Coșuri stradale
 **Bază legală:** SR 13387:1997 (citat în art. 18 alin. (2), Ord. ANRSC 97/2025)
 
 Inventar geografic complet: identificator unic, fotografii, istoricul
 golirilor, intervențiile de mentenanță. Calculul densității optime
 urmează SR 13387:1997.
 
-#### Modul 7 — Pontaj digital
+#### Modul 7 - Pontaj digital
 **Bază legală:** Legea 53/2003 (Codul Muncii), republicată
 
 Marcaj GPS la intrarea pe sectorul de activitate. Raport lunar
 pentru evidența resurselor umane.
 
-#### Modul 8 — Sesizări cetățeni
-**Bază legală:** OG 27/2002 — termen răspuns 30 zile
+#### Modul 8 - Sesizări cetățeni
+**Bază legală:** OG 27/2002 - termen răspuns 30 zile
 
 Portal dedicat cu preluare automată în sistemul de programare,
 asignare echipă, urmărire până la închidere cu documentație
 fotografică post-intervenție.
 
-#### Modul 9 — Tarife
+#### Modul 9 - Tarife
 **Bază legală:** Ord. ANRSC 640/2022, modificat prin 201/2023 și 324/2025
 
 Calculul și ajustarea tarifelor cu documentația de fundamentare
 generată automat din parametrii operaționali.
 
-#### Modul 10 — Deszăpezire
+#### Modul 10 - Deszăpezire
 **Bază legală:** Art. 2 alin. (3) lit. k, Legea 101/2006
 
 GPS pe utilajele specializate, cantitățile de antiderapant utilizate,
-suprafețele intervenite — raport complet pentru prefectură.
+suprafețele intervenite - raport complet pentru prefectură.
 
 ---
 
@@ -508,10 +508,10 @@ suprafețele intervenite — raport complet pentru prefectură.
 
 | Caracteristică | Detaliu |
 |----------------|---------|
-| Arhitectură | Multi-tenant — contracte multiple simultane, cu separare strictă |
+| Arhitectură | Multi-tenant - contracte multiple simultane, cu separare strictă |
 | Audit log | Imutabil, 5 ani, opozabil în instanță |
-| Hosting | România și UE — conform GDPR + OUG 119/2022 |
-| Integrare | API deschis — compatibil ASiS Salubritate și alte ERP-uri sectoriale |
+| Hosting | România și UE - conform GDPR + OUG 119/2022 |
+| Integrare | API deschis - compatibil ASiS Salubritate și alte ERP-uri sectoriale |
 | Acces | Roluri diferențiate: Operator / Dispecer / UAT (read-only) / Admin |
 
 **[CTA]** Solicitați o demonstrație pe modulul de interes →
@@ -537,7 +537,7 @@ cu conformitatea.
 
 ### 5.2 Schimbarea cadrului în 2025
 
-**[ALERTĂ EDITORIALĂ — componentă vizuală distinctă]**
+**[ALERTĂ EDITORIALĂ - componentă vizuală distinctă]**
 
 Pe 5 martie 2025, Monitorul Oficial nr. 190 și 192 au publicat Ordinele
 ANRSC 97/2025 și 98/2025. Au abrogat Ordinele 82/2015 și 111/2007,
@@ -564,7 +564,7 @@ pe care funcționau toate contractele de salubrizare din România.
 | Legea 51/2006 | MOf. 121/5.03.2013, cu modificări | Art. 8 alin. (3) lit. d¹, d², e; Art. 9 lit. h; Art. 21 alin. (1) lit. f |
 | Legea 101/2006 | MOf. 658/8.09.2014, formă oct. 2025 | Art. 2 alin. (3); Art. 6; Art. 9 alin. (4); Art. 11 alin. (2); Art. 28 alin. (3); Art. 30 |
 | Legea 211/2011 | Cu OUG 92/2021 | Art. 4 parag. 40, 41, 43; obligații raportare ANPM |
-| Legea 98/2016 + HG 395/2016 | Cu Legea 208/2022 | Art. 7 alin. (5) — prag 132.519 lei; Art. 43–46 HG — SEAP |
+| Legea 98/2016 + HG 395/2016 | Cu Legea 208/2022 | Art. 7 alin. (5) - prag 132.519 lei; Art. 43–46 HG - SEAP |
 
 ---
 
@@ -572,18 +572,18 @@ pe care funcționau toate contractele de salubrizare din România.
 
 | Ordin | Publicare | Status | Înlocuiește |
 |-------|-----------|--------|-------------|
-| Ord. ANRSC 97/2025 — Regulament-cadru | MOf. 190/5.03.2025 | **ÎN VIGOARE** | Ord. 82/2015 — **ABROGAT** |
-| Ord. ANRSC 98/2025 — Caiet de sarcini-cadru | MOf. 192/5.03.2025 | **ÎN VIGOARE** | Ord. 111/2007 — **ABROGAT** |
-| Ord. ANRSC 112/2007 — Contract-cadru | — | **ÎN VIGOARE** | — |
-| Ord. ANRSC 100/2023 — Licențiere | — | **ÎN VIGOARE** | — |
-| Ord. ANRSC 640/2022 + 201/2023 + 324/2025 — Tarife | — | **ÎN VIGOARE** | Ord. 109/2007 |
-| Ord. ANRSC 759/2025 — Tarife licențiere | — | **ÎN VIGOARE** | — |
+| Ord. ANRSC 97/2025 - Regulament-cadru | MOf. 190/5.03.2025 | **ÎN VIGOARE** | Ord. 82/2015 - **ABROGAT** |
+| Ord. ANRSC 98/2025 - Caiet de sarcini-cadru | MOf. 192/5.03.2025 | **ÎN VIGOARE** | Ord. 111/2007 - **ABROGAT** |
+| Ord. ANRSC 112/2007 - Contract-cadru | - | **ÎN VIGOARE** | - |
+| Ord. ANRSC 100/2023 - Licențiere | - | **ÎN VIGOARE** | - |
+| Ord. ANRSC 640/2022 + 201/2023 + 324/2025 - Tarife | - | **ÎN VIGOARE** | Ord. 109/2007 |
+| Ord. ANRSC 759/2025 - Tarife licențiere | - | **ÎN VIGOARE** | - |
 
 ---
 
 ### 5.5 Standarde tehnice
 
-**SR 13387:1997** — Salubrizarea localităților. Deșeuri urbane.
+**SR 13387:1997** - Salubrizarea localităților. Deșeuri urbane.
 Prescripții de proiectare a punctelor pentru precolectare.
 
 Citat expres în articolul 18 alineatul (2) din Regulamentul-cadru
@@ -597,7 +597,7 @@ dedicat coșurilor stradale este construit pe parametrii acestui standard.
 
 | Act | Rol în relația SALUX |
 |-----|---------------------|
-| Regulamentul (UE) 2016/679 (GDPR) | SALUX SRL — persoană împuternicită (art. 28) |
+| Regulamentul (UE) 2016/679 (GDPR) | SALUX SRL - persoană împuternicită (art. 28) |
 | Legea 190/2018 | Transpunere națională GDPR |
 | OUG 119/2022 | Securitate cibernetică; hosting RO + UE |
 
@@ -609,9 +609,9 @@ state membre ale Uniunii Europene.
 
 ### 5.7 Cadrul european aplicabil
 
-- **Directiva (UE) 2018/851** — modificarea Directivei-cadru 2008/98/CE
+- **Directiva (UE) 2018/851** - modificarea Directivei-cadru 2008/98/CE
   privind deșeurile; transpusă prin OUG 92/2021
-- **Decizia de punere în aplicare (UE) 2019/1004** — calculul, verificarea
+- **Decizia de punere în aplicare (UE) 2019/1004** - calculul, verificarea
   și raportarea datelor privind deșeurile; citată în Anexa II la
   Regulamentul-cadru aprobat prin Ordinul ANRSC 97/2025
 
@@ -629,7 +629,7 @@ state membre ale Uniunii Europene.
 
 ---
 
-## 6. FAQ — Întrebări frecvente
+## 6. FAQ - Întrebări frecvente
 
 ### 6.1 Despre obligațiile legale
 
@@ -679,8 +679,8 @@ publicarea unei documentații de atribuire.
 **Î: Există surse de finanțare europeană aplicabile?**
 
 Da. Principalele surse active în 2026:
-- **PNRR Componenta 10 — Fondul Local** (2,1 mld. euro; termen 30.06.2026)
-- **PNRR Componenta 7 — Transformare digitală** (Investiția I5 — mediu)
+- **PNRR Componenta 10 - Fondul Local** (2,1 mld. euro; termen 30.06.2026)
+- **PNRR Componenta 7 - Transformare digitală** (Investiția I5 - mediu)
 - **POCA și fonduri europene 2021–2027** (digitalizare administrativă)
 
 ---
@@ -791,7 +791,7 @@ Modelul comercial este licență anuală cu suport tehnic inclus.
 
 ### 7.3 Echipa
 
-**[REZERVAT — de completat de echipa SALUX]**
+**[REZERVAT - de completat de echipa SALUX]**
 Recomandare: minimum doi fondatori cu experiență directă în operațiuni
 de salubrizare sau în administrația locală.
 
@@ -799,7 +799,7 @@ de salubrizare sau în administrația locală.
 
 ### 7.4 Contact
 
-**[REZERVAT — adresă, telefon, email, formular, hartă]**
+**[REZERVAT - adresă, telefon, email, formular, hartă]**
 
 **[CTA]** Programați o discuție cu echipa noastră →
 
@@ -819,7 +819,7 @@ de salubrizare sau în administrația locală.
 
 ---
 
-### 8.2 Apeluri la acțiune — variante pentru A/B testing
+### 8.2 Apeluri la acțiune - variante pentru A/B testing
 
 **Variante primare:**
 - Programați o demonstrație de 45 de minute.
@@ -838,13 +838,13 @@ de salubrizare sau în administrația locală.
 **Pentru operatori privați:**
 - Alinierea documentației la Ordinele ANRSC 97/2025 și 98/2025.
 - Producerea automată a situațiilor de plată cu probă completă.
-- Pregătirea pentru auditul Curții de Conturi — ce documentație
+- Pregătirea pentru auditul Curții de Conturi - ce documentație
   trebuie să existe în mod sistematic.
 
 **Pentru UAT-uri:**
 - Monitorizarea operatorului conform art. 9 lit. h, Legea 51/2006.
 - Achiziția directă a unei platforme de digitalizare prin SEAP.
-- PNRR Componenta 10 — termen 30 iunie 2026.
+- PNRR Componenta 10 - termen 30 iunie 2026.
 
 ---
 
@@ -860,7 +860,7 @@ opțional, cookie-uri analitice. Conform Regulamentului (UE) 2016/679
 Vă mulțumim pentru solicitare. Un consultant SALUX vă va contacta
 în maxim 24 de ore lucrătoare.
 
-**Footer — linie legală:**
+**Footer - linie legală:**
 © 2026 SALUX SRL. Hosting în România și Uniunea Europeană.
 Conform GDPR. Aliniat Ordinelor ANRSC 97/2025 și 98/2025.
 
@@ -882,11 +882,11 @@ Conform GDPR. Aliniat Ordinelor ANRSC 97/2025 și 98/2025.
 
 | Ordin | MOf. | Link |
 |-------|------|------|
-| Ord. 97/2025 — Regulament-cadru | 190/5.03.2025 | https://legislatie.just.ro/Public/DetaliiDocument/295150 |
-| Ord. 98/2025 — Caiet de sarcini | 192/5.03.2025 | https://legislatie.just.ro/Public/DetaliiDocument/295163 |
-| Ord. 112/2007 — Contract-cadru | — | https://www.anrsc.ro/salubrizare/legislatie/ |
-| Ord. 100/2023 — Licențiere | — | https://www.anrsc.ro |
-| Ord. 640/2022 + 324/2025 — Tarife | — | https://www.anrsc.ro |
+| Ord. 97/2025 - Regulament-cadru | 190/5.03.2025 | https://legislatie.just.ro/Public/DetaliiDocument/295150 |
+| Ord. 98/2025 - Caiet de sarcini | 192/5.03.2025 | https://legislatie.just.ro/Public/DetaliiDocument/295163 |
+| Ord. 112/2007 - Contract-cadru | - | https://www.anrsc.ro/salubrizare/legislatie/ |
+| Ord. 100/2023 - Licențiere | - | https://www.anrsc.ro |
+| Ord. 640/2022 + 324/2025 - Tarife | - | https://www.anrsc.ro |
 
 ### Standard tehnic
 
@@ -897,5 +897,5 @@ Conform GDPR. Aliniat Ordinelor ANRSC 97/2025 și 98/2025.
 ---
 
 *Document finalizat: Mai 2026*
-*Versiune: 3.0 — Varianta finală echilibrată*
+*Versiune: 3.0 - Varianta finală echilibrată*
 *Utilizare: Website www.salux.ro + Claude Code context*
