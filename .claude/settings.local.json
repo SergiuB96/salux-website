@@ -24,7 +24,18 @@
       "Skill(ship)",
       "Bash(node *)",
       "Bash(grep -v \"//.*Solicită\\\\|<p>.*caiet de sarcini\\\\|format.*caiet\\\\|Export.*caiet\\\\|conform.*caiet\\\\|prevăzut.*caiet\\\\|prevăzute.*caiet\\\\|model.*caiet\")",
-      "Bash(xargs ls -t)"
+      "Bash(xargs ls -t)",
+      "Bash($B goto *)",
+      "Bash($B screenshot *)",
+      "Bash(/c/Users/baciu/.claude/skills/gstack/browse/dist/browse scroll *)",
+      "Bash(/c/Users/baciu/.claude/skills/gstack/browse/dist/browse screenshot *)",
+      "Bash(/c/Users/baciu/.claude/skills/gstack/browse/dist/browse goto *)",
+      "Bash(/c/Users/baciu/.claude/skills/gstack/browse/dist/browse js *)",
+      "Bash(gh repo *)",
+      "Bash(sed -n '70,100p' article-srs.html)",
+      "Bash(sed -n '68,90p' article-deszapezire.html)",
+      "Bash(sed -n '65,90p' article-multi-tenant.html)",
+      "mcp__plugin_vercel_vercel__deploy_to_vercel"
     ]
   }
 }
