@@ -89,6 +89,7 @@ body { background: #FBFBF9; }
   display: grid; place-items: center;
   font-family: var(--font-mono); color: rgba(255,255,255,.6); font-size: 11px;
   position: relative;
+  background-color: #1E3A5F;
 }
 .post.c1 .cover { background: linear-gradient(135deg, #0B1829, #1E3A5F); }
 .post.c2 .cover { background: linear-gradient(135deg, #3F9A6C, #5BB286); }
@@ -284,7 +285,7 @@ body { background: #FBFBF9; }
       <p>Schimbări legislative, șabloane de raportare, lecții din implementări reale. Fără spam, dezabonare cu un click.</p>
     </div>
     <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='✓ Te-ai abonat'">
-      <input type="email" placeholder="adresa@primaria.ro" required />
+      <input type="email" id="newsletter-email" name="email" placeholder="adresa@primaria.ro" required />
       <button class="btn btn-accent btn-lg">Abonează-mă</button>
     </form>
   </div>
