@@ -50,12 +50,42 @@ body { background: #FFFFFF; }
 /* Obligații legale (accordion) */
 .legal-acc { background: var(--bg); }
 .legal-acc .list { max-width: 800px; margin: 0 auto; display: grid; gap: 12px; }
-.legal-acc details { background: white; border-radius: 14px; border: 1px solid var(--line); padding: 0 24px; }
-.legal-acc summary { padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 16px; font-weight: 600; color: var(--ink); }
+.legal-acc details {
+  background: white; border-radius: 14px; border: 1px solid var(--line); padding: 0 24px;
+  transition: border-color .22s ease, box-shadow .22s ease;
+}
+.legal-acc details[open] {
+  border-color: var(--primary-700);
+  box-shadow: 0 0 0 1px var(--primary-700), var(--shadow-md);
+}
+.legal-acc summary {
+  padding: 20px 0; cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font-size: 16px; font-weight: 600; color: var(--ink); user-select: none;
+}
 .legal-acc summary::-webkit-details-marker { display: none; }
-.legal-acc summary::after { content: "+"; color: var(--primary-700); font-size: 22px; font-weight: 400; flex-shrink: 0; }
-.legal-acc details[open] summary::after { content: "−"; }
-.legal-acc .a { padding: 0 0 20px; color: var(--muted); font-size: 14.5px; line-height: 1.65; }
+.legal-acc summary::after {
+  content: "+";
+  color: var(--primary-700); font-size: 24px; font-weight: 300;
+  flex-shrink: 0; display: inline-block; line-height: 1;
+  transition: transform .32s cubic-bezier(.4,0,.2,1);
+}
+.legal-acc details[open] summary::after { transform: rotate(45deg); }
+/* Animație smooth - overrides browser display:none pe content */
+.legal-acc details > .a {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  transition: max-height .42s cubic-bezier(.4,0,.2,1), opacity .3s ease, padding-bottom .42s ease;
+  color: var(--muted); font-size: 14.5px; line-height: 1.65;
+}
+.legal-acc details[open] > .a {
+  max-height: 400px;
+  opacity: 1;
+  padding-bottom: 20px;
+}
 .legal-ref {
   font-family: var(--font-mono); font-size: 11px; color: var(--accent-600);
   background: var(--accent-50); padding: 3px 10px; border-radius: 999px;
@@ -536,5 +566,23 @@ body { background: #FFFFFF; }
     </div>
   </div>
 </footer>
+
+<script>
+// Exclusive accordion cu animatie smooth
+(function() {
+  var details = document.querySelectorAll('.legal-acc details');
+  details.forEach(function(d) {
+    d.querySelector('summary').addEventListener('click', function() {
+      var isOpen = d.open;
+      if (!isOpen) {
+        // inchide celelalte
+        details.forEach(function(other) {
+          if (other !== d && other.open) other.removeAttribute('open');
+        });
+      }
+    });
+  });
+})();
+</script>
 
 </body></html>
