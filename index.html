@@ -282,9 +282,10 @@ body { background: #FFFFFF; }
   .compare-footer-row > div { padding-left: 8px; }
 }
 @media (max-width: 600px) {
-  .compare-hdr-row { grid-template-columns: 1fr 70px 70px; padding: 16px 14px 12px; }
-  .c-lbl-feat { display: none; }
-  .c-lbl-party { padding-left: 0; flex-direction: column; align-items: center; gap: 4px; font-size: 11px; }
+  .compare-hdr-row { grid-template-columns: 1fr 60px 60px; padding: 16px 14px 12px; }
+  .c-lbl-feat { visibility: hidden; }
+  .c-lbl-party { padding-left: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .c-lbl-party .gtag { font-size: 10px; padding: 4px 8px; text-align: center; white-space: normal; line-height: 1.3; }
   .compare-row { grid-template-columns: 1fr 60px 60px; padding: 11px 14px; gap: 0; }
   .c-feat { font-size: 13px; }
   .c-val { padding-left: 0; justify-content: center; }
