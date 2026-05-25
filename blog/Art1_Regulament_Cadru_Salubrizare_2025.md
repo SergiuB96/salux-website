@@ -16,15 +16,13 @@ Pe 5 martie 2025, ANRSC a publicat [Ordinul nr. 97/2025](https://legislatie.just
 
 Pe 5 martie 2025, în Monitorul Oficial nr. 190 și 190 bis, a apărut un document pe care oricine lucrează în salubrizare ar trebui să-l aibă pe birou: noul [Regulament-cadru al serviciului de salubrizare a localităților](https://legislatie.just.ro/Public/DetaliiDocument/295150), aprobat prin Ordinul ANRSC nr. 97/2025.
 
-Nu e vorba de o simplă actualizare cosmetică. Vechiul regulament ([Ordinul 82/2015](https://www.anrsc.ro/realizari-legislative/2004-2019/)) a fost abrogat integral. Cel nou rescrie cadrul în care operatorii prestează și primăriile monitorizează serviciul de salubrizare, inclusiv componenta stradală. Iar dacă lucrezi cu un contract de delegare sau cu o hotărâre de dare în administrare, unele dintre schimbări te afectează direct.
+Nu e vorba de o simplă actualizare cosmetică. Vechiul regulament ([Ordinul 82/2015](https://www.anrsc.ro/realizari-legislative/2004-2019/)) a fost abrogat integral. Cel nou rescrie cadrul în care operatorii prestează și primăriile monitorizează serviciul de salubrizare, inclusiv componenta stradală. Dacă lucrezi cu un contract de delegare sau cu o hotărâre de dare în administrare, unele dintre schimbări te afectează direct.
 
 Am parcurs documentul și am extras ce contează practic, fără să reproducem textul de lege.
 
 ## De ce s-a schimbat regulamentul de salubrizare în 2025?
 
-Motivul de fond este simplu: România trebuie să se alinieze la directivele europene privind economia circulară și reducerea deșeurilor depozitate. Regulamentul din 2015 nu mai reflecta realitatea legislativă ([OUG 92/2021](https://legislatie.just.ro/Public/DetaliiDocument/246236) privind regimul deșeurilor, [Legea 101/2006](https://legislatie.just.ro/Public/DetaliiDocument/73195) modificată) și nici pe cea operațională.
-
-Concret, noul cadru face trei lucruri mari: lărgește lista activităților reglementate, clarifică obligațiile fiecărei părți și impune cerințe mai stricte de monitorizare și raportare.
+România trebuia să se alinieze la directivele europene privind economia circulară și reducerea deșeurilor depozitate, iar regulamentul din 2015 nu mai reflecta nici realitatea legislativă ([OUG 92/2021](https://legislatie.just.ro/Public/DetaliiDocument/246236) privind regimul deșeurilor, [Legea 101/2006](https://legislatie.just.ro/Public/DetaliiDocument/73195) modificată), nici pe cea operațională. Noul cadru lărgește lista activităților reglementate, clarifică obligațiile fiecărei părți și impune cerințe mai stricte de monitorizare și raportare.
 
 ## Ce activități de salubrizare acoperă acum Regulamentul-cadru 97/2025
 
@@ -38,21 +36,21 @@ Pentru operatorii de salubrizare stradală, schimbarea directă este mai puțin 
 
 „Curățarea rigolelor" are acum o definiție precisă conform art. 4.10 din regulament: îndepărtarea depunerilor de noroi, nisip și praf de pe o porțiune de 0,75 m de la bordură spre axul median al străzii, urmată de măturare și/sau stropire. „Curățarea zăpezii/gheții" este definită separat, la art. 4.9, ca operațiune distinctă de îndepărtare a stratului depus pe suprafața carosabilă și pietonală.
 
-De ce contează aceste definiții? Pentru că ele se reflectă în caietele de sarcini, în programele lunare și în situațiile de plată. O definiție precisă înseamnă mai puțin loc de interpretare și mai puțin loc de contestație.
+Aceste definiții se reflectă în caietele de sarcini, în programele lunare și în situațiile de plată. O definiție precisă înseamnă mai puțin loc de interpretare și, implicit, mai puțin loc de contestație.
 
 ## Licențiere ANRSC și condiții de prestare: ce nu mai merge „ca înainte"
 
 Noul regulament întărește o cerință care exista și înainte, dar era aplicată inconsistent. Prestarea activităților de salubrizare se face exclusiv pe baza unui contract de delegare a gestiunii sau a unei hotărâri de dare în administrare, de către operatori licențiați [ANRSC](https://www.anrsc.ro/salubrizare/).
 
-Un operator care prestează fără licență valabilă sau fără contract conform riscă sancțiuni directe. Conform [Legii 101/2006, art. 30](https://www.anrsc.ro/salubrizare/nerespectare-legislatie-consecinte/), amenzile pentru nerespectarea condițiilor de prestare pot ajunge la 50.000 de lei. Nu e o noutate absolută, dar formularea din noul regulament este mai fermă și mai greu de eludat.
+Un operator care prestează fără licență valabilă sau fără contract conform riscă sancțiuni directe. Conform [Legii 101/2006, art. 30](https://www.anrsc.ro/salubrizare/nerespectare-legislatie-consecinte/), amenzile pentru nerespectarea condițiilor de prestare pot ajunge la 50.000 de lei. Formularea din noul regulament este mai fermă și mai greu de eludat decât înainte.
 
-Ce înseamnă asta pentru tine? Dacă ești operator, verifică-ți licența: e valabilă? acoperă activitățile pe care le prestezi efectiv? Dacă ești funcționar într-o primărie, verifică dacă hotărârea de dare în administrare sau contractul de delegare menționează explicit toate activitățile prestate de operator. O neconcordanță între ce e scris în contract și ce se prestează pe teren poate deveni o problemă reală la un control ANRSC.
+Dacă ești operator, verifică-ți licența: e valabilă și acoperă activitățile pe care le prestezi efectiv? Dacă ești funcționar într-o primărie, verifică dacă hotărârea de dare în administrare sau contractul de delegare menționează explicit toate activitățile prestate de operator. O neconcordanță între ce e scris în contract și ce se prestează pe teren poate deveni o problemă reală la un control ANRSC.
 
 ## Indicatori de performanță în salubrizarea stradală: aceiași termeni, așteptări mai mari
 
 Regulamentul păstrează structura de indicatori pe care o cunoșteam: continuitatea serviciului, calitatea prestației, soluționarea reclamațiilor în timp util, adaptarea la cerințele utilizatorilor. Indicatorii minimali sunt detaliați în Anexa nr. 1 la regulament, iar lista completă a contravențiilor apare în Anexa nr. 2.
 
-Ce se schimbă nu e neapărat lista de indicatori, ci contextul în care sunt evaluați. Noul cadru pune accent pe monitorizarea efectivă, nu doar pe raportarea formală. Conform art. 7 alin. (2) din regulament, utilizatorii au dreptul explicit de acces la informațiile publice privind indicatorii de performanță și structura tarifară. În practică, asta înseamnă că primăriile vor fi tot mai presate să solicite operatorilor date verificabile, nu doar declarații.
+Ce se schimbă nu e neapărat lista de indicatori, ci contextul în care sunt evaluați. Noul cadru pune accent pe monitorizarea efectivă, nu pe raportarea formală. Conform art. 7 alin. (2) din regulament, utilizatorii au dreptul explicit de acces la informațiile publice privind indicatorii de performanță și structura tarifară. În practică, asta înseamnă că primăriile vor fi tot mai presate să solicite operatorilor date verificabile, nu declarații.
 
 Pentru un operator de salubrizare stradală, totul se reduce la o singură întrebare: poți demonstra ce ai făcut? Ai trasee GPS care confirmă că ai acoperit arterele din program? Ai fotografii cu marcaj temporal și geolocalizare? Ai un jurnal de activitate care corelează echipele cu suprafețele lucrate?
 
@@ -60,7 +58,7 @@ Dacă răspunsul la oricare dintre aceste întrebări este „nu în mod sistema
 
 ## Obligația de aliniere a regulamentelor locale de salubrizare
 
-Un aspect pe care multe primării îl subestimează: noul regulament-cadru obligă autoritățile locale să-și actualizeze propriile regulamente de salubrizare. Câteva județe și sectoare din București au început deja acest proces. Unele au adoptat regulamente locale noi, altele sunt în faza de dezbatere publică.
+Noul regulament-cadru obligă autoritățile locale să-și actualizeze propriile regulamente de salubrizare, iar multe primării subestimează urgența acestui pas. Câteva județe și sectoare din București au început deja procesul. Unele au adoptat regulamente locale noi, altele sunt în faza de dezbatere publică.
 
 Dacă regulamentul local al primăriei cu care lucrezi face referire la Ordinul 82/2015 (cel abrogat), acesta trebuie actualizat. Nu e doar o formalitate. Un regulament local care citează un act normativ inexistent poate fi contestat, iar clauzele contractuale care derivă din el pot fi puse sub semnul întrebării.
 
