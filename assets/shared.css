@@ -128,6 +128,7 @@ img { display: block; max-width: 100%; }
 .nav-mobile hr { border: none; border-top: 1px solid var(--line); margin: 8px 0; }
 .nav-mobile .nav-mobile-cta { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
 .nav-mobile .nav-mobile-cta .btn { width: 100%; justify-content: center; padding: 13px 20px; }
+.nav-mobile .nav-mobile-cta .btn-nav { color: white; }
 
 @media (max-width: 900px) {
   .nav-links { display: none; }
