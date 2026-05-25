@@ -10,7 +10,7 @@
 
 ## Pe scurt
 
-Ordinul ANRSC nr. 98/2025, publicat în Monitorul Oficial nr. 192 din 5 martie 2025, aprobă un nou [Caiet de sarcini-cadru al serviciului de salubrizare a localităților](https://legislatie.just.ro/Public/DetaliiDocument/295163). Documentul înlocuiește cadrul vechi de 18 ani (Ordinul 111/2007) și stabilește structura obligatorie pe care trebuie să o respecte fiecare caiet de sarcini aferent unui contract de delegare sau unei hotărâri de dare în administrare. Include 32 de anexe cu formulare obligatorii, secțiuni dedicate fiecărei activități de salubrizare și cerințe noi de raportare digitală. Acest articol explică ce se schimbă concret și ce verifici în documentația existentă.
+Ordinul ANRSC nr. 98/2025, publicat în Monitorul Oficial nr. 192 din 5 martie 2025, aprobă un nou [Caiet de sarcini-cadru al serviciului de salubrizare a localităților](https://legislatie.just.ro/Public/DetaliiDocument/295163). Documentul înlocuiește cadrul vechi de 18 ani (Ordinul 111/2007) și stabilește structura obligatorie pe care trebuie să o respecte fiecare caiet de sarcini aferent unui contract de delegare sau unei hotărâri de dare în administrare. Include 32 de anexe cu formulare obligatorii, cerințe detaliate de raportare prin sistem informatic și obligația recepției zilnice a serviciilor prestate pe căile publice. Acest articol explică ce se schimbă concret și ce verifici în documentația existentă.
 
 ---
 
@@ -38,41 +38,49 @@ Față de caietul din 2007, noul cadru adaugă secțiuni pentru activitățile i
 
 ## 32 de anexe cu formulare obligatorii
 
-Cel mai vizibil element de noutate este volumul de formulare standardizate. Noul caiet de sarcini-cadru conține [32 de anexe](https://legislatie.just.ro/Public/DetaliiDocumentAfis/295295) cu formulare pe care autoritățile locale trebuie să le preia în propriile caiete de sarcini.
+Noul caiet de sarcini-cadru conține [32 de anexe](https://legislatie.just.ro/Public/DetaliiDocumentAfis/295295) cu formulare pe care autoritățile locale trebuie să le preia în propriile caiete de sarcini. Conform art. 232 din caiet, toate cele 32 de anexe fac parte integrantă din document și sunt obligatorii.
 
-Aceste formulare acoperă tot ce ține de documentarea operațională: liste de străzi cu suprafețe și frecvențe, programe de lucru pe categorii de artere, rapoarte de execuție, jurnale de activitate, fișe de evidență a materialelor antiderapante, rapoarte de intervenție pe timp de iarnă și tabele cu indicatorii de performanță.
+Pentru salubrizarea stradală, anexele direct relevante sunt cele care standardizează suprafețele și frecvențele pe tip de operațiune. Anexa nr. 8 acoperă căile publice rutiere pe care se execută măturatul mecanizat, Anexa nr. 9 pe cele cu măturat manual, Anexa nr. 10 căile pietonale cu măturat mecanizat, Anexa nr. 11 trotuarele cu măturat manual, Anexa nr. 12 stropitul rutier, Anexa nr. 13 spălatul rutier, Anexa nr. 14 spălatul pietonal, Anexa nr. 15 răzuitul rigolelor, Anexa nr. 16 coșurile stradale și Anexele nr. 18-22 activitățile de deszăpezire și combatere a poleiului.
 
 Standardizarea aceasta reduce semnificativ spațiul de interpretare. Când formularul este impus de cadru, nu mai poți argumenta că raportezi altfel sau că documentul tău conține aceleași informații în alt format. Ori folosești formularul prevăzut, ori nu ești conform.
 
-## Cerințe noi de raportare și monitorizare digitală
+## Cerințe de raportare prin sistem informatic
 
-Unul dintre cele mai importante elemente ale noului cadru este cerința de utilizare a unui sistem informatic pentru raportarea și monitorizarea activităților de salubrizare. Caietul de sarcini-cadru prevede implementarea unei baze de date electronice pentru înregistrarea operațiunilor, raportare lunară a cantităților de deșeuri colectate și predate, raportare trimestrială a indicatorilor de performanță, raportare anuală a eficienței generale a serviciului și jurnale zilnice ale operațiunilor prestate.
+Noul cadru introduce cerințe clare privind sistemul informatic și jurnalul zilnic de activitate. Operatorul are obligația să implementeze un sistem informatic și o bază electronică de date unde se înregistrează, stochează și procesează toate datele legate de activitate. Sistemul trebuie să poată genera rapoarte zilnice, lunare, trimestriale și anuale.
 
-Pentru operatorii de salubrizare stradală, asta înseamnă că raportarea pe hârtie sau prin tabele Excel nesistematizate nu mai este suficientă din punct de vedere al conformității. Nu pentru că cineva interzice Excel-ul explicit, ci pentru că volumul și frecvența datelor solicitate fac imposibilă gestionarea lor manuală în mod corect și constant.
+Jurnalul zilnic de activitate, ținut în cadrul bazei de date, trebuie să conțină cel puțin: traseul de colectare și codul fiecărei fracții de deșeuri colectate, autospecialele folosite, cantitățile și categoriile de deșeuri colectate, instalația la care au fost transportate, incidentele și defecțiunile echipamentelor, limitările și întreruperile neprogramate, registrele de întreținere și reparații, petițiile și notificările primite, și problemele apărute în raporturile cu alți operatori.
+
+Raportarea lunară include cantitățile de deșeuri municipale colectate defalcat pe surse și categorii, cantitățile predate operatorilor din aval, situația utilizatorilor cu contract activ și înregistrările activității zilnice pe fiecare traseu de colectare.
+
+Raportul trimestrial, transmis cel târziu până la sfârșitul lunii următoare închiderii trimestrului, trebuie să cuprindă performanța realizată în ceea ce privește îndeplinirea indicatorilor de performanță. Raportul anual, transmis până la sfârșitul lunii ianuarie a anului următor, include numărul total de personal, eficiența colectării, respectarea indicatorilor anuali și dovezi privind plata impozitelor, controlul tehnic al vehiculelor și valabilitatea autorizațiilor.
+
+## Recepția zilnică a serviciilor pe căile publice
+
+Una dintre cele mai concrete cerințe din noul cadru, și totodată cea mai des ignorată în practică: pentru activitățile de salubrizare desfășurate pe căile publice, autoritatea contractantă are obligația să desemneze persoane pentru recepția serviciilor executate. Recepția se face zilnic, la sfârșitul programului de lucru, în prezența unui reprezentant al operatorului, și se încheie un proces-verbal de recepție semnat de ambele părți. Reprezentantul autorității contractante notează observațiile sale în procesul-verbal.
+
+Cerința nu este facultativă și nu se poate substitui cu o recepție lunară sau cu simpla aprobare a situației de plată. Formatul procesului-verbal nu este standardizat prin cadrul național, ceea ce lasă loc contractelor locale să îl definească.
 
 ## Ce se schimbă concret pentru operatorii de salubrizare stradală
 
-Noul caiet de sarcini-cadru schimbă câteva lucruri cu impact direct în activitatea zilnică. Programul de lucru trebuie să fie detaliat pe categorii de artere, cu frecvențe specifice pentru fiecare tip de operațiune (măturat manual, măturat mecanic, spălat, stropit, curățare rigole). Un program generic de tipul „măturat zilnic pe tot" nu mai corespunde cerințelor.
+Programul de lucru trebuie să fie detaliat pe categorii de artere, cu frecvențe specifice pentru fiecare tip de operațiune (măturat manual, măturat mecanic, spălat, stropit, curățare rigole), conform formatelor din anexele caietului de sarcini-cadru. Un program generic de tipul „măturat zilnic pe tot" nu mai corespunde cerințelor.
 
-Dovezile de execuție trebuie corelate cu programul. Dacă programul prevede spălat pe arterele de categoria I de două ori pe săptămână, operatorul trebuie să aibă dovezi verificabile că asta s-a întâmplat efectiv: traseu GPS, fotografii cu marcaj temporal. Jurnalele zilnice de activitate devin obligatorii, nu opționale. Fiecare zi de lucru trebuie documentată cu ce echipe au lucrat, pe ce artere, ce operațiuni au executat și ce cantități de deșeuri au rezultat.
-
-Indicatorii de performanță din caietul de sarcini sunt acum corelați cu cei din [Regulamentul-cadru (Ordinul 97/2025)](https://legislatie.just.ro/Public/DetaliiDocument/295150), ceea ce elimină posibilitatea de a exista discrepanțe între ce promite contractul și ce măsoară regulamentul.
+Dovezile de execuție trebuie corelate cu programul. Dacă programul prevede spălat pe arterele de categoria I de două ori pe săptămână, operatorul trebuie să aibă dovezi verificabile că asta s-a întâmplat efectiv. Jurnalele zilnice de activitate nu mai sunt opționale. Și indicatorii de performanță din caietul de sarcini sunt acum corelați cu cei din [Regulamentul-cadru (Ordinul 97/2025)](https://legislatie.just.ro/Public/DetaliiDocument/295150), ceea ce elimină posibilitatea de discrepanțe între ce promite contractul și ce măsoară regulamentul.
 
 ## Ce verifici dacă pregătești o licitație sau o delegare de gestiune
 
 Dacă lucrezi într-o primărie sau într-o asociație de dezvoltare intercomunitară și pregătești o procedură de delegare, primul lucru de verificat este dacă documentația preia integral condițiile tehnice și formularele obligatorii din [Caietul de sarcini-cadru](https://legislatie.just.ro/Public/DetaliiDocumentAfis/295295). Dacă a fost pregătită înainte de 5 martie 2025, aproape sigur se bazează pe cadrul din 2007 și trebuie refăcută.
 
-Verifică dacă activitățile din caietul de sarcini corespund exact cu cele din contractul de delegare sau hotărârea de dare în administrare. O neconcordanță poate invalida întreaga procedură. Verifică dacă indicatorii de performanță au mecanisme de măsurare definite, nu doar formulări declarative. Un indicator fără metodă de verificare rămâne pe hârtie. Și verifică dacă cerințele de raportare includ componenta digitală: dacă soliciți operatorului jurnale zilnice și raportări periodice, trebuie să specifici și cum se transmit aceste date.
+Verifică dacă activitățile din caietul de sarcini corespund exact cu cele din contractul de delegare sau hotărârea de dare în administrare. O neconcordanță poate invalida întreaga procedură. Verifică dacă indicatorii de performanță au mecanisme de măsurare definite, nu doar formulări declarative. Verifică dacă sunt prevăzute cerințele de sistem informatic și de raportare periodică. Și verifică dacă contractul prevede explicit obligația de recepție zilnică și desemnarea persoanelor responsabile din partea autorității contractante.
 
 ## Checklist rapid pentru documentația existentă
 
-Pentru cine are deja un caiet de sarcini în vigoare, câteva puncte de verificare rapidă. Documentul face referire la Ordinul 111/2007 (cel abrogat)? Dacă da, trebuie actualizat. Folosește formularele din noul cadru sau formulare proprii? Activitățile sunt definite conform [Regulamentului-cadru 97/2025](https://legislatie.just.ro/Public/DetaliiDocument/295150), inclusiv noile definiții pentru curățarea rigolelor și curățarea zăpezii? Frecvențele sunt detaliate pe categorii de artere și pe tip de operațiune? Sunt prevăzute cerințe de raportare digitală? Indicatorii de performanță sunt corelați cu Anexa nr. 1 din regulamentul-cadru?
+Câteva puncte de verificare rapidă pentru cine are deja un caiet de sarcini în vigoare. Documentul face referire la Ordinul 111/2007 (cel abrogat)? Dacă da, trebuie actualizat. Folosește formularele din cele 32 de anexe ale noului cadru? Activitățile sunt definite conform [Regulamentului-cadru 97/2025](https://legislatie.just.ro/Public/DetaliiDocument/295150), inclusiv noile definiții pentru curățarea rigolelor și curățarea zăpezii? Frecvențele sunt detaliate pe categorii de artere și pe tip de operațiune? Este prevăzut sistemul informatic și jurnalul zilnic de activitate? Este prevăzută recepția zilnică cu proces-verbal semnat de ambele părți?
 
 Un singur răspuns negativ e suficient pentru a începe procesul de actualizare.
 
 ## De ce contează acum
 
-Noul caiet de sarcini-cadru nu este un document teoretic. Este fundamentul pe care se construiesc contractele, se validează situațiile de plată și se rezolvă neînțelegerile dintre operatori și primării. Când ambele părți lucrează cu aceleași formulare, aceleași definiții și aceleași standarde de raportare, spațiul pentru dispute se reduce drastic.
+Noul caiet de sarcini-cadru nu este un document teoretic. Este fundamentul pe care se construiesc contractele, se validează situațiile de plată și se rezolvă neînțelegerile dintre operatori și autoritățile contractante. Când ambele părți lucrează cu aceleași formulare, aceleași definiții și aceleași standarde de raportare, spațiul pentru dispute se reduce drastic.
 
 Localitățile care actualizează primele documentația câștigă proceduri mai clare, licitații mai puțin vulnerabile la contestații și contracte mai ușor de monitorizat. Pentru operatori, a lucra cu un caiet de sarcini actualizat înseamnă reguli clare de la început, nu surprize la validarea situațiilor de plată.
 
@@ -90,16 +98,16 @@ Cadrul legislativ complet este disponibil pe pagina de [legislație a ANRSC](htt
 Este actul normativ prin care ANRSC a aprobat noul Caiet de sarcini-cadru al serviciului de salubrizare a localităților, publicat în Monitorul Oficial nr. 192 din 5 martie 2025. Înlocuiește vechiul caiet de sarcini-cadru din 2007 (Ordinul 111/2007).
 
 **Câte anexe conține noul caiet de sarcini-cadru de salubrizare?**
-Noul caiet de sarcini-cadru conține 32 de anexe cu formulare obligatorii care acoperă documentarea operațională: liste de străzi, programe de lucru, rapoarte de execuție, jurnale de activitate, fișe de evidență materiale și indicatori de performanță.
+Noul caiet de sarcini-cadru conține 32 de anexe cu formulare obligatorii. Pentru salubrizarea stradală sunt direct relevante Anexele nr. 8-16 (măturat, spălat, stropit, răzuit rigole, coșuri stradale) și Anexele nr. 18-22 (deszăpezire și combatere polei).
+
+**Este recepția zilnică obligatorie pentru salubrizarea stradală?**
+Da. Ordinul 98/2025 prevede explicit că pentru activitățile de salubrizare desfășurate pe căile publice, autoritatea contractantă desemnează persoane pentru recepția zilnică a serviciilor, la sfârșitul programului de lucru, cu proces-verbal semnat de ambele părți.
 
 **Cine trebuie să folosească noul caiet de sarcini-cadru?**
 Autoritățile administrației publice locale și asociațiile de dezvoltare intercomunitară sunt obligate să-l folosească la întocmirea caietelor de sarcini pentru contractele de delegare a gestiunii sau hotărârile de dare în administrare privind activitățile de salubrizare.
 
-**Trebuie actualizate caietele de sarcini existente?**
-Da, dacă se bazează pe vechiul cadru din 2007 (Ordinul 111/2007, acum abrogat). Un caiet de sarcini care citează un act normativ inexistent poate fi contestat.
-
-**Ce cerințe noi de raportare introduce caietul de sarcini-cadru 2025?**
-Noul cadru impune utilizarea unui sistem informatic și a unei baze de date electronice, raportare lunară a cantităților, raportare trimestrială a indicatorilor de performanță, raportare anuală a eficienței și jurnale zilnice ale operațiunilor prestate.
+**Ce cerințe de raportare introduce caietul de sarcini-cadru 2025?**
+Noul cadru impune un sistem informatic cu bază electronică de date, jurnal zilnic de activitate cu conținut minim specificat, raportare lunară a cantităților, raport trimestrial privind indicatorii de performanță și raport anual transmis până la sfârșitul lunii ianuarie a anului următor.
 
 ---
 
@@ -108,7 +116,7 @@ Noul cadru impune utilizarea unui sistem informatic și a unei baze de date elec
 - [Ordinul ANRSC nr. 98/2025 - Caietul de sarcini-cadru al serviciului de salubrizare](https://legislatie.just.ro/Public/DetaliiDocument/295163) (Monitorul Oficial nr. 192 din 5 martie 2025)
 - [Caietul de sarcini-cadru - text integral cu cele 32 de anexe](https://legislatie.just.ro/Public/DetaliiDocumentAfis/295295) (Monitorul Oficial nr. 192 bis din 5 martie 2025)
 - [Ordinul ANRSC nr. 97/2025 - Regulamentul-cadru al serviciului de salubrizare](https://legislatie.just.ro/Public/DetaliiDocument/295150) (Monitorul Oficial nr. 190 din 5 martie 2025)
-- [Legea 101/2006 - Legea serviciului de salubrizare a localităților](https://legislatie.just.ro/Public/DetaliiDocument/73195) (republicată, cu modificările ulterioare)
+- [Legea 101/2006 - Legea serviciului de salubrizare a localităților](https://legislatie.just.ro/Public/DetaliiDocument/73195) (republicată, actualizată octombrie 2025)
 - [OUG 92/2021 - Regimul deșeurilor](https://legislatie.just.ro/Public/DetaliiDocument/246236)
 - [ANRSC - Legislație salubrizare](https://www.anrsc.ro/salubrizare/legislatie/)
 - [ANRSC - Realizări legislative 2025](https://www.anrsc.ro/realizari-legislative/2025-2/)
@@ -116,9 +124,9 @@ Noul cadru impune utilizarea unui sistem informatic și a unei baze de date elec
 ---
 
 **Meta-title:** Noul Caiet de sarcini-cadru pentru salubrizare (Ordinul ANRSC 98/2025) - ghid practic
-**Meta-description:** Ce prevede Ordinul ANRSC 98/2025, ce conțin cele 32 de anexe obligatorii, cum construiești un caiet de sarcini conform și ce verifici în documentația existentă.
-**Tag-uri:** conformitate, caiet de sarcini salubrizare, legislație, Ordin ANRSC 98/2025, licitație salubrizare, salubrizare stradală, formulare obligatorii salubrizare
-**Cuvinte cheie:** caiet sarcini cadru salubrizare 2025, Ordin ANRSC 98/2025, caiet sarcini salubrizare localități, licitație salubrizare 2025, formulare obligatorii salubrizare, delegare gestiune salubrizare
+**Meta-description:** Ce prevede Ordinul ANRSC 98/2025, ce conțin cele 32 de anexe obligatorii, ce cerințe de raportare introduce și ce verifici în documentația existentă.
+**Tag-uri:** conformitate, caiet de sarcini salubrizare, legislație, Ordin ANRSC 98/2025, licitație salubrizare, salubrizare stradală, recepție zilnică, jurnal activitate
+**Cuvinte cheie:** caiet sarcini cadru salubrizare 2025, Ordin ANRSC 98/2025, caiet sarcini salubrizare localități, licitație salubrizare 2025, formulare obligatorii salubrizare, recepție zilnică salubrizare stradală, jurnal activitate salubrizare
 
 **Denumire imagine recomandată:**
 Fișier: `caiet-sarcini-cadru-salubrizare-ordin-anrsc-98-2025.jpg`
