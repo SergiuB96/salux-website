@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html lang="ro"><head>
+<!DOCTYPE html><html lang="ro"><head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -192,7 +192,26 @@ body { background: #FFFFFF; }
   .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .legal-ref { white-space: normal; font-size: 10px; }
   .legal-acc summary { flex-wrap: wrap; }
+  .seap-highlight { padding: 32px 20px; }
+  .seap-amount { font-size: clamp(36px, 10vw, 56px); }
+  .seap-desc { font-size: 15px; }
 }
+.seap-b { background: var(--bg); }
+.seap-highlight {
+  background: linear-gradient(135deg, var(--accent-50) 0%, var(--primary-50) 100%);
+  border: 1px solid rgba(59,114,196,.2);
+  border-radius: var(--radius-xl); padding: 56px; text-align: center; margin-bottom: 32px;
+}
+.seap-badge {
+  display: inline-flex; padding: 5px 16px; border-radius: 999px;
+  background: var(--accent); color: white;
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; margin-bottom: 22px;
+}
+.seap-amount { font-size: clamp(42px, 6vw, 68px); font-weight: 800; color: var(--ink); letter-spacing: -.04em; line-height: 1; margin-bottom: 6px; }
+.seap-unit { font-family: var(--font-mono); font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+.seap-desc { font-size: 16px; color: var(--ink-2); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+.seap-note { font-size: 13.5px; color: var(--muted); font-style: italic; margin-top: 20px; text-align: center; }
 </style>
 <link rel="icon" type="image/x-icon" href="assets/icons/logo_mobile_app.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo_mobile_app.png">
@@ -449,7 +468,7 @@ body { background: #FFFFFF; }
         <div class="amount">165.682 lei</div>
         <div class="amount-label">prejudiciu constatat</div>
         <h3>Plată nejustificată pentru servicii neefectuate</h3>
-        <p>La o primărie de sector din municipiul București, auditorii au constatat plata nejustificată prin acceptarea la decontare a unor cantități de servicii de salubrizare publică stradală neefectuată.</p>
+        <p>La o autoritate contractantă de sector din municipiul București, auditorii au constatat plata nejustificată prin acceptarea la decontare a unor cantități de servicii de salubrizare publică stradală neefectuată.</p>
         <div class="source">Sursa: Raport Camera de Conturi - Legea 94/1992</div>
       </div>
       <div class="case-card">
@@ -463,7 +482,7 @@ body { background: #FFFFFF; }
         <div class="amount">3.267.700 lei</div>
         <div class="amount-label">amenzi cumulate</div>
         <h3>Amenzi contravenționale pentru indicatori nedovediți</h3>
-        <p>La o primărie de sector din București, un operator privat a primit în 2025 amenzi cumulate pentru deficiențe în prestația de curățenie stradală, colectare separată și deszăpezire.</p>
+        <p>La o autoritate contractantă de sector din București, un operator privat a primit în 2025 amenzi cumulate pentru deficiențe în prestația de curățenie stradală, colectare separată și deszăpezire.</p>
         <div class="source">Sursa: Raport Camera de Conturi - Legea 94/1992</div>
       </div>
     </div>
@@ -554,6 +573,25 @@ body { background: #FFFFFF; }
         <h3>Extindere completă</h3>
         <p>Extindere la întreaga operațiune. Migrare date istorice relevante în paralel cu activitatea curentă. Asistență la prima situație de plată generată complet din sistem.</p>
         <div class="out"><b>→ output:</b><br>operațiune integrală în SALUX<br>prima situație de plată completă</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LICENȚIERE -->
+<section class="section seap-b">
+  <div class="container">
+    <div class="s-head">
+      <span class="eyebrow accent"><span class="dot"></span>Licențiere</span>
+      <h2>Model de licențiere simplu</h2>
+    </div>
+    <div class="container-narrow">
+      <div class="seap-highlight">
+        <div class="seap-badge">Fără costuri de implementare</div>
+        <div class="seap-amount">0 lei</div>
+        <div class="seap-unit">costuri de implementare</div>
+        <p class="seap-desc">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Specialiștii SALUX oferă asistență tehnică pe tot parcursul procedurii de achiziție - analiza compatibilității cu Ordinul ANRSC 98/2025, consultanță privind specificațiile tehnice și suport în etapele de evaluare și atribuire.</p>
+        <p class="seap-note">Contactați echipa SALUX pentru o ofertă adaptată dimensiunii contractului dumneavoastră.</p>
       </div>
     </div>
   </div>
