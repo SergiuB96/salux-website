@@ -1,0 +1,43 @@
+# SALUX
+
+> Platforma SaaS pentru salubrizare stradala si deszapezire in Romania.
+> Construita pe Ordinele ANRSC 97/2025 si 98/2025.
+> Se adreseaza operatorilor privati de salubrizare si autoritatilor contractante (UAT-uri).
+
+SALUX digitalizeaza gestionarea activitatii de salubrizare stradala: program lunar
+digital, sarcini zilnice, aplicatie mobila pentru echipele de teren, situatii de plata
+generate automat, raportare ANRSC si ANPM, audit log imutabil.
+
+## Pagini principale
+
+- [Acasa](https://salux.ro/): Prezentare generala platforma SaaS
+- [Operatori](https://salux.ro/operator): Solutia pentru operatorii privati de salubrizare
+- [UAT](https://salux.ro/uat): Solutia pentru autoritati contractante
+- [Contact / Demo](https://salux.ro/contact): Solicita un demo de 30 de minute
+
+## Blog - Conformitate si legislatie salubrizare Romania
+
+- [SRS 6705/2008 explicat](https://salux.ro/article-srs): Indicatori lunari de calitate pentru salubrizare stradala
+- [Regulament-cadru ANRSC 97/2025](https://salux.ro/article-regulament-97-2025): Ce aduce nou Ordinul 97/2025 pentru operatori si primarii
+- [Caiet de sarcini-cadru ANRSC 98/2025](https://salux.ro/article-caiet-98-2025): Cele 32 de anexe obligatorii si cerintele de raportare
+- [Checklist conformitate 2025](https://salux.ro/article-checklist-2025): Ghid de verificare contract salubrizare vs. Ord. 97, 98, 324
+- [Tarifare Ord. 324/2025](https://salux.ro/article-tarifare-324-2025): Ajustare vs. modificare tarife, majorare 5%, sanctiuni
+- [Documente de lucru](https://salux.ro/article-documente-lucru-salubrizare): Ce impune legea intre operator si autoritatea contractanta
+- [Multi-tenant SaaS](https://salux.ro/article-multi-tenant): Izolarea datelor intre contracte multiple
+- [Deszapezire](https://salux.ro/article-deszapezire): Documentatia si evidentele digitale pentru decont la UAT
+
+## Cadru legal
+
+SALUX este construit pe:
+- Legea 101/2006 privind serviciile de salubrizare
+- Legea 51/2006 privind serviciile comunitare de utilitati publice
+- Ordinul ANRSC 97/2025 (Regulament-cadru, MOf. 190/5.03.2025)
+- Ordinul ANRSC 98/2025 (Caiet de sarcini-cadru, MOf. 192/5.03.2025)
+- Ordinul ANRSC 324/2025 (norme metodologice tarifare)
+- Ordinul ANRSC 640/2022
+
+## Contact
+
+- Email: office@salux.ro
+- Web: https://salux.ro
+- App: https://app.salux.ro
