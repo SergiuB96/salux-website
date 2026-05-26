@@ -45,7 +45,16 @@
       "mcp__plugin_vercel_vercel__list_teams",
       "mcp__plugin_vercel_vercel__list_projects",
       "WebFetch(domain:saluxwebsite-r6s2vp2lo-sergiub96s-projects.vercel.app)",
-      "WebFetch(domain:salux.ro)"
+      "WebFetch(domain:salux.ro)",
+      "Bash(~/.claude/skills/gstack/bin/gstack-brain-sync --discover-new)",
+      "Bash(~/.claude/skills/gstack/bin/gstack-brain-sync --once)",
+      "Bash(dir C:\\\\xampp\\\\htdocs\\\\salux_website\\\\assets\\\\img_blog *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\xampp\\\\htdocs\\\\salux_website\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(dir C:\\\\xampp\\\\htdocs\\\\salux_website *)"
     ]
   }
 }
