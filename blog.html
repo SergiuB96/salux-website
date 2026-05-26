@@ -133,7 +133,12 @@ body { background: #FBFBF9; }
   .news-grid { grid-template-columns: 1fr; }
   .news-form input { min-width: 0; flex: 1; }
 }
-@media (max-width: 600px) { .posts-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .posts-grid { grid-template-columns: 1fr; }
+  .news-form { flex-direction: column; align-items: stretch; }
+  .news-form input { min-width: 0; width: 100%; }
+  .news-form button { width: 100%; justify-content: center; }
+}
 </style>
 <link rel="icon" type="image/x-icon" href="assets/icons/logo_mobile_app.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo_mobile_app.png">
