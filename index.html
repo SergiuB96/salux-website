@@ -193,14 +193,14 @@ body { background: #FFFFFF; }
 
 /* Module grid SaaS */
 .mods { background: white; }
-.mod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.mod-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .mod {
   padding: 26px; border-radius: 18px; border: 1px solid var(--line);
   background: white; transition: all .2s;
 }
 .mod:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .mod .ic { width: 40px; height: 40px; border-radius: 11px; background: var(--primary-50); color: var(--primary-700); display: grid; place-items: center; margin-bottom: 18px; }
-.mod .ic.b { background: var(--accent-50); color: var(--accent); }
+.mod .ic.b { background: var(--primary-50); color: var(--primary-700); }
 .mod .ic svg { width: 20px; height: 20px; stroke-width: 1.7; }
 .mod h3 { font-size: 16px; margin-bottom: 6px; }
 .mod p { font-size: 13.5px; }
@@ -263,7 +263,7 @@ body { background: #FFFFFF; }
 .c-yes { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: var(--primary-50); color: var(--primary-700); font-size: 12px; font-weight: 700; }
 .c-yes.b { background: var(--accent-50); color: var(--accent); }
 .c-no { color: var(--muted-2); font-size: 18px; display: inline-block; padding: 0 8px; }
-.c-view { font-size: 11px; font-weight: 600; color: var(--muted); background: var(--bg-alt); padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); }
+.c-view { font-size: 11px; font-weight: 700; color: var(--accent-700, #1F4788); background: var(--accent-50); padding: 4px 10px; border-radius: 999px; border: none; letter-spacing: .01em; }
 .compare-footer-row { display: grid; grid-template-columns: 1fr 210px 210px; padding: 22px 32px; background: var(--bg); border-top: 2px solid var(--line); }
 .compare-footer-row > div { padding-left: 20px; }
 .compare-footer-row > div:first-child { padding-left: 0; }
@@ -599,7 +599,7 @@ body { background: #FFFFFF; }
             <div class="row"><span class="d">Mie</span><div class="bar"><i style="width: 100%; background: var(--primary-700);"></i></div><span class="v">14/14</span></div>
             <div class="row"><span class="d">Joi</span><div class="bar"><i style="width: 64%;"></i></div><span class="v">9/14</span></div>
             <div class="row"><span class="d">Vin</span><div class="bar"><i style="width: 85%;"></i></div><span class="v">12/14</span></div>
-            <div class="row"><span class="d">Sâm</span><div class="bar"><i style="width: 50%; background: var(--accent);"></i></div><span class="v">4/8</span></div>
+            <div class="row"><span class="d">Sâm</span><div class="bar"><i style="width: 50%;"></i></div><span class="v">4/8</span></div>
           </div>
         </div>
       </div>
@@ -770,20 +770,6 @@ body { background: #FFFFFF; }
       <details><summary>Unde sunt găzduite datele?</summary><div class="a">Exclusiv în România și în alte state membre ale Uniunii Europene. Conform GDPR, Legii 190/2018 și OUG 119/2022. Fără transfer către țări terțe. Acordul de prelucrare a datelor (DPA) se semnează odată cu contractul de licență.</div></details>
       <details><summary>Probele generate de SALUX sunt admisibile în instanță?</summary><div class="a">Audit log-ul SALUX este construit pe principiile probei electronice acceptate în Codul de procedură civilă. Marcajul temporal criptografic și hash-ul de integritate asigură opozabilitatea probei.</div></details>
       <details><summary>Ce se întâmplă cu datele la rezilierea contractului?</summary><div class="a">Datele aparțin clientului. La încetarea contractului SALUX, datele se exportă în format deschis (CSV, JSON, PDF) și se predau clientului. Ștergerea din sistemele SALUX urmează prevederile DPA și obligațiile legale de păstrare aplicabile.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="section cta-demo-wrap">
-  <div class="container">
-    <div class="cta-card">
-      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
-      <h2>Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.</h2>
-      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
-      <div class="cta-row">
-        <a href="/contact" class="btn btn-green btn-lg">Programează o demonstrație →</a>
-      </div>
     </div>
   </div>
 </section>
