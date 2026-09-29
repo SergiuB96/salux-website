@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/shared.css?v=20260929">
+<link rel="stylesheet" href="assets/shared.css?v=20260929b">
 <style>
 body { background: #FFFFFF; }
 
@@ -100,7 +100,9 @@ body { background: #FFFFFF; }
 .feat-block p { font-size: 17px; line-height: 1.6; margin-bottom: 24px; }
 .feat-block .bullets { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 10px; }
 .feat-block .bullets li { display: flex; gap: 10px; font-size: 15.5px; color: var(--ink-2); }
-.feat-block .bullets li::before { content: ""; width: 12px; height: 2px; background: var(--primary-700); margin-top: 11px; flex-shrink: 0; }
+.feat-block .bullets { gap: 12px; }
+.feat-block .bullets li { gap: 14px; }
+.feat-block .bullets li::before { content: ""; width: 8px; height: 1.5px; border-radius: 1px; background: #C3CCD9; margin-top: 12px; flex-shrink: 0; }
 .feat-block .visual {
   border-radius: var(--radius-lg); padding: 28px;
   display: grid; align-content: center; gap: 12px; position: relative; overflow: hidden;
@@ -193,7 +195,9 @@ body { background: #FFFFFF; }
   display: grid; place-items: center;
 }
 .aud-card.b .card-icon { background: var(--accent-50); color: var(--accent); }
-.aud-card .aud-btn { margin-top: 28px; }
+.aud-card { display: flex; flex-direction: column; }
+.aud-card > p { flex: 1; }
+.aud-card .aud-btn { margin-top: 28px; align-self: flex-start; }
 .aud-card .card-icon svg { width: 28px; height: 28px; stroke-width: 1.5; }
 
 
@@ -348,7 +352,7 @@ body { background: #FFFFFF; }
       <a href="/contact">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="https://app.salux.ro/login.php" class="btn btn-nav">Autentificare</a>
+      <a href="https://app.salux.ro/login.php" class="btn btn-nav btn-login">Autentificare</a>
     </div>
       <button class="nav-hamburger" aria-label="Meniu" onclick="this.closest('.nav').classList.toggle('nav-open')">
         <span></span><span></span><span></span>
@@ -361,7 +365,7 @@ body { background: #FFFFFF; }
         <a href="/contact">Contact</a>
         <hr>
         <div class="nav-mobile-cta">
-          <a href="https://app.salux.ro/login.php" class="btn btn-nav">Autentificare</a>
+          <a href="https://app.salux.ro/login.php" class="btn btn-nav btn-login">Autentificare</a>
         </div>
       </div>
   </div>
