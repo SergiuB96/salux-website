@@ -274,17 +274,6 @@ p  { margin: 0; color: var(--muted); }
   border: 1px solid var(--line);
 }
 
-/* Variation switcher banner */
-.var-switcher {
-  position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
-  background: var(--ink); color: white; border-radius: 999px;
-  padding: 5px; display: flex; gap: 2px; z-index: 100;
-  box-shadow: 0 10px 30px rgba(0,0,0,.18);
-  font-size: 13px;
-}
-.var-switcher a { padding: 8px 14px; border-radius: 999px; color: rgba(255,255,255,.65); font-weight: 500; transition: all .15s; }
-.var-switcher a:hover { color: white; }
-.var-switcher a.active { background: white; color: var(--ink); font-weight: 600; }
 
 /* ====== HERO CU COLAJ FOTO (operator, UAT) ====== */
 .hero-photo { position: relative; overflow: hidden; background: var(--ink); isolation: isolate; }
