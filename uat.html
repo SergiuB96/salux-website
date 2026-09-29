@@ -7,28 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/shared.css?v=20260929">
 <style>
 body { background: #FFFFFF; }
 
-/* Gradient text albastru */
-.grad-blue {
-  background: linear-gradient(120deg, var(--accent) 0%, var(--primary-700) 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+/* Text accent albastru */
+.grad-blue { color: var(--accent-600); }
+.hero-photo .grad-blue { color: #9DC0F2; }
 
 /* Hero */
-.hero-uat {
-  padding: 80px 0 100px;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,114,196,.15), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(125,200,160,.1), transparent 60%),
-    linear-gradient(180deg, #F5F8FD 0%, #FFFFFF 100%);
-}
+.hero-uat { padding: 96px 0 104px; }
 .hero-uat .center { text-align: center; max-width: 880px; margin: 0 auto; }
 .hero-uat h1 { font-size: clamp(36px, 5vw, 62px); margin: 22px 0; }
 .hero-uat .lede { font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 auto 36px; line-height: 1.65; }
-.hero-uat .legal-cite { font-family: var(--font-mono); font-size: 12px; color: var(--accent-600); background: var(--accent-50); padding: 10px 18px; border-radius: var(--radius); display: inline-block; margin-bottom: 28px; }
+.hero-uat .legal-cite { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,.82); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); padding: 10px 18px; border-radius: var(--radius); display: inline-block; margin-bottom: 28px; }
 .hero-uat .cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
 /* Section heads */
@@ -229,7 +221,13 @@ body { background: #FFFFFF; }
 </nav>
 
 <!-- HERO -->
-<section class="hero-uat">
+<section class="hero-uat hero-photo">
+  <div class="hero-collage" aria-hidden="true">
+    <img src="assets/hero/spalat.webp" alt="" width="1100" height="619" decoding="async">
+    <img src="assets/hero/maturat-drona.webp" alt="" width="1100" height="619" decoding="async">
+    <img src="assets/hero/deszapezire.webp" alt="" width="1100" height="619" decoding="async">
+    <img src="assets/hero/perii.webp" alt="" width="1100" height="619" decoding="async">
+  </div>
   <div class="container">
     <div class="center">
       <span class="eyebrow accent"><span class="dot"></span>Soluție pentru UAT-uri</span>

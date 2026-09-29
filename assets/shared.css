@@ -285,3 +285,27 @@ p  { margin: 0; color: var(--muted); }
 .var-switcher a { padding: 8px 14px; border-radius: 999px; color: rgba(255,255,255,.65); font-weight: 500; transition: all .15s; }
 .var-switcher a:hover { color: white; }
 .var-switcher a.active { background: white; color: var(--ink); font-weight: 600; }
+
+/* ====== HERO CU COLAJ FOTO (operator, UAT) ====== */
+.hero-photo { position: relative; overflow: hidden; background: var(--ink); isolation: isolate; }
+.hero-collage {
+  position: absolute; inset: 0; z-index: -2;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px;
+}
+.hero-collage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-collage img:first-child { grid-row: span 2; }
+.hero-collage img:last-child { grid-column: span 2; }
+.hero-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(11,24,41,.72) 0%, rgba(11,24,41,.8) 100%);
+}
+section.hero-photo h1 { color: white; }
+section.hero-photo .lede { color: rgba(255,255,255,.88); }
+.hero-photo .eyebrow { background: rgba(255,255,255,.12); color: white; }
+.hero-photo .btn-outline { background: rgba(255,255,255,.08); color: white; border-color: rgba(255,255,255,.4); box-shadow: none; }
+.hero-photo .btn-outline:hover { background: rgba(255,255,255,.16); border-color: white; }
+@media (max-width: 700px) {
+  .hero-collage { grid-template-columns: 1fr 1fr; }
+  .hero-collage img:first-child { grid-row: auto; grid-column: span 2; }
+  .hero-collage img:nth-child(3) { display: none; }
+}
