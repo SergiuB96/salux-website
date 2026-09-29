@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/shared.css?v=20260929b">
+<link rel="stylesheet" href="assets/shared.css?v=20260929c">
 <style>
 body { background: #FFFFFF; }
 
@@ -140,19 +140,6 @@ body { background: #FFFFFF; }
 .feat-block .ftag { display: inline-flex; padding: 4px 10px; font-size: 12px; font-weight: 600; border-radius: 999px; background: var(--primary-50); color: var(--primary-700); margin-bottom: 14px; width: fit-content; }
 
 /* Visual mocks */
-.fmock-cal { background: white; border-radius: 14px; padding: 18px; box-shadow: 0 10px 30px rgba(11,24,41,.07); display: grid; gap: 10px; }
-.fmock-cal .row { display: grid; grid-template-columns: 52px 1fr 56px; gap: 10px; align-items: center; font-size: 12px; }
-.fmock-cal .row .d { font-weight: 600; color: var(--ink); }
-.fmock-cal .row .bar { height: 8px; background: var(--bg-alt); border-radius: 4px; overflow: hidden; }
-.fmock-cal .row .bar i { display: block; height: 100%; background: var(--primary); border-radius: 4px; }
-.fmock-cal .row .v { font-family: var(--font-mono); color: var(--muted); font-size: 11px; text-align: right; }
-.fmock-mobile { background: var(--ink); border-radius: 20px; padding: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.2); max-width: 200px; margin: 0 auto; }
-.fmock-mobile .scr { background: white; border-radius: 12px; padding: 14px; }
-.fmock-mobile .mrow { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); }
-.fmock-mobile .mrow:last-child { border-bottom: none; }
-.fmock-mobile .mrow .ch { width: 18px; height: 18px; border-radius: 5px; background: var(--primary-50); display: grid; place-items: center; color: var(--primary-700); font-size: 10px; font-weight: 700; flex-shrink: 0; }
-.fmock-mobile .mrow .t { font-size: 11.5px; color: var(--ink); font-weight: 500; }
-.fmock-mobile .mrow .s { font-size: 10px; color: var(--muted); margin-left: auto; white-space: nowrap; }
 
 @media (max-width: 900px) {
   .feat-block { grid-template-columns: 1fr; gap: 28px; padding: 36px 24px; }
@@ -286,7 +273,7 @@ body { background: #FFFFFF; }
     <div class="center">
       <span class="eyebrow accent"><span class="dot"></span>Soluție pentru operatori privați</span>
       <h1>O singură platformă, de la teren la <span class="grad">situație de plată acceptată.</span></h1>
-      <p class="lede">Operatorii privați de salubrizare stradală gestionează simultan obligații față de patru categorii de interlocutori: autoritatea contractantă, ANRSC, Curtea de Conturi și Agenția Națională pentru Protecția Mediului. SALUX consolidează datele necesare pentru toate aceste obligații într-o singură sursă, alimentată în timp real de echipele de teren, și produce automat documentele cerute.</p>
+      <p class="lede">Autoritatea contractantă, ANRSC, Curtea de Conturi și ANPM cer documente diferite. SALUX le produce din aceleași date raportate de echipele din teren.</p>
       <div class="cta-row">
         <a href="/contact" class="btn btn-green btn-lg">Programați o demonstrație</a>
         <a href="#flux" class="btn btn-outline btn-lg">Cum funcționează</a>
@@ -299,7 +286,6 @@ body { background: #FFFFFF; }
 <section id="flux" class="section" style="background: var(--bg);">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Cum funcționează</span>
       <h2>Patru etape, de la teren<br>la dosar de audit</h2>
       <p>Datele de teren alimentează automat programul lunar, rapoartele și situațiile de plată.</p>
     </div>
@@ -308,56 +294,42 @@ body { background: #FFFFFF; }
       <!-- Etapa 1: text stânga, visual dreapta -->
       <div class="feat-block">
         <div>
-          <span class="ftag">Etapa 1 · Teren</span>
+          <span class="ftag">Teren</span>
           <h3>Echipele înregistrează activitatea direct din mobil</h3>
           <p>Aplicația mobilă SALUX este accesibilă pe orice telefon Android sau iOS prin browser, fără instalare. Interfața conține elementele strict necesare - start schimb, marcaj activitate, captură foto, încheiere schimb. Funcționează fără conexiune și sincronizează automat la revenirea semnalului.</p>
           <ul class="bullets">
             <li>Fără instalare - accesibil prin browser pe orice telefon</li>
-            <li>Captură foto cu localizare și marcaj temporal imutabil</li>
+            <li>Captură foto cu localizare opțională și marcaj temporal imutabil</li>
             <li>Curbă de învățare: o singură tură de lucru</li>
           </ul>
         </div>
-        <div class="visual v-blue">
-          <div class="fmock-mobile">
-            <div class="scr">
-              <div style="font-size: 11px; font-weight: 700; margin-bottom: 8px; color: var(--ink);">Sarcini azi</div>
-              <div class="mrow"><span class="ch">✓</span><span class="t">MS-03 Decebal</span><span class="s">09:12</span></div>
-              <div class="mrow"><span class="ch">✓</span><span class="t">CS-01 Centru</span><span class="s">10:04</span></div>
-              <div class="mrow"><span class="ch" style="background:var(--accent-50);color:var(--accent);">●</span><span class="t">MS-05 Carol</span><span class="s">acum</span></div>
-              <div class="mrow"><span class="ch" style="background:var(--bg-alt);color:var(--muted);">○</span><span class="t">CD-01 Sector 2</span><span class="s">12:00</span></div>
-            </div>
-          </div>
+        <div class="visual v-blue bleed">
+          <img class="shot" src="assets/screens/sarcini-zilnice.webp" alt="Sarcinile zilnice ale echipelor, cu starea fiecărei operațiuni" width="1075" height="700" loading="lazy" decoding="async">
         </div>
       </div>
 
       <!-- Etapa 2: visual stânga, text dreapta -->
       <div class="feat-block rev">
         <div>
-          <span class="ftag">Etapa 2 · Planificare</span>
-          <h3>Sistemul construiește zilnic programul lunar</h3>
-          <p>Datele introduse pe parcursul zilei se consolidează automat în programul lunar de prestație. La orice moment din lună, operatorul vede situația cumulată: ce s-a executat, ce este programat, ce abateri există față de planul aprobat. Modificările se aprobă ierarhic cu trasabilitate completă.</p>
+          <span class="ftag">Planificare</span>
+          <h3>Programul lunar aprobat devine sarcini zilnice</h3>
+          <p>Execuția raportată din teren se adaugă automat. La orice moment din lună, operatorul vede ce s-a executat, ce urmează și ce abateri există față de planul aprobat. Modificările se aprobă ierarhic, cu trasabilitate completă.</p>
           <ul class="bullets">
-            <li>Program actualizat zilnic din datele de teren</li>
+            <li>Execuție actualizată zilnic din datele de teren</li>
             <li>Abateri față de plan vizibile în timp real</li>
-            <li>Aprobare ierarhică cu versioning complet</li>
+            <li>Aprobare ierarhică, cu istoricul complet al versiunilor</li>
           </ul>
         </div>
-        <div class="visual v-green">
-          <div class="fmock-cal">
-            <div class="row"><span class="d">Lun</span><div class="bar"><i style="width:92%"></i></div><span class="v">12/13</span></div>
-            <div class="row"><span class="d">Mar</span><div class="bar"><i style="width:78%"></i></div><span class="v">11/14</span></div>
-            <div class="row"><span class="d">Mie</span><div class="bar"><i style="width:100%;background:var(--primary-700)"></i></div><span class="v">14/14</span></div>
-            <div class="row"><span class="d">Joi</span><div class="bar"><i style="width:64%"></i></div><span class="v">9/14</span></div>
-            <div class="row"><span class="d">Vin</span><div class="bar"><i style="width:85%"></i></div><span class="v">12/14</span></div>
-          </div>
+        <div class="visual v-green bleed">
+          <img class="shot" src="assets/screens/program-lunar.webp" alt="Lista programelor lunare de lucru, cu stare de aprobare și versiune" width="1075" height="645" loading="lazy" decoding="async">
         </div>
       </div>
 
       <!-- Etapa 3: text stânga, visual dreapta -->
       <div class="feat-block">
         <div>
-          <span class="ftag">Etapa 3 · Raportare</span>
-          <h3>Rapoartele și situațiile de plată se generează cu un singur click</h3>
+          <span class="ftag">Raportare</span>
+          <h3>Rapoartele și situațiile de plată se generează în maximum un minut</h3>
           <p>La sfârșit de lună, raportul către autoritatea contractantă este deja construit. Situația de plată include automat toate prestațiile efectuate, fiecare cu probele aferente - coordonate, fotografii, marcaje temporale. Exportat în formatul prevăzut de Ordinul ANRSC 98/2025.</p>
           <ul class="bullets">
             <li>Situație de plată cu probe complete per rând</li>
@@ -365,26 +337,15 @@ body { background: #FFFFFF; }
             <li>Captură imutabilă per situație de plată</li>
           </ul>
         </div>
-        <div class="visual v-ink">
-          <div style="background:rgba(255,255,255,.08);border-radius:14px;padding:20px;">
-            <div style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.5);margin-bottom:10px;">SITUAȚIE DE PLATĂ · MAI 2026</div>
-            <div style="display:grid;grid-template-columns:1fr auto;gap:7px 14px;font-size:12.5px;">
-              <span style="color:rgba(255,255,255,.7);">MS-03 Măturat mecanizat</span><span>128.400 m²</span>
-              <span style="color:rgba(255,255,255,.7);">CS-01 Golit coșuri</span><span>1.240 buc</span>
-              <span style="color:rgba(255,255,255,.7);">CD-01 Colectat</span><span>54,2 t</span>
-            </div>
-            <div style="height:1px;background:rgba(255,255,255,.1);margin:14px 0;"></div>
-            <div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;">
-              <span>Total fără TVA</span><span style="color:var(--primary);">128.420 RON</span>
-            </div>
-          </div>
+        <div class="visual v-green bleed">
+          <img class="shot" src="assets/screens/rapoarte.webp" alt="Generare raport lunar cu export PDF, Excel și situație de plată" width="1400" height="539" loading="lazy" decoding="async">
         </div>
       </div>
 
       <!-- Etapa 4: visual stânga, text dreapta -->
       <div class="feat-block rev">
         <div>
-          <span class="ftag">Etapa 4 · Conformitate</span>
+          <span class="ftag">Conformitate</span>
           <h3>Raportările instituționale se exportă pre-formatate</h3>
           <p>Raportul anual ANRSC, raportul ANPM și pachetul de probe pentru auditul Curții de Conturi se generează din aceleași date primare. Arhiva rămâne accesibilă minim 5 ani, fără perioade de pregătire dedicate.</p>
           <ul class="bullets">
@@ -393,30 +354,8 @@ body { background: #FFFFFF; }
             <li>Dosar audit Curtea de Conturi - arhivă 5 ani</li>
           </ul>
         </div>
-        <div class="visual v-green">
-          <div style="display:grid;gap:10px;">
-            <div style="background:white;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 12px rgba(11,24,41,.06);">
-              <div style="width:36px;height:36px;border-radius:10px;background:var(--primary-50);display:grid;place-items:center;flex-shrink:0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-700)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              </div>
-              <div><div style="font-size:13px;font-weight:600;color:var(--ink);">Raport ANRSC</div><div style="font-size:11px;color:var(--muted);">Export pre-formatat</div></div>
-              <span style="margin-left:auto;font-size:10px;font-weight:700;background:var(--primary-50);color:var(--primary-700);padding:3px 8px;border-radius:999px;">Gata</span>
-            </div>
-            <div style="background:white;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 12px rgba(11,24,41,.06);">
-              <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-50);display:grid;place-items:center;flex-shrink:0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              </div>
-              <div><div style="font-size:13px;font-weight:600;color:var(--ink);">Raport ANPM</div><div style="font-size:11px;color:var(--muted);">Export automat</div></div>
-              <span style="margin-left:auto;font-size:10px;font-weight:700;background:var(--accent-50);color:var(--accent);padding:3px 8px;border-radius:999px;">Gata</span>
-            </div>
-            <div style="background:white;border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 12px rgba(11,24,41,.06);">
-              <div style="width:36px;height:36px;border-radius:10px;background:#FEF3C7;display:grid;place-items:center;flex-shrink:0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/></svg>
-              </div>
-              <div><div style="font-size:13px;font-weight:600;color:var(--ink);">Dosar audit</div><div style="font-size:11px;color:var(--muted);">Arhivă 5 ani</div></div>
-              <span style="margin-left:auto;font-size:10px;font-weight:700;background:#FEF3C7;color:#B45309;padding:3px 8px;border-radius:999px;">5 ani</span>
-            </div>
-          </div>
+        <div class="visual v-blue bleed">
+          <img class="shot" src="assets/screens/jurnal-pdf.webp" alt="Jurnal de activitate generat în PDF, gata de transmis" width="804" height="506" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -428,14 +367,13 @@ body { background: #FFFFFF; }
 <section class="section legal-acc">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Cadru legal</span>
       <h2>Patru obligații legale,<br>soluționate prin design</h2>
       <p>Fiecare funcționalitate SALUX răspunde unei obligații concrete prevăzute de lege.</p>
     </div>
     <div class="list">
       <details open="">
         <summary>Justificarea prestației <span class="legal-ref">Art. 6 alin. (2), Legea 101/2006</span></summary>
-        <div class="a">Autoritatea contractantă are dreptul de a aplica penalități, daune-interese, de a executa garanția de bună execuție sau de a rezilia unilateral contractul „pe baza unor analize și justificări fundamentate". SALUX produce această justificare în mod sistematic, pentru fiecare prestație, eliminând riscul de contestare retrospectivă.</div>
+        <div class="a">Autoritatea contractantă are dreptul de a aplica penalități, daune-interese, de a executa garanția de bună execuție sau de a rezilia unilateral contractul „pe baza unor analize și justificări fundamentate". SALUX produce această justificare în mod sistematic, pentru fiecare prestație, reducând riscul unei contestări ulterioare.</div>
       </details>
       <details>
         <summary>Evidențe distincte pe activitate <span class="legal-ref">Art. 28 alin. (3), Legea 101/2006</span></summary>
@@ -457,7 +395,6 @@ body { background: #FFFFFF; }
 <section class="section compare-b">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Comparativ operațional</span>
       <h2>Sistem tradițional vs. SALUX</h2>
     </div>
     <div class="container-narrow">
@@ -516,7 +453,6 @@ body { background: #FFFFFF; }
 <section class="section impl-b">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Implementare</span>
       <h2>Șase săptămâni. Trei faze.<br>Fără întreruperea activității.</h2>
     </div>
     <div class="flow-grid-3">
@@ -524,19 +460,19 @@ body { background: #FFFFFF; }
         <span class="stamp">Săptămânile 1-2</span>
         <h3>Configurare sistem</h3>
         <p>Import inventar (coșuri, străzi, contracte), configurare conturi și roluri, instruire echipe administrative. Sistemul devine operațional la finalul acestei faze.</p>
-        <div class="out"><b>→ output:</b><br>conturi active<br>nomenclatoare importate</div>
+        <div class="out"><b>Rezultat:</b><br>conturi active<br>nomenclatoare importate</div>
       </div>
       <div class="flow-step">
         <span class="stamp">Săptămânile 3-4</span>
         <h3>Pilot pe o rută</h3>
         <p>Activarea pilot cu o echipă de teren restrânsă pe o rută sau un sector, pentru calibrarea fluxurilor și validarea formatelor de raportare specifice contractului.</p>
-        <div class="out"><b>→ output:</b><br>primul raport lunar pilot<br>fluxuri validate</div>
+        <div class="out"><b>Rezultat:</b><br>primul raport lunar pilot<br>fluxuri validate</div>
       </div>
       <div class="flow-step">
         <span class="stamp">Săptămânile 5-6</span>
         <h3>Extindere completă</h3>
         <p>Extindere la întreaga operațiune. Migrare date istorice relevante în paralel cu activitatea curentă. Asistență la prima situație de plată generată complet din sistem.</p>
-        <div class="out"><b>→ output:</b><br>operațiune integrală în SALUX<br>prima situație de plată completă</div>
+        <div class="out"><b>Rezultat:</b><br>operațiune integrală în SALUX<br>prima situație de plată completă</div>
       </div>
     </div>
   </div>
@@ -546,7 +482,6 @@ body { background: #FFFFFF; }
 <section class="section seap-b">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Licențiere</span>
       <h2>Model de licențiere simplu</h2>
     </div>
     <div class="container-narrow">
@@ -554,7 +489,7 @@ body { background: #FFFFFF; }
         <div class="seap-badge">Fără costuri de implementare</div>
         <div class="seap-amount">0 lei</div>
         <div class="seap-unit">costuri de implementare</div>
-        <p class="seap-desc">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Specialiștii SALUX oferă asistență tehnică pe tot parcursul procedurii de achiziție - analiza compatibilității cu Ordinul ANRSC 98/2025, consultanță privind specificațiile tehnice și suport în etapele de evaluare și atribuire.</p>
+        <p class="seap-desc">SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Oferta se stabilește după numărul de contracte și de echipe din teren. Configurarea, importul datelor și instruirea echipelor sunt incluse.</p>
         <p class="seap-note">Contactați echipa SALUX pentru o ofertă adaptată dimensiunii contractului dumneavoastră.</p>
       </div>
     </div>
@@ -565,9 +500,8 @@ body { background: #FFFFFF; }
 <section class="section cta-final">
   <div class="container">
     <div class="cta-card">
-      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
       <h2>Programați o demonstrație și vedeți cum funcționează SALUX cu datele dumneavoastră.</h2>
-      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
+      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră: un sector, o lună, un raport. Vedeți concret fluxul de la teren până la situația de plată.</p>
       <div class="cta-row">
         <a href="/contact" class="btn btn-green btn-lg">Programați o demonstrație</a>
       </div>

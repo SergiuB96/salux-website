@@ -312,3 +312,24 @@ section.hero-photo .lede { color: rgba(255,255,255,.88); }
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3'/%3E%3C/svg%3E") center / contain no-repeat;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3'/%3E%3C/svg%3E") center / contain no-repeat;
 }
+
+
+/* ====== CAPTURI DIN APLICATIE IN CARDURI (index, operator, UAT) ====== */
+.shot { display: block; width: 100%; height: auto; background: white; border-radius: 14px; border: 1px solid rgba(11,24,41,.08); box-shadow: 0 1px 2px rgba(11,24,41,.06), 0 24px 48px -24px rgba(11,24,41,.28); }
+.feat-block .visual.bleed { aspect-ratio: auto; padding: 14px 0 0 14px; align-self: stretch; display: flex; min-height: 440px; }
+.feat-block .visual.bleed .shot { height: 100%; object-fit: cover; object-position: left top; }
+.feat-block.wide .visual.bleed { min-height: 0; }
+.feat-block.wide .visual.bleed .shot { height: auto; }
+.feat-block:has(.visual.bleed):not(.wide) { grid-template-columns: 4fr 7fr; gap: 44px; padding: 44px; }
+.feat-block.rev:has(.visual.bleed) { grid-template-columns: 4fr 7fr; } /* cu direction: rtl, prima coloana e in dreapta */
+.feat-block .visual.bleed .shot { border-radius: 14px 0 0 0; border-right: none; border-bottom: none; }
+.feat-block.rev .visual.bleed { padding: 14px 14px 0 0; }
+.feat-block.rev .visual.bleed .shot { border-radius: 0 14px 0 0; border-left: none; border-right: 1px solid rgba(11,24,41,.08); }
+.feat-block.wide .visual.bleed { padding: 14px 14px 0; }
+.feat-block.wide .visual.bleed .shot { border-radius: 14px 14px 0 0; border-bottom: none; }
+@media (max-width: 900px) {
+  .feat-block:has(.visual.bleed):not(.wide), .feat-block.rev:has(.visual.bleed) { grid-template-columns: 1fr; gap: 30px; padding: 32px 20px; }
+  .feat-block .visual.bleed, .feat-block.rev .visual.bleed { padding: 10px 0 0 10px; min-height: 260px; }
+  .feat-block.rev .visual.bleed .shot { border-radius: 14px 0 0 0; border-left: 1px solid rgba(11,24,41,.08); border-right: none; }
+  .feat-block.wide .visual.bleed { padding: 10px 10px 0; }
+}

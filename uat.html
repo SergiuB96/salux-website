@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/shared.css?v=20260929b">
+<link rel="stylesheet" href="assets/shared.css?v=20260929c">
 <style>
 body { background: #FFFFFF; }
 
@@ -50,26 +50,10 @@ body { background: #FFFFFF; }
 .feat-block .v-ink   { background: linear-gradient(135deg, #0B1829 0%, #1E3A5F 100%); color: white; }
 
 /* Mock hartă */
-.mock-map { background: white; border-radius: 14px; height: 100%; min-height: 220px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(11,24,41,.06); }
-.mock-map .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(11,24,41,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(11,24,41,.04) 1px, transparent 1px); background-size: 32px 32px; }
-.mock-map .pin { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 5px rgba(125,200,160,.25); }
-.mock-map .pin.blue { background: var(--accent); box-shadow: 0 0 0 5px rgba(59,114,196,.25); }
-.mock-map .pin.red { background: #EF4444; box-shadow: 0 0 0 5px rgba(239,68,68,.25); }
-.mock-map .badge { position: absolute; bottom: 12px; left: 12px; background: white; border-radius: 8px; padding: 6px 10px; font-size: 11px; font-family: var(--font-mono); color: var(--ink); box-shadow: 0 4px 12px rgba(11,24,41,.1); }
 
 /* Mock sesizare */
-.mock-sez { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 10px 30px rgba(11,24,41,.06); }
-.mock-sez .row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
-.mock-sez .row:last-child { border-bottom: none; }
-.mock-sez .badge-status { padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; margin-left: auto; }
-.mock-sez .open { background: #FEF3C7; color: #B45309; }
-.mock-sez .closed { background: var(--primary-50); color: var(--primary-700); }
 
 /* Mock dosar */
-.mock-dosar { background: rgba(255,255,255,.08); border-radius: 14px; padding: 20px; }
-.mock-dosar .item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 12px; color: rgba(255,255,255,.8); }
-.mock-dosar .item:last-child { border-bottom: none; }
-.mock-dosar .icon { width: 28px; height: 28px; border-radius: 6px; background: rgba(255,255,255,.1); display: grid; place-items: center; flex-shrink: 0; }
 
 /* SEAP highlight */
 .seap-b { background: var(--bg); }
@@ -233,7 +217,7 @@ body { background: #FFFFFF; }
       <span class="eyebrow accent"><span class="dot"></span>Soluție pentru UAT-uri</span>
       <h1>Monitorizarea serviciului de salubrizare<br>ca <span class="grad-blue">obligație îndeplinită sistematic.</span></h1>
       <div class="legal-cite">Art. 9 litera h din Legea 51/2006 - obligația autorităților locale de a monitoriza și controla modul de respectare a obligațiilor operatorilor</div>
-      <p class="lede">SALUX vă oferă instrumentul prin care această obligație trece de la o intenție administrativă la o practică documentată. Acces în timp real la activitatea operatorului, răspuns prompt la sesizările cetățenilor și documentație structurată pentru orice control.</p>
+      <p class="lede">SALUX face din această obligație o rutină documentată: vedeți activitatea operatorului pe măsură ce este raportată, verificați sesizările cetățenilor și aveți documentația pregătită pentru orice control.</p>
       <div class="cta-row">
         <a href="/contact" class="btn btn-accent btn-lg">Programați o demonstrație</a>
         <a href="#cum-functioneaza" class="btn btn-outline btn-lg">Cum funcționează</a>
@@ -246,7 +230,6 @@ body { background: #FFFFFF; }
 <section id="cum-functioneaza" class="section feat-blocks-uat">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow"><span class="dot"></span>Cum funcționează pentru autoritatea contractantă</span>
       <h2>Vizibilitate, răspuns prompt<br>și documentație pentru audit</h2>
     </div>
     <div class="feat-blocks">
@@ -254,21 +237,12 @@ body { background: #FFFFFF; }
       <!-- 1. Acces real-time -->
       <div class="feat-block">
         <div>
-          <span class="tag">Acces real-time</span>
+          <span class="tag">Acces în timp real</span>
           <h3>Activitatea operatorului, vizibilă în timp real</h3>
-          <p>Autoritatea contractantă primește un cont dedicat, cu permisiuni de citire, prin care vede în timp real localizarea echipelor de teren ale operatorului, programul lunar curent, prestațiile executate și abaterile față de planificare. Vizualizarea se face pe hartă, cu posibilitatea de a interoga orice stradă sau interval orar.</p>
+          <p>Autoritatea contractantă primește un cont dedicat, cu permisiuni de citire, prin care vede, pe măsură ce sunt raportate, prestațiile executate, programul lunar curent și abaterile față de planificare. Fiecare operațiune poate avea localizarea și fotografia înregistrate de echipă. Vizualizarea se face pe hartă, cu posibilitatea de a interoga orice stradă sau interval orar.</p>
         </div>
-        <div class="visual v-green">
-          <div class="mock-map">
-            <div class="grid-bg"></div>
-            <div class="pin" style="top: 22%; left: 30%;"></div>
-            <div class="pin blue" style="top: 50%; left: 55%;"></div>
-            <div class="pin" style="top: 70%; left: 25%;"></div>
-            <div class="pin red" style="top: 35%; left: 70%;"></div>
-            <div class="pin blue" style="top: 80%; left: 80%;"></div>
-            <div class="pin" style="top: 15%; left: 75%;"></div>
-            <div class="badge">5 echipe active acum</div>
-          </div>
+        <div class="visual v-green bleed">
+          <img class="shot" src="assets/screens/sarcini-zilnice.webp" alt="Prestațiile zilei raportate de operator, cu starea fiecărei operațiuni" width="1075" height="700" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -279,26 +253,8 @@ body { background: #FFFFFF; }
           <h3>Răspuns prompt la sesizările cetățenilor</h3>
           <p>Când un cetățean reclamă neefectuarea unei prestații pe o stradă, autoritatea poate consulta direct istoricul SALUX pe acel segment de drum, pentru intervalul indicat. Răspunsul devine prompt și documentat - fotografie cu localizare și marcaj temporal, nu un email de confirmare de la operator.</p>
         </div>
-        <div class="visual v-blue">
-          <div class="mock-sez">
-            <div style="font-size: 11px; font-weight: 700; margin-bottom: 6px; color: var(--ink);">Sesizări active</div>
-            <div class="row">
-              <span style="font-size: 11px;">Str. Mihai Eminescu - coș plin</span>
-              <span class="badge-status open">Deschis</span>
-            </div>
-            <div class="row">
-              <span style="font-size: 11px;">Bd. Carol - măturat neefectuat</span>
-              <span class="badge-status open">Deschis</span>
-            </div>
-            <div class="row">
-              <span style="font-size: 11px;">Str. Victoriei - deszăpezire</span>
-              <span class="badge-status closed">Rezolvat</span>
-            </div>
-            <div class="row">
-              <span style="font-size: 11px;">Piața Unirii - gunoi stradal</span>
-              <span class="badge-status closed">Rezolvat</span>
-            </div>
-          </div>
+        <div class="visual v-blue bleed">
+          <img class="shot" src="assets/screens/sesizari.webp" alt="Evidența sesizărilor, cu starea fiecăreia: înregistrate, în rezolvare, închise" width="1200" height="355" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -309,30 +265,8 @@ body { background: #FFFFFF; }
           <h3>Audit și control fără perioadă de pregătire</h3>
           <p>La auditul anual al Camerei de Conturi județene, documentația există, este structurată și se prezintă în formatul cerut. SALUX oferă răspunsul direct la întrebarea auditorului: cum ați monitorizat că operatorul și-a îndeplinit obligațiile contractuale?</p>
         </div>
-        <div class="visual v-ink">
-          <div class="mock-dosar">
-            <div style="font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,.5); margin-bottom: 10px;">DOSAR AUDIT - MAI 2026</div>
-            <div class="item">
-              <div class="icon">📄</div>
-              <span>Rapoarte lunare - 5 luni</span>
-            </div>
-            <div class="item">
-              <div class="icon">📍</div>
-              <span>Localizări operațiuni - 1.247</span>
-            </div>
-            <div class="item">
-              <div class="icon">📸</div>
-              <span>Fotografii - 3.891 probe</span>
-            </div>
-            <div class="item">
-              <div class="icon">✅</div>
-              <span>Sesizări rezolvate - 48</span>
-            </div>
-            <div class="item" style="border-bottom: none;">
-              <div class="icon">🔒</div>
-              <span>Jurnal audit - imutabil, 5 ani</span>
-            </div>
-          </div>
+        <div class="visual v-green bleed">
+          <img class="shot" src="assets/screens/jurnal-pdf.webp" alt="Jurnal de activitate generat în PDF, pentru dosarul de control" width="804" height="506" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -344,7 +278,6 @@ body { background: #FFFFFF; }
 <section class="section seap-b">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Licențiere</span>
       <h2>Model de licențiere simplu</h2>
     </div>
     <div class="container-narrow">
@@ -365,14 +298,13 @@ body { background: #FFFFFF; }
 <section class="section beneficii-b">
   <div class="container">
     <div class="s-head">
-      <span class="eyebrow accent"><span class="dot"></span>Beneficii directe</span>
       <h2>Trei dimensiuni de impact<br>pentru autoritatea contractantă</h2>
     </div>
     <div class="dim-grid">
       <div class="dim-card">
         <div class="dim-label">Operațional</div>
-        <h3>Timp de răspuns redus</h3>
-        <p>Timpul de răspuns la sesizările cetățenilor se reduce semnificativ, iar disputele privind realitatea prestațiilor se rezolvă prin consultarea sistemului, nu prin verificare telefonică sau schimburi de emailuri.</p>
+        <h3>Sesizări verificate direct</h3>
+        <p>Autoritatea verifică o sesizare direct în istoricul străzii, fără să aștepte confirmarea operatorului. Disputele privind realitatea prestațiilor se rezolvă din documente, nu prin telefon sau email.</p>
       </div>
       <div class="dim-card">
         <div class="dim-label">Financiar</div>
@@ -382,7 +314,7 @@ body { background: #FFFFFF; }
       <div class="dim-card">
         <div class="dim-label">Instituțional</div>
         <h3>Obligație îndeplinită sistematic</h3>
-        <p>Autoritatea îndeplinește în mod sistematic obligația de monitorizare prevăzută la art. 9 lit. h, Legea 51/2006 - fapt care se reflectă favorabil în rapoartele anuale ale Camerei de Conturi.</p>
+        <p>Autoritatea îndeplinește în mod sistematic obligația de monitorizare prevăzută la art. 9 lit. h din Legea 51/2006, iar la control documentația există deja.</p>
       </div>
     </div>
   </div>
@@ -392,9 +324,8 @@ body { background: #FFFFFF; }
 <section class="section cta-final-uat">
   <div class="container">
     <div class="cta-card">
-      <span class="eyebrow" style="background: rgba(255,255,255,.1); color: white; margin-bottom: 20px; display: inline-flex;"><span class="dot" style="background: var(--primary);"></span>Pasul următor</span>
       <h2>Programați o demonstrație și vedeți cum funcționează SALUX cu datele dumneavoastră.</h2>
-      <p>Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.</p>
+      <p>Pregătim demonstrația pe un contract real, cu o lună de date. Vedeți ce informații primește autoritatea contractantă și cum arată dosarul pentru un control.</p>
       <div class="cta-row">
         <a href="/contact" class="btn btn-green btn-lg">Programați o demonstrație</a>
       </div>

@@ -118,19 +118,6 @@ body { background: #FFFFFF; }
 
 .tag { display: block; font-size: 13px; font-weight: 600; color: var(--primary-700); margin-bottom: 10px; }
 
-/* Capturi reale din aplicatie: card cu colturi rotunjite, imaginea iese din colt */
-.shot { display: block; width: 100%; height: auto; background: white; border-radius: 14px; border: 1px solid rgba(11,24,41,.08); box-shadow: 0 1px 2px rgba(11,24,41,.06), 0 24px 48px -24px rgba(11,24,41,.28); }
-.feat-block .visual.bleed { padding: 14px 0 0 14px; align-self: stretch; display: flex; min-height: 440px; }
-.feat-block .visual.bleed .shot { height: 100%; object-fit: cover; object-position: left top; }
-.feat-block.wide .visual.bleed { min-height: 0; }
-.feat-block.wide .visual.bleed .shot { height: auto; }
-.feat-block:has(.visual.bleed):not(.wide) { grid-template-columns: 4fr 7fr; gap: 44px; padding: 44px; }
-.feat-block.rev:has(.visual.bleed) { grid-template-columns: 4fr 7fr; } /* cu direction: rtl, prima coloana e in dreapta */
-.feat-block .visual.bleed .shot { border-radius: 14px 0 0 0; border-right: none; border-bottom: none; }
-.feat-block.rev .visual.bleed { padding: 14px 14px 0 0; }
-.feat-block.rev .visual.bleed .shot { border-radius: 0 14px 0 0; border-left: none; border-right: 1px solid rgba(11,24,41,.08); }
-.feat-block.wide .visual.bleed { padding: 14px 14px 0; }
-.feat-block.wide .visual.bleed .shot { border-radius: 14px 14px 0 0; border-bottom: none; }
 
 /* Prezentare produs sub hero */
 .showcase { background: white; padding: 0 0 72px; }
@@ -312,13 +299,9 @@ body { background: #FFFFFF; }
   .feat-block.wide .wide-head { grid-template-columns: 1fr; gap: 24px; }
   .screens-grid { grid-template-columns: 1fr; }
   .screen-card .media { height: 240px; }
-  .feat-block:has(.visual.bleed):not(.wide), .feat-block.rev:has(.visual.bleed) { grid-template-columns: 1fr; gap: 30px; padding: 32px 20px; }
   .screen-card.span2 { grid-column: auto; }
   .showcase-frame { margin-top: -56px; padding: 8px; border-radius: var(--radius-lg); }
   .showcase-frame .shot { border-radius: 12px; }
-  .feat-block .visual.bleed, .feat-block.rev .visual.bleed { padding: 10px 0 0 10px; min-height: 260px; }
-  .feat-block.rev .visual.bleed .shot { border-radius: 14px 0 0 0; border-left: 1px solid rgba(11,24,41,.08); border-right: none; }
-  .feat-block.wide .visual.bleed { padding: 10px 10px 0; }
   .aud-grid { grid-template-columns: 1fr; }
   .aud-card { padding: 30px; }
   .aud-card h3 { font-size: 22px; padding-right: 60px; }
