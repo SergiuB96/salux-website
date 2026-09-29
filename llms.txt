@@ -13,7 +13,7 @@ generate automat, raportare ANRSC și ANPM, audit log imutabil.
 - [Acasă](https://salux.ro/): Prezentare generală platformă SaaS
 - [Operatori](https://salux.ro/operator): Soluția pentru operatorii privați de salubrizare
 - [UAT](https://salux.ro/uat): Soluția pentru autorități contractante
-- [Contact / Demo](https://salux.ro/contact): Solicitați o demonstrație de 30 de minute
+- [Contact / Demo](https://salux.ro/contact): Solicitați o demonstrație de o oră
 
 ## Blog - Conformitate și legislație salubrizare România
 
