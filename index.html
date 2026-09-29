@@ -110,7 +110,7 @@ body { background: #FFFFFF; }
 .feat-block .visual.v-ink   { background: var(--ink); color: white; }
 
 /* Blocul 3: text sus, previzualizare pe toată lățimea (rupe ritmul zigzag) */
-.feat-block.wide { grid-template-columns: 1fr; gap: 36px; }
+.feat-block.wide { grid-template-columns: 1fr; gap: 32px; padding: 44px; }
 .feat-block.wide .wide-head { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .feat-block.wide .bullets { margin: 0; }
 
@@ -118,21 +118,21 @@ body { background: #FFFFFF; }
 
 /* Capturi reale din aplicatie: card cu colturi rotunjite, imaginea iese din colt */
 .shot { display: block; width: 100%; height: auto; background: white; border-radius: 14px; border: 1px solid rgba(11,24,41,.08); box-shadow: 0 1px 2px rgba(11,24,41,.06), 0 24px 48px -24px rgba(11,24,41,.28); }
-.feat-block .visual.bleed { padding: 36px 0 0 36px; align-self: stretch; display: flex; min-height: 380px; }
+.feat-block .visual.bleed { padding: 14px 0 0 14px; align-self: stretch; display: flex; min-height: 440px; }
 .feat-block .visual.bleed .shot { height: 100%; object-fit: cover; object-position: left top; }
 .feat-block.wide .visual.bleed { min-height: 0; }
 .feat-block.wide .visual.bleed .shot { height: auto; }
-.feat-block:has(.visual.bleed):not(.wide) { grid-template-columns: 5fr 6fr; gap: 48px; }
-.feat-block.rev:has(.visual.bleed) { grid-template-columns: 6fr 5fr; }
+.feat-block:has(.visual.bleed):not(.wide) { grid-template-columns: 4fr 7fr; gap: 44px; padding: 44px; }
+.feat-block.rev:has(.visual.bleed) { grid-template-columns: 4fr 7fr; } /* cu direction: rtl, prima coloana e in dreapta */
 .feat-block .visual.bleed .shot { border-radius: 14px 0 0 0; border-right: none; border-bottom: none; }
-.feat-block.rev .visual.bleed { padding: 36px 36px 0 0; }
+.feat-block.rev .visual.bleed { padding: 14px 14px 0 0; }
 .feat-block.rev .visual.bleed .shot { border-radius: 0 14px 0 0; border-left: none; border-right: 1px solid rgba(11,24,41,.08); }
-.feat-block.wide .visual.bleed { padding: 40px 40px 0; }
+.feat-block.wide .visual.bleed { padding: 14px 14px 0; }
 .feat-block.wide .visual.bleed .shot { border-radius: 14px 14px 0 0; border-bottom: none; }
 
 /* Prezentare produs sub hero */
 .showcase { background: white; padding: 0 0 72px; }
-.showcase-frame { margin-top: -96px; position: relative; z-index: 2; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 14px; box-shadow: 0 40px 80px -40px rgba(11,24,41,.45); }
+.showcase-frame { margin-top: -96px; position: relative; z-index: 2; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 10px; box-shadow: 0 40px 80px -40px rgba(11,24,41,.45); }
 .showcase-frame .shot { border-radius: 16px; box-shadow: none; }
 .showcase-cap { max-width: 640px; margin: 22px auto 0; text-align: center; font-size: 15px; color: var(--muted); }
 
@@ -142,10 +142,10 @@ body { background: #FFFFFF; }
 .screen-card { background: white; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s, box-shadow .2s; }
 .screen-card:hover { border-color: var(--line-strong); box-shadow: var(--shadow-lg); }
 .screen-card.span2 { grid-column: span 2; }
-.screen-card .media { padding: 28px 0 0 28px; background: var(--primary-50); height: 340px; display: flex; overflow: hidden; }
+.screen-card .media { padding: 14px 0 0 14px; background: var(--primary-50); height: 340px; display: flex; overflow: hidden; }
 .screen-card .media .shot { height: 100%; object-fit: cover; object-position: left top; }
 .screen-card.alt .media { background: var(--accent-50); }
-.screen-card.doc .media { padding: 28px; align-items: center; justify-content: center; }
+.screen-card.doc .media { padding: 14px; align-items: center; justify-content: center; }
 .screen-card .media .shot { border-radius: 12px 0 0 0; border-right: none; border-bottom: none; }
 .screen-card.doc .media .shot { border-radius: 10px; border: 1px solid rgba(11,24,41,.08); height: auto; object-fit: contain; }
 .screen-card .body { padding: 22px 26px 26px; }
@@ -264,13 +264,13 @@ body { background: #FFFFFF; }
   .feat-block.wide .wide-head { grid-template-columns: 1fr; gap: 24px; }
   .screens-grid { grid-template-columns: 1fr; }
   .screen-card .media { height: 240px; }
-  .feat-block:has(.visual.bleed):not(.wide), .feat-block.rev:has(.visual.bleed) { grid-template-columns: 1fr; gap: 30px; }
+  .feat-block:has(.visual.bleed):not(.wide), .feat-block.rev:has(.visual.bleed) { grid-template-columns: 1fr; gap: 30px; padding: 32px 20px; }
   .screen-card.span2 { grid-column: auto; }
   .showcase-frame { margin-top: -56px; padding: 8px; border-radius: var(--radius-lg); }
   .showcase-frame .shot { border-radius: 12px; }
-  .feat-block .visual.bleed, .feat-block.rev .visual.bleed { padding: 24px 0 0 24px; min-height: 260px; }
+  .feat-block .visual.bleed, .feat-block.rev .visual.bleed { padding: 10px 0 0 10px; min-height: 260px; }
   .feat-block.rev .visual.bleed .shot { border-radius: 14px 0 0 0; border-left: 1px solid rgba(11,24,41,.08); border-right: none; }
-  .feat-block.wide .visual.bleed { padding: 24px 24px 0; }
+  .feat-block.wide .visual.bleed { padding: 10px 10px 0; }
   .aud-grid { grid-template-columns: 1fr; }
   .aud-card { padding: 30px; }
   .aud-card h3 { font-size: 22px; padding-right: 60px; }
