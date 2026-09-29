@@ -241,6 +241,50 @@ body { background: #FFFFFF; }
 .mod-icon { color: var(--primary-700); font-size: 17px; font-weight: 400; flex-shrink: 0; margin-top: 1px; transition: transform .25s; }
 .mod.mod-open .mod-icon { transform: rotate(45deg); }
 
+
+/* Harta operatorilor licentiati pe judete */
+.ho-section { background: white; }
+.ho-wrap { display: grid; grid-template-columns: 7fr 5fr; gap: 28px; align-items: start; }
+.ho-mapcard { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 24px; }
+.ho-map { aspect-ratio: 900 / 638; }
+.ho-map svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ho-map path { stroke: white; stroke-width: 1; cursor: pointer; transition: fill .15s ease, stroke .15s ease; outline: none; }
+.ho-map path.lvl0 { fill: #E3E8EF; }
+.ho-map path.lvl1 { fill: #CFEBDC; }
+.ho-map path.lvl2 { fill: #9FD6B8; }
+.ho-map path.lvl3 { fill: #5FB48A; }
+.ho-map path.lvl4 { fill: #2E7350; }
+.ho-map path:hover, .ho-map path:focus-visible { stroke: var(--ink); stroke-width: 1.6; }
+.ho-map path.is-active { fill: var(--accent-600); stroke: var(--ink); stroke-width: 2; }
+.ho-legend { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 16px; font-size: 13px; color: var(--muted); }
+.ho-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.ho-legend i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.ho-side { display: grid; gap: 14px; }
+.ho-select-wrap label { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.ho-select { width: 100%; min-height: 48px; padding: 0 14px; font: inherit; font-size: 15px; color: var(--ink); background: white; border: 1px solid var(--line-strong); border-radius: 12px; }
+.ho-select:focus-visible { outline: 3px solid rgba(46,115,80,.35); outline-offset: 1px; }
+.ho-panel { background: white; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 26px; min-height: 320px; display: flex; flex-direction: column; }
+.ho-kicker { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+.ho-title { font-size: 26px; margin-bottom: 6px; }
+.ho-count { font-size: 15px; font-weight: 600; color: var(--primary-800, #2E7350); margin-bottom: 14px; }
+.ho-hint { font-size: 15px; line-height: 1.6; }
+.ho-list { list-style: none; margin: 0 0 24px; padding: 0; max-height: 360px; overflow-y: auto; display: grid; gap: 2px; }
+.ho-list li { padding: 11px 0; display: grid; gap: 2px; }
+.ho-list li + li { border-top: 1px solid var(--line); }
+.ho-op { font-size: 15px; font-weight: 600; color: var(--ink); }
+.ho-meta { font-size: 13px; color: var(--muted); }
+.ho-cta { margin-top: auto; align-self: flex-start; }
+.ho-source { font-size: 13px; color: var(--muted); margin-top: 18px; line-height: 1.6; }
+.ho-source a { color: var(--accent-600); text-decoration: underline; text-underline-offset: 2px; }
+#harta-operatori.is-loading .ho-map { background: var(--bg-alt); border-radius: 16px; animation: ho-pulse 1.4s ease-in-out infinite; }
+@keyframes ho-pulse { 50% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) { #harta-operatori.is-loading .ho-map { animation: none; } .ho-map path { transition: none; } }
+@media (max-width: 900px) {
+  .ho-wrap { grid-template-columns: 1fr; }
+  .ho-mapcard { padding: 14px; border-radius: var(--radius-lg); }
+  .ho-panel { min-height: 0; padding: 20px; }
+  .ho-title { font-size: 22px; }
+}
 @media (max-width: 900px) {
   .compare-hdr-row, .compare-row, .compare-footer-row { grid-template-columns: 1fr 90px 90px; padding: 13px 16px; }
   .c-lbl-party, .c-val { padding-left: 8px; }
@@ -596,6 +640,40 @@ body { background: #FFFFFF; }
   </div>
 </section>
 
+<!-- HARTA OPERATORILOR -->
+<section class="section ho-section" id="operatori-judete">
+  <div class="container">
+    <div class="s-head">
+      <h2>Operatori de salubrizare licențiați, pe județe</h2>
+      <p>Lista oficială ANRSC a operatorilor cu licență pentru serviciul de salubrizare, grupați după județul sediului.</p>
+    </div>
+    <div class="ho-wrap is-loading" id="harta-operatori">
+      <div class="ho-mapcard">
+        <div class="ho-map" aria-busy="true"></div>
+        <div class="ho-legend" aria-hidden="true">
+          <span><i style="background:#E3E8EF"></i>0</span>
+          <span><i style="background:#CFEBDC"></i>1-2</span>
+          <span><i style="background:#9FD6B8"></i>3-5</span>
+          <span><i style="background:#5FB48A"></i>6-10</span>
+          <span><i style="background:#2E7350"></i>peste 10 operatori</span>
+        </div>
+      </div>
+      <div class="ho-side">
+        <div class="ho-select-wrap">
+          <label for="ho-select">Alegeți județul</label>
+          <select id="ho-select" class="ho-select" disabled>
+            <option value="">Toată țara</option>
+          </select>
+        </div>
+        <div class="ho-panel" aria-live="polite">
+          <p class="ho-hint">Se încarcă datele...</p>
+        </div>
+      </div>
+    </div>
+    <p class="ho-source">Limite administrative: geo-spatial.org (CC BY-SA 4.0).</p>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="section faq-b" id="faq">
   <div class="container">
@@ -708,4 +786,5 @@ body { background: #FFFFFF; }
 })();
 
 </script>
+<script src="assets/harta-operatori.js?v=20260929" defer></script>
 </body></html>

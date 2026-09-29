@@ -1,0 +1,2032 @@
+{
+ "source": "Evidența licențelor valabile la data de 06.07.2026 (ANRSC, serviciul de salubrizare)",
+ "source_url": "https://www.anrsc.ro/wp-content/uploads/2026/07/evidenta-licente-sal-06.07.2026.pdf",
+ "source_date": "06.07.2026",
+ "retrieved": "2026-09-29",
+ "scope_note": "Operatori cu licență ANRSC valabilă la 29.09.2026 pentru măturatul, spălatul și stropitul căilor publice, curățarea și transportul zăpezii sau pentru serviciul complet de salubrizare a localităților, grupați după județul sediului (prefixul codului de operator ANRSC, verificat cu localitatea sediului din listă).",
+ "activities_legend": {
+  "salubrizare": "salubrizare a localităților (licență pentru întregul serviciu)",
+  "maturat": "măturat, spălat, stropit și întreținerea căilor publice",
+  "zapada": "curățarea și transportul zăpezii de pe căile publice"
+ },
+ "counties": {
+  "AB": [
+   {
+    "name": "SALUBRITATE APUSENI SRL",
+    "license": "nr. 6232/26.05.2026 clasa 3",
+    "valid_until": "02.02.2028",
+    "city": "Câmpeni",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICIUL DE SALUBRIZARE ȘI ADMINISTRARE A DOMENIULUI PUBLIC ȘI PRIVAT CÂMPENI",
+    "license": "nr. 5619/16.12.2021 clasa 3",
+    "valid_until": "16.12.2026",
+    "city": "Câmpeni",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE ADMINISTRAREA PATRIMONIULUI",
+    "license": "nr. 4470/23.11.2023 clasa 3; nr. 4471/23.11.2023 clasa 3",
+    "valid_until": "28.11.2028",
+    "city": "Sebeș",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIRE LOCALĂ CUGIR",
+    "license": "nr. 6901/19.08.2024 clasa 3; nr. 6902/19.08.2024 clasa 3",
+    "valid_until": "19.08.2029",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE INTERES LOCAL ADMINISTRAȚIA PATRIMONIULUI LOCAL",
+    "license": "nr. 6950/16.10.2024 clasa 3; nr. 6951/16.10.2024 clasa 3",
+    "valid_until": "16.10.2029",
+    "city": "Aiud",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "AR": [
+   {
+    "name": "FCC ENVIRONMENT ROMÂNIA SRL",
+    "license": "nr. 5104/13.11.2025 clasa 1",
+    "valid_until": "24.11.2030",
+    "city": "Arad",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE AL ORAȘULUI NĂDLAC",
+    "license": "nr. 5601/03.12.2021 clasa 3; nr. 5602/03.12.2021 clasa 3",
+    "valid_until": "03.12.2026",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBI-SERV PECICA SA",
+    "license": "nr. 6240/03.03.2023 clasa 3; nr. 6241/03.03.2023 clasa 3",
+    "valid_until": "02.09.2027",
+    "city": "Pecica",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "AG": [
+   {
+    "name": "SALUBRITATE 2000 SA",
+    "license": "nr. 6576/20.12.2023 clasa 2",
+    "valid_until": "27.10.2028",
+    "city": "Pitești",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SALUBRITATE PUBLICĂ URBANĂ CURTEA DE ARGEȘ SRL",
+    "license": "nr. 7437/19.11.2025 clasa 3",
+    "valid_until": "01.10.2030",
+    "city": "Curtea de Argeș",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICII EDILITARE PENTRU COMUNITATE MIOVENI SRL",
+    "license": "nr. 7525/20.01.2026 clasa 3; nr. 7526/20.01.2026 clasa 3",
+    "valid_until": "20.01.2031",
+    "city": "Mioveni",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE ADMINISTRAREA DOMENIULUI PUBLIC ȘI PRIVAT",
+    "license": "nr. 6217/03.03.2023 clasa 3; nr. 6218/03.03.2023 clasa 3",
+    "valid_until": "03.03.2028",
+    "city": "Câmpulung",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ",
+    "license": "nr. 6461/23.08.2023 clasa 3",
+    "valid_until": "23.08.2028",
+    "city": "Curtea de Argeș",
+    "activities": [
+     "zapada"
+    ]
+   }
+  ],
+  "BC": [
+   {
+    "name": "COMPANIA DE UTILITĂȚI PUBLICE TÎRGU OCNA SA",
+    "license": "nr. 6040/17.10.2022 clasa 3; nr. 6041/17.10.2022 clasa 3",
+    "valid_until": "02.09.2027",
+    "city": "Târgu Ocna",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "DOMENIU PUBLIC ȘI PRIVAT ONEȘTI SA",
+    "license": "nr. 5968/30.08.2022 clasa 3; nr. 5969/30.08.2022 clasa 3",
+    "valid_until": "29.06.2027",
+    "city": "Onești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GYNDANY IMPEX SRL",
+    "license": "nr. 7431/14.11.2025 clasa 3",
+    "valid_until": "14.11.2026",
+    "city": "Buhuși",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC LOCAL DE SALUBRIZARE AL ORAȘULUI SLĂNIC MOLDOVA",
+    "license": "nr. 6913/23.09.2024 clasa 3",
+    "valid_until": "16.10.2028",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SOMA SRL",
+    "license": "nr. 6357/27.02.2024 clasa 1",
+    "valid_until": "19.06.2028",
+    "city": "Bacău",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "BH": [
+   {
+    "name": "ADMINISTRAȚIA DOMENIULUI PUBLIC BEIUȘ SA",
+    "license": "nr. 6575/20.12.2023 clasa 3; nr. 7000/03.12.2024 clasa 3",
+    "valid_until": "30.06.2028",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "RER VEST SA",
+    "license": "nr. 7363/23.09.2025 clasa 1",
+    "valid_until": "01.04.2029",
+    "city": "Oradea",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICII PUBLICE, AGREMENT ȘI SALUBRITATE SPAS SA",
+    "license": "nr. 5818/20.04.2022 clasa 3",
+    "valid_until": "28.02.2027",
+    "city": "Sânmartin",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE ALIMENTARE CU APĂ, CANALIZARE ȘI SALUBRIZARE",
+    "license": "nr. 5085/06.08.2025 clasa 3",
+    "valid_until": "21.08.2030",
+    "city": "Marghita",
+    "activities": [
+     "maturat"
+    ]
+   }
+  ],
+  "BN": [
+   {
+    "name": "DIRECȚIA DE GOSPODĂRIE COMUNALĂ",
+    "license": "nr. 6432/04.08.2023 clasa 3; nr. 6433/04.08.2023 clasa 3",
+    "valid_until": "04.08.2028",
+    "city": "Beclean",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "DIRECȚIA DE INFRASTRUCTURĂ ȘI SERVICII BISTRIȚA",
+    "license": "nr. 5590/18.08.2023 clasa 2",
+    "valid_until": "18.11.2026",
+    "city": "",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "LOCAL SERV NĂSĂUD SRL",
+    "license": "nr. 7511/19.01.2026 clasa 3; nr. 7512/19.01.2026 clasa 3",
+    "valid_until": "05.09.2030",
+    "city": "Năsăud",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBANA SA",
+    "license": "nr. 6298/10.05.2023 clasa 2",
+    "valid_until": "01.01.2028",
+    "city": "Bistrița",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "BT": [
+   {
+    "name": "LOCAL SERVICII SRL",
+    "license": "nr. 7157/14.04.2025 clasa 3; nr. 7158/14.04.2025 clasa 3",
+    "valid_until": "18.02.2030",
+    "city": "Flămânzi",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICII PUBLICE LOCALE SRL",
+    "license": "nr. 7622/19.03.2026 clasa 3; nr. 7623/19.03.2026 clasa 3",
+    "valid_until": "04.02.2031",
+    "city": "Dorohoi",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBAN SERV SA",
+    "license": "nr. 7456/03.12.2025 clasa 2; nr. 7457/03.12.2025 clasa 2",
+    "valid_until": "14.08.2030",
+    "city": "Botoșani",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "BV": [
+   {
+    "name": "CIBIN SRL",
+    "license": "nr. 5932/11.06.2026 clasa 2",
+    "valid_until": "18.04.2028",
+    "city": "Săcele",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "COMPANIA DE SERVICII PUBLICE ZARNESTI S.R.L.",
+    "license": "nr. 6837/15.07.2024 clasa 3; nr. 6838/15.07.2024 clasa 3",
+    "valid_until": "31.01.2029",
+    "city": "Zărnesti",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "COMPREST SA",
+    "license": "nr. 6588/24.02.2026 clasa 1",
+    "valid_until": "31.12.2030",
+    "city": "Brașov",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "ECOSISTEM VICTORIA SRL",
+    "license": "nr. 6638/06.02.2024 clasa 3",
+    "valid_until": "01.01.2029",
+    "city": "Victoria",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "MARIENBURG SCUP SRL",
+    "license": "nr. 5903/11.07.2022 clasa 3",
+    "valid_until": "21.04.2027",
+    "city": "Feldioara",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SALCOSERV SA",
+    "license": "nr. 6730/11.03.2024 clasa 3",
+    "valid_until": "04.03.2028",
+    "city": "Făgăraș",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICII DE GOSPODĂRIRE MĂGURA CODLEI SRL",
+    "license": "nr. 6252/18.04.2024 clasa 3",
+    "valid_until": "16.03.2028",
+    "city": "Codlea",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL DE UTILITATI PUBLICE RÂȘNOV",
+    "license": "nr. 6492/21.09.2023 clasa 3",
+    "valid_until": "21.09.2028",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC AQUASAL TRANSCARPATICA - FUNDATA",
+    "license": "nr. 7304/07.08.2025 clasa 3",
+    "valid_until": "07.08.2030",
+    "city": "Fundata",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE CRISTIAN",
+    "license": "nr. 7094/18.02.2025 clasa 3",
+    "valid_until": "18.02.2030",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC RUPEA SRL",
+    "license": "nr. 6814/05.06.2024 clasa 3; nr. 6815/05.06.2024 clasa 3",
+    "valid_until": "01.02.2029",
+    "city": "Rupea",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "UTILITĂȚI PUBLICE BRAN SRL",
+    "license": "nr. 7285/04.08.2025 clasa 3",
+    "valid_until": "05.06.2030",
+    "city": "Sohodol Bran",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "BR": [
+   {
+    "name": "DIRECȚIA SERVICIILOR PUBLICE",
+    "license": "nr. 7619/19.03.2026 clasa 3; nr. 7620/19.03.2026 clasa 3",
+    "valid_until": "19.03.2031",
+    "city": "Ianca",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "B": [
+   {
+    "name": "ADMINISTRATIA SERVICIULUI PUBLIC DE SALUBRIZARE SECTOR 6",
+    "license": "nr. 6932/02.10.2024 clasa 1; nr. 6933/02.10.2024 clasa 1",
+    "valid_until": "02.10.2029",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "BIN GO SOLUTONS SRL (UNITED WASTE SOLUTIONS SRL)",
+    "license": "nr. 7278/01.08.2025 clasa 1",
+    "valid_until": "06.11.2029",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "BRAI-CATA SRL",
+    "license": "nr. 7217/12.06.2025 clasa 1",
+    "valid_until": "01.03.2028",
+    "city": "București",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "COMPANIA ROMPREST SERVICE SA",
+    "license": "nr. 6397/25.07.2023 clasa 1",
+    "valid_until": "18.04.2027",
+    "city": "București",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "IRIDEX GROUP SALUBRIZARE SRL",
+    "license": "nr. 6274/20.04.2023 clasa 1",
+    "valid_until": "20.04.2028",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SALSERV ECOSISTEM SRL",
+    "license": "nr. 5866/20.06.2022 clasa 2",
+    "valid_until": "20.06.2027",
+    "city": "București",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SUPERCOM SA",
+    "license": "nr. 6832/25.06.2024 clasa 1",
+    "valid_until": "25.06.2029",
+    "city": "București",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "BZ": [
+   {
+    "name": "RER SUD SA",
+    "license": "nr. 6697/26.02.2024 clasa 1",
+    "valid_until": "26.02.2029",
+    "city": "Buzău",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE",
+    "license": "nr. 7486/17.12.2025 clasa 3",
+    "valid_until": "17.12.2030",
+    "city": "Cilibia",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "TERMO PREST PON SRL",
+    "license": "nr. 7152/11.04.2025 clasa 3",
+    "valid_until": "17.12.2029",
+    "city": "Nehoiu",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "CS": [
+   {
+    "name": "SERVICIUL PUBLIC – DIRECȚIA PENTRU ÎNTREȚINEREA ȘI REPARAREA PATRIMONIULUI CONSILIULUI LOCAL, SERVICIUL DE ILUMINAT PUBLIC ȘI DESZĂPEZIRE",
+    "license": "nr. 7115/11.03.2025 clasa 2; nr. 7116/11.03.2025 clasa 2; nr. 7669/08.05.2026 clasa 2",
+    "valid_until": "30.09.2030",
+    "city": "Reșița",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ AL ORAȘULUI BĂILE HERCULANE",
+    "license": "nr. 7585/25.02.2026 clasa 3; nr. 7586/25.02.2026 clasa 3",
+    "valid_until": "25.02.2031",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ MĂURENI",
+    "license": "nr. 5759/15.03.2022 clasa 3; nr. 5760/15.03.2022 clasa 3",
+    "valid_until": "15.03.2027",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE EZERIȘ",
+    "license": "nr. 5562/28.10.2021 clasa 3; nr. 5563/28.10.2021 clasa 3",
+    "valid_until": "28.10.2026",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE MOLDOVA NOUĂ",
+    "license": "nr. 5930/25.07.2022 clasa 3; nr. 5931/25.07.2022 clasa 3",
+    "valid_until": "25.07.2027",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "TRANSAL URBIS SRL",
+    "license": "nr. 7299/06.08.2025 clasa 3",
+    "valid_until": "27.09.2027",
+    "city": "Caransebeș",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "CL": [
+   {
+    "name": "ECOSAL SERVICII OLTENITA SRL",
+    "license": "nr. 7328/26.08.2025 clasa 3; nr. 7329/26.08.2025 clasa 3",
+    "valid_until": "07.07.2030",
+    "city": "Oltenița",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL COMUNITAR DE UTILITĂȚI PUBLICE FUNDULEA",
+    "license": "nr. 7632/02.04.2026 clasa 3; nr. 7633/02.04.2026 clasa 3",
+    "valid_until": "02.04.2031",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "CJ": [
+   {
+    "name": "ADMINISTRAREA DOMENIULUI PUBLIC GHERLA SA",
+    "license": "nr. 6918/25.09.2024 clasa 3",
+    "valid_until": "04.03.2029",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "BRANTNER SERVICII ECOLOGICE SRL",
+    "license": "nr. 7509/19.01.2026 clasa 1",
+    "valid_until": "19.01.2031",
+    "city": "Cluj-Napoca",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "COMPANIA DE SALUBRITATE CÂMPIA TURZII SA",
+    "license": "nr. 6893/19.08.2024 clasa 3",
+    "valid_until": "01.03.2029",
+    "city": "Câmpia Turzii",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "DOMENIUL PUBLIC CÂMPIA TURZII SA",
+    "license": "nr. 5578/03.11.2021 clasa 3",
+    "valid_until": "12.10.2026",
+    "city": "",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "LUKACOM INVEST SRL",
+    "license": "nr. 7020/17.12.2024 clasa 3; nr. 7021/17.12.2024 clasa 3",
+    "valid_until": "11.07.2028",
+    "city": "Florești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRITERMSERV SRL",
+    "license": "nr. 7583/25.02.2026 clasa 3; nr. 7584/25.02.2026 clasa 3",
+    "valid_until": "13.11.2030",
+    "city": "Huedin",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALVERES SRL",
+    "license": "nr. 6569/20.12.2023 clasa 3; nr. 6570/20.12.2023 clasa 3",
+    "valid_until": "22.06.2028",
+    "city": "Cluj Napoca",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "CT": [
+   {
+    "name": "AGIGEA SERV CONSTRUCT SRL",
+    "license": "nr. 7528/20.01.2026 clasa 3",
+    "valid_until": "29.09.2030",
+    "city": "Agigea",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "ALACAP SRL",
+    "license": "nr. 7634/02.04.2026 clasa 3",
+    "valid_until": "06.11.2030",
+    "city": "Poarta Alba",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "CONFORT URBAN CARSIUM SRL",
+    "license": "nr. 7666/30.04.2026 clasa 3; nr. 7667/30.04.2026 clasa 3",
+    "valid_until": "02.12.2029",
+    "city": "Hârșova",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "LIMANU VERDE SERVICII DE CURĂȚENIE SRL",
+    "license": "nr. 6563/04.12.2023 clasa 3",
+    "valid_until": "21.04.2028",
+    "city": "Limanu",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "OVI-PRESTCON SRL",
+    "license": "nr. 7592/25.02.2026 clasa 3",
+    "valid_until": "30.01.2030",
+    "city": "Ovidiu",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "POLARIS M.HOLDING SRL",
+    "license": "nr. 7438/19.11.2025 clasa 1",
+    "valid_until": "19.11.2030",
+    "city": "Constanța",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SALUBRIZARE ȘI GOSPODĂRIE CUMPĂNA S.R.L.",
+    "license": "nr. 6647/09.02.2024 clasa 3",
+    "valid_until": "25.10.2028",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICII PUBLICE DE MENTENANȚĂ MIHAIL KOGĂLNICEANU SRL",
+    "license": "nr. 5558/26.10.2021 clasa 3",
+    "valid_until": "01.10.2026",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL COMUNITAR DE UTILITĂȚI PUBLICE ALBEȘTI",
+    "license": "nr. 6928/25.09.2024 clasa 3",
+    "valid_until": "25.09.2029",
+    "city": "Albești",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL LOCAL DE SALUBRIZARE LUMINA",
+    "license": "nr. 6909/10.09.2024 clasa 3",
+    "valid_until": "10.09.2029",
+    "city": "Lumina",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL LOCAL DE SALUBRIZARE NICOLAE BĂLCESCU",
+    "license": "nr. 5696/09.02.2022 clasa 3",
+    "valid_until": "09.02.2027",
+    "city": "",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ ȘI PRESTĂRI SERVICII DESTINATE PROTECȚIEI POPULAȚIEI-COSTINEȘTI",
+    "license": "nr. 5554/26.10.2021 clasa 3; nr. 6978/14.11.2024 clasa 3",
+    "valid_until": "14.11.2029",
+    "city": "Costinești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODARIRE COMUNALA TECHIRGHIOL",
+    "license": "nr. 6522/27.10.2023 clasa 3; nr. 6523/27.10.2023 clasa 3",
+    "valid_until": "27.10.2028",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE CORBU",
+    "license": "nr. 7462/04.12.2025 clasa 3",
+    "valid_until": "04.12.2030",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "UTILITĂȚI PUBLICE- GOSPODĂRIA COMUNALĂ S.R.L.",
+    "license": "nr. 7045/22.01.2025 clasa 3",
+    "valid_until": "30.04.2029",
+    "city": "Cernavodă",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "CV": [
+   {
+    "name": "GOS-TRANS-COM SRL",
+    "license": "nr. 6115/15.12.2022 clasa 3; nr. 6116/15.12.2022 clasa 3",
+    "valid_until": "18.10.2027",
+    "city": "Covasna",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GOSP-COM SRL",
+    "license": "nr. 6591/20.12.2023 clasa 3",
+    "valid_until": "27.11.2028",
+    "city": "Târgu Secuiesc",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC LOCAL",
+    "license": "nr. 5673/19.01.2022 clasa 3",
+    "valid_until": "19.01.2027",
+    "city": "Târgu Secuiesc",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "TEGA SA",
+    "license": "nr. 7244/25.06.2025 clasa 2",
+    "valid_until": "23.05.2030",
+    "city": "Sfântu Gheorghe",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "DB": [
+   {
+    "name": "DIRECȚIA DE SALUBRITATE",
+    "license": "nr. 7342/03.09.2025 clasa 2; nr. 7343/03.09.2025 clasa 2",
+    "valid_until": "03.09.2030",
+    "city": "Târgoviște",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "IGO SA",
+    "license": "nr. 4555/26.03.2024 clasa 3",
+    "valid_until": "30.01.2027",
+    "city": "Găești",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SALUB TITU SRL",
+    "license": "nr. 6016/04.10.2022 clasa 3",
+    "valid_until": "22.08.2027",
+    "city": "Titu",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICII COMUNITARE DE UTILITĂȚI PUBLICE PUCIOASA SCUP SRL",
+    "license": "nr. 6085/24.11.2022 clasa 3; nr. 6086/24.11.2022 clasa 3",
+    "valid_until": "01.11.2027",
+    "city": "Pucioasa",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL COMUNITAR UTILITĂȚI PUBLICE AL ORAȘULUI FIENI",
+    "license": "nr. 7274/30.07.2025 clasa 3; nr. 7275/30.07.2025 clasa 3",
+    "valid_until": "30.07.2030",
+    "city": "Fieni",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "DJ": [
+   {
+    "name": "SALUBRITATE CRAIOVA SRL",
+    "license": "nr. 7689/25.05.2026 clasa 1; nr. 7690/25.05.2026 clasa 1",
+    "valid_until": "31.03.2031",
+    "city": "Craiova",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE ȘI SPAȚII VERZI",
+    "license": "nr. 6409/27.07.2023 clasa 3; nr. 6410/27.07.2023 clasa 3",
+    "valid_until": "27.07.2028",
+    "city": "Băilești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "GL": [
+   {
+    "name": "COMPANIA DE UTILITĂȚI PUBLICE TECUCI SRL",
+    "license": "nr. 5986/31.08.2022 clasa 3; nr. 5987/31.08.2022 clasa 3",
+    "valid_until": "01.07.2027",
+    "city": "Tecuci",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GOSPODĂRIE COMUNALĂ ȘENDRENI SRL",
+    "license": "nr. 7007/05.12.2014 clasa 3",
+    "valid_until": "01.07.2029",
+    "city": "Șendreni",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL DE ALIMENTARE CU APĂ AL COMUNEI MUNTENI",
+    "license": "nr. 6875/07.08.2024 clasa 3",
+    "valid_until": "07.08.2029",
+    "city": "",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC ECOSAL GALAȚI",
+    "license": "nr. 7010/10.12.2024 clasa 2",
+    "valid_until": "10.12.2029",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "GR": [
+   {
+    "name": "GIURGIU SERVICII PUBLICE SA",
+    "license": "nr. 5961/12.08.2022 clasa 2; nr. 5962/12.08.2022 clasa 2",
+    "valid_until": "21.04.2027",
+    "city": "Giurgiu",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "GJ": [
+   {
+    "name": "DIRECȚIA PUBLICĂ MOTRU SA",
+    "license": "nr. 7639/06.04.2026 clasa 3",
+    "valid_until": "23.03.2031",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "MATSALUBRIS SRL",
+    "license": "nr. 6258/03.04.2023 clasa 3",
+    "valid_until": "12.10.2027",
+    "city": "Mătăsari",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL DE ILUMINAT PUBLIC AL ORAȘULUI ROVINARI",
+    "license": "nr. 5596/18.11.2021 clasa 3; nr. 5597/18.11.2021 clasa 3",
+    "valid_until": "18.11.2026",
+    "city": "Rovinari",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIRE COMUNAL AL COMUNEI TURBUREA",
+    "license": "nr. 7031/18.12.2024 clasa 3",
+    "valid_until": "18.12.2029",
+    "city": "Turburea",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "TURCENISAL SRL",
+    "license": "nr. 5904/11.07.2022 clasa 3",
+    "valid_until": "31.03.2027",
+    "city": "Turceni",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "HR": [
+   {
+    "name": "DEZVOLTARE URBANA SRL",
+    "license": "nr. 7560/02.02.2026 clasa 3; nr. 7561/02.02.2026 clasa 3",
+    "valid_until": "10.12.2030",
+    "city": "Borsec",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ECO - CSIK SRL",
+    "license": "nr. 6783/14.05.2024 clasa 3; nr. 6784/14.05.2024 clasa 3",
+    "valid_until": "31.01.2029",
+    "city": "Sânnsimion",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GOSCOM ZETEA SRL",
+    "license": "nr. 7327/26.08.2025 clasa 3",
+    "valid_until": "18.01.2027",
+    "city": "Zetea",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "RDE HARGHITA SRL",
+    "license": "nr. 7111/03.03.2025 clasa 2",
+    "valid_until": "01.10.2026",
+    "city": "Odorheiu Secuiesc",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "RDE HURON SRL",
+    "license": "nr. 5689/07.02.2022 clasa 2",
+    "valid_until": "23.03.2027",
+    "city": "Miercurea Ciuc",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE ALIMENTARE CU APA, CANALIZARE, SALUBRIZARE - PUNCT DE LUCRU",
+    "license": "nr. 7429/14.11.2025 clasa 3",
+    "valid_until": "14.11.2030",
+    "city": "Bălan",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE TOPLIȚA",
+    "license": "nr. 6528/27.10.2023 clasa 3; nr. 6529/27.10.2023 clasa 3",
+    "valid_until": "27.10.2028",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBANA SA",
+    "license": "nr. 7671/08.05.2026 clasa 3; nr. 7672/08.05.2026 clasa 3",
+    "valid_until": "01.05.2031",
+    "city": "Odorheiu Secuiesc",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "VITALISSIMA SRL",
+    "license": "nr. 6775/09.05.2024 clasa 3; nr. 6776/09.05.2024 clasa 3",
+    "valid_until": "28.12.2028",
+    "city": "Gheorgheni",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "HD": [
+   {
+    "name": "BUCURA PREST SA",
+    "license": "nr. 6880/07.08.2024 clasa 3; nr. 6881/07.08.2024 clasa 3",
+    "valid_until": "01.04.2029",
+    "city": "Hațeg",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "COMEXIM R SRL",
+    "license": "nr. 7637/02.04.2026 clasa 3",
+    "valid_until": "29.01.2028",
+    "city": "Lupeni",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "DUDAS COM AGROPREST SRL",
+    "license": "nr. 7581/24.02.2026 clasa 3",
+    "valid_until": "02.12.2026",
+    "city": "Băcia",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "EDIL SAL PREST SA",
+    "license": "nr. 7027/18.12.2024 clasa 3; nr. 7028/18.12.2024 clasa 3",
+    "valid_until": "11.10.2028",
+    "city": "Petrila",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GENERAL SALSERV SRL",
+    "license": "nr. 7696/26.05.2026 clasa 3; nr. 7697/26.05.2026 clasa 3",
+    "valid_until": "16.03.2031",
+    "city": "Brad",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GOSPODARUL BRETEAN SERV SRL",
+    "license": "nr. 7312/21.08.2025 clasa 3; nr. 7313/21.08.2025 clasa 3",
+    "valid_until": "03.02.2030",
+    "city": "Bretea Română",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBPREST HUNEDOARA SRL",
+    "license": "nr. 6329/26.05.2023 clasa 2; nr. 6330/26.05.2023 clasa 2",
+    "valid_until": "01.03.2028",
+    "city": "Hunedoara",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIZARE DEVA SRL",
+    "license": "nr. 7422/14.11.2025 clasa 2; nr. 7423/14.11.2025 clasa 2",
+    "valid_until": "31.07.2030",
+    "city": "Deva",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ BARU",
+    "license": "nr. 5886/11.07.2022 clasa 3; nr. 5887/11.07.2022 clasa 3",
+    "valid_until": "11.07.2027",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODARIRE COMUNALA ORASTIE",
+    "license": "nr. 6184/17.02.2023 clasa 3; nr. 6185/17.02.2023 clasa 3",
+    "valid_until": "17.02.2028",
+    "city": "Orăștie",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE VULCAN",
+    "license": "nr. 7284/04.08.2025 clasa 3",
+    "valid_until": "04.08.2030",
+    "city": "",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SIMPRESTUTIL SRL",
+    "license": "nr. 7476/12.12.2025 clasa 3; nr. 7477/12.12.2025 clasa 3",
+    "valid_until": "10.03.2030",
+    "city": "Simeria",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "TANI DANONA SRL",
+    "license": "nr. 7150/10.04.2025 clasa 3",
+    "valid_until": "23.10.2028",
+    "city": "Teliucu Inferior",
+    "activities": [
+     "zapada"
+    ]
+   }
+  ],
+  "IL": [
+   {
+    "name": "DIRECȚIA DE ADMINISTRARE A DOMENIULUI PUBLIC",
+    "license": "nr. 6112/15.12.2022 clasa 2; nr. 6113/15.12.2022 clasa 2",
+    "valid_until": "15.12.2027",
+    "city": "Slobozia",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "DRUMURI MUNICIPALE SRL",
+    "license": "nr. 7174/06.05.2025 clasa 3; nr. 7175/06.05.2025 clasa 3",
+    "valid_until": "01.03.2030",
+    "city": "Fetești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRITATE-URZICENI SRL",
+    "license": "nr. 7409/27.10.2025 clasa 3",
+    "valid_until": "04.08.2030",
+    "city": "Urziceni",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICII COMUNITARE AMARA SRL",
+    "license": "nr. 7102/25.02.2025 clasa 3; nr. 7582/24.02.2026 clasa 3",
+    "valid_until": "29.12.2030",
+    "city": "Amara",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "IS": [
+   {
+    "name": "CLP ECOSERV SRL",
+    "license": "nr. 7419/13.11.2025 clasa 3; nr. 7420/13.11.2025 clasa 3",
+    "valid_until": "16.07.2030",
+    "city": "Pașcani",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ECOSALUBRIS HÎRLĂU SA",
+    "license": "nr. 7700/27.05.2026 clasa 3; nr. 7701/27.05.2026 clasa 3",
+    "valid_until": "30.04.2031",
+    "city": "Hârlău",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIS SA",
+    "license": "nr. 6190/20.02.2023 clasa 1",
+    "valid_until": "20.02.2028",
+    "city": "Iași",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "IF": [
+   {
+    "name": "3R GREEN SRL",
+    "license": "nr. 5935/25.07.2022 clasa 3",
+    "valid_until": "26.05.2027",
+    "city": "Chitila",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "ADMINISTRAREA DOMENIULUI PUBLIC ȘI PRIVAT BALOTEȘTI SRL",
+    "license": "nr. 6799/22.05.2024 clasa 3",
+    "valid_until": "31.01.2029",
+    "city": "Săftica Balotești",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "ADMINISTRAȚIA GENERALA DE SALUBRIZARE TUNARI",
+    "license": "nr. 7647/06.04.2026 clasa 3",
+    "valid_until": "06.04.2031",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "BLUE PLANET SERVICES SRL",
+    "license": "nr. 6992/27.11.2024 clasa 1",
+    "valid_until": "09.05.2027",
+    "city": "Popești Leordeni",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "COLECTARE DEȘEURI MOGOȘOAIA SRL",
+    "license": "nr. 5708/18.02.2022 clasa 3",
+    "valid_until": "30.12.2026",
+    "city": "Mogoșoaia",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "ECOSAL SERV DOBROEȘTI SRL",
+    "license": "nr. 5991/31.08.2022 clasa 3; nr. 5992/31.08.2022 clasa 3",
+    "valid_until": "11.07.2027",
+    "city": "Dobroești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ECOVOL SA",
+    "license": "nr. 4215/31.08.2022 clasa 2",
+    "valid_until": "01.10.2027",
+    "city": "Voluntari",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "EURO PREST SERV JILAVA SRL",
+    "license": "nr. 7219/12.07.2025 clasa 3",
+    "valid_until": "14.05.2030",
+    "city": "Jilava",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SALUBRITATE BRĂNEȘTI SRL",
+    "license": "nr. 5858/30.05.2022 clasa 3",
+    "valid_until": "06.04.2027",
+    "city": "Brănești",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ CIOLPANI SRL",
+    "license": "nr. 6156/20.01.2023 clasa 3; nr. 6157/20.01.2023 clasa 3",
+    "valid_until": "26.10.2027",
+    "city": "Ciolpani",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL SALUBRIZARE VIDRA SRL",
+    "license": "nr. 5819/20.04.2022 clasa 3",
+    "valid_until": "11.03.2027",
+    "city": "Vidra",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "TRANS AUTO CORBEANCA SRL",
+    "license": "nr. 6048/24.10.2022 clasa 3; nr. 6049/24.10.2022 clasa 3",
+    "valid_until": "13.10.2027",
+    "city": "Corbeanca",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "MM": [
+   {
+    "name": "DIRECȚIA DE LUCRĂRI PUBLICE BAIA SPRIE",
+    "license": "nr. 6718/28.02.2024 clasa 3; nr. 6719/28.02.2024 clasa 3",
+    "valid_until": "28.02.2029",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "DIRECȚIA DE SERVICII PUBLICE",
+    "license": "nr. 6970/31.10.2024 clasa 3",
+    "valid_until": "31.10.2029",
+    "city": "Târgu Lăpuș",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "DRUSAL CITY SA",
+    "license": "nr. 7117/11.03.2025 clasa 3; nr. 7118/11.03.2025 clasa 3",
+    "valid_until": "24.02.2027",
+    "city": "Baia Mare",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "HERODOT GRUP SRL",
+    "license": "nr. 7673/08.05.2026 clasa 3",
+    "valid_until": "27.03.2031",
+    "city": "Sighetu Marmației",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "MH": [
+   {
+    "name": "ECOSAL DROBETA SRL",
+    "license": "nr. 7478/16.12.2025 clasa 3",
+    "valid_until": "12.11.2027",
+    "city": "Drobeta-Turnu Severin",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE SALUBRIZARE",
+    "license": "nr. 6973/04.11.2024 clasa 3; nr. 6974/04.11.2024 clasa 3",
+    "valid_until": "04.11.2029",
+    "city": "Strehaia",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "MS": [
+   {
+    "name": "ADMINISTRATIV SERV LUDUȘ SRL",
+    "license": "nr. 6462/23.08.2023 clasa 3; nr. 6463/23.08.2023 clasa 3",
+    "valid_until": "01.09.2028",
+    "city": "Luduș",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ECOSERV SIG SRL",
+    "license": "nr. 6407/27.07.2023 clasa 3; nr. 6408/27.07.2023 clasa 3",
+    "valid_until": "23.10.2027",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "RAGCL SA",
+    "license": "nr. 6670/13.02.2024 clasa 3",
+    "valid_until": "15.11.2028",
+    "city": "Reghin",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICII EDILITAR - GOSPODĂREȘTI RÎCIU SRL",
+    "license": "nr. 6137/04.01.2023 clasa 3; nr. 6138/04.01.2023 clasa 3",
+    "valid_until": "30.09.2027",
+    "city": "Rîciu",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "NT": [
+   {
+    "name": "EUROSAL TRADE SRL",
+    "license": "nr. 6479/11.09.2023 clasa 3; nr. 6480/11.09.2023 clasa 3",
+    "valid_until": "19.05.2028",
+    "city": "Târgu Neamț",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "PUBLISERV BICAZ SRL",
+    "license": "nr. 6525/27.10.2023 clasa 3; nr. 6526/27.10.2023 clasa 3",
+    "valid_until": "01.02.2028",
+    "city": "Bicaz",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "PUBLISERV SRL",
+    "license": "nr. 7410/13.11.2025 clasa 2; nr. 7411/13.11.2025 clasa 2",
+    "valid_until": "01.09.2027",
+    "city": "Piatra Neamț",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ROSSAL SRL",
+    "license": "nr. 7506/19.01.2026 clasa 2",
+    "valid_until": "19.01.2031",
+    "city": "Roman",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "OT": [
+   {
+    "name": "A.D.P.P. CARACAL SRL",
+    "license": "nr. 7645/06.04.2026, 7646/06.04.2026 clasa 3",
+    "valid_until": "12.02.2031",
+    "city": "Caracal",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIS SA",
+    "license": "nr. 6110/15.12.2022 clasa 1",
+    "valid_until": "23.12.2027",
+    "city": "Slatina",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICII COMUNITARE CORABIA SRL",
+    "license": "nr. 5609/09.12.2021 clasa 3",
+    "valid_until": "08.11.2026",
+    "city": "Corabia",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "URBAN ACTIV SERV SRL",
+    "license": "nr. 7574/10.02.2026 clasa 3; nr. 7575/10.02.2026 clasa 3",
+    "valid_until": "12.12.2026",
+    "city": "Drăgănești-Olt",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "PH": [
+   {
+    "name": "FLORICON SALUB SRL",
+    "license": "nr. 6117/21.12.2022 clasa 1",
+    "valid_until": "20.01.2028",
+    "city": "Câmpina",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "SERVICII DE GOSPODĂRIRE COMUNALĂ ARICEȘTII RAHTIVANI SRL",
+    "license": "nr. 7280/01.08.2025 clasa 3; nr. 7281/01.08.2025 clasa 3",
+    "valid_until": "11.06.2030",
+    "city": "Ariceștii Rahtivani",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "SM": [
+   {
+    "name": "SERVICIUL PUBLIC AL COMUNEI MOFTIN",
+    "license": "nr. 7443/19.11.2025 clasa 3 (provizorie)",
+    "valid_until": "19.11.2026",
+    "city": "",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "SJ": [
+   {
+    "name": "CITADIN SALUBRIZARE SRL",
+    "license": "nr. 7012/10.12.2024 clasa 2; nr. 7013/10.12.2024 clasa 2",
+    "valid_until": "29.09.2029",
+    "city": "Zalău",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "CRASNA-SERV SRL",
+    "license": "nr. 7096/19.02.2025 clasa 3; nr. 7097/19.02.2025 clasa 3",
+    "valid_until": "01.01.2030",
+    "city": "Crasna",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GMG MIHA&GABI CONSTRUCT SRL",
+    "license": "nr. 7380/14.10.2025 clasa 3; nr. 7381/14.10.2025 clasa 3",
+    "valid_until": "14.10.2030",
+    "city": "Nușfalău",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIZARE JIBOU",
+    "license": "nr. 6510/06.10.2023 clasa 3; nr. 6511/06.10.2023 clasa 3",
+    "valid_until": "06.10.2028",
+    "city": "Jibou",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "SB": [
+   {
+    "name": "ECO - SAL SA",
+    "license": "nr. 6979/14.11.2024 clasa 2",
+    "valid_until": "14.11.2029",
+    "city": "Mediaș",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "GOSPODĂRIE ORĂȘENEASCĂ AVRIG SA",
+    "license": "nr. 6483/11.09.2023, 6484/11.09.2023 clasa 3",
+    "valid_until": "17.07.2028",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ȘOPA ȘELIMBĂR SRL",
+    "license": "nr. 7522/20.01.2026 clasa 3; nr. 7523/20.01.2026 clasa 3",
+    "valid_until": "13.10.2030",
+    "city": "Șelimbăr",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "SV": [
+   {
+    "name": "DIASIL SERVICE SRL",
+    "license": "nr. 7550/30.01.2026 clasa 1",
+    "valid_until": "30.01.2031",
+    "city": "Suceava",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "FRITEHNIC SRL",
+    "license": "nr. 6436/09.08.2023 clasa 1; nr. 5703/16.02.2022 clasa 3; nr. 5704/16.02.2022 clasa 3",
+    "valid_until": "09.08.2028",
+    "city": "Suceava",
+    "activities": [
+     "salubrizare",
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL DE ALIMENTARE CU APĂ ȘI CANALZIARE ORAȘUL FRASINU",
+    "license": "nr. 5648/05.01.2022 clasa 3; nr. 5649/05.01.2022 clasa 3",
+    "valid_until": "05.01.2027",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "TR": [
+   {
+    "name": "ADMINISTRAȚIA DOMENIULUI PUBLIC",
+    "license": "nr. 6376/22.06.2023 clasa 3; nr. 6377/22.06.2023 clasa 3",
+    "valid_until": "22.06.2028",
+    "city": "Alexandria",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRITATE-TURNU SRL",
+    "license": "nr. 6442/10.08.2023 clasa 3; nr. 6443/10.08.2023 clasa 3",
+    "valid_until": "20.07.2028",
+    "city": "Turnu Măgurele",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBAN VIDELE SRL",
+    "license": "nr. 7622/19.03.2026 clasa 3; nr. 7623/19.03.2026 clasa 3",
+    "valid_until": "04.02.2031",
+    "city": "Videle",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBANA SERV S.R.L.",
+    "license": "nr. 6404/27.07.2023 clasa 3; nr. 6405/27.07.2023 clasa 3",
+    "valid_until": "01.05.2028",
+    "city": "Zimnicea",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBIS SERVCONSTRUCT SA",
+    "license": "nr. 7291/05.08.2025 clasa 3; nr. 7292/05.08.2025 clasa 3",
+    "valid_until": "29.05.2030",
+    "city": "Roșiorii de Vede",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "TM": [
+   {
+    "name": "CARSADE INVEST SRL",
+    "license": "nr. 7554/02.02.2026 clasa 3; nr. 7555/02.02.2026 clasa 3",
+    "valid_until": "08.12.2026",
+    "city": "Buziaș",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "CONSILIUL LOCAL FĂGET- GOSPODĂRIA ORĂȘENEASCĂ",
+    "license": "nr. 7247/25.06.2025 clasa 3; nr. 7248/25.06.2025 clasa 3",
+    "valid_until": "25.06.2030",
+    "city": "Lugoj",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "PEISAJ HOSTA SRL",
+    "license": "nr. 6657/09.02.2024 clasa 3; nr. 6658/09.02.2024 clasa 3",
+    "valid_until": "01.01.2029",
+    "city": "Jimbolia",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIZARE LUGOJ SRL",
+    "license": "nr. 7286/05.08.2025 clasa 3; nr. 7287/05.08.2025 clasa 3",
+    "valid_until": "11.06.2029",
+    "city": "Lugoj",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIZARE TIMISOARA SRL",
+    "license": "nr. 7190/26.05.2025 clasa 2; nr. 7191/26.05.2025 clasa 2",
+    "valid_until": "14.03.2030",
+    "city": "Timișoara",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIRE COMUNALĂ LENAUHEIM",
+    "license": "nr. 5555/26.10.2021 clasa 3; nr. 5556/26.10.2021 clasa 3",
+    "valid_until": "26.10.2026",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "TL": [
+   {
+    "name": "EDILITAR SALUB-TERM SRL",
+    "license": "nr. 5594/18.11.2021 clasa 3; nr. 5595/18.11.2021 clasa 3",
+    "valid_until": "28.10.2026",
+    "city": "Măcin",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GOSPODĂRIRE LOCALĂ BABADAG SRL",
+    "license": "nr. 7567/06.02.2026 clasa 3",
+    "valid_until": "31.01.2031",
+    "city": "Babadag",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "SERVICII PUBLICE SA",
+    "license": "nr. 5174/25.08.2020 clasa 2",
+    "valid_until": "31.12.2029",
+    "city": "Tulcea",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ],
+  "VS": [
+   {
+    "name": "COMPANIA DE UTILITĂȚI PUBLICE SA",
+    "license": "nr. 6233/03.03.2023 clasa 2; nr. 6234/03.03.2023 clasa 2",
+    "valid_until": "16.12.2027",
+    "city": "Bârlad",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ECOSALUBRIZARE PREST SRL",
+    "license": "nr. 6711/27.02.2024 clasa 3; nr. 6712/27.02.2024 clasa 3",
+    "valid_until": "01.01.2029",
+    "city": "Huși",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "GOSCOM VASLUI SA",
+    "license": "nr. 6609/09.01.2024 clasa 2; nr. 6065/04.11.2022 clasa 2",
+    "valid_until": "01.09.2027",
+    "city": "",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "UTILITĂȚI SRL",
+    "license": "nr. 5671/19.01.2022 clasa 3; nr. 5672/19.01.2022 clasa 3",
+    "valid_until": "22.12.2026",
+    "city": "Negrești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "VL": [
+   {
+    "name": "BĂLCEȘTI SERVICII PUBLICE SRL",
+    "license": "nr. 7352/15.09.2025 clasa 3; nr. 7353/15.09.2025 clasa 3",
+    "valid_until": "30.07.2030",
+    "city": "Bălcești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "DIRECȚIA DE ADMINISTRARE A DOMENIULUI PUBLIC ȘI PRIVAT ȘI ALIMENTARE CU ENERGIE TERMICĂ",
+    "license": "nr. 7589/25.02.2026 clasa 3; nr. 7590/25.02.2026 clasa 3",
+    "valid_until": "25.02.2031",
+    "city": "Călimănești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "ECO SERV BAILE OLANESTI SRL",
+    "license": "nr. 7676/12.05.2026 clasa 3",
+    "valid_until": "13.04.2027",
+    "city": "Băile Olănești",
+    "activities": [
+     "maturat"
+    ]
+   },
+   {
+    "name": "PIEȚE PREST SA",
+    "license": "nr. 7323/26.08.2025 clasa 2; nr. 7324/26.08.2025 clasa 2",
+    "valid_until": "26.08.2030",
+    "city": "Râmnicu Vâlcea",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SERVICIUL PUBLIC DE GOSPODĂRIE COMUNALĂ",
+    "license": "nr. 6062/31.10.2022 clasa 3; nr. 6063/31.10.2022 clasa 3",
+    "valid_until": "31.10.2027",
+    "city": "Brezoi",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   }
+  ],
+  "VN": [
+   {
+    "name": "BINDIBEBE CON SRL",
+    "license": "nr. 7558/02.02.2026 clasa 3",
+    "valid_until": "21.11.2026",
+    "city": "Gura Caliței",
+    "activities": [
+     "zapada"
+    ]
+   },
+   {
+    "name": "DUMIEXPOPRIM GARDEN SRL",
+    "license": "nr. 7513/20.01.2026 clasa 3; nr. 7514/20.01.2026 clasa 3",
+    "valid_until": "10.09.2030",
+    "city": "Odobești",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "SALUBRIZARE ȘI SERVICII PUBLICE FOCȘANI SA",
+    "license": "nr. 7148/10.04.2025 clasa 2; nr. 7149/10.04.2025 clasa 2",
+    "valid_until": "04.12.2029",
+    "city": "Focșani",
+    "activities": [
+     "maturat",
+     "zapada"
+    ]
+   },
+   {
+    "name": "URBAN SERV PANCIU SRL",
+    "license": "nr. 7631/02.04.2026 clasa 3",
+    "valid_until": "17.07.2030",
+    "city": "Panciu",
+    "activities": [
+     "salubrizare"
+    ]
+   },
+   {
+    "name": "UTILITĂȚI PUBLICE MUNICIPALE ADJUD SRL",
+    "license": "nr. 5989/31.08.2022 clasa 3",
+    "valid_until": "10.08.2027",
+    "city": "Adjud",
+    "activities": [
+     "salubrizare"
+    ]
+   }
+  ]
+ },
+ "unassigned": []
+}
