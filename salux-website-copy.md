@@ -91,7 +91,7 @@ Panoul principal: execuția zilei, situația lunii și alertele operaționale,
 **[H2]** Două părți contractante. Un mod unitar de lucru.
 
 **[CARD OPERATOR]**
-#### Operatorilor privați de salubrizare stradală
+#### De la teren la situația de plată, fără transcrieri
 
 Pentru companiile de salubrizare care au unul sau mai multe contracte
 în curs de semnare sau în execuție în România. SALUX digitalizează
@@ -103,7 +103,7 @@ controale din partea instituțiilor abilitate.
 [BUTON] Vedeți soluția pentru operatori
 
 **[CARD UAT]**
-#### Autorităților publice
+#### Monitorizarea obligatorie, documentată automat
 
 Primăriilor, consiliilor județene și asociațiilor de dezvoltare
 intercomunitară care au calitate de autoritate contractantă pentru
