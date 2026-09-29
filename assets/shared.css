@@ -137,32 +137,47 @@ img { display: block; max-width: 100%; }
 }
 
 /* ====== BUTTONS ====== */
+/* Regula de forma: butoanele au raza 12px, cardurile 22-28px. */
 .btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 20px; border-radius: 999px;
-  font-weight: 600; font-size: 14.5px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 44px; padding: 0 20px; border-radius: 12px;
+  font-weight: 600; font-size: 15px; line-height: 1; letter-spacing: -.005em;
   border: 1px solid transparent;
-  transition: all .15s ease; cursor: pointer; font-family: inherit;
-  white-space: nowrap;
+  transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  cursor: pointer; font-family: inherit; white-space: nowrap;
 }
-.btn-primary { background: var(--ink); color: white; }
-.btn-primary:hover { background: var(--ink-2); transform: translateY(-1px); }
-.btn-accent { background: var(--accent); color: white; }
-.btn-accent:hover { background: var(--accent-600); transform: translateY(-1px); }
-.btn-green  { background: var(--primary-800, #2E7350); color: white; }
-.btn-green:hover { background: var(--primary-800, #2E7350); filter: brightness(1.1); }
-.btn-outline { background: transparent; color: var(--ink); border-color: var(--line-strong); }
-.btn-outline:hover { background: var(--bg-alt); border-color: var(--ink); }
+.btn:focus-visible { outline: 3px solid rgba(46,115,80,.35); outline-offset: 2px; }
+.btn:active { transform: translateY(1px); }
+.btn-lg { min-height: 52px; padding: 0 26px; font-size: 16px; }
+
+/* Butoanele de actiune primesc o sageata care aluneca la hover */
+.btn-green::after, .btn-accent::after, .btn-primary::after, .btn-lg::after {
+  content: ""; width: 16px; height: 16px; flex-shrink: 0;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform .18s ease;
+}
+.btn-outline.btn-lg::after { display: none; }
+.btn:hover::after { transform: translateX(3px); }
+
+.btn-primary { background: var(--ink); color: white; box-shadow: 0 1px 2px rgba(11,24,41,.2), inset 0 1px 0 rgba(255,255,255,.08); }
+.btn-primary:hover { background: var(--ink-2); }
+.btn-accent { background: var(--accent-600); color: white; box-shadow: 0 1px 2px rgba(11,24,41,.14), 0 6px 16px -8px rgba(42,91,167,.55), inset 0 1px 0 rgba(255,255,255,.14); }
+.btn-accent:hover { background: #224C8D; }
+.btn-green, .btn-nav { background: var(--primary-800, #2E7350); color: white; box-shadow: 0 1px 2px rgba(11,24,41,.14), 0 6px 16px -8px rgba(46,115,80,.6), inset 0 1px 0 rgba(255,255,255,.14); }
+.btn-green:hover, .btn-nav:hover { background: #245C40; }
+.btn-outline { background: white; color: var(--ink); border-color: var(--line-strong); box-shadow: 0 1px 2px rgba(11,24,41,.05); }
+.btn-outline:hover { border-color: var(--ink-2); background: var(--bg); }
 .btn-ghost { background: transparent; color: var(--ink); }
 .btn-ghost:hover { background: var(--bg-alt); }
-.btn-lg { padding: 14px 24px; font-size: 15.5px; }
-.btn-nav {
-  background: var(--primary-800, #2E7350);
-  color: white; border: none;
-  transition: background .15s, transform .15s;
+.btn-nav { border: none; }
+.nav-cta .btn-nav { min-height: 40px; padding: 0 18px; font-size: 14.5px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .btn::after { transition: none; }
+  .btn:hover::after { transform: none; }
 }
-.btn-nav:hover { background: #256A48; }
-.btn:active { transform: translateY(1px); }
 
 /* ====== TYPE ====== */
 h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); margin: 0; letter-spacing: -.02em; }
