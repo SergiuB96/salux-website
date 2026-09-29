@@ -3,3 +3,5 @@
 
 .vercel
 .gstack/
+
+.claude/settings.local.json

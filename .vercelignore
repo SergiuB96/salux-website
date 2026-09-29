@@ -1,0 +1,6 @@
+# Fisiere interne, nu se publica pe site
+.claude
+.gstack
+CLAUDE.md
+salux-website-copy.md
+blog/*.md
