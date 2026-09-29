@@ -1,0 +1,93 @@
+﻿
+SRS 6705/2008 explicat: indicatori lunari - SALUX Blog
+Operatori
+UAT
+ProdusModuleFAQDemonstrație
+Blog
+Contact
+Autentificare
+Operatori
+UAT
+Produs
+Blog
+Contact
+Autentificare
+← Toate articolele
+Conformitate
+SRS 6705/2008 explicat: ce indicatori trebuie să raportezi lunar
+Ghidul complet al indicatorilor de calitate pentru salubrizare stradală - cum se calculează, cine îi controlează și ce ai voie să automatizezi.
+MR
+Mihai Rusu · Co-fondator SALUX
+·
+04 mai 2026
+·
+8 min citire
+Dacă operezi un contract de salubrizare stradală în România, există o singură întrebare care contează la sfârșitul lunii: poți demonstra ce ai făcut? SRS 6705/2008 - standardul român pentru servicii de salubrizare a localităților - îți spune exact ce trebuie să demonstrezi.
+În următoarele 8 minute, parcurgem împreună indicatorii pe care orice operator e obligat să-i raporteze, plus partea pe care 9 din 10 echipe o gestionează manual și pe care un sistem informatic o poate genera automat.
+Ce este, de fapt, SRS 6705/2008
+Pe scurt: standardul stabilește cerințele de calitate, frecvențele minime și metodele de verificare pentru toate activitățile de salubrizare urbană - măturat manual și mecanic, spălare carosabil, golire coșuri stradale, deszăpezire. Conține și formulele de calcul pentru indicatorii de performanță pe care UAT-ul îi verifică lunar.
+De reținut
+Standardul nu e opțional. Caietul de sarcini al oricărui contract public de salubrizare îl invocă explicit. Lipsa raportării conforme = motiv de penalizare contractuală.
+Cei 6 indicatori obligatorii
+1. Gradul de execuție a programului (GEP)
+Raportul dintre sarcinile executate și cele planificate, exprimat procentual. UAT-ul îl vrea peste 95% lunar. Sub 90% se consideră eșec contractual.
+GEP = (sarcini_executate / sarcini_planificate) × 100
+2. Suprafața măturată / spălată (mp)
+Cumulat lunar, defalcat pe străzi și pe tipul de operațiune (manual / mecanic). Trebuie corelat cu nomenclatorul oficial al UAT-ului - nu cu „lista noastră internă”.
+3. Numărul de coșuri golite
+Pe sector și pe zi. La fiecare golire, sistemul trebuie să rețină momentul (timestamp) și poziția (GPS sau confirmare manuală). Auto-confirmările bulk sunt o invitație la contestație.
+4. Timpul mediu de răspuns la sesizări
+De la primirea unei sesizări de la cetățean până la închiderea ei. Caietele moderne cer SLA < 48h pentru sesizări obișnuite și < 4h pentru urgențe (animale moarte, deversări).
+5. Cantitatea de deșeuri colectate (t / m³)
+Doar pentru activitățile care includ și ridicarea deșeurilor stradale - măturat mecanic cu aspirație, golire coșuri. Se exprimă la cântar, nu „estimat”.
+6. Intervențiile de deszăpezire
+Număr de intervenții, timp de acțiune, materiale antiderapante consumate (kg sare / tonă nisip). Corelat cu codul meteo în vigoare.
+6/lună
+indicatori obligatorii minim
+≥95%
+prag tipic GEP în caiete
+48h
+SLA standard sesizare
+Ce poți automatiza (și ce nu)
+Cei trei piloni - nomenclator, execuție pe teren, raportare - pot fi complet digitalizați. Ce nu poate fi automatizat este decizia operațională: ce echipă trimiți, ce frecvență aplici, cum reacționezi la o sesizare urgentă. Acelea rămân umane.
+În practică, un sistem informatic acoperă:
+Generarea programului lunar din nomenclator + norme + frecvențe (în 30 de secunde, nu 3 zile)
+Confirmarea execuției prin app mobil cu GPS + foto-doveadă
+Calculul automat al celor 6 indicatori, agregați pe sector și pe lună
+Generarea fișierului PDF / Excel pentru UAT, cu toate datele primare atașate
+Cea mai frecventă greșeală
+Operatorii care lucrează pe Excel raportează totaluri către UAT - „am măturat 142.000 mp luna asta”. Asta funcționează până la prima contestație. Când inspectorul cere „arătați-mi ce s-a măturat pe Bd. Magheru pe data de 14”, începe panica.
+Trasabilitatea nu se adaugă la sfârșitul lunii. Se construiește la sursă, pe teren, când șeful de echipă apasă butonul „Finalizat”.
+Cu un sistem care înregistrează la nivel de sarcină individuală, contestațiile se închid în 2 click-uri: vezi sarcina, vezi GPS-ul utilajului, vezi foto-doveada. Inspector mulțumit, operator liniștit.
+Pe scurt
+SRS 6705 nu e birocrație suplimentară. E modul în care UAT-ul îți spune „dovedește-mi că meriți banii din contract”. Cu evidențe corecte de la sursă, indicatorii se calculează singuri, iar raportul lunar se generează la un click.
+Vezi cum SALUX generează raportul SRS pe contractul tău.
+Discuție aplicată timp de 1 oră: îți arătăm cum SALUX calculează și raportează automat indicatorii lunari din SR 6705/2008.
+Programează o demonstrație
+Continuă lectura
+22 APR 2026 · 6 MIN
+Sezonul de deszăpezire: 7 lucruri care te apără în fața UAT-ului
+Documentația minimă pe care orice operator ar trebui să o aibă pregătită înainte de prima ninsoare.
+15 APR 2026 · 5 MIN
+De ce un operator multi-contract are nevoie de multi-tenant
+Cum izolăm datele între contracte diferite și ce înseamnă client_id pentru securitatea ta.
+TOATE ARTICOLELE
+Vezi toate articolele
+Note practice pentru operatori și UAT-uri.
+Sistem informatic pentru salubrizare stradală și deszăpezire în România.
+office@salux.ro
+Soluții
+Operatori privați
+Autorități contractante
+Produs
+Module
+FAQ
+Demo
+Resurse
+Blog
+Legal
+Confidențialitate
+Termeni
+GDPR
+EULA
+© 2026 MILBAC MANAGEMENT S.R.L.

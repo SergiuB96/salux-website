@@ -1,0 +1,78 @@
+﻿
+Multi-tenant pentru operatori multi-contract - SALUX Blog
+Operatori
+UAT
+ProdusModuleFAQDemonstrație
+Blog
+Contact
+Autentificare
+Operatori
+UAT
+Produs
+Blog
+Contact
+Autentificare
+← Toate articolele
+Tehnic
+De ce un operator multi-contract are nevoie de multi-tenant
+Cum izolezi datele între contracte diferite, de ce nu funcționează „un Excel pe județ” și ce înseamnă client_id pentru securitatea ta.
+CL
+Cristian Lupu · CTO SALUX
+·15 aprilie 2026·5 min citire
+Un operator cu 3 contracte într-o țară mică (Cluj, Sibiu, Brașov) și un sistem informatic „cu o instalare pe contract” = 3 baze de date, 3 backup-uri, 3 versiuni de software de sincronizat manual. La 5 contracte, devine ingestionabil.
+Soluția corectă se numește multi-tenant. Un singur sistem, cu izolare logică strictă între chiriași (tenants). În cazul nostru, fiecare „tenant” = un contract / operator / UAT.
+Cum arată izolarea, tehnic
+Fiecare tabel operațional din baza de date are o coloană numită client_id. Toate interogările trec printr-un filtru automat care adaugă WHERE client_id = ? la nivel de framework. Niciun query SQL nu poate ieși din contractul utilizatorului autentificat.
+În practică
+Un dispecer din Cluj nu poate vedea o sarcină din Sibiu. Nu pentru că UI-ul ascunde linkul. Pentru că SELECT * FROM tasks WHERE client_id = 'cluj' nu va returna niciodată un rând cu client_id = 'sibiu'.
+De ce nu „un Excel pe județ”
+Trei probleme apar imediat:
+Nomenclatoarele divergează. Strada „Mihai Viteazul” are 3 variante de scriere în 3 Excel-uri. Când treci la raportare consolidată, se aprinde infernul.
+Nu poți raporta consolidat. Câte coșuri ai golit luna asta, în total? Câte sesizări ai închis? Cu Excel-uri separate, e o săptămână de muncă manuală pentru fiecare întrebare.
+Drepturile sunt o utopie. Cine deschide fișierul vede tot. Nu există RBAC pe Excel.
+De ce nu „o instalare pe contract”
+Aici intervine costul operațional. La fiecare upgrade de software, ai N instalări de actualizat. La fiecare nou regulament, N migrări de făcut. La fiecare incident de securitate, N investigații. Echipa ta tehnică nu va scala niciodată suficient.
+Multi-tenant nu e o optimizare. E singura arhitectură care suportă creșterea ta de la 2 la 20 de contracte fără să dublezi echipa tehnică.
+Ce mai face un sistem multi-tenant bun
+Audit log per tenant. Cine a făcut ce, când, în ce contract. Stocat 5 ani.
+Branding per UAT. Portalul public „Sesizări cetățeni” poate purta logo-ul UAT-ului, nu al operatorului.
+Indicatori cross-tenant doar pentru admin. Doar tu, ca operator, vezi „toate contractele mele”. UAT-ul vede doar al lui.
+Backup & restore selectiv. Poți restaura un tenant fără să atingi pe ceilalți.
+1×
+o singură instalare
+N×
+contracte izolate
+0×
+scurgere între tenanți
+Pe scurt
+Dacă operezi un singur contract pentru tot restul vieții, multi-tenant nu te ajută. Dacă vrei să poți câștiga al doilea contract fără să refaci sistemul de la zero, e singura arhitectură care merge. SALUX e multi-tenant de la fundație - nu adăugat ulterior.
+Vrei să vezi cum arată dashboard-ul tău cu 3 contracte simultane?
+Discuție aplicată timp de 1 oră: îți arătăm arhitectura multi-tenant aplicată pe contractele tale.
+Programează o demonstrație
+Continuă lectura
+04 MAI 2026 · 8 MIN
+SRS 6705/2008 explicat: indicatori lunari
+Cei 6 indicatori obligatorii pe care orice operator îi raportează lunar.
+22 APR 2026 · 6 MIN
+Sezonul de deszăpezire: 7 lucruri care te apără
+Documentația minimă pe care orice operator ar trebui să o aibă pregătită.
+TOATE
+Vezi toate articolele
+Note practice pentru operatori și UAT-uri.
+Sistem informatic pentru salubrizare stradală și deszăpezire în România.
+office@salux.ro
+Soluții
+Operatori privați
+Autorități contractante
+Produs
+Module
+FAQ
+Demo
+Resurse
+Blog
+Legal
+Confidențialitate
+Termeni
+GDPR
+EULA
+© 2026 MILBAC MANAGEMENT S.R.L.

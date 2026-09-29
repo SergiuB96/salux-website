@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Multi-tenant pentru operatori multi-contract - SALUX Blog</title>
-<meta name="description" content="Cum izolezi datele intre contracte diferite, de ce nu functioneaza un Excel pe judet si ce inseamna client_id pentru securitatea datelor tale." />
+<meta name="description" content="Cum izolați datele între contracte diferite, de ce nu funcționează un Excel pe județ și ce înseamnă client_id pentru securitatea datelor dumneavoastră." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="SALUX" />
 <meta property="og:title" content="Multi-tenant pentru operatori multi-contract - SALUX Blog" />
-<meta property="og:description" content="Cum izolezi datele intre contracte diferite, de ce nu functioneaza un Excel pe judet si ce inseamna client_id pentru securitatea datelor tale." />
+<meta property="og:description" content="Cum izolați datele între contracte diferite, de ce nu funcționează un Excel pe județ și ce înseamnă client_id pentru securitatea datelor dumneavoastră." />
 <meta property="og:url" content="https://salux.ro/article-multi-tenant" />
 <meta property="og:image" content="https://salux.ro/assets/og-salux.png" />
 <meta property="og:image:width" content="1200" />
@@ -29,7 +29,7 @@
 <meta property="article:section" content="Tehnic" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Multi-tenant pentru operatori multi-contract - SALUX Blog" />
-<meta name="twitter:description" content="Cum izolezi datele intre contracte diferite si ce inseamna client_id pentru securitatea datelor tale." />
+<meta name="twitter:description" content="Cum izolați datele între contracte diferite și ce înseamnă client_id pentru securitatea datelor dumneavoastră." />
 <meta name="twitter:image" content="https://salux.ro/assets/og-salux.png" />
 <link rel="canonical" href="https://salux.ro/article-multi-tenant" />
 <script type="application/ld+json">
@@ -37,7 +37,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "De ce un operator multi-contract are nevoie de multi-tenant",
-  "description": "Cum izolezi datele intre contracte diferite, de ce nu functioneaza un Excel pe judet si ce inseamna client_id pentru securitatea datelor tale.",
+  "description": "Cum izolați datele între contracte diferite, de ce nu funcționează un Excel pe județ și ce înseamnă client_id pentru securitatea datelor dumneavoastră.",
   "url": "https://salux.ro/article-multi-tenant",
   "datePublished": "2026-04-15",
   "dateModified": "2026-04-15",
@@ -47,7 +47,7 @@
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Acasa", "item": "https://salux.ro" },
+      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://salux.ro" },
       { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://salux.ro/blog" },
       { "@type": "ListItem", "position": 3, "name": "Multi-tenant", "item": "https://salux.ro/article-multi-tenant" }
     ]
@@ -64,7 +64,7 @@
     <div class="nav-links">
       <a href="/operator">Operatori</a>
       <a href="/uat">UAT</a>
-      <div class="nav-drop"><a href="/#modules">Produs</a><div class="nav-drop-menu"><div class="nav-drop-menu-inner"><a href="/#modules">Module</a><a href="/#faq">FAQ</a><a href="/contact">Demonstrație</a></div></div></div>
+      <div class="nav-drop"><a href="/#modules">Produs</a><div class="nav-drop-menu"><div class="nav-drop-menu-inner"><a href="/#modules">Module</a><a href="/#faq">FAQ</a><a href="/contact">Programați o demonstrație</a></div></div></div>
       <a href="/blog">Blog</a>
       <a href="/contact">Contact</a>
     </div>
@@ -92,7 +92,7 @@
   <nav class="crumb"><a href="/blog">← Toate articolele</a></nav>
   <span class="tag"><span class="dot"></span>Tehnic</span>
   <h1>De ce un operator multi-contract are nevoie de multi-tenant</h1>
-  <p class="deck">Cum izolezi datele între contracte diferite, de ce nu funcționează „un Excel pe județ” și ce înseamnă <code>client_id</code> pentru securitatea ta.</p>
+  <p class="deck">Cum izolați datele între contracte diferite, de ce nu funcționează „un Excel pe județ” și ce înseamnă <code>client_id</code> pentru securitatea dumneavoastră.</p>
   <div class="meta">
     <span class="avi">CL</span>
     <span><b>Cristian Lupu</b> · CTO SALUX</span>
@@ -122,24 +122,24 @@
 <h2>De ce nu „un Excel pe județ”</h2>
 <p>Trei probleme apar imediat:</p>
 <ol>
-  <li><strong>Nomenclatoarele divergează.</strong> Strada „Mihai Viteazul” are 3 variante de scriere în 3 Excel-uri. Când treci la raportare consolidată, se aprinde infernul.</li>
-  <li><strong>Nu poți raporta consolidat.</strong> Câte coșuri ai golit luna asta, în total? Câte sesizări ai închis? Cu Excel-uri separate, e o săptămână de muncă manuală pentru fiecare întrebare.</li>
+  <li><strong>Nomenclatoarele divergează.</strong> Strada „Mihai Viteazul” are 3 variante de scriere în 3 Excel-uri. Când treceți la raportare consolidată, se aprinde infernul.</li>
+  <li><strong>Nu puteți raporta consolidat.</strong> Câte coșuri ați golit luna asta, în total? Câte sesizări ați închis? Cu Excel-uri separate, e o săptămână de muncă manuală pentru fiecare întrebare.</li>
   <li><strong>Drepturile sunt o utopie.</strong> Cine deschide fișierul vede tot. Nu există RBAC pe Excel.</li>
 </ol>
 
 <h2>De ce nu „o instalare pe contract”</h2>
-<p>Aici intervine costul operațional. La fiecare upgrade de software, ai N instalări de actualizat. La fiecare nou regulament, N migrări de făcut. La fiecare incident de securitate, N investigații. Echipa ta tehnică nu va scala niciodată suficient.</p>
+<p>Aici intervine costul operațional. La fiecare upgrade de software, aveți N instalări de actualizat. La fiecare nou regulament, N migrări de făcut. La fiecare incident de securitate, N investigații. Echipa dumneavoastră tehnică nu va scala niciodată suficient.</p>
 
 <blockquote>
-  Multi-tenant nu e o optimizare. E singura arhitectură care suportă creșterea ta de la 2 la 20 de contracte fără să dublezi echipa tehnică.
+  Multi-tenant nu e o optimizare. E singura arhitectură care suportă creșterea dumneavoastră de la 2 la 20 de contracte fără să dublați echipa tehnică.
 </blockquote>
 
 <h2>Ce mai face un sistem multi-tenant bun</h2>
 <ul>
   <li><strong>Audit log per tenant.</strong> Cine a făcut ce, când, în ce contract. Stocat 5 ani.</li>
   <li><strong>Branding per UAT.</strong> Portalul public „Sesizări cetățeni” poate purta logo-ul UAT-ului, nu al operatorului.</li>
-  <li><strong>Indicatori cross-tenant doar pentru admin.</strong> Doar tu, ca operator, vezi „toate contractele mele”. UAT-ul vede doar al lui.</li>
-  <li><strong>Backup &amp; restore selectiv.</strong> Poți restaura un tenant fără să atingi pe ceilalți.</li>
+  <li><strong>Indicatori cross-tenant doar pentru admin.</strong> Doar dumneavoastră, ca operator, vedeți „toate contractele mele”. UAT-ul vede doar al lui.</li>
+  <li><strong>Backup &amp; restore selectiv.</strong> Puteți restaura un tenant fără să atingi pe ceilalți.</li>
 </ul>
 
 <div class="kpi-inline">
@@ -149,16 +149,16 @@
 </div>
 
 <h2>Pe scurt</h2>
-<p>Dacă operezi un singur contract pentru tot restul vieții, multi-tenant nu te ajută. Dacă vrei să poți câștiga al doilea contract fără să refaci sistemul de la zero, e singura arhitectură care merge. SALUX e multi-tenant de la fundație - nu adăugat ulterior.</p>
+<p>Dacă operați un singur contract pentru tot restul vieții, multi-tenant nu vă ajută. Dacă doriți să puteți câștiga al doilea contract fără să refaceți sistemul de la zero, e singura arhitectură care merge. SALUX e multi-tenant de la fundație - nu adăugat ulterior.</p>
 
 </article></section>
 
 <section class="art-cta"><div class="container"><div class="grid">
   <div>
-    <h2>Vrei să vezi cum arată dashboard-ul tău cu 3 contracte simultane?</h2>
-    <p>Discuție aplicată timp de 1 oră: îți arătăm arhitectura multi-tenant aplicată pe contractele tale.</p>
+    <h2>Doriți să vedeți cum arată dashboard-ul dumneavoastră cu 3 contracte simultane?</h2>
+    <p>Discuție aplicată timp de 1 oră: vă arătăm arhitectura multi-tenant aplicată pe contractele dumneavoastră.</p>
   </div>
-  <a href="/contact" class="btn btn-primary btn-lg">Programează o demonstrație</a>
+  <a href="/contact" class="btn btn-primary btn-lg">Programați o demonstrație</a>
 </div></div></section>
 
 <section class="related"><div class="container">
@@ -171,12 +171,12 @@
     </a>
     <a href="/article-deszapezire" class="rel-card">
       <div class="meta">22 APR 2026 · 6 MIN</div>
-      <h5>Sezonul de deszăpezire: 7 lucruri care te apără</h5>
+      <h5>Sezonul de deszăpezire: 7 lucruri care vă apără</h5>
       <p>Documentația minimă pe care orice operator ar trebui să o aibă pregătită.</p>
     </a>
     <a href="/blog" class="rel-card">
       <div class="meta">TOATE</div>
-      <h5>Vezi toate articolele</h5>
+      <h5>Vedeți toate articolele</h5>
       <p>Note practice pentru operatori și UAT-uri.</p>
     </a>
   </div>

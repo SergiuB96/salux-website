@@ -1,0 +1,181 @@
+SALUX pentru Operatori - Documentație justificativă completă, de la teren la audit
+Operatori
+UAT
+ProdusModuleFAQDemonstrație
+Blog
+Contact
+Autentificare
+Operatori
+UAT
+Produs
+Blog
+Contact
+Autentificare
+Soluție pentru operatori privați
+O singură platformă, de la teren la situație de plată acceptată.
+Operatorii privați de salubrizare stradală gestionează simultan obligații față de patru categorii de interlocutori: autoritatea contractantă, ANRSC, Curtea de Conturi și Agenția Națională pentru Protecția Mediului. SALUX consolidează datele necesare pentru toate aceste obligații într-o singură sursă, alimentată în timp real de echipele de teren, și produce automat documentele cerute.
+Programează o demonstrație
+Cum funcționează
+Cum funcționează
+Patru etape, de la teren
+la dosar de audit
+Datele de teren alimentează automat programul lunar, rapoartele și situațiile de plată.
+Etapa 1 · Teren
+Echipele înregistrează activitatea direct din mobil
+Aplicația mobilă SALUX este accesibilă pe orice telefon Android sau iOS prin browser, fără instalare. Interfața conține elementele strict necesare - start schimb, marcaj activitate, captură foto, încheiere schimb. Funcționează fără conexiune și sincronizează automat la revenirea semnalului.
+Fără instalare - accesibil prin browser pe orice telefon
+Captură foto cu localizare și marcaj temporal imutabil
+Curbă de învățare: o singură tură de lucru
+Sarcini azi
+✓MS-03 Decebal09:12
+✓CS-01 Centru10:04
+●MS-05 Carolacum
+○CD-01 Sector 212:00
+Etapa 2 · Planificare
+Sistemul construiește zilnic programul lunar
+Datele introduse pe parcursul zilei se consolidează automat în programul lunar de prestație. La orice moment din lună, operatorul vede situația cumulată: ce s-a executat, ce este programat, ce abateri există față de planul aprobat. Modificările se aprobă ierarhic cu trasabilitate completă.
+Program actualizat zilnic din datele de teren
+Abateri față de plan vizibile în timp real
+Aprobare ierarhică cu versioning complet
+Lun
+12/13
+Mar
+11/14
+Mie
+14/14
+Joi
+9/14
+Vin
+12/14
+Etapa 3 · Raportare
+Rapoartele și situațiile de plată se generează cu un singur click
+La sfârșit de lună, raportul către autoritatea contractantă este deja construit. Situația de plată include automat toate prestațiile efectuate, fiecare cu probele aferente - coordonate, fotografii, marcaje temporale. Exportat în formatul prevăzut de Ordinul ANRSC 98/2025.
+Situație de plată cu probe complete per rând
+Export PDF și Excel, format caiet de sarcini
+Captură imutabilă per situație de plată
+SITUAȚIE DE PLATĂ · MAI 2026
+MS-03 Măturat mecanizat128.400 m²
+CS-01 Golit coșuri1.240 buc
+CD-01 Colectat54,2 t
+Total fără TVA128.420 RON
+Etapa 4 · Conformitate
+Raportările instituționale se exportă pre-formatate
+Raportul anual ANRSC, raportul ANPM și pachetul de probe pentru auditul Curții de Conturi se generează din aceleași date primare. Arhiva rămâne accesibilă minim 5 ani, fără perioade de pregătire dedicate.
+Raport anual ANRSC - art. 8 alin. (3) lit. g, Legea 51/2006
+Raport ANPM - Legea 211/2011
+Dosar audit Curtea de Conturi - arhivă 5 ani
+Raport ANRSC
+Export pre-formatat
+Gata
+Raport ANPM
+Export automat
+Gata
+Dosar audit
+Arhivă 5 ani
+5 ani
+Cadru legal
+Patru obligații legale,
+soluționate prin design
+Fiecare funcționalitate SALUX răspunde unei obligații concrete prevăzute de lege.
+Justificarea prestației Art. 6 alin. (2), Legea 101/2006
+Autoritatea contractantă are dreptul de a aplica penalități, daune-interese, de a executa garanția de bună execuție sau de a rezilia unilateral contractul „pe baza unor analize și justificări fundamentate". SALUX produce această justificare în mod sistematic, pentru fiecare prestație, eliminând riscul de contestare retrospectivă.
+Evidențe distincte pe activitate Art. 28 alin. (3), Legea 101/2006
+Obligația de a ține evidențe separate pe fiecare tip de activitate este implementată din arhitectura SALUX: măturat manual, măturat mecanic, spălat, deszăpezire, întreținerea coșurilor stradale - module distincte, rapoarte independente.
+Indicatori de performanță Ord. ANRSC 98/2025, Caiet de sarcini-cadru
+SALUX calculează indicatorii în timp real, pe baza datelor de teren, și îi prezintă atât operatorului, cât și autorității contractante. Abaterile sunt vizibile imediat, nu la sfârșitul lunii.
+Răspunsul la sesizări OG 27/2002 - termen 30 zile
+Sesizările se preiau printr-un portal dedicat, se repartizează automat unei echipe de teren și se urmăresc până la închidere, cu documentație fotografică post-intervenție.
+Contextul riscului
+Ce constată Curtea de Conturi
+Cazuri reale din rapoarte publice ale Curții de Conturi a României și ale Camerelor de Conturi județene, conform Legii 94/1992. Prezentate fără nominalizarea operatorilor privați implicați.
+165.682 lei
+prejudiciu constatat
+Plată nejustificată pentru servicii neefectuate
+La o autoritate contractantă de sector din municipiul București, auditorii au constatat plata nejustificată prin acceptarea la decontare a unor cantități de servicii de salubrizare publică stradală neefectuată.
+Sursa: Raport Camera de Conturi - Legea 94/1992
+1.272.529 lei
+prejudiciu constatat
+Contracte fără probă a realității operațiunilor
+La un UAT din județul Constanța, Curtea de Conturi a stabilit un prejudiciu pentru contracte de salubrizare derulate fără certificarea realității și regularității operațiunilor.
+Sursa: Raport Camera de Conturi - Legea 94/1992
+3.267.700 lei
+amenzi cumulate
+Amenzi contravenționale pentru indicatori nedovediți
+La o autoritate contractantă de sector din București, un operator privat a primit în 2025 amenzi cumulate pentru deficiențe în prestația de curățenie stradală, colectare separată și deszăpezire.
+Sursa: Raport Camera de Conturi - Legea 94/1992
+SALUX nu garantează absența controalelor sau a sancțiunilor. Asigură că, pentru fiecare prestație înregistrată, operatorul deține proba imediat accesibilă.
+Comparativ operațional
+Sistem tradițional vs. SALUX
+Activitate
+Sistem tradițional
+Cu SALUX
+Pregătire raport lunar
+2-3 zile lucrătoare
+Generare automată, 30 min revizuire
+Justificare prestație contestată
+Recuperare retrospectivă
+Probă disponibilă instantaneu
+Pregătire audit ANRSC / Curtea de Conturi
+1-2 săptămâni dedicate
+Dosarul există deja
+Răspuns la sesizare cetățean
+Verificare telefonică, întârzieri
+Fotografie cu localizare în câteva minute
+Raport anual ANRSC
+Compilație manuală
+Export pre-formatat
+Raport ANPM
+Reconstituire din evidențe paralele
+Export automat din date primare
+Coordonare operator-UAT
+Schimburi de email și telefonie
+Acces partajat la aceeași sursă
+Implementare
+Șase săptămâni. Trei faze.
+Fără întreruperea activității.
+Săptămânile 1-2
+Configurare sistem
+Import inventar (coșuri, străzi, contracte), configurare conturi și roluri, instruire echipe administrative. Sistemul devine operațional la finalul acestei faze.
+→ output:
+conturi active
+nomenclatoare importate
+Săptămânile 3-4
+Pilot pe o rută
+Activarea pilot cu o echipă de teren restrânsă pe o rută sau un sector, pentru calibrarea fluxurilor și validarea formatelor de raportare specifice contractului.
+→ output:
+primul raport lunar pilot
+fluxuri validate
+Săptămânile 5-6
+Extindere completă
+Extindere la întreaga operațiune. Migrare date istorice relevante în paralel cu activitatea curentă. Asistență la prima situație de plată generată complet din sistem.
+→ output:
+operațiune integrală în SALUX
+prima situație de plată completă
+Licențiere
+Model de licențiere simplu
+Fără costuri de implementare
+0 lei
+costuri de implementare
+SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Specialiștii SALUX oferă asistență tehnică pe tot parcursul procedurii de achiziție - analiza compatibilității cu Ordinul ANRSC 98/2025, consultanță privind specificațiile tehnice și suport în etapele de evaluare și atribuire.
+Contactați echipa SALUX pentru o ofertă adaptată dimensiunii contractului dumneavoastră.
+Pasul următor
+Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.
+Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret cum arată fluxul de la teren la situație de plată, fără slide-uri generale și fără promisiuni nedovedibile.
+Programează o demonstrație
+Sistem informatic pentru salubrizare stradală și deszăpezire în România.
+office@salux.ro
+Soluții
+Operatori privați
+Autorități contractante
+Produs
+Module
+FAQ
+Demo
+Resurse
+Blog
+Legal
+Confidențialitate
+Termeni
+GDPR
+EULA
+© 2026 MILBAC MANAGEMENT S.R.L.

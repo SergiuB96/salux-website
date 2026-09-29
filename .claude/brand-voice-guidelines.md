@@ -2,7 +2,7 @@
 
 ## Metadate
 - Creat: 2026-09-29
-- Versiune: 1
+- Versiune: 1.1 (decizii confirmate: adresare formală, timp de generare)
 - Surse: salux-website-copy.md, llms.txt, index.html, operator.html, uat.html, contact.html, blog.html, 8 articole (article-*.html) și sursele lor din blog/*.md
 - Documente procesate: 14
 - Conversații analizate: 0 (nu există înregistrări de apeluri de vânzare)
@@ -144,6 +144,8 @@ Variante existente:
 |--------|----------|-----------|
 | autoritate contractantă | termenul legal complet, la prima mențiune pe pagină | „client”, „beneficiar” |
 | UAT | după prima mențiune, sau în navigare și titluri scurte | „primărie” (prea restrâns: exclude consilii județene și ADI) |
+| dumneavoastră / vă / verbe la pers. a II-a plural | toate textele publice, inclusiv butoanele | „tu”, „te”, „îți”, „tău”, verbe la pers. a II-a singular |
+| „în maximum un minut” | timpul de generare pentru orice document | „5 minute”, „30 min revizuire”, „5 zile → 30 min” |
 | situație de plată | documentul lunar de decont | „factură” (facturarea rămâne în ERP) |
 | program lunar de lucru | planificarea lunară aprobată | „plan”, „calendar” |
 | operator de salubrizare | firma care prestează serviciul | „furnizor”, „prestator” |
@@ -219,15 +221,12 @@ Problemă: seria „fără, fără, fără” sună a reclamă și promite „f�
 ## Întrebări deschise pentru echipă
 
 ### Prioritate ridicată
-1. **Adresare: „dumneavoastră” sau „tu”?**
-   - Ce am găsit: master copy și paginile Operatori/UAT folosesc „dumneavoastră”; butoanele („Programează o demonstrație”), formularul de contact și toate articolele folosesc „tu”; homepage-ul le amestecă.
-   - Recomandare: „dumneavoastră” pe toate paginile publice, inclusiv butoanele („Programați o demonstrație”) și formularul de contact. Publicul include instituții publice, iar master copy-ul (sursa de autoritate) e formal. Articolele de blog pot folosi construcții impersonale („operatorul trebuie”, „se aplică”) în loc de „tu”.
-   - Aveți de decis: confirmați sau alegeți „tu” peste tot.
+1. **Adresare: REZOLVAT (2026-09-29)**
+   - Decizie: „dumneavoastră” peste tot: pagini, butoane („Programați o demonstrație”), formulare, articole de blog, meta și date structurate.
 
-2. **Cifra pentru timpul de raportare**
-   - Ce am găsit: „5 zile → 30 min” (index.html), „2 zile → 30 minute” (salux-website-copy.md), „2-3 zile lucrătoare → 30 min revizuire” (operator.html), „Situații de plată generate în 5 minute” (index.html).
-   - Recomandare: o singură cifră, din date reale de la un client pilot, folosită identic peste tot. Până atunci, „de la câteva zile la sub o oră”.
-   - Aveți de decis: cifra reală și sursa ei.
+2. **Timp de generare: REZOLVAT (2026-09-29)**
+   - Decizie: orice document generat de SALUX durează **maximum 1 minut**, pentru că toate datele se preiau din operațiunile raportate de echipele din teren.
+   - Formulare recomandată: „în maximum un minut” / „1 minut, timp maxim pentru generarea oricărui document”.
 
 ### Prioritate medie
 3. **Afirmația „admisibile în instanță”**

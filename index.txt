@@ -1,0 +1,159 @@
+﻿
+SALUX - Platformă SaaS pentru salubrizare stradală
+Operatori
+UAT
+ProdusModuleFAQProgramează o demonstrație
+Blog
+Contact
+Autentificare
+Operatori
+UAT
+Produs
+Blog
+Contact
+Autentificare
+Digitalizăm salubrizarea stradală. Sistem informatic integrat pentru operator și autoritate contractantă.
+Operatorul planifică și execută, autoritatea contractantă monitorizează și aprobă, iar situația de plată se construiește automat din datele de teren.
+Programează o demonstrație
+Panoul principal: execuția zilei, situația lunii și alertele operaționale, într-un singur ecran.
+Cadru legal în vigoare
+SALUX este construit pe cadrul legal actual. Ordinele ANRSC 97/2025 și 98/2025 au înlocuit complet reglementările vechi (82/2015 și 111/2007). Fiecare contract de salubrizare din România trebuie aliniat, iar SALUX nu s-a adaptat la noul cadru, ci este construit direct pe el.
+5 zile → 30 min
+timp raport lunar
+0 lei
+costuri de implementare, inclusiv configurare, import și instruirea personalului
+5 ani
+arhivă disponibilă
+Actualizări constante
+conform legislației în vigoare
+Două părți contractante. Un mod unitar de lucru.
+Operatorilor privați de salubrizare stradală
+Pentru companiile de salubrizare care au unul sau mai multe contracte în curs de semnare sau în execuție în România. SALUX digitalizează activitatea de teren, raportarea, generarea situațiilor de plată, programe lunare de lucru, sesizări, mapare pe harta beneficiarului, cu documente care justifică toată activitatea în eventualitatea unor controale din partea instituțiilor abilitate.
+Vezi soluția pentru operatori
+Autorităților publice
+Primăriilor, consiliilor județene și asociațiilor de dezvoltare intercomunitară care au calitate de autoritate contractantă pentru serviciul de salubrizare. SALUX oferă acces în timp real la activitatea operatorului și monitorizare conformă obligațiilor legale, iar autoritatea are un fundament documentar solid pentru deciziile contractuale și pentru răspunsul la orice control din partea instituțiilor abilitate.
+Vezi soluția pentru UAT
+Cum lucrează
+De la programul lunar la situația de plată
+Trei fluxuri principale, toate integrate. Restul vine la pachet.
+Planificare
+Program lunar care se transformă în sarcini zilnice
+Definești operațiunile contractuale cu frecvențe (zilnic, săptămânal 1-7×, lunar 1-N×) și cantități. Sistemul generează automat sarcini zilnice pentru echipele de teren, cu ce trebuie făcut și când.
+20+ tipuri de operațiune preconfigurate
+Aprobare ierarhică (șef echipă, manager, UAT)
+Distribuție automată pe zile lucrătoare
+Audit log per linie de plan
+Execuție în teren
+Echipele raportează din teren, cu sau fără conexiune
+Aplicație mobilă accesibilă pe orice telefon prin browser, fără instalare. Fotografiile, pontajul și sesizările se înregistrează direct din teren, fără transcriere ulterioară.
+Funcționează fără conexiune, cu sincronizare automată la revenire
+Captură foto cu localizare opțională și marcaj temporal imutabil
+Pontaj intrare/ieșire cu rol și utilaj
+Vizualizare activitate în timp real pentru dispecer și UAT
+Raportare
+Situații de plată generate în 5 minute
+Datele din teren se consolidează automat. Aplici tariful (cu istoricizare), generezi PDF/Excel conform caietului de sarcini și transmiți la UAT. Tot fluxul cu captură imutabilă per linie.
+Tarife istorice cu perioadă de valabilitate
+Export PDF și Excel, format standard caiet de sarcini
+Captură imutabilă per situație de plată
+Rapoarte analitice per sector, utilaj sau operator
+Alte ecrane din aplicație
+Contractul, documentele și intervențiile punctuale, urmărite în același sistem.
+Urmărire contract
+Consumul față de bugetul anual, ritmul lunar și jaloanele contractului.
+Documente generate
+Jurnale de activitate și comenzi speciale, exportate în PDF.
+Solicitări UAT
+Intervenții în afara programului lunar, cu raport și situație de plată.
+Nomenclator străzi
+Străzile pe sectoare, cu dimensiuni, suprafețe și prioritate la deszăpezire.
+Zece module funcționale. Un singur abonament.
+Construite pe activitățile enumerate în art. 2 alin. (3) din Legea 101/2006. Nu plătești pe utilizator, nu plătești pe modul.
+Program lunar digital
+Planificare cu frecvențe și cantități, aprobare ierarhică - art. 17 alin. (4), Legea 101/2006.
+Vizualizare activitate
+Execuții, sesizări și coșuri vizibile în timp real, cu acces diferențiat pentru operator și UAT.
+Aplicație mobilă
+Android și iOS, fără instalare, accesibilă prin browser. Funcționează fără conexiune. Curbă de învățare: o tură.
+Raportare automată
+Rapoarte zilnice, săptămânale, lunare, trimestriale și anuale.
+Coșuri stradale
+Inventar geografic, istoricul golirilor, mentenanță - conform SR 13387:1997.
+Pontaj digital
+Înregistrare intrare/ieșire pe sector, evidență resurse umane - Legea 53/2003.
+Sesizări cetățeni
+Portal dedicat, asignare automată echipă, urmărire până la închidere cu foto - OG 27/2002.
+Situații de plată
+Generare automată a situațiilor de plată lunare sau pentru solicitări punctuale.
+Tarife
+Calcul și ajustare tarife cu documentație de fundamentare - Ord. ANRSC 640/2022 + 324/2025.
+Deszăpezire
+Toate operațiunile de deszăpezire programate și calculate automat pe baza raportării echipelor din teren.
+Ce face fiecare parte în SALUX
+Funcționalitate
+Operator
+Autoritate contractantă
+Program lunar digital și sarcini zilnice
+✓
+vizualizare
+Probe fotografice imutabile, păstrate 5 ani
+✓
+✓
+Situații de plată generate lunar sau pentru fiecare solicitare punctuală
+✓
+aprobare
+Vizualizare activitate operator în timp real
+✓
+✓
+Sesizări cetățeni cu dovezi fotografice
+✓
+✓
+Dosar audit gata în orice moment
+✓
+✓
+Implementare fără costuri suplimentare
+✓
+✓
+Întrebări frecvente
+Despre obligațiile legale
+SALUX urmărește în timp real flota de utilaje?Nu. Urmărirea în timp real a flotei de utilaje (telematică) este un serviciu distinct, oferit de furnizori specializați. SALUX permite captarea, la alegerea operatorului, a datelor de localizare pentru fiecare operațiune și sesizare înregistrată - nu urmărirea continuă a vehiculelor. Cele două sisteme sunt complementare și pot funcționa independent.
+Trebuie să mă conformez Ordinului ANRSC 97/2025? Vechiul Ordin 82/2015 mai este aplicabil?Nu. Ordinul ANRSC 97/2025 (MOf. 190/5.03.2025) a abrogat Ordinul ANRSC 82/2015. Ordinul ANRSC 98/2025 (MOf. 192/5.03.2025) a abrogat Ordinul ANRSC 111/2007. Toate regulamentele și caietele de sarcini aprobate pe baza ordinelor vechi trebuie revizuite și aliniate la noul cadru.
+Ce sancțiuni riscă operatorul în cazul neîndeplinirii indicatorilor de performanță?Sancțiunile funcționează pe două paliere:
+Contractual: penalități, daune-interese, executarea garanției de bună execuție sau rezilierea unilaterală a contractului (art. 6 alin. (2), Legea 101/2006).
+Contravențional: amenzi ANRSC între 30.000 și 50.000 lei pentru încălcări majore (art. 30, Legea 101/2006); risc retragere licență ANRSC (Ord. ANRSC 100/2023).
+Despre achiziție și costuri
+Cum se achiziționează SALUX de către o autoritate publică?SALUX se achiziționează pe bază de licență anuală, fără costuri de implementare. Specialiștii SALUX oferă asistență tehnică pe tot parcursul procedurii de achiziție - analiza compatibilității cu Ordinul ANRSC 98/2025, consultanță privind specificațiile tehnice și suport în etapele de evaluare și atribuire.
+Despre operațiune și implementare
+Cât durează implementarea?Implementarea standard se desfășoară în trei etape, pe parcursul a șase săptămâni, fără întreruperea operațiunilor curente:
+• Săptămânile 1-2: Configurare sistem, import inventar (coșuri, străzi, contracte), instruire echipe administrative.
+• Săptămânile 3-4: Pilot pe o rută sau un sector, cu o echipă de teren restrânsă.
+• Săptămânile 5-6: Extindere la întreaga operațiune, migrare date istorice relevante.
+Echipele de teren se adaptează la sistemul digital?Aplicația mobilă are o interfață cu patru acțiuni: pornire schimb, marcaj activitate, fotografie, încheiere schimb. Curba de învățare este, în experiența noastră, de o singură tură de lucru.
+Aplicația funcționează în zonele fără semnal mobil?Da. Aplicația înregistrează toate datele local pe dispozitiv atunci când nu există conexiune. Sincronizarea se realizează automat la revenirea conectivității, fără pierdere de informații.
+SALUX înlocuiește sistemul de gestiune curent?Nu. SALUX gestionează activitatea operațională de teren și produce documentația justificativă. Sistemul de gestiune existent (ASiS Salubritate, alte soluții) își păstrează rolul în contabilitate și facturare. Transferul automat al datelor relevante se face prin interfață de integrare.
+Despre securitate și date
+Unde sunt găzduite datele?Exclusiv în România și în alte state membre ale Uniunii Europene. Conform GDPR, Legii 190/2018 și OUG 119/2022. Fără transfer către țări terțe. Acordul de prelucrare a datelor (DPA) se semnează odată cu contractul de licență.
+Probele generate de SALUX sunt admisibile în instanță?Audit log-ul SALUX este construit pe principiile probei electronice acceptate în Codul de procedură civilă. Marcajul temporal criptografic și hash-ul de integritate asigură opozabilitatea probei.
+Ce se întâmplă cu datele la rezilierea contractului?Datele aparțin clientului. La încetarea contractului SALUX, datele se exportă în format deschis (CSV, JSON, PDF) și se predau clientului. Ștergerea din sistemele SALUX urmează prevederile DPA și obligațiile legale de păstrare aplicabile.
+Programează o demonstrație și vezi cum funcționează SALUX cu datele tale.
+Pregătim demonstrația pe un caz real din operațiunea dumneavoastră - un sector, o lună, un raport. Vedeți concret fluxul de la teren până la situația de plată.
+Programează o demonstrație
+Sistem informatic pentru salubrizare stradală și deszăpezire în România.
+office@salux.ro
+Soluții
+Operatori privați
+Autorități contractante
+Produs
+Module
+FAQ
+Demo
+Resurse
+Blog
+Ordinul ANRSC 97/2025
+Checklist conformitate
+Legal
+Confidențialitate
+Termeni
+GDPR
+EULA
+© 2026 MILBAC MANAGEMENT S.R.L. · CUI 44991231 · Nr. Reg. Com. J26/1603/2021 · Bulevardul Pandurilor, Nr. 86, Târgu Mureș, jud. Mureș
